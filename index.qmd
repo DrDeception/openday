@@ -1,0 +1,333 @@
+---
+title: "Psychology Taster Lecture"
+author: "Dr. Gordon Wright"
+affiliation: "LittleMonkeyLab @Goldsmiths"
+mainfont: Atkinson Hyperlegible
+format: 
+  revealjs: 
+    title-slide-attributes:
+      data-background-color: "black"
+    logo: "images/LMLLOGO.png"
+    scrollable: true
+    controls: true
+    controls-layout: edges
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 100px;
+      }
+      </style>
+---
+
+## Dr. Gordon Wright {background-color="black"}
+
+. . . 
+
+Lecturer in Deception, Mind-reading and People-Watching
+
+. . .
+
+Chief Mischief Officer - LittleMonkeyLab
+
+. . .
+
+![](images/Themes.png){fig-align="center" width="400"}
+
+## I'm very sorry...
+
+::::: columns
+::: {.column width="50%"}
+![](images/C&C.png){.absolute top="10%" left="10%" width="250px"}
+
+![](images/H&W.png){.absolute top="40%" left="10%" width="250px"}
+
+![](images/L&S.png){.absolute top="70%" left="10%" width="250px"}
+:::
+
+::: {.column width="50%"}
+![](images/G&C.png){.absolute .fragment .fade-in top="10%" left="50%" width="250px"}
+
+![](images/G&H.png){.absolute .fragment .fade-in top="40%" left="50%" width="250px"}
+
+![](images/G&S.png){.absolute .fragment .fade-in top="70%" left="50%" width="250px"}
+:::
+:::::
+
+# Cognition & Culture Theme {background-color="#2583c6"}
+
+## Little Monkey {background-color="#2583c6"}
+
+```{=html}
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;height:auto;">
+  <iframe src="https://www.youtube.com/embed/6kvQHGZU86A?start=301" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+```
+
+## Deception - Key Questions {background-color="#2583c6"}
+
+-   Why do we lie?
+-   Who lies? How much?
+-   How do we do it?
+
+::: header
+
+Cognition & Culture
+
+:::
+
+## Why we lie {background-color="#2583c6"}
+
+![](images/paste-3.png){fig-align="center" width="800"}
+
+::: header
+
+Cognition & Culture
+
+:::
+
+## Who lies and how often? {background-color="#2583c6"}
+
+```{r}
+# Load required libraries
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+# Sample data for the chart
+data <- data.frame(
+  AgeGroup = c("60-77", "45-60", "30-44", "18-29", "13-17", "8-12", "6-8"),
+  MoreThanFiveLies = c(1, 3, 4, 10, 11, 9, 9),
+  OneToFiveLies = c(10, 13, 28, 35, 45, 43, 43),
+  NoLies = c(89, 84, 68, 55, 45, 48, 48)
+)
+
+# Reshape the data for plotting
+data_long <- data %>%
+  pivot_longer(cols = c("MoreThanFiveLies", "OneToFiveLies", "NoLies"),
+               names_to = "LieFrequency",
+               values_to = "Percentage")
+
+# Define the order of the factors for AgeGroup and LieFrequency
+data_long$AgeGroup <- factor(data_long$AgeGroup, levels = rev(data$AgeGroup))
+data_long$LieFrequency <- factor(data_long$LieFrequency, 
+                                 levels = c("NoLies", "OneToFiveLies", "MoreThanFiveLies"))
+
+# Updated pastel color palette
+color_palette <- c("#f2f2f2", "#f7c6c7", "#FFEB84")  # Light grey, pastel pink, pastel yellow for 5+
+
+# Create the stacked bar plot
+p <- ggplot(data_long, aes(x = AgeGroup, y = Percentage, fill = LieFrequency)) +
+  geom_bar(stat = "identity", position = "stack", width = 0.7) +
+  scale_fill_manual(values = color_palette) +
+  coord_flip() +
+  labs(title = "Lying frequency, by age", subtitle = "Over a 24-hour period", 
+       x = "Age Group", y = "Percentage of Lies", fill = "Lies Frequency") +
+  theme_minimal() +
+  theme(legend.position = "top", 
+        plot.title = element_text(size = 16, face = "bold"),
+        plot.subtitle = element_text(size = 12),
+        legend.title = element_blank()) +
+  geom_text(aes(label = ifelse(LieFrequency == "NoLies", paste0(Percentage, "%"), "")), 
+            position = position_stack(vjust = 0.5), 
+            size = 3, color = "black") +  # Black text for "No Lies"
+  geom_text(aes(label = ifelse(LieFrequency != "NoLies", paste0(Percentage, "%"), "")), 
+            position = position_stack(vjust = 0.5), 
+            size = 3, color = "black")  # White text for other categories
+
+# Display the plot
+print(p)
+
+
+```
+
+::: header
+
+Cognition & Culture
+
+:::
+
+## But is it so bad? {background-color="#2583c6"}
+
+-   Well I argue not
+-   We saw out little monkey tricking his co-monkeys out of a tasty bird's egg
+-   That's right up there with animals that use tools
+
+::: header
+
+Cognition & Culture
+
+:::
+
+## Dunbar's Number {background-color="#2583c6"}
+
+![](images/Dunbar.png){fig-align="center"}
+
+::: header
+
+Cognition & Culture
+
+:::
+
+## Mindreading? For real? {background-color="#62a537"}
+
+::: header
+
+Health & Wellbeing
+
+:::
+
+## Prepare for a journey through Mind-Space! {background-color="#62a537"}
+
+-   Forget everything you thought you knew about understanding people
+-   I'm about to revolutionize your view of social interaction
+-   Welcome to the wild world of Mind-space!
+
+::: header
+
+Health & Wellbeing
+
+:::
+
+## Introducing Mind-space {background-color="#62a537"}
+
+::: incremental
+-   Every person's mind exists in a multidimensional space
+-   It's like the Marvel multiverse, but for brains!
+-   Minds are mapped based on traits, abilities, and quirks
+-   YOU are constantly navigating this mind-boggling terrain
+:::
+
+::: header
+
+Health & Wellbeing
+
+:::
+
+## The Power of Mind-space {background-color="#62a537"}
+
+::: incremental
+-   Not just abstract theory - the key to unlocking human behavior!
+-   Every time you:
+    -   Size someone up
+    -   Predict their actions
+    -   Wonder "What were they thinking?!"
+-   You're tapping into the awesome power of Mind-space!
+:::
+
+::: header
+
+Health & Wellbeing
+
+:::
+
+## For any AI geeks out there... 💛 {background-color="#62a537"}
+
+-   It's essentially the same idea as Embeddings in VectorSpace in LLMs
+
+-   But we do it WAY better, and potentially faster! ![](images/paste-4.png){fig-align="center"}
+
+::: header
+
+Health & Wellbeing
+
+:::
+
+## People-watching {background-color="#ef3a5d"}
+
+::: header
+
+Life & Society
+
+:::
+
+## Systematic Observation in Natural Settings
+
+-   Observing behavior without interference
+-   Identifying patterns and anomalies
+-   Inferring meaning and motive in everyday behaviour
+
+::: header
+
+Life & Society
+
+:::
+
+## I did some people-watching on the telly {background-color="#ef3a5d"}
+
+[BBC Horizon - A Week Without Lying](https://learningonscreen.ac.uk/ondemand/index.php/prog/11ED256E?bcast=127465838&playlist=220146)
+
+[Goldsmiths Link](https://login.learningonscreen.ac.uk/wayfless.php?entityID=https%3A%2F%2Fidp.goldsmiths.ac.uk%2Fidp%2Fshibboleth&target=https%3A%2F%2Flearningonscreen.ac.uk%2Fondemand%2Findex.php%2Fprog%2F11ED256E%3Fbcast%3D127465838)
+
+![](images/paste-5.png){width="800"}
+
+::: header
+
+Life & Society
+
+:::
+
+## Forensic Psychology Unit {background-color="#d0f42e"}
+
+```{=html}
+<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;height:auto;">
+  <iframe src="https://www.youtube.com/embed/2G1ESs-NJQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+</div>
+```
+
+![](images/29882.png){fig-align="center" width="600"}
+
+![](images/66984.png){fig-align="center" width="600"}
+
+![](images/90703.png){fig-align="center" width="600"}
+
+![](images/10573.png){fig-align="center" width="600"}
+
+![](images/60045.png){fig-align="center" width="600"}
+
+![](images/85543.png){fig-align="center" width="400"}
+
+![](images/paste-6.png){fig-align="center" width="800"}
+
+::: header
+
+Forensic Psychology Unit
+
+:::
+
+## Do you want to play?  {.incremental background-color="yellow"}
+
+-   The topic for this year is...
+-   Psychological Profiling (in all it's guises)
+-   All students are welcome to join in (current and future!)
+
+::: header
+
+Forensic Psychology Unit
+
+:::
+
+## Thank you {background-color="black"}
+
+### Any Questions? {background-color="black"}
+
+I think I forgot something.
+
+::: header
+
+Ooops
+
+:::
+
+## Yes. The subject I mostly teach...
+
+---
+
+![](images/Themes+.png){fig-align="center" width="800"}
+
+::: header
+
+Bet no other Uni gives you a Research Methods lecture on an Open Day!
+
+:::

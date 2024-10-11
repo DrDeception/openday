@@ -1,0 +1,135 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n# Load required libraries\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(tidyr)\n\n# Sample data for the chart\ndata &lt;- data.frame(\n  AgeGroup = c(\"60-77\", \"45-60\", \"30-44\", \"18-29\", \"13-17\", \"8-12\", \"6-8\"),\n  MoreThanFiveLies = c(1, 3, 4, 10, 11, 9, 9),\n  OneToFiveLies = c(10, 13, 28, 35, 45, 43, 43),\n  NoLies = c(89, 84, 68, 55, 45, 48, 48)\n)\n\n# Reshape the data for plotting\ndata_long &lt;- data %&gt;%\n  pivot_longer(cols = c(\"MoreThanFiveLies\", \"OneToFiveLies\", \"NoLies\"),\n               names_to = \"LieFrequency\",\n               values_to = \"Percentage\")\n\n# Define the order of the factors for AgeGroup and LieFrequency\ndata_long$AgeGroup &lt;- factor(data_long$AgeGroup, levels = rev(data$AgeGroup))\ndata_long$LieFrequency &lt;- factor(data_long$LieFrequency, \n                                 levels = c(\"NoLies\", \"OneToFiveLies\", \"MoreThanFiveLies\"))\n\n# Improved color palette\ncolor_palette &lt;- c(\"#d9d9d9\", \"#969696\", \"#525252\")  # Light to dark grey\n\n# Create the stacked bar plot\nggplot(data_long, aes(x = AgeGroup, y = Percentage, fill = LieFrequency)) +\n  geom_bar(stat = \"identity\", position = \"stack\", width = 0.7) +\n  scale_fill_manual(values = color_palette) +\n  coord_flip() +\n  labs(title = \"Lying frequency, by age\", subtitle = \"Over a 24-hour period\", \n       x = \"Age Group\", y = \"Percentage of Lies\", fill = \"Lies Frequency\") +\n  theme_minimal() +\n  theme(legend.position = \"top\", \n        plot.title = element_text(size = 16, face = \"bold\"),\n        plot.subtitle = element_text(size = 12),\n        legend.title = element_blank()) +\n  geom_text(aes(label = paste0(Percentage, \"%\")), \n            position = position_stack(vjust = 0.5), \n            size = 3, color = \"white\")\n\n\n\n\n\n\n\n\n\n# Load required libraries\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(tidyr)\n\n# Sample data for the chart\ndata &lt;- data.frame(\n  AgeGroup = c(\"60-77\", \"45-60\", \"30-44\", \"18-29\", \"13-17\", \"8-12\", \"6-8\"),\n  MoreThanFiveLies = c(1, 3, 4, 10, 11, 9, 9),\n  OneToFiveLies = c(10, 13, 28, 35, 45, 43, 43),\n  NoLies = c(89, 84, 68, 55, 45, 48, 48)\n)\n\n# Reshape the data for plotting\ndata_long &lt;- data %&gt;%\n  pivot_longer(cols = c(\"MoreThanFiveLies\", \"OneToFiveLies\", \"NoLies\"),\n               names_to = \"LieFrequency\",\n               values_to = \"Percentage\")\n\n# Define the order of the factors for AgeGroup and LieFrequency\ndata_long$AgeGroup &lt;- factor(data_long$AgeGroup, levels = rev(data$AgeGroup))\ndata_long$LieFrequency &lt;- factor(data_long$LieFrequency, \n                                 levels = c(\"NoLies\", \"OneToFiveLies\", \"MoreThanFiveLies\"))\n\n# Updated pastel color palette\ncolor_palette &lt;- c(\"#f2f2f2\", \"#f7c6c7\", \"#FFEB84\")  # Light grey, pastel pink, pastel yellow for 5+\n\n# Create the stacked bar plot\np &lt;- ggplot(data_long, aes(x = AgeGroup, y = Percentage, fill = LieFrequency)) +\n  geom_bar(stat = \"identity\", position = \"stack\", width = 0.7) +\n  scale_fill_manual(values = color_palette) +\n  coord_flip() +\n  labs(title = \"Lying frequency, by age\", subtitle = \"Over a 24-hour period\", \n       x = \"Age Group\", y = \"Percentage of Lies\", fill = \"Lies Frequency\") +\n  theme_minimal() +\n  theme(legend.position = \"top\", \n        plot.title = element_text(size = 16, face = \"bold\"),\n        plot.subtitle = element_text(size = 12),\n        legend.title = element_blank()) +\n  geom_text(aes(label = ifelse(LieFrequency == \"NoLies\", paste0(Percentage, \"%\"), \"\")), \n            position = position_stack(vjust = 0.5), \n            size = 3, color = \"black\") +  # Black text for \"No Lies\"\n  geom_text(aes(label = ifelse(LieFrequency != \"NoLies\", paste0(Percentage, \"%\"), \"\")), \n            position = position_stack(vjust = 0.5), \n            size = 3, color = \"black\")  # White text for other categories\n\n# Display the plot\nprint(p)"
+  },
+  {
+    "objectID": "index.html#dr.-gordon-wright",
+    "href": "index.html#dr.-gordon-wright",
+    "title": "Psychology Taster Lecture",
+    "section": "Dr. Gordon Wright",
+    "text": "Dr. Gordon Wright\n\nLecturer in Deception, Mind-reading and People-Watching\n\n\nChief Mischief Officer - LittleMonkeyLab"
+  },
+  {
+    "objectID": "index.html#im-very-sorry",
+    "href": "index.html#im-very-sorry",
+    "title": "Psychology Taster Lecture",
+    "section": "I’m very sorry…",
+    "text": "I’m very sorry…"
+  },
+  {
+    "objectID": "index.html#little-monkey",
+    "href": "index.html#little-monkey",
+    "title": "Psychology Taster Lecture",
+    "section": "Little Monkey",
+    "text": "Little Monkey"
+  },
+  {
+    "objectID": "index.html#deception---key-questions",
+    "href": "index.html#deception---key-questions",
+    "title": "Psychology Taster Lecture",
+    "section": "Deception - Key Questions",
+    "text": "Deception - Key Questions\n\nWhy do we lie?\nWho lies? How much?\nHow do we do it?"
+  },
+  {
+    "objectID": "index.html#why-we-lie",
+    "href": "index.html#why-we-lie",
+    "title": "Psychology Taster Lecture",
+    "section": "Why we lie",
+    "text": "Why we lie"
+  },
+  {
+    "objectID": "index.html#who-lies-and-how-often",
+    "href": "index.html#who-lies-and-how-often",
+    "title": "Psychology Taster Lecture",
+    "section": "Who lies and how often?",
+    "text": "Who lies and how often?"
+  },
+  {
+    "objectID": "index.html#but-is-it-so-bad",
+    "href": "index.html#but-is-it-so-bad",
+    "title": "Psychology Taster Lecture",
+    "section": "But is it so bad?",
+    "text": "But is it so bad?\n\nWell I argue not\nWe saw out little monkey tricking his co-monkeys out of a tasty bird’s egg\nThat’s right up there with animals that use tools"
+  },
+  {
+    "objectID": "index.html#dunbars-number",
+    "href": "index.html#dunbars-number",
+    "title": "Psychology Taster Lecture",
+    "section": "Dunbar’s Number",
+    "text": "Dunbar’s Number"
+  },
+  {
+    "objectID": "index.html#prepare-for-a-journey-through-mind-space",
+    "href": "index.html#prepare-for-a-journey-through-mind-space",
+    "title": "Psychology Taster Lecture",
+    "section": "Prepare for a journey through Mind-Space!",
+    "text": "Prepare for a journey through Mind-Space!\n\nForget everything you thought you knew about understanding people\nI’m about to revolutionize your view of social interaction\nWelcome to the wild world of Mind-space!"
+  },
+  {
+    "objectID": "index.html#introducing-mind-space",
+    "href": "index.html#introducing-mind-space",
+    "title": "Psychology Taster Lecture",
+    "section": "Introducing Mind-space",
+    "text": "Introducing Mind-space\n\n\nEvery person’s mind exists in a multidimensional space\nIt’s like the Marvel multiverse, but for brains!\nMinds are mapped based on traits, abilities, and quirks\nYOU are constantly navigating this mind-boggling terrain"
+  },
+  {
+    "objectID": "index.html#the-power-of-mind-space",
+    "href": "index.html#the-power-of-mind-space",
+    "title": "Psychology Taster Lecture",
+    "section": "The Power of Mind-space",
+    "text": "The Power of Mind-space\n\n\nNot just abstract theory - the key to unlocking human behavior!\nEvery time you:\n\nSize someone up\nPredict their actions\nWonder “What were they thinking?!”\n\nYou’re tapping into the awesome power of Mind-space!"
+  },
+  {
+    "objectID": "index.html#for-any-ai-geeks-out-there",
+    "href": "index.html#for-any-ai-geeks-out-there",
+    "title": "Psychology Taster Lecture",
+    "section": "For any AI geeks out there… 💛",
+    "text": "For any AI geeks out there… 💛\n\nIt’s essentially the same idea as Embeddings in VectorSpace in LLMs\nBut we do it WAY better, and potentially faster!"
+  },
+  {
+    "objectID": "index.html#systematic-observation-in-natural-settings",
+    "href": "index.html#systematic-observation-in-natural-settings",
+    "title": "Psychology Taster Lecture",
+    "section": "Systematic Observation in Natural Settings",
+    "text": "Systematic Observation in Natural Settings\n\nStreet Psychology\nObserving behavior without interference\nIdentifying patterns and anomalies\nReal-life Psychological Profiling\nInferring meaning and motive in everyday behaviour"
+  },
+  {
+    "objectID": "index.html#i-did-some-people-watching-on-the-telly",
+    "href": "index.html#i-did-some-people-watching-on-the-telly",
+    "title": "Psychology Taster Lecture",
+    "section": "I did some people-watching on the telly",
+    "text": "I did some people-watching on the telly\nBBC Horizon - A Week Without Lying\nGoldsmiths Link"
+  },
+  {
+    "objectID": "index.html#forensic-psychology-unit",
+    "href": "index.html#forensic-psychology-unit",
+    "title": "Psychology Taster Lecture",
+    "section": "Forensic Psychology Unit",
+    "text": "Forensic Psychology Unit"
+  },
+  {
+    "objectID": "index.html#do-you-want-to-play",
+    "href": "index.html#do-you-want-to-play",
+    "title": "Psychology Taster Lecture",
+    "section": "Do you want to play?",
+    "text": "Do you want to play?\n\nThe topic for this year is…\nPsychological Profiling (in all it’s guises)\nAll students are welcome to join in (current and maybe future!)\n@ForensicGold on X.com\nhttps://www.gold.ac.uk/forensic-psychology-unit/"
+  },
+  {
+    "objectID": "index.html#thank-you",
+    "href": "index.html#thank-you",
+    "title": "Psychology Taster Lecture",
+    "section": "Thank you",
+    "text": "Thank you\nAny Questions?\nBut I think I forgot something…"
+  },
+  {
+    "objectID": "index.html#yes.-the-subject-i-mostly-teach",
+    "href": "index.html#yes.-the-subject-i-mostly-teach",
+    "title": "Psychology Taster Lecture",
+    "section": "Yes. The subject I mostly teach…",
+    "text": "Yes. The subject I mostly teach…"
+  }
+]
