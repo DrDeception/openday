@@ -17,4 +17,5 @@ format:
 
 filters: 
   - webr
+  - reveal-header
 

@@ -8,7 +8,6 @@ format:
     title-slide-attributes:
       data-background-color: "black"
     logo: "images/LMLLOGO.png"
-    incremental: true
     scrollable: true
     controls: true
     controls-layout: edges
@@ -24,7 +23,7 @@ include-in-header:
 
 ## Dr. Gordon Wright {background-color="black"}
 
-. . .
+. . . 
 
 Lecturer in Deception, Mind-reading and People-Watching
 
@@ -58,8 +57,6 @@ Chief Mischief Officer - LittleMonkeyLab
 
 # Cognition & Culture Theme {background-color="#2583c6"}
 
-# Deception {background-color="#2583c6"}
-
 ## Little Monkey {background-color="#2583c6"}
 
 ```{=html}
@@ -74,9 +71,21 @@ Chief Mischief Officer - LittleMonkeyLab
 -   Who lies? How much?
 -   How do we do it?
 
+::: header
+
+Cognition & Culture
+
+:::
+
 ## Why we lie {background-color="#2583c6"}
 
 ![](images/paste-3.png){fig-align="center" width="800"}
+
+::: header
+
+Cognition & Culture
+
+:::
 
 ## Who lies and how often? {background-color="#2583c6"}
 
@@ -133,25 +142,53 @@ print(p)
 
 ```
 
+::: header
+
+Cognition & Culture
+
+:::
+
 ## But is it so bad? {background-color="#2583c6"}
 
 -   Well I argue not
 -   We saw out little monkey tricking his co-monkeys out of a tasty bird's egg
 -   That's right up there with animals that use tools
 
+::: header
+
+Cognition & Culture
+
+:::
+
 ## Dunbar's Number {background-color="#2583c6"}
 
 ![](images/Dunbar.png){fig-align="center"}
 
-# Health & Wellbeing Theme {background-color="#62a537"}
+::: header
 
-# Mindreading {background-color="#62a537"}
+Cognition & Culture
+
+:::
+
+## Mindreading? For real? {background-color="#62a537"}
+
+::: header
+
+Health & Wellbeing
+
+:::
 
 ## Prepare for a journey through Mind-Space! {background-color="#62a537"}
 
 -   Forget everything you thought you knew about understanding people
 -   I'm about to revolutionize your view of social interaction
 -   Welcome to the wild world of Mind-space!
+
+::: header
+
+Health & Wellbeing
+
+:::
 
 ## Introducing Mind-space {background-color="#62a537"}
 
@@ -160,6 +197,12 @@ print(p)
 -   It's like the Marvel multiverse, but for brains!
 -   Minds are mapped based on traits, abilities, and quirks
 -   YOU are constantly navigating this mind-boggling terrain
+:::
+
+::: header
+
+Health & Wellbeing
+
 :::
 
 ## The Power of Mind-space {background-color="#62a537"}
@@ -173,23 +216,43 @@ print(p)
 -   You're tapping into the awesome power of Mind-space!
 :::
 
+::: header
+
+Health & Wellbeing
+
+:::
+
 ## For any AI geeks out there... 💛 {background-color="#62a537"}
 
 -   It's essentially the same idea as Embeddings in VectorSpace in LLMs
 
 -   But we do it WAY better, and potentially faster! ![](images/paste-4.png){fig-align="center"}
 
-# Life & Society Theme {background-color="#ef3a5d"}
+::: header
 
-# People-watching {background-color="#ef3a5d"}
+Health & Wellbeing
 
-## Systematic Observation in Natural Settings {background-color="#ef3a5d"}
+:::
 
--   Street Psychology
+## People-watching {background-color="#ef3a5d"}
+
+::: header
+
+Life & Society
+
+:::
+
+## Systematic Observation in Natural Settings
+
 -   Observing behavior without interference
 -   Identifying patterns and anomalies
--   Real-life Psychological Profiling
 -   Inferring meaning and motive in everyday behaviour
+
+::: header
+
+Life & Society
+
+:::
 
 ## I did some people-watching on the telly {background-color="#ef3a5d"}
 
@@ -199,7 +262,11 @@ print(p)
 
 ![](images/paste-5.png){width="800"}
 
-# ExtraCurricular {background-color="#d0f42e"}
+::: header
+
+Life & Society
+
+:::
 
 ## Forensic Psychology Unit {background-color="#d0f42e"}
 
@@ -223,24 +290,44 @@ print(p)
 
 ![](images/paste-6.png){fig-align="center" width="800"}
 
-## Do you want to play? {.incremental background-color="yellow"}
+::: header
+
+Forensic Psychology Unit
+
+:::
+
+## Do you want to play?  {.incremental background-color="yellow"}
 
 -   The topic for this year is...
 -   Psychological Profiling (in all it's guises)
--   All students are welcome to join in (current and maybe future!)
--   \@ForensicGold on X.com
--   <https://www.gold.ac.uk/forensic-psychology-unit/>
+-   All students are welcome to join in (current and future!)
+
+::: header
+
+Forensic Psychology Unit
+
+:::
 
 ## Thank you {background-color="black"}
 
 ### Any Questions? {background-color="black"}
 
-But I think I forgot something...
+I think I forgot something.
+
+::: header
+
+Ooops
+
+:::
 
 ## Yes. The subject I mostly teach...
 
-------------------------------------------------------------------------
-
-### I bet no other Uni gave you a Research Methods Lecture at their open day!
+---
 
 ![](images/Themes+.png){fig-align="center" width="800"}
+
+::: header
+
+Bet no other Uni gives you a Research Methods lecture on an Open Day!
+
+:::
