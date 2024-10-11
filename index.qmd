@@ -147,17 +147,11 @@ print(p)
 
 # Mindreading {background-color="#62a537"}
 
-## Prepare for a journey through Mind-Space! {background-color="#62a537"}
-
--   Forget everything you thought you knew about understanding people
--   I'm about to revolutionize your view of social interaction
--   Welcome to the wild world of Mind-space!
-
 ## Introducing Mind-space {background-color="#62a537"}
 
 ::: incremental
 -   Every person's mind exists in a multidimensional space
--   It's like the Marvel multiverse, but for brains!
+-   It's like the multiverse, but for brains!
 -   Minds are mapped based on traits, abilities, and quirks
 -   YOU are constantly navigating this mind-boggling terrain
 :::
@@ -175,9 +169,15 @@ print(p)
 
 ## For any AI geeks out there... 💛 {background-color="#62a537"}
 
--   It's essentially the same idea as Embeddings in VectorSpace in LLMs
+-   It's essentially the same idea as embeddings in vectorspace in LLMs
 
 -   But we do it WAY better, and potentially faster! ![](images/paste-4.png){fig-align="center"}
+
+## What's the point? {background-color="#62a537"}
+
+-   It's not just really cool (it is!)
+-   It could offer us new ways to understand variability in Social Cognitive ability
+-   And understand some of the 'magic' abilities we share with cheeky monkeys
 
 # Life & Society Theme {background-color="#ef3a5d"}
 
