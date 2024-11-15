@@ -7,18 +7,389 @@
     "text": "About this site\n\n# Load required libraries\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(tidyr)\n\n# Sample data for the chart\ndata &lt;- data.frame(\n  AgeGroup = c(\"60-77\", \"45-60\", \"30-44\", \"18-29\", \"13-17\", \"8-12\", \"6-8\"),\n  MoreThanFiveLies = c(1, 3, 4, 10, 11, 9, 9),\n  OneToFiveLies = c(10, 13, 28, 35, 45, 43, 43),\n  NoLies = c(89, 84, 68, 55, 45, 48, 48)\n)\n\n# Reshape the data for plotting\ndata_long &lt;- data %&gt;%\n  pivot_longer(cols = c(\"MoreThanFiveLies\", \"OneToFiveLies\", \"NoLies\"),\n               names_to = \"LieFrequency\",\n               values_to = \"Percentage\")\n\n# Define the order of the factors for AgeGroup and LieFrequency\ndata_long$AgeGroup &lt;- factor(data_long$AgeGroup, levels = rev(data$AgeGroup))\ndata_long$LieFrequency &lt;- factor(data_long$LieFrequency, \n                                 levels = c(\"NoLies\", \"OneToFiveLies\", \"MoreThanFiveLies\"))\n\n# Improved color palette\ncolor_palette &lt;- c(\"#d9d9d9\", \"#969696\", \"#525252\")  # Light to dark grey\n\n# Create the stacked bar plot\nggplot(data_long, aes(x = AgeGroup, y = Percentage, fill = LieFrequency)) +\n  geom_bar(stat = \"identity\", position = \"stack\", width = 0.7) +\n  scale_fill_manual(values = color_palette) +\n  coord_flip() +\n  labs(title = \"Lying frequency, by age\", subtitle = \"Over a 24-hour period\", \n       x = \"Age Group\", y = \"Percentage of Lies\", fill = \"Lies Frequency\") +\n  theme_minimal() +\n  theme(legend.position = \"top\", \n        plot.title = element_text(size = 16, face = \"bold\"),\n        plot.subtitle = element_text(size = 12),\n        legend.title = element_blank()) +\n  geom_text(aes(label = paste0(Percentage, \"%\")), \n            position = position_stack(vjust = 0.5), \n            size = 3, color = \"white\")\n\n\n\n\n\n\n\n\n\n# Load required libraries\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(tidyr)\n\n# Sample data for the chart\ndata &lt;- data.frame(\n  AgeGroup = c(\"60-77\", \"45-60\", \"30-44\", \"18-29\", \"13-17\", \"8-12\", \"6-8\"),\n  MoreThanFiveLies = c(1, 3, 4, 10, 11, 9, 9),\n  OneToFiveLies = c(10, 13, 28, 35, 45, 43, 43),\n  NoLies = c(89, 84, 68, 55, 45, 48, 48)\n)\n\n# Reshape the data for plotting\ndata_long &lt;- data %&gt;%\n  pivot_longer(cols = c(\"MoreThanFiveLies\", \"OneToFiveLies\", \"NoLies\"),\n               names_to = \"LieFrequency\",\n               values_to = \"Percentage\")\n\n# Define the order of the factors for AgeGroup and LieFrequency\ndata_long$AgeGroup &lt;- factor(data_long$AgeGroup, levels = rev(data$AgeGroup))\ndata_long$LieFrequency &lt;- factor(data_long$LieFrequency, \n                                 levels = c(\"NoLies\", \"OneToFiveLies\", \"MoreThanFiveLies\"))\n\n# Updated pastel color palette\ncolor_palette &lt;- c(\"#f2f2f2\", \"#f7c6c7\", \"#FFEB84\")  # Light grey, pastel pink, pastel yellow for 5+\n\n# Create the stacked bar plot\np &lt;- ggplot(data_long, aes(x = AgeGroup, y = Percentage, fill = LieFrequency)) +\n  geom_bar(stat = \"identity\", position = \"stack\", width = 0.7) +\n  scale_fill_manual(values = color_palette) +\n  coord_flip() +\n  labs(title = \"Lying frequency, by age\", subtitle = \"Over a 24-hour period\", \n       x = \"Age Group\", y = \"Percentage of Lies\", fill = \"Lies Frequency\") +\n  theme_minimal() +\n  theme(legend.position = \"top\", \n        plot.title = element_text(size = 16, face = \"bold\"),\n        plot.subtitle = element_text(size = 12),\n        legend.title = element_blank()) +\n  geom_text(aes(label = ifelse(LieFrequency == \"NoLies\", paste0(Percentage, \"%\"), \"\")), \n            position = position_stack(vjust = 0.5), \n            size = 3, color = \"black\") +  # Black text for \"No Lies\"\n  geom_text(aes(label = ifelse(LieFrequency != \"NoLies\", paste0(Percentage, \"%\"), \"\")), \n            position = position_stack(vjust = 0.5), \n            size = 3, color = \"black\")  # White text for other categories\n\n# Display the plot\nprint(p)"
   },
   {
+    "objectID": "t-tests.html#introduction",
+    "href": "t-tests.html#introduction",
+    "title": "Experiments - Revision",
+    "section": "Introduction",
+    "text": "Introduction\n\n\n\n\n\n\nImportant\n\n\n\nUnderstanding IVs, DVs and Design is crucial for research design\nGolf putting used as a running example for T-Tests, OneWay ANOVA, and 2x2 ANOVA\nReminder to revisit foundational concepts if struggling\n\n\n\n\nUnderstanding the basics of experimental design is crucial for conducting scientific research, especially your Mini-Dissertation this year. In this review, we’ll explore the concepts of Independent Variables (IVs), Dependent Variables (DVs), and how experiments are designed to determine causal links. We’ll use golf putting as our running example.\nClarifying Independent and Dependent Variables for Your Mini-Dissertation:\nI want to remind you how crucial it is to fully grasp the concept of Independent Variables (IVs) and Dependent Variables (DVs). These were covered in depth last year and are central to the research design of your mini-dissertation. If you’re experiencing challenges now, it may stem from not being completely confident or competent in distinguishing between these key elements.\nThe Independent Variable is what you, as the researcher, manipulate or categorize, and the Dependent Variable is what you measure as a result of these manipulations. Whether you’re working on an experimental or correlational study, mastering this distinction is critical.\nPlease take time to revisit this foundational concept, as a clear understanding will simplify the complexity of your research and improve your analysis moving forward."
+  },
+  {
+    "objectID": "t-tests.html#independent-variables-ivs",
+    "href": "t-tests.html#independent-variables-ivs",
+    "title": "Experiments - Revision",
+    "section": "Independent Variables (IVs)",
+    "text": "Independent Variables (IVs)\nDefinition\nAn Independent Variable is the factor that researchers manipulate or change in an experiment. It’s the presumed cause in a cause-effect relationship. I remember this by saying “the IV is the variable I manipulate!” - silly, but effective!\nCharacteristics\n\nControlled by the researcher\nHas two or more levels or conditions\nManipulated to observe its effect on the Dependent Variable\n\nGolf Putting Example\nIn a golf putting experiment, potential Independent Variables could include: - Hole size (e.g., small vs. big) - Putting distance (e.g., 5 feet vs. 10 feet) - Crowd noise (e.g., booing vs. cheering) - Incentive (e.g., win a egg, or lose an egg)"
+  },
+  {
+    "objectID": "t-tests.html#dependent-variables-dvs",
+    "href": "t-tests.html#dependent-variables-dvs",
+    "title": "Experiments - Revision",
+    "section": "Dependent Variables (DVs)",
+    "text": "Dependent Variables (DVs)\nDefinition\nA Dependent Variable is the outcome that is measured in an experiment. It’s the presumed effect in a cause-effect relationship. I remember this as “the DV is the data I collect that depends on the result of the manipulation”\nCharacteristics\n\nObserved and measured by the researcher\nChanges in response to the Independent Variable (if a causal relationship exists)\nQuantifiable and measurable in the right way!\n\nGolf Putting Example\nIn our golf putting experiment, potential Dependent Variables could include:\n\nPercentage of successful putts\nDistance from the hole for missed putts\nConsistency of putting stroke (measured by the purity of the sound when hit)"
+  },
+  {
+    "objectID": "t-tests.html#experiments-to-determine-causal-links-golf-joke",
+    "href": "t-tests.html#experiments-to-determine-causal-links-golf-joke",
+    "title": "Experiments - Revision",
+    "section": "Experiments to Determine Causal Links (golf joke!)",
+    "text": "Experiments to Determine Causal Links (golf joke!)\nPurpose\nExperiments are designed to establish a causal relationship between the IV and DV by controlling for other factors that might influence the outcome.\nKey Components\n\nControl: Minimizing the influence of extraneous variables\nRandomization: Assigning participants or conditions randomly\nReplication: Repeating the experiment to ensure reliability\n\nSteps in Experimental Design\n\nFormulate a hypothesis\nIdentify and define the IV and DV\nDesign the experimental procedure\nCollect and analyze data\nDraw conclusions"
+  },
+  {
+    "objectID": "t-tests.html#experiment-overview",
+    "href": "t-tests.html#experiment-overview",
+    "title": "Experiments - Revision",
+    "section": "Experiment Overview",
+    "text": "Experiment Overview\n\nIndependent Variable (IV):\n\nPresence of crowd noise (2 levels: Booing vs. Cheering)\n\nDependent Variable (DV):\n\nPutting accuracy (percentage of successful putts)"
+  },
+  {
+    "objectID": "t-tests.html#between-groups-design-concept",
+    "href": "t-tests.html#between-groups-design-concept",
+    "title": "Experiments - Revision",
+    "section": "Between-Groups Design Concept",
+    "text": "Between-Groups Design Concept\nIn this between-groups design:\n\nWe have two separate groups of participants\nEach group experiences only one condition of the IV\nWe compare the mean scores of the two groups on the DV"
+  },
+  {
+    "objectID": "t-tests.html#golf-putting-experiment-example",
+    "href": "t-tests.html#golf-putting-experiment-example",
+    "title": "Experiments - Revision",
+    "section": "Golf Putting Experiment Example",
+    "text": "Golf Putting Experiment Example\nHypotheses\n\nNull Hypothesis (H0):\n\nThere is no significant difference in putting accuracy between the booing and cheering conditions.\n\nAlternative Hypothesis (H1):\n\nThere is a significant difference in putting accuracy between the booing and cheering conditions.\n\n\nMethod\nParticipants\n\n40 amateur golfers (20 per group)\nRandomly assigned to either the Booing condition or the Cheering condition\n\nMaterials\n\nStandard putters and golf balls\nPutting green with a straight 10-foot putt\nAudio system for the cheering condition\n\nProcedure\n\nParticipants are briefed on the task but not told about the specific hypothesis\nEach participant attempts 20 putts\nBooing group: putts while the horrible crowd boos and jeers\nCheering group: putts while the crowd goes wild with excitement\n\nData Structure\nOur data might look like this:\n\n\n\nParticipant\nCondition\nSuccess Rate (%)\n\n\n\n\n1\nBooing\n70\n\n\n2\nBooing\n65\n\n\n…\n…\n…\n\n\n20\nBooing\n75\n\n\n21\nCheering\n80\n\n\n22\nCheering\n85\n\n\n…\n…\n…\n\n\n40\nCheering\n78\n\n\n\nAnalysis\nWe would use an independent samples t-test to analyze this data, comparing the means of the two groups."
+  },
+  {
+    "objectID": "t-tests.html#conducting-an-independent-samples-t-test",
+    "href": "t-tests.html#conducting-an-independent-samples-t-test",
+    "title": "Experiments - Revision",
+    "section": "Conducting an Independent Samples t-test",
+    "text": "Conducting an Independent Samples t-test\nAssumptions\n\nThe DV is continuous\nThe IV consists of two categorical, independent groups\nThere is independence of observations\nNo significant outliers in either group\nThe DV is approximately normally distributed for each group\nThere is homogeneity of variances\n\nCalculation\nWe won’t go into this here but it might look like this.\n\nInterpretation & Reporting\n\nIf p &lt; α (typically 0.05), reject the null hypothesis\nReport the t-statistic, degrees of freedom, p-value, and effect size (e.g., Cohen’s d)\n\n\nThere was a significant difference in putting success rates between the cheering (M = 79.74%, SD = 4.15) and booing (M = 70.71%, SD = 4.86) conditions; t(37) = -6.32, p &lt; 0.001, d = 2.00. The cheering condition resulted in a 9.04 percentage point increase in putting success rate compared to the booing condition."
+  },
+  {
+    "objectID": "t-tests.html#advantages-and-limitations",
+    "href": "t-tests.html#advantages-and-limitations",
+    "title": "Experiments - Revision",
+    "section": "Advantages and Limitations",
+    "text": "Advantages and Limitations\nAdvantages\n\nAvoids order effects and practice effects\nEach participant only needs to be tested once\nSuitable for manipulations that cannot be easily reversed, like a nice or awful crowd\n\nLimitations\n\nRequires more participants for the same statistical power as a within-subjects design\nIndividual differences between groups could affect the results\n\nFor example, one group might coincidentally have more skilled golfers\n\nEach participant provides data for only one condition, potentially limiting the richness of the data\nMore susceptible to the influence of outliers due to smaller per-condition sample sizes\nCannot account for how individuals might respond differently to various conditions\nMay be less sensitive to detecting small effects due to between-subject variability\nRandomization may not always perfectly balance out all potential confounding variables\nIf the manipulation is obvious, there might be demand characteristics where participants guess the hypothesis and alter their behavior\nIn our specific golf example, environmental factors (like slight changes in wind or green conditions) might affect one group more than the other if all tests for one condition are done together"
+  },
+  {
+    "objectID": "t-tests.html#experiment-overview-1",
+    "href": "t-tests.html#experiment-overview-1",
+    "title": "Experiments - Revision",
+    "section": "Experiment Overview",
+    "text": "Experiment Overview\n\nIndependent Variable (IV):\n\nIncentive type (2 levels: Win an egg vs. Lose an egg)\n\nDependent Variable (DV):\n\nPutting accuracy (percentage of successful putts)"
+  },
+  {
+    "objectID": "t-tests.html#within-subjects-design-concept",
+    "href": "t-tests.html#within-subjects-design-concept",
+    "title": "Experiments - Revision",
+    "section": "Within-Subjects Design Concept",
+    "text": "Within-Subjects Design Concept\nIn this within-subjects design:\n\nEach participant experiences both conditions of the IV\nThe order of conditions is counterbalanced across participants\nWe compare each participant’s performance across the two conditions"
+  },
+  {
+    "objectID": "t-tests.html#golf-putting-experiment-example-1",
+    "href": "t-tests.html#golf-putting-experiment-example-1",
+    "title": "Experiments - Revision",
+    "section": "Golf Putting Experiment Example",
+    "text": "Golf Putting Experiment Example\nHypotheses\n\nNull Hypothesis (H0):\n\nThere is no significant difference in putting accuracy between the “win an egg” and “lose an egg” conditions.\n\nAlternative Hypothesis (H1):\n\nThere is a significant difference in putting accuracy between the “win an egg” and “lose an egg” conditions.\n\n\nMethod\nParticipants\n\n20 amateur golfers\nEach participant completes both conditions in a counterbalanced order\n\nMaterials\n\nStandard putters and golf balls\nPutting green with a straight 10-foot putt\nEggs as incentives\n\nProcedure\n\nParticipants are briefed on the task but not told about the specific hypothesis\nEach participant attempts 20 putts in each condition\n“Win an egg” condition: Participant wins an egg for each successful putt\n“Lose an egg” condition: Participant starts with 20 eggs and loses one for each missed putt\nOrder of conditions is counterbalanced across participants\n\nData Structure\nOur data might look like this:\n\n\n\nParticipant\nWin Egg (%)\nLose Egg (%)\n\n\n\n\n1\n75\n70\n\n\n2\n80\n75\n\n\n…\n…\n…\n\n\n20\n85\n80\n\n\n\nAnalysis\nWe would use a paired samples t-test to analyze this data, comparing each participant’s performance across the two conditions."
+  },
+  {
+    "objectID": "t-tests.html#conducting-a-paired-samples-t-test",
+    "href": "t-tests.html#conducting-a-paired-samples-t-test",
+    "title": "Experiments - Revision",
+    "section": "Conducting a Paired Samples t-test",
+    "text": "Conducting a Paired Samples t-test\nAssumptions\n\nThe DV is continuous\nThe IV consists of two related groups (repeated measures)\nNo significant outliers in the differences between the two related groups\nThe distribution of the differences should be approximately normally distributed\n\nCalculation\nWe won’t go into this here but it might look like this.\n\nInterpretation & Reporting\n\nIf p &lt; α (typically 0.05), reject the null hypothesis\nReport the t-statistic, degrees of freedom, p-value, and effect size (e.g., Cohen’s d)\n\n\nThere was a significant difference in putting success rates between the ‘win an egg’ (M = 79.87%, SD = 5.09) and ‘lose an egg’ (M = 74.76%, SD = 4.70) conditions; t(19) = 3.55, p &lt; 0.001, d = 0.79. The ‘win an egg’ condition resulted in a 5.96 percentage point increase in putting success rate compared to the ‘lose an egg’ condition."
+  },
+  {
+    "objectID": "t-tests.html#advantages-and-limitations-1",
+    "href": "t-tests.html#advantages-and-limitations-1",
+    "title": "Experiments - Revision",
+    "section": "Advantages and Limitations",
+    "text": "Advantages and Limitations\nAdvantages\n\nControls for individual differences in golfing ability\nRequires fewer participants for the same statistical power\nEach participant provides data for both conditions, allowing for richer within-subject comparisons\nMore sensitive to detecting small effects due to reduced error variance\n\nLimitations\n\nPotential for order effects (partially addressed through counterbalancing)\nPractice effects may occur as participants become more familiar with the task\nFatigue effects may influence performance in the second condition\nCarryover effects from one condition to another (e.g., strategy developed in first condition applied to second)\nCannot be used for manipulations that have lasting effects (unlike the between-subjects design)\nParticipants may guess the hypothesis more easily, potentially leading to demand characteristics\nAnalysis can be more complex, especially if order effects need to be accounted for\nIn our specific golf example, the psychological impact of winning or losing eggs in the first condition might affect performance in the second condition"
+  },
+  {
+    "objectID": "t-tests.html#bridge-from-t-tests-to-one-way-anova",
+    "href": "t-tests.html#bridge-from-t-tests-to-one-way-anova",
+    "title": "Experiments - Revision",
+    "section": "Bridge: From t-tests to One-Way ANOVA",
+    "text": "Bridge: From t-tests to One-Way ANOVA\nWhen we move beyond comparing just two groups, we enter the realm of Analysis of Variance (ANOVA). The simplest form of ANOVA is the one-way ANOVA, which is used when we have one independent variable (IV) with three or more levels.\nOne-Way ANOVA: Three Group Comparison\nLet’s consider an extension of our TeemuBall experiment where we have three types of crowd reactions:\nIndependent Variable (IV): Crowd Reaction (3 levels: Booing, Silence, Cheering) Dependent Variable (DV): Accuracy (percentage of successful throws)\nDesign Concept\n\nThree separate groups of participants\nEach group experiences one type of crowd reaction\n\nMethod\nParticipants\n\n60 participants (20 per group)\nRandomly assigned to one of three conditions\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in their assigned condition\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nAccuracy (%)\n\n\n\n\n1\nBooing\n70\n\n\n2\nBooing\n75\n\n\n…\n…\n…\n\n\n21\nSilence\n80\n\n\n…\n…\n…\n\n\n41\nCheering\n85\n\n\n…\n…\n…\n\n\n\nAnalysis\n\nOne-way between-groups ANOVA\n\nKey Points\n\nExtension of t-test: One-way ANOVA is an extension of the independent samples t-test, allowing comparison of more than two groups.\nOverall F-test: ANOVA provides an overall F-test to determine if there are any significant differences among the groups.\nPost-hoc tests: If the overall F-test is significant, post-hoc tests (e.g., Tukey’s HSD) can determine which specific groups differ from each other.\nEfficiency: One-way ANOVA is more efficient than conducting multiple t-tests, reducing the risk of Type I errors.\n\nThis bridge from t-tests to one-way ANOVA sets the stage for understanding more complex designs like the 2x2 ANOVA, where we introduce a second independent variable."
+  },
+  {
+    "objectID": "t-tests.html#overview-of-2x2-anova",
+    "href": "t-tests.html#overview-of-2x2-anova",
+    "title": "Experiments - Revision",
+    "section": "Overview of 2x2 ANOVA",
+    "text": "Overview of 2x2 ANOVA\nA 2x2 ANOVA (Analysis of Variance) is a powerful statistical technique that allows us to examine the effects of two independent variables (IVs) simultaneously on a dependent variable (DV). It extends the concept of a t-test, which compares means between two groups, to a more complex design with four groups.\nComponents of a 2x2 ANOVA:\n\nMain Effect of IV1: The overall effect of the first independent variable, averaged across levels of the second IV.\nMain Effect of IV2: The overall effect of the second independent variable, averaged across levels of the first IV.\nInteraction Effect: The combined effect of both IVs, which may be different from what we’d expect based on the main effects alone."
+  },
+  {
+    "objectID": "t-tests.html#x2-anova-visual-representations",
+    "href": "t-tests.html#x2-anova-visual-representations",
+    "title": "Experiments - Revision",
+    "section": "2x2 ANOVA Visual Representations",
+    "text": "2x2 ANOVA Visual Representations\nBasic 2x2 Table Structure\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\nMain Effect of Crowd Reaction\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\n\nYou’d expect A&C to consistently differ from B&D to show Crowd has a general effect\n\nMain Effect of Incentive\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\n\nYou’d expect A&B to consistently differ from C&D to show Incentive has a general effect\n\nInteraction Effect\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB!\n\n\nLose\nC\nD\n\n\n\nIf Crowd and Incentive both have general effects, where they interact e.g. B (assuming both positive) something magic might happen there.\nIf you have trouble grasping this (common) think about Drug interactions. You shouldn’t take Drug 1 and Drug 2 together or your nose will grow. If you are not taking either drug, fine. If you are taking only one of the two drugs, fine. But if you are in the condition where you are taking both drugs… they interact and your nose grows!\nThese schematic representations help illustrate:\n\nThe basic structure of a 2x2 design\nHow main effects involve comparisons across one variable (ignoring the other)\nHow interaction effects involve the unique combinations of both variables\n\nAdvantages over Multiple t-tests:\n\nEfficiency: Conducts multiple comparisons in a single analysis, reducing the risk of Type I errors.\nInteraction Detection: Can identify how the effect of one IV depends on the levels of the other IV.\nIncreased Power: Generally has more statistical power to detect effects than multiple separate t-tests."
+  },
+  {
+    "objectID": "t-tests.html#experiment-overview-2",
+    "href": "t-tests.html#experiment-overview-2",
+    "title": "Experiments - Revision",
+    "section": "Experiment Overview",
+    "text": "Experiment Overview\nTask:\n\nParticipants throw balls into Teemu’s Topmiler (a hat that looks like a basketball net)\n\nIndependent Variables (IVs):\n\n1. Crowd Reaction: Booing vs. Cheering\n2. Incentive: Win an egg vs. Lose an egg\n\nDependent Variable (DV):\n\nAccuracy (percentage of successful throws)"
+  },
+  {
+    "objectID": "t-tests.html#fully-between-groups-factorial-design-2b-x-2b-anova",
+    "href": "t-tests.html#fully-between-groups-factorial-design-2b-x-2b-anova",
+    "title": "Experiments - Revision",
+    "section": "1. Fully Between-Groups Factorial Design: 2(b) x 2(b) ANOVA",
+    "text": "1. Fully Between-Groups Factorial Design: 2(b) x 2(b) ANOVA\nDesign Concept\n\nFour separate (groups of) participants\nEach group experiences one combination of the two IVs\n\nMethod\nParticipants\n\n80 participants (20 per group)\nRandomly assigned to one of four conditions\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in their assigned condition\nConditions:\n\nBooing, Win an egg\nBooing, Lose an egg\nCheering, Win an egg\nCheering, Lose an egg\n\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nIncentive\nAccuracy (%)\n\n\n\n\n1\nBooing\nWin egg\n75\n\n\n2\nBooing\nWin egg\n80\n\n\n…\n…\n…\n…\n\n\n21\nBooing\nLose egg\n65\n\n\n…\n…\n…\n…\n\n\n41\nCheering\nWin egg\n85\n\n\n…\n…\n…\n…\n\n\n61\nCheering\nLose egg\n70\n\n\n…\n…\n…\n…\n\n\n\nAnalysis\n\nTwo-way between-groups ANOVA\n\nAdvantages and Limitations\nAdvantages\n\nNo order effects\nEach participant only tested once\nCan examine both main effects and interaction\n\nLimitations\n\nRequires larger sample size\nCannot account for individual differences across conditions"
+  },
+  {
+    "objectID": "t-tests.html#mixed-design-2w-x-2b-anova",
+    "href": "t-tests.html#mixed-design-2w-x-2b-anova",
+    "title": "Experiments - Revision",
+    "section": "2. Mixed Design: 2(w) x 2(b) ANOVA",
+    "text": "2. Mixed Design: 2(w) x 2(b) ANOVA\nDesign Concept\n\nTwo (groups of) participants\nEach participant experiences both levels of Incentive, but only one level of Crowd Reaction\n\nMethod\nParticipants\n\n40 participants (20 per group)\nRandomly assigned to either Booing or Cheering condition\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in the “Win egg” condition and 20 throws in the “Lose egg” condition\nIncentive order is counterbalanced\nParticipants remain in their assigned Crowd Reaction condition for all throws\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nWin Egg (%)\nLose Egg (%)\n\n\n\n\n1\nBooing\n75\n70\n\n\n2\nBooing\n80\n75\n\n\n…\n…\n…\n…\n\n\n21\nCheering\n85\n80\n\n\n…\n…\n…\n…\n\n\n\nAnalysis\n\nMixed ANOVA with Incentive as within-subjects factor and Crowd Reaction as between-groups factor\n\nAdvantages and Limitations\nAdvantages\n\nCombines benefits of within and between-subjects designs\nRequires fewer participants than fully between-groups\nCan examine individual differences in response to Incentive\n\nLimitations\n\nPotential for order effects in the Incentive factor\nMore complex analysis\nCannot examine individual differences across Crowd Reaction conditions"
+  },
+  {
+    "objectID": "t-tests.html#mixed-design-2b-x-2w-anova",
+    "href": "t-tests.html#mixed-design-2b-x-2w-anova",
+    "title": "Experiments - Revision",
+    "section": "3. Mixed Design: 2(b) x 2(w) ANOVA",
+    "text": "3. Mixed Design: 2(b) x 2(w) ANOVA\nDesign Concept\n\nTwo groups of participants\nEach participant experiences both levels of Crowd Reaction, but only one level of Incentive\n\nMethod\nParticipants\n\n40 participants (20 per group)\nRandomly assigned to either Win egg or Lose egg condition\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in the Booing condition and 20 throws in the Cheering condition\nCrowd Reaction order is counterbalanced\nParticipants remain in their assigned Incentive condition for all throws\n\nData Structure\n\n\n\nParticipant\nIncentive\nBooing (%)\nCheering (%)\n\n\n\n\n1\nWin egg\n75\n85\n\n\n2\nWin egg\n80\n90\n\n\n…\n…\n…\n…\n\n\n21\nLose egg\n65\n75\n\n\n…\n…\n…\n…\n\n\n\nAnalysis\n\nMixed ANOVA with Crowd Reaction as within-subjects factor and Incentive as between-groups factor\n\nAdvantages and Limitations\nAdvantages\n\nCombines benefits of within and between-subjects designs\nRequires fewer participants than fully between-groups\nCan examine individual differences in response to Crowd Reaction\n\nLimitations\n\nPotential for order effects in the Crowd Reaction factor\nMore complex analysis\nCannot examine individual differences across Incentive conditions"
+  },
+  {
+    "objectID": "t-tests.html#repeated-measures-design-2w-x-2w-anova",
+    "href": "t-tests.html#repeated-measures-design-2w-x-2w-anova",
+    "title": "Experiments - Revision",
+    "section": "4. Repeated Measures Design: 2(w) x 2(w) ANOVA",
+    "text": "4. Repeated Measures Design: 2(w) x 2(w) ANOVA\nDesign Concept\n\nOne group of participants\nEach participant experiences all combinations of the two IVs\n\nMethod\nParticipants\n\n20 participants\n\nProcedure\n\nParticipants are briefed on the task\nEach participant completes 20 throws in each of the four conditions:\n\nBooing, Win egg\nBooing, Lose egg\nCheering, Win egg\nCheering, Lose egg\n\nOrder of conditions is counterbalanced\n\nData Structure\n\n\n\n\n\n\n\n\n\n\nParticipant\nBooing, Win (%)\nBooing, Lose (%)\nCheering, Win (%)\nCheering, Lose (%)\n\n\n\n\n1\n75\n70\n85\n80\n\n\n2\n80\n75\n90\n85\n\n\n…\n…\n…\n…\n…\n\n\n\nAnalysis\n\nTwo-way repeated measures ANOVA\n\nAdvantages and Limitations\nAdvantages\n\nRequires fewest participants\nCan examine individual differences across all conditions\nHighest statistical power\n\nLimitations\n\nMost susceptible to order effects and practice effects\nPotential for participant fatigue\nMost complex analysis\nCannot be used if effects of conditions are long-lasting"
+  },
+  {
+    "objectID": "t-tests.html#into-some-detail",
+    "href": "t-tests.html#into-some-detail",
+    "title": "Experiments - Revision",
+    "section": "Into some detail",
+    "text": "Into some detail\n\n\n\n\n\n\nNote\n\n\nCopied with thanks from Matt Crump’s Asking Questions with Data OER under CC-BY-NC-SA 4.0 Online Textbook: https://crumplab.github.io/statistics/\nCitation: Crump, M. J. C., Navarro, D. J., & Suzuki, J. (2019, June 5). Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students. https://doi.org/10.17605/OSF.IO/JZE52\n\n\n\nDesigns with multiple factors are very common. When you read a research article you will often see graphs that show the results from designs with multiple factors. It would be good for you if you were comfortable interpreting the meaning of those results. The skill here is to be able to look at a graph and see the pattern of main effects and interactions. This skill is important, because the patterns in the data can quickly become very complicated looking, especially when there are more than two independent variables, with more than two levels.\n2x2 designs\nLet’s take the case of 2x2 designs. There will always be the possibility of two main effects and one interaction. You will always be able to compare the means for each main effect and interaction. If the appropriate means are different then there is a main effect or interaction. Here’s the thing, there a bunch of ways all of this can turn out. Check out the ways, there are 8 of them:\n\nno IV1 main effect, no IV2 main effect, no interaction\nIV1 main effect, no IV2 main effect, no interaction\nIV1 main effect, no IV2 main effect, interaction\nIV1 main effect, IV2 main effect, no interaction\nIV1 main effect, IV2 main effect, interaction\nno IV1 main effect, IV2 main effect, no interaction\nno IV1 main effect, IV2 main effect, interaction\nno IV1 main effect, no IV2 main effect, interaction\n\nOK, so if you run a 2x2, any of these 8 general patterns could occur in your data. That’s a lot to keep track of isn’t. As you develop your skills in examining graphs that plot means, you should be able to look at the graph and visually guesstimate if there is, or is not, a main effect or interaction. You will need you inferential statistics to tell you for sure, but it is worth knowing how to know see the patterns.\nFigure 1 shows the possible patterns of main effects and interactions in bar graph form. Here is a legend for the labels in the panels.\n\n1 = there was a main effect for IV1.\n~1 = there was not a main effect for IV1\n2 = there was a main effect for IV2\n~2 = there was not a main effect of IV2\n1x2 = there was an interaction\n~1x2 = there was not an interaction\n\n\n\n\n\n\n\n\n\nFigure 1: 8 Example patterns for means for each of the possible kinds of general outcomes in a 2x2 design.\n\n\n\n\n\nFigure 2 shows the same eight patterns in line graph form:\n\n\n\n\n\n\n\n\nFigure 2: Line graphs showing 8 possible general outcomes for a 2x2 design.\n\n\n\n\n\nThe line graphs accentuates the presence of interaction effects. Whenever the lines cross, or would cross if they kept going, you have a possibility of an interaction. Whenever the lines are parallel, there can’t be an interaction. When both of the points on the A side are higher or lower than both of the points on the B side, then you have a main effect for IV1 (A vs B). Whenever the green line is above or below the red line, then you have a main effect for IV2 (1 vs. 2). We know this is complicated. You should see what all the possibilities look like when we start adding more levels or more IVs. It gets nuts. Because of this nuttiness, it is often good practice to make your research designs simple (as few IVs and levels as possible to test your question). That way it will be easier to interpret your data. Whenever you see that someone ran a 4x3x7x2 design, your head should spin. It’s just too complicated."
+  },
+  {
+    "objectID": "t-tests.html#interpreting-main-effects-and-interactions",
+    "href": "t-tests.html#interpreting-main-effects-and-interactions",
+    "title": "Experiments - Revision",
+    "section": "Interpreting main effects and interactions",
+    "text": "Interpreting main effects and interactions\nThe interpretation of main effects and interactions can get tricky. Consider the concept of a main effect. This is the idea that a particular IV has a consistent effect. For example, drinking 5 cups of coffee makes you more awake compared to not drinking 5 cups of coffee. The main effect of drinking 5 cups of coffee vs not drinking coffee will generally be true across the levels of other IVs in our life. For example, let’s say you conducted an experiment testing whether the effect of drinking 5 cups of coffee vs not, changes depending on whether you are in your house or in a car. Perhaps the situation matters? No, probably not so much. You will probably still be more awake in your house, or your car, after having 5 cups of coffee, compared to if you hadn’t.\nThe coffee example is a reasonably good example of a consistent main effect. Another silly kind of example might be the main effect of shoes on your height. For example, if your IV was wearing shoes or not, and your DV was height, then we could expect to find a main effect of wearing shoes on your measurement of height. When you wear shoes, you will become taller compared to when you don’t wear shoes. Wearing shoes adds to your total height. In fact, it’s hard to imagine how the effect of wearing shoes on your total height would ever interact with other kinds of variables. You will be always be that extra bit taller wearing shoes. Indeed, if there was another manipulation that could cause an interaction that would truly be strange. For example, imagine if the effect of being inside a bodega or outside a bodega interacted with the effect of wearing shoes on your height. That could mean that shoes make you taller when you are outside a bodega, but when you step inside, your shoes make you shorter…but, obviously this is just totally ridiculous. That’s correct, it is often ridiculous to expect that one IV will have an influence on the effect of another, especially when there is no good reason.\nThe summary here is that it is convenient to think of main effects as a consistent influence of one manipulation. However, when an interaction is observed, this messes up the consistency of the main effect. That is the very definition of an interaction. It means that some main effect is not behaving consistently across different situations. Indeed, whenever we find an interaction, sometimes we can question whether or not there really is a general consistent effect of some manipulation, or instead whether that effect only happens in specific situations.\nFor this reason, you will often see that researchers report their findings this way:\n“We found a main effect of X, BUT, this main effect was qualified by an interaction between X and Y”.\nNotice the big BUT. Why is it there? The sentence points out that before they talk about the main effect, they need to first talk about the interaction, which is making the main effect behave inconsistently. In other words, the interpretation of the main effect depends on the interaction, the two things have to be thought of together to make sense of them.\nHere are two examples to help you make sense of these issues:\nA consistent main effect and an interaction\n\n\n\n\n\n\n\n\nFigure 3: Example means showing a generally consistent main effect along with an interaction\n\n\n\n\n\nFigure 3 shows a main effect and interaction. There is a main effect of IV2: the level 1 means (red points and line) are both lower than the level 2 means (aqua points and line). There is also an interaction. The size of the difference between the red and aqua points in the A condition (left) is bigger than the size of the difference in the B condition.\nHow would we interpret this? We could say there WAS a main effect of IV2, BUT it was qualified by an IV1 x IV2 interaction.\nWhat’s the qualification? The size of the IV2 effect changed as a function of the levels of IV1. It was big for level A, and small for level B of IV1.\nWhat does the qualification mean for the main effect? Well, first it means the main effect can be changed by the other IV. That’s important to know. Does it also mean that the main effect is not a real main effect because there was an interaction? Not really, there is a generally consistent effect of IV2. The green points are above the red points in all cases. Whatever IV2 is doing, it seems to work in at least a couple situations, even if the other IV also causes some change to the influence.\nAn inconsistent main effect and an interaction\n\n\n\n\n\n\n\n\nFigure 4: Example data showing how an interaction exists, and a main effect does not, even though the means for the main effect may show a difference\n\n\n\n\n\nFigure 4 shows another 2x2 design. You should see an interaction here straight away. The difference between the aqua and red points in condition A (left two dots) is huge, and there is 0 difference between them in condition B. Is there an interaction? Yes!\nAre there any main effects here? With data like this, sometimes an ANOVA will suggest that you do have significant main effects. For example, what is the mean difference between level 1 and 2 of IV2? That is the average of the green points ( (10+5)/2 = 15/2= 7.5 ) compared to the average of the red points (5). There will be a difference of 2.5 for the main effect (7.5 vs. 5).\nStarting to see the issue here? From the perspective of the main effect (which collapses over everything and ignores the interaction), there is an overall effect of 2.5. In other words, level 2 adds 2.5 in general compared to level 1. However, we can see from the graph that IV2 does not do anything in general. It does not add 2.5s everywhere. It adds 5 in condition A, and nothing in condition B. It only does one thing in one condition.\nWhat is happening here is that a “main effect” is produced by the process of averaging over a clear interaction.\nHow would we interpret this? We might have to say there was a main effect of IV2, BUT we would definitely say it was qualified by an IV1 x IV2 interaction.\nWhat’s the qualification? The size of the IV2 effect completely changes as a function of the levels of IV1. It was big for level A, and nonexistent for level B of IV1.\nWhat does the qualification mean for the main effect? In this case, we might doubt whether there is a main effect of IV2 at all. It could turn out that IV2 does not have a general influence over the DV all of the time, it may only do something in very specific circumstances, in combination with the presence of other factors."
+  },
+  {
+    "objectID": "t-tests.html#mixed-designs",
+    "href": "t-tests.html#mixed-designs",
+    "title": "Experiments - Revision",
+    "section": "Mixed Designs",
+    "text": "Mixed Designs\nThroughout this book we keep reminding you that research designs can take different forms. The manipulations can be between-subjects (different subjects in each group), or within-subjects (everybody contributes data in all conditions). If you have more than one manipulation, you can have a mixed design when one of your IVs is between-subjects and one of the other ones is within-subjects.\nThe only “trick” to these designs is to use the appropriate error terms to construct the F-values for each effect. Effects that have a within-subjects repeated measure (IV) use different error terms than effects that only have a between-subject IV. In principle, you could run an ANOVA with any number of IVs, and any of them good be between or within-subjects variables.\nBecause this is an introductory textbook, we leave out a full discussion on mixed designs. What we are leaving out are the formulas to construct ANOVA tables that show how to use the correct error terms for each effect. There are many good more advanced textbooks that discuss these issues in much more depth. And, these things can all be Googled. This is a bit of a cop-out on our part, and we may return to fill in this section at some point in the future (or perhaps someone else will add a chapter about this)."
+  },
+  {
+    "objectID": "t-tests.htm",
+    "href": "t-tests.htm",
+    "title": "Experiments - Revision",
+    "section": "",
+    "text": "Important\n\n\n\n\nUnderstanding IVs, DVs and Design is crucial for research design\nGolf putting used as a running example for T-Tests, OneWay ANOVA, and 2x2 ANOVA\nReminder to revisit foundational concepts if struggling\n\n\n\nUnderstanding the basics of experimental design is crucial for conducting scientific research, especially your Mini-Dissertation this year. In this review, we’ll explore the concepts of Independent Variables (IVs), Dependent Variables (DVs), and how experiments are designed to determine causal links. We’ll use golf putting as our running example.\nClarifying Independent and Dependent Variables for Your Mini-Dissertation:\nI want to remind you how crucial it is to fully grasp the concept of Independent Variables (IVs) and Dependent Variables (DVs). These were covered in depth last year and are central to the research design of your mini-dissertation. If you’re experiencing challenges now, it may stem from not being completely confident or competent in distinguishing between these key elements.\nThe Independent Variable is what you, as the researcher, manipulate or categorize, and the Dependent Variable is what you measure as a result of these manipulations. Whether you’re working on an experimental or correlational study, mastering this distinction is critical.\nPlease take time to revisit this foundational concept, as a clear understanding will simplify the complexity of your research and improve your analysis moving forward.\n\n\n\n\n\nAn Independent Variable is the factor that researchers manipulate or change in an experiment. It’s the presumed cause in a cause-effect relationship. I remember this by saying “the IV is the variable I manipulate!” - silly, but effective!\n\n\n\n\nControlled by the researcher\nHas two or more levels or conditions\nManipulated to observe its effect on the Dependent Variable\n\n\n\n\nIn a golf putting experiment, potential Independent Variables could include: - Hole size (e.g., small vs. big) - Putting distance (e.g., 5 feet vs. 10 feet) - Crowd noise (e.g., booing vs. cheering) - Incentive (e.g., win a egg, or lose an egg)\n\n\n\n\n\n\nA Dependent Variable is the outcome that is measured in an experiment. It’s the presumed effect in a cause-effect relationship. I remember this as “the DV is the data I collect that depends on the result of the manipulation”\n\n\n\n\nObserved and measured by the researcher\nChanges in response to the Independent Variable (if a causal relationship exists)\nQuantifiable and measurable in the right way!\n\n\n\n\nIn our golf putting experiment, potential Dependent Variables could include:\n\nPercentage of successful putts\nDistance from the hole for missed putts\nConsistency of putting stroke (measured by the purity of the sound when hit)\n\n\n\n\n\n\n\nExperiments are designed to establish a causal relationship between the IV and DV by controlling for other factors that might influence the outcome.\n\n\n\n\nControl: Minimizing the influence of extraneous variables\nRandomization: Assigning participants or conditions randomly\nReplication: Repeating the experiment to ensure reliability\n\n\n\n\n\nFormulate a hypothesis\nIdentify and define the IV and DV\nDesign the experimental procedure\nCollect and analyze data\nDraw conclusions"
+  },
+  {
+    "objectID": "t-tests.htm#introduction",
+    "href": "t-tests.htm#introduction",
+    "title": "Experiments - Revision",
+    "section": "",
+    "text": "Important\n\n\n\n\nUnderstanding IVs, DVs and Design is crucial for research design\nGolf putting used as a running example for T-Tests, OneWay ANOVA, and 2x2 ANOVA\nReminder to revisit foundational concepts if struggling\n\n\n\nUnderstanding the basics of experimental design is crucial for conducting scientific research, especially your Mini-Dissertation this year. In this review, we’ll explore the concepts of Independent Variables (IVs), Dependent Variables (DVs), and how experiments are designed to determine causal links. We’ll use golf putting as our running example.\nClarifying Independent and Dependent Variables for Your Mini-Dissertation:\nI want to remind you how crucial it is to fully grasp the concept of Independent Variables (IVs) and Dependent Variables (DVs). These were covered in depth last year and are central to the research design of your mini-dissertation. If you’re experiencing challenges now, it may stem from not being completely confident or competent in distinguishing between these key elements.\nThe Independent Variable is what you, as the researcher, manipulate or categorize, and the Dependent Variable is what you measure as a result of these manipulations. Whether you’re working on an experimental or correlational study, mastering this distinction is critical.\nPlease take time to revisit this foundational concept, as a clear understanding will simplify the complexity of your research and improve your analysis moving forward."
+  },
+  {
+    "objectID": "t-tests.htm#independent-variables-ivs",
+    "href": "t-tests.htm#independent-variables-ivs",
+    "title": "Experiments - Revision",
+    "section": "",
+    "text": "An Independent Variable is the factor that researchers manipulate or change in an experiment. It’s the presumed cause in a cause-effect relationship. I remember this by saying “the IV is the variable I manipulate!” - silly, but effective!\n\n\n\n\nControlled by the researcher\nHas two or more levels or conditions\nManipulated to observe its effect on the Dependent Variable\n\n\n\n\nIn a golf putting experiment, potential Independent Variables could include: - Hole size (e.g., small vs. big) - Putting distance (e.g., 5 feet vs. 10 feet) - Crowd noise (e.g., booing vs. cheering) - Incentive (e.g., win a egg, or lose an egg)"
+  },
+  {
+    "objectID": "t-tests.htm#dependent-variables-dvs",
+    "href": "t-tests.htm#dependent-variables-dvs",
+    "title": "Experiments - Revision",
+    "section": "",
+    "text": "A Dependent Variable is the outcome that is measured in an experiment. It’s the presumed effect in a cause-effect relationship. I remember this as “the DV is the data I collect that depends on the result of the manipulation”\n\n\n\n\nObserved and measured by the researcher\nChanges in response to the Independent Variable (if a causal relationship exists)\nQuantifiable and measurable in the right way!\n\n\n\n\nIn our golf putting experiment, potential Dependent Variables could include:\n\nPercentage of successful putts\nDistance from the hole for missed putts\nConsistency of putting stroke (measured by the purity of the sound when hit)"
+  },
+  {
+    "objectID": "t-tests.htm#experiments-to-determine-causal-links-golf-joke",
+    "href": "t-tests.htm#experiments-to-determine-causal-links-golf-joke",
+    "title": "Experiments - Revision",
+    "section": "",
+    "text": "Experiments are designed to establish a causal relationship between the IV and DV by controlling for other factors that might influence the outcome.\n\n\n\n\nControl: Minimizing the influence of extraneous variables\nRandomization: Assigning participants or conditions randomly\nReplication: Repeating the experiment to ensure reliability\n\n\n\n\n\nFormulate a hypothesis\nIdentify and define the IV and DV\nDesign the experimental procedure\nCollect and analyze data\nDraw conclusions"
+  },
+  {
+    "objectID": "t-tests.htm#experiment-overview",
+    "href": "t-tests.htm#experiment-overview",
+    "title": "Experiments - Revision",
+    "section": "Experiment Overview",
+    "text": "Experiment Overview\n\nIndependent Variable (IV):\n\nPresence of crowd noise (2 levels: Booing vs. Cheering)\n\nDependent Variable (DV):\n\nPutting accuracy (percentage of successful putts)"
+  },
+  {
+    "objectID": "t-tests.htm#between-groups-design-concept",
+    "href": "t-tests.htm#between-groups-design-concept",
+    "title": "Experiments - Revision",
+    "section": "Between-Groups Design Concept",
+    "text": "Between-Groups Design Concept\nIn this between-groups design:\n\nWe have two separate groups of participants\nEach group experiences only one condition of the IV\nWe compare the mean scores of the two groups on the DV"
+  },
+  {
+    "objectID": "t-tests.htm#golf-putting-experiment-example",
+    "href": "t-tests.htm#golf-putting-experiment-example",
+    "title": "Experiments - Revision",
+    "section": "Golf Putting Experiment Example",
+    "text": "Golf Putting Experiment Example\n\nHypotheses\n\nNull Hypothesis (H0):\n\nThere is no significant difference in putting accuracy between the booing and cheering conditions.\n\nAlternative Hypothesis (H1):\n\nThere is a significant difference in putting accuracy between the booing and cheering conditions.\n\n\n\n\nMethod\n\nParticipants\n\n40 amateur golfers (20 per group)\nRandomly assigned to either the Booing condition or the Cheering condition\n\n\n\nMaterials\n\nStandard putters and golf balls\nPutting green with a straight 10-foot putt\nAudio system for the cheering condition\n\n\n\nProcedure\n\nParticipants are briefed on the task but not told about the specific hypothesis\nEach participant attempts 20 putts\nBooing group: putts while the horrible crowd boos and jeers\nCheering group: putts while the crowd goes wild with excitement\n\n\n\n\nData Structure\nOur data might look like this:\n\n\n\nParticipant\nCondition\nSuccess Rate (%)\n\n\n\n\n1\nBooing\n70\n\n\n2\nBooing\n65\n\n\n…\n…\n…\n\n\n20\nBooing\n75\n\n\n21\nCheering\n80\n\n\n22\nCheering\n85\n\n\n…\n…\n…\n\n\n40\nCheering\n78\n\n\n\n\n\nAnalysis\nWe would use an independent samples t-test to analyze this data, comparing the means of the two groups."
+  },
+  {
+    "objectID": "t-tests.htm#conducting-an-independent-samples-t-test",
+    "href": "t-tests.htm#conducting-an-independent-samples-t-test",
+    "title": "Experiments - Revision",
+    "section": "Conducting an Independent Samples t-test",
+    "text": "Conducting an Independent Samples t-test\n\nAssumptions\n\nThe DV is continuous\nThe IV consists of two categorical, independent groups\nThere is independence of observations\nNo significant outliers in either group\nThe DV is approximately normally distributed for each group\nThere is homogeneity of variances\n\n\n\nCalculation\nWe won’t go into this here but it might look like this.\n\n\n\n\n\n\n\n\n\n\n\nInterpretation & Reporting\n\nIf p &lt; α (typically 0.05), reject the null hypothesis\nReport the t-statistic, degrees of freedom, p-value, and effect size (e.g., Cohen’s d)\n\n\nThere was a significant difference in putting success rates between the cheering (M = 79.74%, SD = 4.15) and booing (M = 70.71%, SD = 4.86) conditions; t(37) = -6.32, p &lt; 0.001, d = 2.00. The cheering condition resulted in a 9.04 percentage point increase in putting success rate compared to the booing condition."
+  },
+  {
+    "objectID": "t-tests.htm#advantages-and-limitations",
+    "href": "t-tests.htm#advantages-and-limitations",
+    "title": "Experiments - Revision",
+    "section": "Advantages and Limitations",
+    "text": "Advantages and Limitations\n\nAdvantages\n\nAvoids order effects and practice effects\nEach participant only needs to be tested once\nSuitable for manipulations that cannot be easily reversed, like a nice or awful crowd\n\n\n\nLimitations\n\nRequires more participants for the same statistical power as a within-subjects design\nIndividual differences between groups could affect the results\n\nFor example, one group might coincidentally have more skilled golfers\n\nEach participant provides data for only one condition, potentially limiting the richness of the data\nMore susceptible to the influence of outliers due to smaller per-condition sample sizes\nCannot account for how individuals might respond differently to various conditions\nMay be less sensitive to detecting small effects due to between-subject variability\nRandomization may not always perfectly balance out all potential confounding variables\nIf the manipulation is obvious, there might be demand characteristics where participants guess the hypothesis and alter their behavior\nIn our specific golf example, environmental factors (like slight changes in wind or green conditions) might affect one group more than the other if all tests for one condition are done together"
+  },
+  {
+    "objectID": "t-tests.htm#experiment-overview-1",
+    "href": "t-tests.htm#experiment-overview-1",
+    "title": "Experiments - Revision",
+    "section": "Experiment Overview",
+    "text": "Experiment Overview\n\nIndependent Variable (IV):\n\nIncentive type (2 levels: Win an egg vs. Lose an egg)\n\nDependent Variable (DV):\n\nPutting accuracy (percentage of successful putts)"
+  },
+  {
+    "objectID": "t-tests.htm#within-subjects-design-concept",
+    "href": "t-tests.htm#within-subjects-design-concept",
+    "title": "Experiments - Revision",
+    "section": "Within-Subjects Design Concept",
+    "text": "Within-Subjects Design Concept\nIn this within-subjects design:\n\nEach participant experiences both conditions of the IV\nThe order of conditions is counterbalanced across participants\nWe compare each participant’s performance across the two conditions"
+  },
+  {
+    "objectID": "t-tests.htm#golf-putting-experiment-example-1",
+    "href": "t-tests.htm#golf-putting-experiment-example-1",
+    "title": "Experiments - Revision",
+    "section": "Golf Putting Experiment Example",
+    "text": "Golf Putting Experiment Example\n\nHypotheses\n\nNull Hypothesis (H0):\n\nThere is no significant difference in putting accuracy between the “win an egg” and “lose an egg” conditions.\n\nAlternative Hypothesis (H1):\n\nThere is a significant difference in putting accuracy between the “win an egg” and “lose an egg” conditions.\n\n\n\n\nMethod\n\nParticipants\n\n20 amateur golfers\nEach participant completes both conditions in a counterbalanced order\n\n\n\nMaterials\n\nStandard putters and golf balls\nPutting green with a straight 10-foot putt\nEggs as incentives\n\n\n\nProcedure\n\nParticipants are briefed on the task but not told about the specific hypothesis\nEach participant attempts 20 putts in each condition\n“Win an egg” condition: Participant wins an egg for each successful putt\n“Lose an egg” condition: Participant starts with 20 eggs and loses one for each missed putt\nOrder of conditions is counterbalanced across participants\n\n\n\n\nData Structure\nOur data might look like this:\n\n\n\nParticipant\nWin Egg (%)\nLose Egg (%)\n\n\n\n\n1\n75\n70\n\n\n2\n80\n75\n\n\n…\n…\n…\n\n\n20\n85\n80\n\n\n\n\n\nAnalysis\nWe would use a paired samples t-test to analyze this data, comparing each participant’s performance across the two conditions."
+  },
+  {
+    "objectID": "t-tests.htm#conducting-a-paired-samples-t-test",
+    "href": "t-tests.htm#conducting-a-paired-samples-t-test",
+    "title": "Experiments - Revision",
+    "section": "Conducting a Paired Samples t-test",
+    "text": "Conducting a Paired Samples t-test\n\nAssumptions\n\nThe DV is continuous\nThe IV consists of two related groups (repeated measures)\nNo significant outliers in the differences between the two related groups\nThe distribution of the differences should be approximately normally distributed\n\n\n\nCalculation\nWe won’t go into this here but it might look like this.\n\n\n\n\n\n\n\n\n\n\n\nInterpretation & Reporting\n\nIf p &lt; α (typically 0.05), reject the null hypothesis\nReport the t-statistic, degrees of freedom, p-value, and effect size (e.g., Cohen’s d)\n\n\nThere was a significant difference in putting success rates between the ‘win an egg’ (M = 79.87%, SD = 5.09) and ‘lose an egg’ (M = 74.76%, SD = 4.70) conditions; t(19) = 3.55, p &lt; 0.001, d = 0.79. The ‘win an egg’ condition resulted in a 5.96 percentage point increase in putting success rate compared to the ‘lose an egg’ condition."
+  },
+  {
+    "objectID": "t-tests.htm#advantages-and-limitations-1",
+    "href": "t-tests.htm#advantages-and-limitations-1",
+    "title": "Experiments - Revision",
+    "section": "Advantages and Limitations",
+    "text": "Advantages and Limitations\n\nAdvantages\n\nControls for individual differences in golfing ability\nRequires fewer participants for the same statistical power\nEach participant provides data for both conditions, allowing for richer within-subject comparisons\nMore sensitive to detecting small effects due to reduced error variance\n\n\n\nLimitations\n\nPotential for order effects (partially addressed through counterbalancing)\nPractice effects may occur as participants become more familiar with the task\nFatigue effects may influence performance in the second condition\nCarryover effects from one condition to another (e.g., strategy developed in first condition applied to second)\nCannot be used for manipulations that have lasting effects (unlike the between-subjects design)\nParticipants may guess the hypothesis more easily, potentially leading to demand characteristics\nAnalysis can be more complex, especially if order effects need to be accounted for\nIn our specific golf example, the psychological impact of winning or losing eggs in the first condition might affect performance in the second condition"
+  },
+  {
+    "objectID": "t-tests.htm#bridge-from-t-tests-to-one-way-anova",
+    "href": "t-tests.htm#bridge-from-t-tests-to-one-way-anova",
+    "title": "Experiments - Revision",
+    "section": "Bridge: From t-tests to One-Way ANOVA",
+    "text": "Bridge: From t-tests to One-Way ANOVA\nWhen we move beyond comparing just two groups, we enter the realm of Analysis of Variance (ANOVA). The simplest form of ANOVA is the one-way ANOVA, which is used when we have one independent variable (IV) with three or more levels.\n\nOne-Way ANOVA: Three Group Comparison\nLet’s consider an extension of our TeemuBall experiment where we have three types of crowd reactions:\nIndependent Variable (IV): Crowd Reaction (3 levels: Booing, Silence, Cheering) Dependent Variable (DV): Accuracy (percentage of successful throws)\n\nDesign Concept\n\nThree separate groups of participants\nEach group experiences one type of crowd reaction\n\n\n\nMethod\n\nParticipants\n\n60 participants (20 per group)\nRandomly assigned to one of three conditions\n\n\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in their assigned condition\n\n\n\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nAccuracy (%)\n\n\n\n\n1\nBooing\n70\n\n\n2\nBooing\n75\n\n\n…\n…\n…\n\n\n21\nSilence\n80\n\n\n…\n…\n…\n\n\n41\nCheering\n85\n\n\n…\n…\n…\n\n\n\n\n\nAnalysis\n\nOne-way between-groups ANOVA\n\n\n\nKey Points\n\nExtension of t-test: One-way ANOVA is an extension of the independent samples t-test, allowing comparison of more than two groups.\nOverall F-test: ANOVA provides an overall F-test to determine if there are any significant differences among the groups.\nPost-hoc tests: If the overall F-test is significant, post-hoc tests (e.g., Tukey’s HSD) can determine which specific groups differ from each other.\nEfficiency: One-way ANOVA is more efficient than conducting multiple t-tests, reducing the risk of Type I errors.\n\nThis bridge from t-tests to one-way ANOVA sets the stage for understanding more complex designs like the 2x2 ANOVA, where we introduce a second independent variable."
+  },
+  {
+    "objectID": "t-tests.htm#overview-of-2x2-anova",
+    "href": "t-tests.htm#overview-of-2x2-anova",
+    "title": "Experiments - Revision",
+    "section": "Overview of 2x2 ANOVA",
+    "text": "Overview of 2x2 ANOVA\nA 2x2 ANOVA (Analysis of Variance) is a powerful statistical technique that allows us to examine the effects of two independent variables (IVs) simultaneously on a dependent variable (DV). It extends the concept of a t-test, which compares means between two groups, to a more complex design with four groups.\n\nComponents of a 2x2 ANOVA:\n\nMain Effect of IV1: The overall effect of the first independent variable, averaged across levels of the second IV.\nMain Effect of IV2: The overall effect of the second independent variable, averaged across levels of the first IV.\nInteraction Effect: The combined effect of both IVs, which may be different from what we’d expect based on the main effects alone."
+  },
+  {
+    "objectID": "t-tests.htm#x2-anova-visual-representations",
+    "href": "t-tests.htm#x2-anova-visual-representations",
+    "title": "Experiments - Revision",
+    "section": "2x2 ANOVA Visual Representations",
+    "text": "2x2 ANOVA Visual Representations\n\nBasic 2x2 Table Structure\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\n\n\nMain Effect of Crowd Reaction\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\n\nYou’d expect A&C to consistently differ from B&D to show Crowd has a general effect\n\n\n\nMain Effect of Incentive\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\n\nYou’d expect A&B to consistently differ from C&D to show Incentive has a general effect\n\n\n\nInteraction Effect\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB!\n\n\nLose\nC\nD\n\n\n\nIf Crowd and Incentive both have general effects, where they interact e.g. B (assuming both positive) something magic might happen there.\nIf you have trouble grasping this (common) think about Drug interactions. You shouldn’t take Drug 1 and Drug 2 together or your nose will grow. If you are not taking either drug, fine. If you are taking only one of the two drugs, fine. But if you are in the condition where you are taking both drugs… they interact and your nose grows!\nThese schematic representations help illustrate:\n\nThe basic structure of a 2x2 design\nHow main effects involve comparisons across one variable (ignoring the other)\nHow interaction effects involve the unique combinations of both variables\n\n\n\nAdvantages over Multiple t-tests:\n\nEfficiency: Conducts multiple comparisons in a single analysis, reducing the risk of Type I errors.\nInteraction Detection: Can identify how the effect of one IV depends on the levels of the other IV.\nIncreased Power: Generally has more statistical power to detect effects than multiple separate t-tests."
+  },
+  {
+    "objectID": "t-tests.htm#experiment-overview-2",
+    "href": "t-tests.htm#experiment-overview-2",
+    "title": "Experiments - Revision",
+    "section": "Experiment Overview",
+    "text": "Experiment Overview\nTask:\n\nParticipants throw balls into Teemu’s Topmiler (a hat that looks like a basketball net)\n\nIndependent Variables (IVs):\n\n1. Crowd Reaction: Booing vs. Cheering\n2. Incentive: Win an egg vs. Lose an egg\n\nDependent Variable (DV):\n\nAccuracy (percentage of successful throws)"
+  },
+  {
+    "objectID": "t-tests.htm#fully-between-groups-factorial-design-2b-x-2b-anova",
+    "href": "t-tests.htm#fully-between-groups-factorial-design-2b-x-2b-anova",
+    "title": "Experiments - Revision",
+    "section": "1. Fully Between-Groups Factorial Design: 2(b) x 2(b) ANOVA",
+    "text": "1. Fully Between-Groups Factorial Design: 2(b) x 2(b) ANOVA\n\nDesign Concept\n\nFour separate (groups of) participants\nEach group experiences one combination of the two IVs\n\n\n\nMethod\n\nParticipants\n\n80 participants (20 per group)\nRandomly assigned to one of four conditions\n\n\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in their assigned condition\nConditions:\n\nBooing, Win an egg\nBooing, Lose an egg\nCheering, Win an egg\nCheering, Lose an egg\n\n\n\n\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nIncentive\nAccuracy (%)\n\n\n\n\n1\nBooing\nWin egg\n75\n\n\n2\nBooing\nWin egg\n80\n\n\n…\n…\n…\n…\n\n\n21\nBooing\nLose egg\n65\n\n\n…\n…\n…\n…\n\n\n41\nCheering\nWin egg\n85\n\n\n…\n…\n…\n…\n\n\n61\nCheering\nLose egg\n70\n\n\n…\n…\n…\n…\n\n\n\n\n\nAnalysis\n\nTwo-way between-groups ANOVA\n\n\n\nAdvantages and Limitations\n\nAdvantages\n\nNo order effects\nEach participant only tested once\nCan examine both main effects and interaction\n\n\n\nLimitations\n\nRequires larger sample size\nCannot account for individual differences across conditions"
+  },
+  {
+    "objectID": "t-tests.htm#mixed-design-2w-x-2b-anova",
+    "href": "t-tests.htm#mixed-design-2w-x-2b-anova",
+    "title": "Experiments - Revision",
+    "section": "2. Mixed Design: 2(w) x 2(b) ANOVA",
+    "text": "2. Mixed Design: 2(w) x 2(b) ANOVA\n\nDesign Concept\n\nTwo (groups of) participants\nEach participant experiences both levels of Incentive, but only one level of Crowd Reaction\n\n\n\nMethod\n\nParticipants\n\n40 participants (20 per group)\nRandomly assigned to either Booing or Cheering condition\n\n\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in the “Win egg” condition and 20 throws in the “Lose egg” condition\nIncentive order is counterbalanced\nParticipants remain in their assigned Crowd Reaction condition for all throws\n\n\n\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nWin Egg (%)\nLose Egg (%)\n\n\n\n\n1\nBooing\n75\n70\n\n\n2\nBooing\n80\n75\n\n\n…\n…\n…\n…\n\n\n21\nCheering\n85\n80\n\n\n…\n…\n…\n…\n\n\n\n\n\nAnalysis\n\nMixed ANOVA with Incentive as within-subjects factor and Crowd Reaction as between-groups factor\n\n\n\nAdvantages and Limitations\n\nAdvantages\n\nCombines benefits of within and between-subjects designs\nRequires fewer participants than fully between-groups\nCan examine individual differences in response to Incentive\n\n\n\nLimitations\n\nPotential for order effects in the Incentive factor\nMore complex analysis\nCannot examine individual differences across Crowd Reaction conditions"
+  },
+  {
+    "objectID": "t-tests.htm#mixed-design-2b-x-2w-anova",
+    "href": "t-tests.htm#mixed-design-2b-x-2w-anova",
+    "title": "Experiments - Revision",
+    "section": "3. Mixed Design: 2(b) x 2(w) ANOVA",
+    "text": "3. Mixed Design: 2(b) x 2(w) ANOVA\n\nDesign Concept\n\nTwo groups of participants\nEach participant experiences both levels of Crowd Reaction, but only one level of Incentive\n\n\n\nMethod\n\nParticipants\n\n40 participants (20 per group)\nRandomly assigned to either Win egg or Lose egg condition\n\n\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in the Booing condition and 20 throws in the Cheering condition\nCrowd Reaction order is counterbalanced\nParticipants remain in their assigned Incentive condition for all throws\n\n\n\n\nData Structure\n\n\n\nParticipant\nIncentive\nBooing (%)\nCheering (%)\n\n\n\n\n1\nWin egg\n75\n85\n\n\n2\nWin egg\n80\n90\n\n\n…\n…\n…\n…\n\n\n21\nLose egg\n65\n75\n\n\n…\n…\n…\n…\n\n\n\n\n\nAnalysis\n\nMixed ANOVA with Crowd Reaction as within-subjects factor and Incentive as between-groups factor\n\n\n\nAdvantages and Limitations\n\nAdvantages\n\nCombines benefits of within and between-subjects designs\nRequires fewer participants than fully between-groups\nCan examine individual differences in response to Crowd Reaction\n\n\n\nLimitations\n\nPotential for order effects in the Crowd Reaction factor\nMore complex analysis\nCannot examine individual differences across Incentive conditions"
+  },
+  {
+    "objectID": "t-tests.htm#repeated-measures-design-2w-x-2w-anova",
+    "href": "t-tests.htm#repeated-measures-design-2w-x-2w-anova",
+    "title": "Experiments - Revision",
+    "section": "4. Repeated Measures Design: 2(w) x 2(w) ANOVA",
+    "text": "4. Repeated Measures Design: 2(w) x 2(w) ANOVA\n\nDesign Concept\n\nOne group of participants\nEach participant experiences all combinations of the two IVs\n\n\n\nMethod\n\nParticipants\n\n20 participants\n\n\n\nProcedure\n\nParticipants are briefed on the task\nEach participant completes 20 throws in each of the four conditions:\n\nBooing, Win egg\nBooing, Lose egg\nCheering, Win egg\nCheering, Lose egg\n\nOrder of conditions is counterbalanced\n\n\n\n\nData Structure\n\n\n\n\n\n\n\n\n\n\nParticipant\nBooing, Win (%)\nBooing, Lose (%)\nCheering, Win (%)\nCheering, Lose (%)\n\n\n\n\n1\n75\n70\n85\n80\n\n\n2\n80\n75\n90\n85\n\n\n…\n…\n…\n…\n…\n\n\n\n\n\nAnalysis\n\nTwo-way repeated measures ANOVA\n\n\n\nAdvantages and Limitations\n\nAdvantages\n\nRequires fewest participants\nCan examine individual differences across all conditions\nHighest statistical power\n\n\n\nLimitations\n\nMost susceptible to order effects and practice effects\nPotential for participant fatigue\nMost complex analysis\nCannot be used if effects of conditions are long-lasting"
+  },
+  {
+    "objectID": "t-tests.htm#into-some-detail",
+    "href": "t-tests.htm#into-some-detail",
+    "title": "Experiments - Revision",
+    "section": "Into some detail",
+    "text": "Into some detail\n\n\n\n\n\n\nNote\n\n\n\n\n\nCopied with thanks from Matt Crump’s Asking Questions with Data OER under CC-BY-NC-SA 4.0 Online Textbook: https://crumplab.github.io/statistics/\nCitation: Crump, M. J. C., Navarro, D. J., & Suzuki, J. (2019, June 5). Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students. https://doi.org/10.17605/OSF.IO/JZE52\n\n\n\nDesigns with multiple factors are very common. When you read a research article you will often see graphs that show the results from designs with multiple factors. It would be good for you if you were comfortable interpreting the meaning of those results. The skill here is to be able to look at a graph and see the pattern of main effects and interactions. This skill is important, because the patterns in the data can quickly become very complicated looking, especially when there are more than two independent variables, with more than two levels.\n\n2x2 designs\nLet’s take the case of 2x2 designs. There will always be the possibility of two main effects and one interaction. You will always be able to compare the means for each main effect and interaction. If the appropriate means are different then there is a main effect or interaction. Here’s the thing, there a bunch of ways all of this can turn out. Check out the ways, there are 8 of them:\n\nno IV1 main effect, no IV2 main effect, no interaction\nIV1 main effect, no IV2 main effect, no interaction\nIV1 main effect, no IV2 main effect, interaction\nIV1 main effect, IV2 main effect, no interaction\nIV1 main effect, IV2 main effect, interaction\nno IV1 main effect, IV2 main effect, no interaction\nno IV1 main effect, IV2 main effect, interaction\nno IV1 main effect, no IV2 main effect, interaction\n\nOK, so if you run a 2x2, any of these 8 general patterns could occur in your data. That’s a lot to keep track of isn’t. As you develop your skills in examining graphs that plot means, you should be able to look at the graph and visually guesstimate if there is, or is not, a main effect or interaction. You will need you inferential statistics to tell you for sure, but it is worth knowing how to know see the patterns.\nFigure 1 shows the possible patterns of main effects and interactions in bar graph form. Here is a legend for the labels in the panels.\n\n1 = there was a main effect for IV1.\n~1 = there was not a main effect for IV1\n2 = there was a main effect for IV2\n~2 = there was not a main effect of IV2\n1x2 = there was an interaction\n~1x2 = there was not an interaction\n\n\n\n\n\n\n\n\n\nFigure 1: 8 Example patterns for means for each of the possible kinds of general outcomes in a 2x2 design.\n\n\n\n\n\nFigure 2 shows the same eight patterns in line graph form:\n\n\n\n\n\n\n\n\nFigure 2: Line graphs showing 8 possible general outcomes for a 2x2 design.\n\n\n\n\n\nThe line graphs accentuates the presence of interaction effects. Whenever the lines cross, or would cross if they kept going, you have a possibility of an interaction. Whenever the lines are parallel, there can’t be an interaction. When both of the points on the A side are higher or lower than both of the points on the B side, then you have a main effect for IV1 (A vs B). Whenever the green line is above or below the red line, then you have a main effect for IV2 (1 vs. 2). We know this is complicated. You should see what all the possibilities look like when we start adding more levels or more IVs. It gets nuts. Because of this nuttiness, it is often good practice to make your research designs simple (as few IVs and levels as possible to test your question). That way it will be easier to interpret your data. Whenever you see that someone ran a 4x3x7x2 design, your head should spin. It’s just too complicated."
+  },
+  {
+    "objectID": "t-tests.htm#interpreting-main-effects-and-interactions",
+    "href": "t-tests.htm#interpreting-main-effects-and-interactions",
+    "title": "Experiments - Revision",
+    "section": "Interpreting main effects and interactions",
+    "text": "Interpreting main effects and interactions\nThe interpretation of main effects and interactions can get tricky. Consider the concept of a main effect. This is the idea that a particular IV has a consistent effect. For example, drinking 5 cups of coffee makes you more awake compared to not drinking 5 cups of coffee. The main effect of drinking 5 cups of coffee vs not drinking coffee will generally be true across the levels of other IVs in our life. For example, let’s say you conducted an experiment testing whether the effect of drinking 5 cups of coffee vs not, changes depending on whether you are in your house or in a car. Perhaps the situation matters? No, probably not so much. You will probably still be more awake in your house, or your car, after having 5 cups of coffee, compared to if you hadn’t.\nThe coffee example is a reasonably good example of a consistent main effect. Another silly kind of example might be the main effect of shoes on your height. For example, if your IV was wearing shoes or not, and your DV was height, then we could expect to find a main effect of wearing shoes on your measurement of height. When you wear shoes, you will become taller compared to when you don’t wear shoes. Wearing shoes adds to your total height. In fact, it’s hard to imagine how the effect of wearing shoes on your total height would ever interact with other kinds of variables. You will be always be that extra bit taller wearing shoes. Indeed, if there was another manipulation that could cause an interaction that would truly be strange. For example, imagine if the effect of being inside a bodega or outside a bodega interacted with the effect of wearing shoes on your height. That could mean that shoes make you taller when you are outside a bodega, but when you step inside, your shoes make you shorter…but, obviously this is just totally ridiculous. That’s correct, it is often ridiculous to expect that one IV will have an influence on the effect of another, especially when there is no good reason.\nThe summary here is that it is convenient to think of main effects as a consistent influence of one manipulation. However, when an interaction is observed, this messes up the consistency of the main effect. That is the very definition of an interaction. It means that some main effect is not behaving consistently across different situations. Indeed, whenever we find an interaction, sometimes we can question whether or not there really is a general consistent effect of some manipulation, or instead whether that effect only happens in specific situations.\nFor this reason, you will often see that researchers report their findings this way:\n“We found a main effect of X, BUT, this main effect was qualified by an interaction between X and Y”.\nNotice the big BUT. Why is it there? The sentence points out that before they talk about the main effect, they need to first talk about the interaction, which is making the main effect behave inconsistently. In other words, the interpretation of the main effect depends on the interaction, the two things have to be thought of together to make sense of them.\nHere are two examples to help you make sense of these issues:\n\nA consistent main effect and an interaction\n\n\n\n\n\n\n\n\nFigure 3: Example means showing a generally consistent main effect along with an interaction\n\n\n\n\n\nFigure 3 shows a main effect and interaction. There is a main effect of IV2: the level 1 means (red points and line) are both lower than the level 2 means (aqua points and line). There is also an interaction. The size of the difference between the red and aqua points in the A condition (left) is bigger than the size of the difference in the B condition.\nHow would we interpret this? We could say there WAS a main effect of IV2, BUT it was qualified by an IV1 x IV2 interaction.\nWhat’s the qualification? The size of the IV2 effect changed as a function of the levels of IV1. It was big for level A, and small for level B of IV1.\nWhat does the qualification mean for the main effect? Well, first it means the main effect can be changed by the other IV. That’s important to know. Does it also mean that the main effect is not a real main effect because there was an interaction? Not really, there is a generally consistent effect of IV2. The green points are above the red points in all cases. Whatever IV2 is doing, it seems to work in at least a couple situations, even if the other IV also causes some change to the influence.\n\n\nAn inconsistent main effect and an interaction\n\n\n\n\n\n\n\n\nFigure 4: Example data showing how an interaction exists, and a main effect does not, even though the means for the main effect may show a difference\n\n\n\n\n\nFigure 4 shows another 2x2 design. You should see an interaction here straight away. The difference between the aqua and red points in condition A (left two dots) is huge, and there is 0 difference between them in condition B. Is there an interaction? Yes!\nAre there any main effects here? With data like this, sometimes an ANOVA will suggest that you do have significant main effects. For example, what is the mean difference between level 1 and 2 of IV2? That is the average of the green points ( (10+5)/2 = 15/2= 7.5 ) compared to the average of the red points (5). There will be a difference of 2.5 for the main effect (7.5 vs. 5).\nStarting to see the issue here? From the perspective of the main effect (which collapses over everything and ignores the interaction), there is an overall effect of 2.5. In other words, level 2 adds 2.5 in general compared to level 1. However, we can see from the graph that IV2 does not do anything in general. It does not add 2.5s everywhere. It adds 5 in condition A, and nothing in condition B. It only does one thing in one condition.\nWhat is happening here is that a “main effect” is produced by the process of averaging over a clear interaction.\nHow would we interpret this? We might have to say there was a main effect of IV2, BUT we would definitely say it was qualified by an IV1 x IV2 interaction.\nWhat’s the qualification? The size of the IV2 effect completely changes as a function of the levels of IV1. It was big for level A, and nonexistent for level B of IV1.\nWhat does the qualification mean for the main effect? In this case, we might doubt whether there is a main effect of IV2 at all. It could turn out that IV2 does not have a general influence over the DV all of the time, it may only do something in very specific circumstances, in combination with the presence of other factors."
+  },
+  {
+    "objectID": "t-tests.htm#mixed-designs",
+    "href": "t-tests.htm#mixed-designs",
+    "title": "Experiments - Revision",
+    "section": "Mixed Designs",
+    "text": "Mixed Designs\nThroughout this book we keep reminding you that research designs can take different forms. The manipulations can be between-subjects (different subjects in each group), or within-subjects (everybody contributes data in all conditions). If you have more than one manipulation, you can have a mixed design when one of your IVs is between-subjects and one of the other ones is within-subjects.\nThe only “trick” to these designs is to use the appropriate error terms to construct the F-values for each effect. Effects that have a within-subjects repeated measure (IV) use different error terms than effects that only have a between-subject IV. In principle, you could run an ANOVA with any number of IVs, and any of them good be between or within-subjects variables.\nBecause this is an introductory textbook, we leave out a full discussion on mixed designs. What we are leaving out are the formulas to construct ANOVA tables that show how to use the correct error terms for each effect. There are many good more advanced textbooks that discuss these issues in much more depth. And, these things can all be Googled. This is a bit of a cop-out on our part, and we may return to fill in this section at some point in the future (or perhaps someone else will add a chapter about this)."
+  },
+  {
+    "objectID": "sliders.htm",
+    "href": "sliders.htm",
+    "title": "Sliders",
+    "section": "",
+    "text": "Content\nContent\nContent\n\nWill not appear in Slides\nThis is for the ladies out there. You know!"
+  },
+  {
+    "objectID": "sliders.htm#title",
+    "href": "sliders.htm#title",
+    "title": "Sliders",
+    "section": "",
+    "text": "Content\nContent\nContent\n\nWill not appear in Slides\nThis is for the ladies out there. You know!"
+  },
+  {
+    "objectID": "sliders.html#title",
+    "href": "sliders.html#title",
+    "title": "Sliders",
+    "section": "Title",
+    "text": "Title\n\nContent\nContent\nContent"
+  },
+  {
     "objectID": "index.html#dr.-gordon-wright",
     "href": "index.html#dr.-gordon-wright",
     "title": "Psychology Taster Lecture",
     "section": "Dr. Gordon Wright",
-    "text": "Dr. Gordon Wright\n\nLecturer in Deception, Mind-reading and People-Watching\n\n\nChief Mischief Officer - LittleMonkeyLab"
-  },
-  {
-    "objectID": "index.html#im-very-sorry",
-    "href": "index.html#im-very-sorry",
-    "title": "Psychology Taster Lecture",
-    "section": "I’m very sorry…",
-    "text": "I’m very sorry…"
+    "text": "Dr. Gordon Wright\n\nLecturer in Deception, Mind-reading and People-Watching\nLittleMonkeyLab"
   },
   {
     "objectID": "index.html#little-monkey",
@@ -49,6 +420,20 @@
     "text": "Who lies and how often?"
   },
   {
+    "objectID": "index.html#frequency-and-nature-of-lying",
+    "href": "index.html#frequency-and-nature-of-lying",
+    "title": "Psychology Taster Lecture",
+    "section": "Frequency and Nature of Lying",
+    "text": "Frequency and Nature of Lying\n\nMost people lie infrequently (depauloLying1996?)\n\nAverage: ~2 lies per day\nBUT: 40-50% tell zero lies in 24 hours\n~5% of people tell ~50% of all lies\n\nLying typically avoided despite potential benefits\n\nPure lie aversion demonstrated in studies (abelerTruth2012?)\nPeople often choose honesty even when lying is beneficial"
+  },
+  {
+    "objectID": "index.html#the-15-coin-flip-study-abelertruth2012",
+    "href": "index.html#the-15-coin-flip-study-abelertruth2012",
+    "title": "Psychology Taster Lecture",
+    "section": "The €15 Coin Flip Study (abelerTruth2012?)",
+    "text": "The €15 Coin Flip Study (abelerTruth2012?)\nThis is a landmark study which purports to illustrate the ‘generalised aversion to lying’\n\n\n\nStudy Setup:\n658 German participants\nPhone survey from home\n\nReport coin flip result:\n\nTails = €15 reward\nHeads = No reward\nComplete anonymity\n\n\n\n\n\nResults:\n\n44.4% reported tails (€15)\n55.6% reported heads (€0)\nDespite:\n\nFinancial incentive to lie\nNo detection possible\nMinimal reputation cost"
+  },
+  {
     "objectID": "index.html#but-is-it-so-bad",
     "href": "index.html#but-is-it-so-bad",
     "title": "Psychology Taster Lecture",
@@ -61,6 +446,13 @@
     "title": "Psychology Taster Lecture",
     "section": "Dunbar’s Number",
     "text": "Dunbar’s Number"
+  },
+  {
+    "objectID": "index.html#psychological-perspectives",
+    "href": "index.html#psychological-perspectives",
+    "title": "Psychology Taster Lecture",
+    "section": "Psychological Perspectives",
+    "text": "Psychological Perspectives\n\nMultiple subdisciplinary approaches:\n\nSocial psychology: relationship dynamics\nCognitive psychology: decision-making processes\nDevelopmental psychology: deception abilities in children\n\nCompeting theoretical frameworks:\n\nTruth-Default Theory (Levine, 2014)\nAdaptive Lie Detector (Street, 2015)"
   },
   {
     "objectID": "index.html#introducing-mind-space",
@@ -88,14 +480,21 @@
     "href": "index.html#whats-the-point",
     "title": "Psychology Taster Lecture",
     "section": "What’s the point?",
-    "text": "What’s the point?\n\nIt’s not just really cool (it is!)\nIt could offer us new ways to understand variability in Social Cognitive ability\nAnd understand some of the ‘magic’ abilities we share with cheeky monkeys"
+    "text": "What’s the point?\n\nIt’s not just really cool\nIt could offer us new ways to understand variability in Social Cognitive ability\nAnd understand some of the ‘magic’ abilities we share with cheeky monkeys"
+  },
+  {
+    "objectID": "index.html#societal-impact-of-deception",
+    "href": "index.html#societal-impact-of-deception",
+    "title": "Psychology Taster Lecture",
+    "section": "Societal Impact of Deception",
+    "text": "Societal Impact of Deception\n\nAffects multiple domains:\n\nLaw enforcement and courts\nCybersecurity (“social engineering”)\nBusiness negotiations\nPolitical sphere\nEmployment interviews\n\nStudied across disciplines: communication, anthropology, philosophy, marketing, management\nBroad economic and societal implications (DePaulo et al., 2003)"
   },
   {
     "objectID": "index.html#systematic-observation-in-natural-settings",
     "href": "index.html#systematic-observation-in-natural-settings",
     "title": "Psychology Taster Lecture",
     "section": "Systematic Observation in Natural Settings",
-    "text": "Systematic Observation in Natural Settings\n\nStreet Psychology\nObserving behavior without interference\nIdentifying patterns and anomalies\nReal-life Psychological Profiling\nInferring meaning and motive in everyday behaviour"
+    "text": "Systematic Observation in Natural Settings\n\nEveryday Psychology\nObserving behavior without interference\nIdentifying patterns and anomalies\nReal-life Psychological Profiling\nInferring meaning and motive in everyday behaviour"
   },
   {
     "objectID": "index.html#its-got-monkeys-too",
@@ -112,6 +511,20 @@
     "text": "I did some people-watching on the telly\nBBC Horizon - A Week Without Lying\nGoldsmiths Link"
   },
   {
+    "objectID": "index.html#cognitive-load-in-deception",
+    "href": "index.html#cognitive-load-in-deception",
+    "title": "Psychology Taster Lecture",
+    "section": "Cognitive Load in Deception",
+    "text": "Cognitive Load in Deception\n\nTraditional view: Lying is more cognitively demanding\n\nRequires suppressing truth\nNeed to create consistent story\n\nHowever, lying can sometimes be easier when:\n\nStakes/rewards are high (shalviHonesty2012?)\nLies are well-rehearsed (vanBockstaeleLying2015?)\nStory is simple (williamsDeception2013?)"
+  },
+  {
+    "objectID": "index.html#being-an-effective-liar",
+    "href": "index.html#being-an-effective-liar",
+    "title": "Psychology Taster Lecture",
+    "section": "Being an Effective Liar",
+    "text": "Being an Effective Liar\n\nKey strategies:\n\nReducing cognitive load through preparation\nEmbedding lies within truthful information\nSelf-deception to reduce cognitive demands\n\nInfluencing factors:\n\nPersonality traits (e.g., Machiavellianism)\nMoral cognition\nCultural context"
+  },
+  {
     "objectID": "index.html#forensic-psychology-unit",
     "href": "index.html#forensic-psychology-unit",
     "title": "Psychology Taster Lecture",
@@ -123,14 +536,14 @@
     "href": "index.html#do-you-want-to-play",
     "title": "Psychology Taster Lecture",
     "section": "Do you want to play?",
-    "text": "Do you want to play?\n\nThe topic for this year is…\nPsychological Profiling (in all it’s guises)\nAll students are welcome to join in (current and maybe future!)\n@ForensicGold on X.com\nhttps://www.gold.ac.uk/forensic-psychology-unit/"
+    "text": "Do you want to play?\n\nThis year we are putting together a 10-year review!\nAll students are welcome to join in (current and maybe future!)\n@ForensicGold on X.com\nhttps://www.gold.ac.uk/forensic-psychology-unit/"
   },
   {
     "objectID": "index.html#thank-you",
     "href": "index.html#thank-you",
     "title": "Psychology Taster Lecture",
     "section": "Thank you",
-    "text": "Thank you\nAny Questions?\nBut I think I forgot something…"
+    "text": "Thank you\nooops..\nBut I think I forgot something…"
   },
   {
     "objectID": "index.html#yes.-the-subject-i-mostly-teach",
@@ -138,5 +551,12 @@
     "title": "Psychology Taster Lecture",
     "section": "Yes. The subject I mostly teach…",
     "text": "Yes. The subject I mostly teach…"
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Psychology Taster Lecture",
+    "section": "References",
+    "text": "References\n\n\nDePaulo, B. M., Lindsay, J. J., Malone, B. E., Muhlenbruck, L., Charlton, K., & Cooper, H. (2003). Cues to deception. Psychological Bulletin Psychol Bull, 129(1), 74–118. https://doi.org/10.1037/0033-2909.129.1.74\n\n\nLevine, T. R. (2014). Truth-default theory (TDT): A theory of human deception and deception detection. Journal of Language and Social Psychology, 33(4), 378–392. https://doi.org/10.1177/0261927X14535916\n\n\nStreet, C. N. H. (2015). ALIED: Humans as adaptive lie detectors. Journal of Applied Research in Memory and Cognition, 4(4), 335–343. https://doi.org/10.1016/j.jarmac.2015.06.002"
   }
 ]
