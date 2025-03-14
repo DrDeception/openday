@@ -1,106 +1,368 @@
 ---
-title: "About"
+title: "MarshMallows"
+author: "Dr. Gordon Wright"
+affiliation: "LittleMonkeyLab @Goldsmiths"
+mainfont: Atkinson Hyperlegible
+format: 
+  revealjs: 
+    title-slide-attributes:
+      data-background-color: "black"
+    logo: "images/LMLLOGO.png"
+    incremental: true
+    scrollable: true
+    controls: true
+    controls-layout: edges
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 100px;
+      }
+      </style>
 ---
 
-About this site
+## Welcome!
 
-```{r}
-# Load required libraries
-library(ggplot2)
-library(dplyr)
-library(tidyr)
+:::{.r-fit-text}
+**Psychology at Goldsmiths**  
+*Where science meets creativity*
+:::
 
-# Sample data for the chart
-data <- data.frame(
-  AgeGroup = c("60-77", "45-60", "30-44", "18-29", "13-17", "8-12", "6-8"),
-  MoreThanFiveLies = c(1, 3, 4, 10, 11, 9, 9),
-  OneToFiveLies = c(10, 13, 28, 35, 45, 43, 43),
-  NoLies = c(89, 84, 68, 55, 45, 48, 48)
-)
+---
 
-# Reshape the data for plotting
-data_long <- data %>%
-  pivot_longer(cols = c("MoreThanFiveLies", "OneToFiveLies", "NoLies"),
-               names_to = "LieFrequency",
-               values_to = "Percentage")
+## Overview of Y1 Psychology at Goldsmiths
 
-# Define the order of the factors for AgeGroup and LieFrequency
-data_long$AgeGroup <- factor(data_long$AgeGroup, levels = rev(data$AgeGroup))
-data_long$LieFrequency <- factor(data_long$LieFrequency, 
-                                 levels = c("NoLies", "OneToFiveLies", "MoreThanFiveLies"))
+:::{.columns}
+:::{.column width="50%"}
+**Term 1 Modules**
+- Introduction to Psychology
+- Research Methods & Statistics I
+- Biological & Comparative Approaches
+- Cognitive Psychology
+:::
 
-# Improved color palette
-color_palette <- c("#d9d9d9", "#969696", "#525252")  # Light to dark grey
+:::{.column width="50%"}
+**Term 2 Modules**
+- Social Psychology
+- Developmental Psychology
+- Individual Differences
+- Applied Psychology
+:::
+:::
 
-# Create the stacked bar plot
-ggplot(data_long, aes(x = AgeGroup, y = Percentage, fill = LieFrequency)) +
-  geom_bar(stat = "identity", position = "stack", width = 0.7) +
-  scale_fill_manual(values = color_palette) +
-  coord_flip() +
-  labs(title = "Lying frequency, by age", subtitle = "Over a 24-hour period", 
-       x = "Age Group", y = "Percentage of Lies", fill = "Lies Frequency") +
-  theme_minimal() +
-  theme(legend.position = "top", 
-        plot.title = element_text(size = 16, face = "bold"),
-        plot.subtitle = element_text(size = 12),
-        legend.title = element_blank()) +
-  geom_text(aes(label = paste0(Percentage, "%")), 
-            position = position_stack(vjust = 0.5), 
-            size = 3, color = "white")
+:::{.notes}
+Emphasize our unique strengths: 
+- Critical approach to psychology
+- Integration of scientific rigor with creative thinking
+- Strong focus on research skills from day one
+:::
 
-```
+---
 
+## Are You Ready for University?
 
-```{r}
-# Load required libraries
-library(ggplot2)
-library(dplyr)
-library(tidyr)
+:::{.panel-tabset}
+### Time Management
 
-# Sample data for the chart
-data <- data.frame(
-  AgeGroup = c("60-77", "45-60", "30-44", "18-29", "13-17", "8-12", "6-8"),
-  MoreThanFiveLies = c(1, 3, 4, 10, 11, 9, 9),
-  OneToFiveLies = c(10, 13, 28, 35, 45, 43, 43),
-  NoLies = c(89, 84, 68, 55, 45, 48, 48)
-)
+- How do you currently organize your studies?
+- Can you manage multiple deadlines without supervision?
+- Do you have systems for tracking your work?
 
-# Reshape the data for plotting
-data_long <- data %>%
-  pivot_longer(cols = c("MoreThanFiveLies", "OneToFiveLies", "NoLies"),
-               names_to = "LieFrequency",
-               values_to = "Percentage")
+### Independent Learning
 
-# Define the order of the factors for AgeGroup and LieFrequency
-data_long$AgeGroup <- factor(data_long$AgeGroup, levels = rev(data$AgeGroup))
-data_long$LieFrequency <- factor(data_long$LieFrequency, 
-                                 levels = c("NoLies", "OneToFiveLies", "MoreThanFiveLies"))
+- How do you find information beyond what's provided?
+- Can you evaluate sources critically?
+- How comfortable are you with ambiguity?
 
-# Updated pastel color palette
-color_palette <- c("#f2f2f2", "#f7c6c7", "#FFEB84")  # Light grey, pastel pink, pastel yellow for 5+
+### Academic Skills
 
-# Create the stacked bar plot
-p <- ggplot(data_long, aes(x = AgeGroup, y = Percentage, fill = LieFrequency)) +
-  geom_bar(stat = "identity", position = "stack", width = 0.7) +
-  scale_fill_manual(values = color_palette) +
-  coord_flip() +
-  labs(title = "Lying frequency, by age", subtitle = "Over a 24-hour period", 
-       x = "Age Group", y = "Percentage of Lies", fill = "Lies Frequency") +
-  theme_minimal() +
-  theme(legend.position = "top", 
-        plot.title = element_text(size = 16, face = "bold"),
-        plot.subtitle = element_text(size = 12),
-        legend.title = element_blank()) +
-  geom_text(aes(label = ifelse(LieFrequency == "NoLies", paste0(Percentage, "%"), "")), 
-            position = position_stack(vjust = 0.5), 
-            size = 3, color = "black") +  # Black text for "No Lies"
-  geom_text(aes(label = ifelse(LieFrequency != "NoLies", paste0(Percentage, "%"), "")), 
-            position = position_stack(vjust = 0.5), 
-            size = 3, color = "black")  # White text for other categories
+- How confident are you with academic writing?
+- Can you construct a coherent argument?
+- Are you comfortable with statistical concepts?
+:::
 
-# Display the plot
-print(p)
+---
 
+## How University Differs from School
 
-```
+| School | University |
+|--------|------------|
+| Teacher-directed learning | Self-directed learning |
+| Regular homework checks | Independent deadlines |
+| Structured timetable | Flexible schedule with gaps |
+| Information provided | Research expected |
+| Focus on correct answers | Focus on critical analysis |
+| Limited reading list | Extensive reading beyond lectures |
 
+---
+
+## Your Psychology Journey
+
+![](https://placekitten.com/800/400)
+
+What brings you to psychology?
+
+---
+
+## Your End Goals
+
+:::{.r-fit-text}
+**What do you want from your psychology degree?**
+:::
+
+:::{.incremental}
+- Career preparation?
+- Understanding human behavior?
+- Research skills?
+- Personal development?
+- Something else?
+:::
+
+---
+
+## Today's Experiment: The Marshmallow Challenge
+
+:::{.callout-important}
+## The Task
+Build the tallest free-standing structure using:
+- 20 sticks of spaghetti
+- 1 yard of tape
+- 1 yard of string
+- 1 marshmallow (must be on top!)
+- Time limit: 18 minutes
+:::
+
+---
+
+## Pre-Challenge Psychology Connections
+
+:::{.incremental}
+- **Group dynamics**: How do strangers form working relationships?
+ - Social facilitation vs. social loafing
+ - In-group formation
+ - Status and power dynamics
+
+- **Cognitive biases**:
+ - Functional fixedness (seeing objects only for their intended use)
+ - Planning fallacy (underestimating time needed)
+ - Overconfidence effect
+
+- **Decision-making under pressure**:
+ - Impact of stress on cognitive performance
+ - Satisficing vs. optimizing strategies
+:::
+
+---
+
+## Predictions
+
+:::{.callout-note}
+## Think-Pair-Share
+- Which type of group performs best in this challenge?
+ - Business executives
+ - Recent MBA graduates
+ - Engineers and architects
+ - Kindergarten children
+- Why do you think this is the case?
+:::
+
+---
+
+## Research Methods Preview
+
+This challenge demonstrates core elements of psychological research:
+
+:::{.incremental}
+- **Variables**: 
+ - Independent (group composition)
+ - Dependent (tower height, completion)
+ - Control (same materials, instructions)
+
+- **Observation methods**:
+ - Structured observation
+ - Behavioral coding
+ - Process analysis
+
+- **Data analysis**:
+ - Quantitative (height measurements)
+ - Qualitative (group dynamics)
+:::
+
+---
+
+## Observer Roles
+
+Some of you will be observers rather than participants:
+
+:::{.incremental}
+- **Communication patterns**:
+ - Who speaks? How often? Who listens?
+ - Verbal vs. non-verbal communication
+ 
+- **Decision-making processes**:
+ - How are ideas generated and evaluated?
+ - Is there evidence of groupthink?
+ 
+- **Leadership emergence**:
+ - Formal vs. informal leadership
+ - Leadership styles (directive, participative)
+ 
+- **Conflict resolution**:
+ - How are disagreements handled?
+ - Constructive vs. destructive conflict
+:::
+
+---
+
+## Now, Let's Begin!
+
+:::{.r-fit-text}
+**18:00 minutes on the clock...**
+:::
+
+---
+
+## Post-Challenge Analysis
+
+### Tuckman's Stages of Group Development
+
+:::{.incremental}
+- **Forming**: Orientation, testing boundaries
+- **Storming**: Conflict, resistance to task demands
+- **Norming**: Development of group cohesion
+- **Performing**: Functional role relatedness
+- **Adjourning**: Completion and disengagement
+:::
+
+---
+
+## Cognitive Biases in Action
+
+:::{.callout-tip}
+## What we observed
+:::
+
+:::{.incremental}
+- **Planning fallacy**: Groups overestimated what they could accomplish
+- **Functional fixedness**: Limited vision of how materials could be used
+- **Overconfidence bias**: Initial certainty vs. final outcomes
+- **Sunk cost fallacy**: Continuing with failing approaches
+:::
+
+---
+
+## Stress and Creativity
+
+:::{.columns}
+:::{.column width="60%"}
+- Yerkes-Dodson Law: Optimal arousal
+- Time pressure effects on divergent thinking
+- Impact of evaluation apprehension
+- Stress responses: Fight, flight, or freeze in team contexts
+:::
+
+:::{.column width="40%"}
+![](https://placekitten.com/300/300)
+:::
+:::
+
+---
+
+## Psychology Careers Connection
+
+:::{.panel-tabset}
+### Organizational Psychology
+
+- Team effectiveness assessment
+- Leadership development
+- Workplace interventions
+- Change management
+
+### Clinical Psychology
+
+- Group therapy dynamics
+- Behavioral observation
+- Interpersonal functioning
+- Stress responses
+
+### Developmental Psychology
+
+- Age differences in approach
+- Learning through play
+- Concrete vs. abstract thinking
+- Social development
+:::
+
+---
+
+## The Research Behind the Challenge
+
+:::{.incremental}
+- **Collaborative problem-solving**:
+ - Coordination costs vs. diversity benefits
+ - Psychological safety (Edmondson, 1999)
+ 
+- **Creative thinking principles**:
+ - Divergent vs. convergent thinking phases
+ - Prototype testing and iteration
+ 
+- **Mindset research**:
+ - Fixed vs. growth mindset (Dweck)
+ - Impact on persistence and approach to failure
+:::
+
+---
+
+## The Kindergarten Advantage
+
+:::{.callout-important}
+## Why children often outperform business students:
+:::
+
+:::{.incremental}
+1. Rapid prototyping - testing early and often
+2. No status management or impression concerns
+3. Learning through play - less fear of failure
+4. Less fixated on "one right way" to solve problems
+5. Natural collaboration without hierarchy
+:::
+
+---
+
+## Follow-up Activity: Design Your Experiment
+
+:::{.callout-note}
+## In groups, design a variation of this challenge to test:
+:::
+
+:::{.incremental}
+- How would you modify the challenge to test a specific psychological variable?
+- What would you measure and how?
+- What hypotheses would you propose?
+- What interventions might improve performance?
+:::
+
+---
+
+## What's Next?
+
+:::{.incremental}
+1. Complete our welcome day feedback form
+2. Join the Psychology Society
+3. Explore the campus
+4. Connect with your peer mentors
+5. Follow @GoldsmithsPsych on social media
+:::
+
+:::{.r-fit-text}
+**Any questions?**
+:::
+
+---
+
+## Thank You!
+
+:::{.r-fit-text}
+We look forward to welcoming you in September!
+:::

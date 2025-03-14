@@ -1,20 +1,46 @@
 project:
   type: website
+  output-dir: _output
+  render:
+    - "*.qmd"
+    - "!README.md"
 
 website:
-  title: "openday"
+  title: "Psychology at Goldsmiths"
   navbar:
+    background: "#111111"
+    foreground: "#ffffff"
+    logo: "images/goldsmiths-logo.png"
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: Applicant.qmd
+        text: Applicant Day
+      - href: contact.qmd
+        text: Contact
 
 format:
-  html:
-    theme: cosmo
-    css: styles.css
-    toc: true
+  revealjs:
+    theme: [default, presentation.scss]
+    slide-number: true
+    chalkboard: true
+    preview-links: auto
+    logo: "images/goldsmiths-logo.png"
+    footer: "Psychology at Goldsmiths | Where science meets creativity"
+    transition: slide
+    background-transition: fade
+    highlight-style: github
+    code-line-numbers: false
+    controls: true
+    progress: true
+    history: true
+    # Fixed: changed from "hash-type: direct" to the correct Quarto parameter
+    hash: true
+    center: false
+    width: 1280
+    height: 720
+    margin: 0.1
+    link-external-newwindow: true
+    embed-resources: false
 
-filters: 
-  - webr
-
+editor: visual

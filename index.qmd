@@ -81,55 +81,6 @@ Chief Mischief Officer - LittleMonkeyLab
 ## Who lies and how often? {background-color="#2583c6"}
 
 ```{r}
-# Load required libraries
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-
-# Sample data for the chart
-data <- data.frame(
-  AgeGroup = c("60-77", "45-60", "30-44", "18-29", "13-17", "8-12", "6-8"),
-  MoreThanFiveLies = c(1, 3, 4, 10, 11, 9, 9),
-  OneToFiveLies = c(10, 13, 28, 35, 45, 43, 43),
-  NoLies = c(89, 84, 68, 55, 45, 48, 48)
-)
-
-# Reshape the data for plotting
-data_long <- data %>%
-  pivot_longer(cols = c("MoreThanFiveLies", "OneToFiveLies", "NoLies"),
-               names_to = "LieFrequency",
-               values_to = "Percentage")
-
-# Define the order of the factors for AgeGroup and LieFrequency
-data_long$AgeGroup <- factor(data_long$AgeGroup, levels = rev(data$AgeGroup))
-data_long$LieFrequency <- factor(data_long$LieFrequency, 
-                                 levels = c("NoLies", "OneToFiveLies", "MoreThanFiveLies"))
-
-# Updated pastel color palette
-color_palette <- c("#f2f2f2", "#f7c6c7", "#FFEB84")  # Light grey, pastel pink, pastel yellow for 5+
-
-# Create the stacked bar plot
-p <- ggplot(data_long, aes(x = AgeGroup, y = Percentage, fill = LieFrequency)) +
-  geom_bar(stat = "identity", position = "stack", width = 0.7) +
-  scale_fill_manual(values = color_palette) +
-  coord_flip() +
-  labs(title = "Lying frequency, by age", subtitle = "Over a 24-hour period", 
-       x = "Age Group", y = "Percentage of Lies", fill = "Lies Frequency") +
-  theme_minimal() +
-  theme(legend.position = "top", 
-        plot.title = element_text(size = 16, face = "bold"),
-        plot.subtitle = element_text(size = 12),
-        legend.title = element_blank()) +
-  geom_text(aes(label = ifelse(LieFrequency == "NoLies", paste0(Percentage, "%"), "")), 
-            position = position_stack(vjust = 0.5), 
-            size = 3, color = "black") +  # Black text for "No Lies"
-  geom_text(aes(label = ifelse(LieFrequency != "NoLies", paste0(Percentage, "%"), "")), 
-            position = position_stack(vjust = 0.5), 
-            size = 3, color = "black")  # White text for other categories
-
-# Display the plot
-print(p)
-
 
 ```
 

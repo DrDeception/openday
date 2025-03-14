@@ -1,0 +1,561 @@
+---
+title: "Psychology Taster Lecture"
+author: "Dr. Gordon Wright"
+affiliation: "LittleMonkeyLab @Goldsmiths"
+mainfont: Atkinson Hyperlegible
+format: 
+  revealjs: 
+    title-slide-attributes:
+      data-background-color: "blue"
+    logo: "images/LMLLOGO.png"
+    incremental: true
+    scrollable: true
+    controls: true
+    controls-layout: edges
+filters: 
+  - timer
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 100px;
+      }
+      </style>
+---
+
+## Welcome!
+
+::: r-fit-text
+**Psychology at Goldsmiths**\
+*Where science meets creativity*
+:::
+
+------------------------------------------------------------------------
+
+## Our ethos
+
+## About the Programme
+
+::: nonincremental
+-   **Accredited by the British Psychological Society (BPS).** Achieving at least 50% on all modules makes you eligible for graduate membership of the BPS.
+-   Underpinned by a **bio-psycho-social model** to explain how human behaviour is influenced by a complex mix of biological, social, environmental & psychological factors.
+-   **Develops understanding of applications of psychology and transferable skills for graduate-level employment by helping you to:**
+    -   Critically assess evidence to develop and deliver creative, coherent, effective and ethical plans for changing practice and policy in an uncertain world.
+    -   Balance personal experience and perspective with scientific evidence to inform critical enquiry and public policy.
+-   **Taught in modules that connect with one another; some teaching in blocks:**
+    -   Lectures, seminars, tutorials, independent learning and active learning strategies
+:::
+
+------------------------------------------------------------------------
+
+## Pedagogy
+
+![](images/CleanShot%202025-03-14%20at%2017.33.49-01.png)
+
+## Year one Term one
+
+![](images/CleanShot 2025-03-14 at 17.59.58.png)
+
+## Year one Term two
+
+![](images/CleanShot 2025-03-14 at 18.00.57.png)
+
+## Year one Term three
+
+![](images/CleanShot 2025-03-14 at 18.01.30.png)
+
+## Personal and Professional Development
+
+::: nonincremental
+-   <div>
+
+    -   Every student has a Personal Tutor who will facilitate these tutorials
+
+    -   Aims to enable empowered, independent & interdependent learners
+
+    -   Pilot PPD programme in 2023/4 co-created with two third year students
+
+    -   Student Advisory Group reviewed whole curriculum, including PPD
+
+    -   In 2024/5
+
+        -   PPD connected to modular content and careers service
+        -   Assessed through portfolio of activities including guided reflections
+        -   Another Student Advisory Group will be developed
+
+    </div>
+:::
+
+------------------------------------------------------------------------
+
+## Research Methods & Statistics
+
+This module offers the nuts and bolts of conducting and interpreting different kinds of research.
+
+These fundamental research skills are highly valued by graduate employers. Whether you want to be a psychologist, a research scientist, an entrepreneur or an Olympic athlete, developing the skills to conduct quality research and analyse data will serve you well.
+
+**You will be assessed via:** \* Lab-book of exercises – practice works! \* 2 lab reports \* In person multiple-choice exam
+
+------------------------------------------------------------------------
+
+## Mental Health and Wellbeing
+
+This module offers an introduction to psychological wellbeing and the emotional experience of being human.
+
+Assessments are designed to help you connect psychological theory, scientific evidence and your personal development now and in the future.
+
+**You will be assessed via:** \* Evidence-based action plan for student wellbeing \* Written description of a behavioural experiment; applying psychological theory in an experiential learning exercise to change a personal belief or behaviour.
+
+------------------------------------------------------------------------
+
+## Cognition & Culture
+
+This module offers an overview of what cognition is and the ways it can be applied in different real-world contexts.
+
+Assessments are designed to enable you to work in groups and individually to present an argument for a non-technical audience. Teamwork and clear communication are essential skills in graduate-level employment.
+
+**You will be assessed via:** \* Group poster designed for a public audience summarising a method in the psychology of cognition and culture \* Individual oral presentation of individual difference on aspect of perception, attention or action.
+
+------------------------------------------------------------------------
+
+## Life And Society
+
+This module offers an introduction to the self and interactions with others using social and developmental psychological theories.
+
+Assessments are designed to ensure that you have grasped key concepts and that you can apply your learning in the form of a policy briefing paper. These policy briefs are frequently written in government agencies, businesses and non-government organisations to enable readers to understand how to take evidence-based actions on a particular issue.
+
+**You will be assessed via:** \* In-person exam \* Policy brief on the first 1001 days of life
+
+------------------------------------------------------------------------
+
+## Identity, Agency & Environment
+
+This Semester 1 module will enable you to develop critical thinking skills through various topics:
+
+Hello students of **Identity Agency Environment 1 (IAE1)** - this module is subtitled ***Critical Thinking***. Welcome to the module and to your new year at Goldsmiths.
+
+Every week this module will introduce you to a new, compelling, topical subject in a lecture, followed by interdisciplinary seminar groups, where you will explore your critical thinking capacities and engage with peers in discussions about topics you are presented with.
+
+Your assessment at the close of the semester will be to respond critically to one of these topics in a way that feels purposeful and useful for you. You might decide to express your ideas about the topic of your choice by writing an essay, song, poem or composition, or by making a podcast, film, or designing a poster.
+
+------------------------------------------------------------------------
+
+### IAE1 Weekly Topics
+
+Lectures are each Wednesday morning in the Ian Gulland Lecture Theatre in the Whitehead Building at either: 9am (Group 1) or 10am (Group 2)
+
+-   Week 1: How To Use Your Critical Thinking Skills To Unpack The World
+-   Week 2: The Utopian Ideal Of Computing and its Controversial Reality
+-   Week 3: Kenneth Goldsmiths Uncreative Writing
+-   Week 4: What We Learn From 4'33'
+-   Week 5: The Crossbones Graveyard
+-   Week 7: "Sex, Lies & Videotape: Bill & Monica"
+-   Week 8: Cultural Hegemony and The Hunger Games
+-   Week 9: Artificial Intelligence As A Text: ChatGPT
+-   Week 10: The Fyre Festival
+
+------------------------------------------------------------------------
+
+## Applications of Psychological Research
+
+This Semester 2 module will enable you to critically evaluate psychological research findings and understand the motivation and practical issues involved in the planning and conduct of that research, from the perspective of investigators and research participants.
+
+**You will be assessed via:** \* Participation in research studies \* A Blog or pre-recorded video for a non-expert audience---
+
+## Are You Ready for University?
+
+::: panel-tabset
+### Time Management
+
+-   How do you currently organize your studies?
+-   Can you manage multiple deadlines without supervision?
+-   Do you have systems for tracking your work?
+
+### Independent Learning
+
+-   How do you find information beyond what's provided?
+-   Can you evaluate sources critically?
+-   How comfortable are you with ambiguity?
+
+### Academic Skills
+
+-   How confident are you with academic writing?
+-   Can you construct a coherent argument?
+-   Are you comfortable with statistical concepts?
+:::
+
+------------------------------------------------------------------------
+
+## How University Differs from School
+
+| School                    | University                        |
+|---------------------------|-----------------------------------|
+| Teacher-directed learning | Self-directed learning            |
+| Regular homework checks   | Independent deadlines             |
+| Structured timetable      | Flexible schedule with gaps       |
+| Information provided      | Research expected                 |
+| Focus on correct answers  | Focus on critical analysis        |
+| Limited reading list      | Extensive reading beyond lectures |
+
+------------------------------------------------------------------------
+
+## Your Psychology Journey
+
+## What brings you to psychology?
+
+------------------------------------------------------------------------
+
+## Your End Goals
+
+::: r-fit-text
+**What do you want from your psychology degree?**
+:::
+
+::: incremental
+-   Career preparation?
+-   Understanding human behavior?
+-   Research skills?
+-   Personal development?
+-   Something else?
+:::
+
+------------------------------------------------------------------------
+
+## Today's Experiment: The Marshmallow Challenge
+
+::: callout-important
+## The Task
+
+Build the tallest free-standing structure using:
+
+\- 20 sticks of spaghetti
+
+\- 1 yard of tape
+
+\- 1 yard of string
+
+\- 1 marshmallow (must be on top!)
+
+\- Time limit: 18 minutes
+:::
+
+------------------------------------------------------------------------
+
+## Pre-Challenge Psychology Connections
+
+::: incremental
+-   **Group dynamics**: How do strangers form working relationships?
+
+-   Social facilitation vs. social loafing
+
+-   In-group formation
+
+-   Status and power dynamics
+
+-   **Cognitive biases**:
+
+-   Functional fixedness (seeing objects only for their intended use)
+
+-   Planning fallacy (underestimating time needed)
+
+-   Overconfidence effect
+
+-   **Decision-making under pressure**:
+
+-   Impact of stress on cognitive performance
+
+-   Satisficing vs. optimizing strategies
+:::
+
+------------------------------------------------------------------------
+
+## Predictions
+
+::: callout-note
+## Think-Pair-Share
+
+-   Which type of group performs best in this challenge?
+-   Business executives
+-   Recent MBA graduates
+-   Engineers and architects
+-   Kindergarten children
+-   Why do you think this is the case?
+:::
+
+------------------------------------------------------------------------
+
+## Research Methods Preview
+
+This challenge demonstrates core elements of psychological research:
+
+::: incremental
+-   **Variables**:
+
+-   Independent (group composition)
+
+-   Dependent (tower height, completion)
+
+-   Control (same materials, instructions)
+
+-   **Observation methods**:
+
+-   Structured observation
+
+-   Behavioral coding
+
+-   Process analysis
+
+-   **Data analysis**:
+
+-   Quantitative (height measurements)
+
+-   Qualitative (group dynamics)
+:::
+
+------------------------------------------------------------------------
+
+## Observer Roles
+
+Some of you will be observers rather than participants:
+
+::: incremental
+-   **Communication patterns**:
+
+-   Who speaks? How often? Who listens?
+
+-   Verbal vs. non-verbal communication
+
+-   **Decision-making processes**:
+
+-   How are ideas generated and evaluated?
+
+-   Is there evidence of groupthink?
+
+-   **Leadership emergence**:
+
+-   Formal vs. informal leadership
+
+-   Leadership styles (directive, participative)
+
+-   **Conflict resolution**:
+
+-   How are disagreements handled?
+
+-   Constructive vs. destructive conflict
+:::
+
+------------------------------------------------------------------------
+
+## Now, Let's Begin!
+
+::: r-fit-text
+**18:00 minutes on the clock...**
+:::
+
+------------------------------------------------------------------------
+
+## Post-Challenge Analysis
+
+### Tuckman's Stages of Group Development
+
+::: incremental
+-   **Forming**: Orientation, testing boundaries
+-   **Storming**: Conflict, resistance to task demands
+-   **Norming**: Development of group cohesion
+-   **Performing**: Functional role relatedness
+-   **Adjourning**: Completion and disengagement (Tuckman, 1965)
+:::
+
+------------------------------------------------------------------------
+
+## Cognitive Biases in Action
+
+::: callout-tip
+## What we observed
+:::
+
+::: incremental
+-   **Planning fallacy**: Groups overestimated what they could accomplish
+-   **Functional fixedness**: Limited vision of how materials could be used
+-   **Overconfidence bias**: Initial certainty vs. final outcomes
+-   **Sunk cost fallacy**: Continuing with failing approaches
+:::
+
+------------------------------------------------------------------------
+
+## Stress and Creativity
+
+::::: columns
+::: {.column width="60%"}
+-   Yerkes-Dodson Law: Optimal arousal (Yerkes & Dodson, 1908)
+-   Time pressure effects on divergent thinking
+-   Impact of evaluation apprehension (Amabile et al., 2002)
+-   Stress responses: Fight, flight, or freeze in team contexts
+:::
+
+::: {.column width="40%"}
+![Graph showing the Yerkes-Dodson curve of optimal arousal and performance](images/stress-creativity.jpg)
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Psychology Careers Connection
+
+::: panel-tabset
+### Organizational Psychology
+
+-   Team effectiveness assessment
+-   Leadership development
+-   Workplace interventions
+-   Change management
+
+### Clinical Psychology
+
+-   Group therapy dynamics
+-   Behavioral observation
+-   Interpersonal functioning
+-   Stress responses
+
+### Developmental Psychology
+
+-   Age differences in approach
+-   Learning through play
+-   Concrete vs. abstract thinking
+-   Social development
+
+### Forensic Psychology
+
+-   Behavioral analysis and profiling
+-   Witness reliability assessment
+-   Decision-making under pressure
+-   Group dynamics in legal contexts
+:::
+
+------------------------------------------------------------------------
+
+## The Research Behind the Challenge
+
+::: incremental
+-   **Collaborative problem-solving**:
+
+-   Coordination costs vs. diversity benefits
+
+-   Psychological safety (Edmondson, 1999)
+
+-   **Creative thinking principles**:
+
+-   Divergent vs. convergent thinking phases
+
+-   Prototype testing and iteration (Brown, 2009)
+
+-   **Mindset research**:
+
+-   Fixed vs. growth mindset (Dweck, 2006)
+
+-   Impact on persistence and approach to failure
+:::
+
+------------------------------------------------------------------------
+
+## The Kindergarten Advantage
+
+::: callout-important
+## Why children often outperform business students:
+:::
+
+::: incremental
+1.  Rapid prototyping - testing early and often
+2.  No status management or impression concerns
+3.  Learning through play - less fear of failure
+4.  Less fixated on "one right way" to solve problems
+5.  Natural collaboration without hierarchy
+:::
+
+------------------------------------------------------------------------
+
+## Follow-up Activity: Design Your Experiment
+
+::: callout-note
+## In groups, design a variation of this challenge to test:
+:::
+
+::: incremental
+-   How would you modify the challenge to test a specific psychological variable?
+-   What would you measure and how?
+-   What hypotheses would you propose?
+-   What interventions might improve performance?
+:::
+
+------------------------------------------------------------------------
+
+## What's Next?
+
+::: incremental
+1.  Complete our welcome day feedback form
+2.  Join the Psychology Society
+3.  Explore the campus
+4.  Connect with your peer mentors
+5.  Follow @GoldsmithsPsych on social media
+:::
+
+::: {.r-fit-text .questions-slide}
+Any questions?
+:::
+
+------------------------------------------------------------------------
+
+## References
+
+::: references
+Amabile, T. M., Mueller, J. S., Simpson, W. B., Hadley, C. N., Kramer, S. J., & Fleming, L. (2002). Time pressure and creativity in organizations: A longitudinal field study. *Harvard Business School Working Paper*, 02-073.
+
+Brown, T. (2009). *Change by design: How design thinking transforms organizations and inspires innovation*. HarperCollins.
+
+Dweck, C. S. (2006). *Mindset: The new psychology of success*. Random House.
+
+Edmondson, A. (1999). Psychological safety and learning behavior in work teams. *Administrative Science Quarterly, 44*(2), 350-383. https://doi.org/10.2307/2666999
+
+Tuckman, B. W. (1965). Developmental sequence in small groups. *Psychological Bulletin, 63*(6), 384-399. https://doi.org/10.1037/h0022100
+
+Wujec, T. (2010, February). *Build a tower, build a team* \[Video\]. TED Conferences. https://www.ted.com/talks/tom_wujec_build_a_tower_build_a_team
+
+Yerkes, R. M., & Dodson, J. D. (1908). The relation of strength of stimulus to rapidity of habit-formation. *Journal of Comparative Neurology and Psychology, 18*(5), 459-482. https://doi.org/10.1002/cne.920180503
+:::
+
+------------------------------------------------------------------------
+
+## Thank You!
+
+::: r-fit-text
+We look forward to welcoming you in September!
+:::
+
+![Goldsmiths University campus view](images/campus-placeholder.jpg)
+
+![Goldsmiths University campus view](images/campus-placeholder.jpg)
+
+![](images/66984.png){fig-align="center" width="600"}
+
+![](images/90703.png){fig-align="center" width="600"}
+
+![](images/10573.png){fig-align="center" width="600"}
+
+![](images/60045.png){fig-align="center" width="600"}
+
+![](images/85543.png){fig-align="center" width="400"}
+
+![](images/paste-6.png){fig-align="center" width="800"}
+
+## Do you want to play? {.incremental background-color="yellow"}
+
+-   The topic for this year is...
+-   Psychological Profiling (in all it's guises)
+-   All students are welcome to join in (current and maybe future!)
+-   \@ForensicGold on X.com
+-   <https://www.gold.ac.uk/forensic-psychology-unit/>
+
+## Thank you {background-color="black"}
+
+### Any Questions? {background-color="black"}

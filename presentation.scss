@@ -1,0 +1,146 @@
+/*-- scss:defaults --*/
+// Color variables
+$goldsmiths-yellow: #ffd700;
+$goldsmiths-black: #111111;
+$goldsmiths-red: #cf142b;
+$accent-color: #7b66ff;
+$text-color: #333333;
+$light-bg: #f8f8f8;
+
+// Font settings
+$font-family-sans-serif: 'Atkinson Hyperlegible', sans-serif;
+$presentation-heading-font: 'Atkinson Hyperlegible', sans-serif;
+$presentation-font-size-root: 24px;
+$presentation-line-height: 1.5;
+
+// Remove background colors from headings
+$presentation-heading-background-color: transparent;
+
+/*-- scss:rules --*/
+// Import Atkinson Hyperlegible font
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+// Clean background
+body, .reveal-viewport {
+  background-color: white;
+}
+
+// Clean heading styles
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  color: $goldsmiths-black;
+  border: none;
+  background: none;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0;
+}
+
+.reveal h2 {
+  border-bottom: 4px solid $goldsmiths-yellow;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+// Remove styling from all r-fit-text
+.r-fit-text {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+// Questions slide styling (simplified)
+.reveal .slides section .questions-slide {
+  background-color: #fffaed;
+  border-left: 6px solid #ffd700;
+  font-size: 3.5em;
+  padding: 0.5em 1em;
+  text-align: left;
+}
+
+// Callout styling (simplified)
+.callout {
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  
+  &.callout-important {
+    background-color: rgba(207, 20, 43, 0.08);
+    border-left: 5px solid $goldsmiths-red;
+  }
+  
+  &.callout-note {
+    background-color: rgba(123, 102, 255, 0.08);
+    border-left: 5px solid $accent-color;
+  }
+  
+  &.callout-tip {
+    background-color: rgba(0, 128, 128, 0.08);
+    border-left: 5px solid #008080;
+  }
+}
+
+// Table styling
+.reveal table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  
+  th {
+    background-color: $goldsmiths-black;
+    color: white;
+    padding: 10px;
+  }
+  
+  td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+}
+
+// Clean panel tab styling
+.panel-tabset {
+  margin: 20px 0;
+  
+  .nav-tabs {
+    border-bottom: 1px solid #ddd;
+    
+    .nav-link.active {
+      border-bottom: 3px solid $goldsmiths-yellow;
+    }
+  }
+  
+  .tab-content {
+    padding: 20px 0;
+  }
+}
+
+// References styling
+.references {
+  font-size: 0.8em;
+  line-height: 1.4;
+  
+  p {
+    margin-bottom: 1em;
+    text-indent: -2em;
+    padding-left: 2em;
+  }
+}
+
+// Progress bar
+.reveal .progress {
+  height: 5px;
+  color: $goldsmiths-yellow;
+}
+
+// Footer styling
+.reveal .footer {
+  font-size: 0.8em;
+  color: #666;
+}
