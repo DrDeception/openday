@@ -55,15 +55,15 @@ include-in-header:
 
 ## Year one Term one
 
-![](images/CleanShot 2025-03-14 at 17.59.58.png)
+![](images/CleanShot%202025-03-14%20at%2017.59.58.png)
 
 ## Year one Term two
 
-![](images/CleanShot 2025-03-14 at 18.00.57.png)
+![](images/CleanShot%202025-03-14%20at%2018.00.57.png)
 
 ## Year one Term three
 
-![](images/CleanShot 2025-03-14 at 18.01.30.png)
+![](images/CleanShot%202025-03-14%20at%2018.01.30.png)
 
 ## Personal and Professional Development
 
