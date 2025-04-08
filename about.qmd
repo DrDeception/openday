@@ -24,78 +24,67 @@ include-in-header:
 
 ## Welcome!
 
-:::{.r-fit-text}
-**Psychology at Goldsmiths**  
+::: r-fit-text
+**Psychology at Goldsmiths**\
 *Where science meets creativity*
 :::
 
----
+------------------------------------------------------------------------
 
 ## Overview of Y1 Psychology at Goldsmiths
 
-:::{.columns}
-:::{.column width="50%"}
-**Term 1 Modules**
-- Introduction to Psychology
-- Research Methods & Statistics I
-- Biological & Comparative Approaches
-- Cognitive Psychology
+::::: columns
+::: {.column width="50%"}
+**Term 1 Modules** - Introduction to Psychology - Research Methods & Statistics I - Biological & Comparative Approaches - Cognitive Psychology
 :::
 
-:::{.column width="50%"}
-**Term 2 Modules**
-- Social Psychology
-- Developmental Psychology
-- Individual Differences
-- Applied Psychology
+::: {.column width="50%"}
+**Term 2 Modules** - Social Psychology - Developmental Psychology - Individual Differences - Applied Psychology
 :::
+:::::
+
+::: notes
+Emphasize our unique strengths: - Critical approach to psychology - Integration of scientific rigor with creative thinking - Strong focus on research skills from day one
 :::
 
-:::{.notes}
-Emphasize our unique strengths: 
-- Critical approach to psychology
-- Integration of scientific rigor with creative thinking
-- Strong focus on research skills from day one
-:::
-
----
+------------------------------------------------------------------------
 
 ## Are You Ready for University?
 
-:::{.panel-tabset}
+::: panel-tabset
 ### Time Management
 
-- How do you currently organize your studies?
-- Can you manage multiple deadlines without supervision?
-- Do you have systems for tracking your work?
+-   How do you currently organize your studies?
+-   Can you manage multiple deadlines without supervision?
+-   Do you have systems for tracking your work?
 
 ### Independent Learning
 
-- How do you find information beyond what's provided?
-- Can you evaluate sources critically?
-- How comfortable are you with ambiguity?
+-   How do you find information beyond what's provided?
+-   Can you evaluate sources critically?
+-   How comfortable are you with ambiguity?
 
 ### Academic Skills
 
-- How confident are you with academic writing?
-- Can you construct a coherent argument?
-- Are you comfortable with statistical concepts?
+-   How confident are you with academic writing?
+-   Can you construct a coherent argument?
+-   Are you comfortable with statistical concepts?
 :::
 
----
+------------------------------------------------------------------------
 
 ## How University Differs from School
 
-| School | University |
-|--------|------------|
-| Teacher-directed learning | Self-directed learning |
-| Regular homework checks | Independent deadlines |
-| Structured timetable | Flexible schedule with gaps |
-| Information provided | Research expected |
-| Focus on correct answers | Focus on critical analysis |
-| Limited reading list | Extensive reading beyond lectures |
+| School                    | University                        |
+|---------------------------|-----------------------------------|
+| Teacher-directed learning | Self-directed learning            |
+| Regular homework checks   | Independent deadlines             |
+| Structured timetable      | Flexible schedule with gaps       |
+| Information provided      | Research expected                 |
+| Focus on correct answers  | Focus on critical analysis        |
+| Limited reading list      | Extensive reading beyond lectures |
 
----
+------------------------------------------------------------------------
 
 ## Your Psychology Journey
 
@@ -103,266 +92,293 @@ Emphasize our unique strengths:
 
 What brings you to psychology?
 
----
+------------------------------------------------------------------------
 
 ## Your End Goals
 
-:::{.r-fit-text}
+::: r-fit-text
 **What do you want from your psychology degree?**
 :::
 
-:::{.incremental}
-- Career preparation?
-- Understanding human behavior?
-- Research skills?
-- Personal development?
-- Something else?
+::: incremental
+-   Career preparation?
+-   Understanding human behavior?
+-   Research skills?
+-   Personal development?
+-   Something else?
 :::
 
----
+------------------------------------------------------------------------
 
 ## Today's Experiment: The Marshmallow Challenge
 
-:::{.callout-important}
+::: callout-important
 ## The Task
-Build the tallest free-standing structure using:
-- 20 sticks of spaghetti
-- 1 yard of tape
-- 1 yard of string
-- 1 marshmallow (must be on top!)
-- Time limit: 18 minutes
+
+Build the tallest free-standing structure using: - 20 sticks of spaghetti - 1 yard of tape - 1 yard of string - 1 marshmallow (must be on top!) - Time limit: 18 minutes
 :::
 
----
+------------------------------------------------------------------------
 
 ## Pre-Challenge Psychology Connections
 
-:::{.incremental}
-- **Group dynamics**: How do strangers form working relationships?
- - Social facilitation vs. social loafing
- - In-group formation
- - Status and power dynamics
+::: incremental
+-   **Group dynamics**: How do strangers form working relationships?
 
-- **Cognitive biases**:
- - Functional fixedness (seeing objects only for their intended use)
- - Planning fallacy (underestimating time needed)
- - Overconfidence effect
+-   Social facilitation vs. social loafing
 
-- **Decision-making under pressure**:
- - Impact of stress on cognitive performance
- - Satisficing vs. optimizing strategies
+-   In-group formation
+
+-   Status and power dynamics
+
+-   **Cognitive biases**:
+
+-   Functional fixedness (seeing objects only for their intended use)
+
+-   Planning fallacy (underestimating time needed)
+
+-   Overconfidence effect
+
+-   **Decision-making under pressure**:
+
+-   Impact of stress on cognitive performance
+
+-   Satisficing vs. optimizing strategies
 :::
 
----
+------------------------------------------------------------------------
 
 ## Predictions
 
-:::{.callout-note}
+::: callout-note
 ## Think-Pair-Share
-- Which type of group performs best in this challenge?
- - Business executives
- - Recent MBA graduates
- - Engineers and architects
- - Kindergarten children
-- Why do you think this is the case?
+
+-   Which type of group performs best in this challenge?
+-   Business executives
+-   Recent MBA graduates
+-   Engineers and architects
+-   Kindergarten children
+-   Why do you think this is the case?
 :::
 
----
+------------------------------------------------------------------------
 
 ## Research Methods Preview
 
 This challenge demonstrates core elements of psychological research:
 
-:::{.incremental}
-- **Variables**: 
- - Independent (group composition)
- - Dependent (tower height, completion)
- - Control (same materials, instructions)
+::: incremental
+-   **Variables**:
 
-- **Observation methods**:
- - Structured observation
- - Behavioral coding
- - Process analysis
+-   Independent (group composition)
 
-- **Data analysis**:
- - Quantitative (height measurements)
- - Qualitative (group dynamics)
+-   Dependent (tower height, completion)
+
+-   Control (same materials, instructions)
+
+-   **Observation methods**:
+
+-   Structured observation
+
+-   Behavioral coding
+
+-   Process analysis
+
+-   **Data analysis**:
+
+-   Quantitative (height measurements)
+
+-   Qualitative (group dynamics)
 :::
 
----
+------------------------------------------------------------------------
 
 ## Observer Roles
 
 Some of you will be observers rather than participants:
 
-:::{.incremental}
-- **Communication patterns**:
- - Who speaks? How often? Who listens?
- - Verbal vs. non-verbal communication
- 
-- **Decision-making processes**:
- - How are ideas generated and evaluated?
- - Is there evidence of groupthink?
- 
-- **Leadership emergence**:
- - Formal vs. informal leadership
- - Leadership styles (directive, participative)
- 
-- **Conflict resolution**:
- - How are disagreements handled?
- - Constructive vs. destructive conflict
+::: incremental
+-   **Communication patterns**:
+
+-   Who speaks? How often? Who listens?
+
+-   Verbal vs. non-verbal communication
+
+-   **Decision-making processes**:
+
+-   How are ideas generated and evaluated?
+
+-   Is there evidence of groupthink?
+
+-   **Leadership emergence**:
+
+-   Formal vs. informal leadership
+
+-   Leadership styles (directive, participative)
+
+-   **Conflict resolution**:
+
+-   How are disagreements handled?
+
+-   Constructive vs. destructive conflict
 :::
 
----
+------------------------------------------------------------------------
 
 ## Now, Let's Begin!
 
-:::{.r-fit-text}
+::: r-fit-text
 **18:00 minutes on the clock...**
 :::
 
----
+------------------------------------------------------------------------
 
 ## Post-Challenge Analysis
 
 ### Tuckman's Stages of Group Development
 
-:::{.incremental}
-- **Forming**: Orientation, testing boundaries
-- **Storming**: Conflict, resistance to task demands
-- **Norming**: Development of group cohesion
-- **Performing**: Functional role relatedness
-- **Adjourning**: Completion and disengagement
+::: incremental
+-   **Forming**: Orientation, testing boundaries
+-   **Storming**: Conflict, resistance to task demands
+-   **Norming**: Development of group cohesion
+-   **Performing**: Functional role relatedness
+-   **Adjourning**: Completion and disengagement
 :::
 
----
+------------------------------------------------------------------------
 
 ## Cognitive Biases in Action
 
-:::{.callout-tip}
+::: callout-tip
 ## What we observed
 :::
 
-:::{.incremental}
-- **Planning fallacy**: Groups overestimated what they could accomplish
-- **Functional fixedness**: Limited vision of how materials could be used
-- **Overconfidence bias**: Initial certainty vs. final outcomes
-- **Sunk cost fallacy**: Continuing with failing approaches
+::: incremental
+-   **Planning fallacy**: Groups overestimated what they could accomplish
+-   **Functional fixedness**: Limited vision of how materials could be used
+-   **Overconfidence bias**: Initial certainty vs. final outcomes
+-   **Sunk cost fallacy**: Continuing with failing approaches
 :::
 
----
+------------------------------------------------------------------------
 
 ## Stress and Creativity
 
-:::{.columns}
-:::{.column width="60%"}
-- Yerkes-Dodson Law: Optimal arousal
-- Time pressure effects on divergent thinking
-- Impact of evaluation apprehension
-- Stress responses: Fight, flight, or freeze in team contexts
+::::: columns
+::: {.column width="60%"}
+-   Yerkes-Dodson Law: Optimal arousal
+-   Time pressure effects on divergent thinking
+-   Impact of evaluation apprehension
+-   Stress responses: Fight, flight, or freeze in team contexts
 :::
 
-:::{.column width="40%"}
+::: {.column width="40%"}
 ![](https://placekitten.com/300/300)
 :::
-:::
+:::::
 
----
+------------------------------------------------------------------------
 
 ## Psychology Careers Connection
 
-:::{.panel-tabset}
+::: panel-tabset
 ### Organizational Psychology
 
-- Team effectiveness assessment
-- Leadership development
-- Workplace interventions
-- Change management
+-   Team effectiveness assessment
+-   Leadership development
+-   Workplace interventions
+-   Change management
 
 ### Clinical Psychology
 
-- Group therapy dynamics
-- Behavioral observation
-- Interpersonal functioning
-- Stress responses
+-   Group therapy dynamics
+-   Behavioral observation
+-   Interpersonal functioning
+-   Stress responses
 
 ### Developmental Psychology
 
-- Age differences in approach
-- Learning through play
-- Concrete vs. abstract thinking
-- Social development
+-   Age differences in approach
+-   Learning through play
+-   Concrete vs. abstract thinking
+-   Social development
 :::
 
----
+------------------------------------------------------------------------
 
 ## The Research Behind the Challenge
 
-:::{.incremental}
-- **Collaborative problem-solving**:
- - Coordination costs vs. diversity benefits
- - Psychological safety (Edmondson, 1999)
- 
-- **Creative thinking principles**:
- - Divergent vs. convergent thinking phases
- - Prototype testing and iteration
- 
-- **Mindset research**:
- - Fixed vs. growth mindset (Dweck)
- - Impact on persistence and approach to failure
+::: incremental
+-   **Collaborative problem-solving**:
+
+-   Coordination costs vs. diversity benefits
+
+-   Psychological safety (Edmondson, 1999)
+
+-   **Creative thinking principles**:
+
+-   Divergent vs. convergent thinking phases
+
+-   Prototype testing and iteration
+
+-   **Mindset research**:
+
+-   Fixed vs. growth mindset (Dweck)
+
+-   Impact on persistence and approach to failure
 :::
 
----
+------------------------------------------------------------------------
 
 ## The Kindergarten Advantage
 
-:::{.callout-important}
+::: callout-important
 ## Why children often outperform business students:
 :::
 
-:::{.incremental}
-1. Rapid prototyping - testing early and often
-2. No status management or impression concerns
-3. Learning through play - less fear of failure
-4. Less fixated on "one right way" to solve problems
-5. Natural collaboration without hierarchy
+::: incremental
+1.  Rapid prototyping - testing early and often
+2.  No status management or impression concerns
+3.  Learning through play - less fear of failure
+4.  Less fixated on "one right way" to solve problems
+5.  Natural collaboration without hierarchy
 :::
 
----
+------------------------------------------------------------------------
 
 ## Follow-up Activity: Design Your Experiment
 
-:::{.callout-note}
+::: callout-note
 ## In groups, design a variation of this challenge to test:
 :::
 
-:::{.incremental}
-- How would you modify the challenge to test a specific psychological variable?
-- What would you measure and how?
-- What hypotheses would you propose?
-- What interventions might improve performance?
+::: incremental
+-   How would you modify the challenge to test a specific psychological variable?
+-   What would you measure and how?
+-   What hypotheses would you propose?
+-   What interventions might improve performance?
 :::
 
----
+------------------------------------------------------------------------
 
 ## What's Next?
 
-:::{.incremental}
-1. Complete our welcome day feedback form
-2. Join the Psychology Society
-3. Explore the campus
-4. Connect with your peer mentors
-5. Follow @GoldsmithsPsych on social media
+::: incremental
+1.  Complete our welcome day feedback form
+2.  Join the Psychology Society
+3.  Explore the campus
+4.  Connect with your peer mentors
+5.  Follow @GoldsmithsPsych on social media
 :::
 
-:::{.r-fit-text}
+::: r-fit-text
 **Any questions?**
 :::
 
----
+------------------------------------------------------------------------
 
 ## Thank You!
 
-:::{.r-fit-text}
+::: r-fit-text
 We look forward to welcoming you in September!
 :::

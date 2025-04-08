@@ -10,7 +10,6 @@ format:
     logo: "images/LMLLOGO.png"
     incremental: true
     scrollable: true
-    font
     controls: true
     controls-layout: edges
 include-in-header:

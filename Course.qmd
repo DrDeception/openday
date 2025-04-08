@@ -1,27 +1,23 @@
 ---
-title: "Psychology At Goldsmiths"
+title: "Psychology at Goldsmiths"
 author: "Dr. Gordon Wright"
-
+affiliation: "LittleMonkeyLab @Goldsmiths"
 mainfont: Atkinson Hyperlegible
 format: 
   revealjs: 
-    title-slide-attributes:
-      data-background-color: "blue"
-
+    logo: "images/goldsmiths-logo.png"
     incremental: true
     scrollable: true
     controls: true
     controls-layout: edges
-filters: 
-  - timer
 include-in-header:
   - text: |
       <style>
       .reveal .slide-logo {
         max-height: unset;
-        height: 100px;
+        height: 150px;
       }
-      </style>
+      </style>   
 ---
 
 # Our new curriculum
@@ -171,7 +167,7 @@ Teaching themes that reflect you, plus:
 
 ::::: columns
 ::: {.column width="30%"}
-![](images/infant-research.jpg)
+![](images/infant-research.png)
 :::
 
 ::: {.column width="70%"}
@@ -189,7 +185,7 @@ Teaching themes that reflect you, plus:
 ::: {.column width="30%"}
 ![Prof Alice Jones](images/alice-jones.jpg)
 
-![Dr Sinead Rocha](images/sinead-rocha.jpg)
+![Dr Sinead Rocha](images/sinead-rocha.png)
 :::
 
 ::: {.column width="70%"}
@@ -217,7 +213,7 @@ Teaching themes that reflect you, plus:
 Example: Year 1 Term2, Life & Society: Growing Up
 
 | Monday | Tuesday | Wednesday | Thursday | Friday |
-|----|----|----|----|----|
+|---------------|---------------|---------------|---------------|---------------|
 | Independent study | Lecture: What is development? | Goldsmiths Connected Curriculum: Identity, environment and agency | Research Methods Lecture | Independent study |
 |  | Developmental Cascades (seminar) | Seminar | PPD: Exploring careers that support children and families |  |
 |  | Lecture: Infancy | Societies! | Research Methods Lab: Data Skills – Experimental Design |  |
@@ -229,11 +225,15 @@ Example: Year 1 Term2, Life & Society: Growing Up
 
 ## Curating your degree
 
+::: incremental
 -   Year 1: Assessments tailored to your interests and experience
 -   Year 2: Group project work
 -   Year 3: Free choice of optional modules including:
+:::
 
+::: {.fragment .fade-in}
 Addictive Behaviours / Neuropsychology / Psychology of the Arts / Behavioural Genetics / Psychology and Law / Coding / Clinical Psychology / Neurodevelopmental Disorders / Psychology and Education / Cognitive Neuroscience
+:::
 
 ## Year 3 projects
 
@@ -301,11 +301,11 @@ Get involved in our research groups:
 
 ![](images/eeg-research.jpg){.absolute top="180" right="50" width="40%"}
 
-![](images/sensor-research.jpg){.absolute bottom="100" right="50" width="40%"}
+![](images/sensor-research.jpg){.absolute bottom="10" right="50" width="40%"}
 
 ## Research in society
 
-![](images/forensic-event.jpg){.column width="33%"} ![](images/research-impact.jpg){.column width="33%"} ![](images/cold-case.jpg){.column width="33%"}
+![](images/forensic-event.jpg){.column width="30%"} ![](images/research-impact.jpg){.column width="30%"} ![](images/cold-case.jpg){.column width="30%"}
 
 # Study environment
 
@@ -328,14 +328,16 @@ Varied teaching
 -   Lab classes
 -   One-to-one sessions
 
+::: {.fragment .fade-in}
 Varied assessment focused around skills for employability
 
 Personal tutor throughout your studies
+:::
 
 ## Study environment
 
 Psychology society: film clubs, social events, study groups
 
-![](images/psych-social.jpg){.column width="33%"} ![](images/film-night1.jpg){.column width="33%"} ![](images/film-night2.jpg){.column width="33%"}
+![](images/psych-social.jpg){.column width="30%"} ![](images/film-night1.jpg){.column width="30%"} ![](images/film-night2.jpg){.column width="30%"}
 
 # Thank you {.center}

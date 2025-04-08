@@ -1,0 +1,786 @@
+---
+title: "The Science of People-Watching"
+subtitle: "How We Make Sense of Social Interactions"
+author: "Dr. Gordon Wright"
+affiliation: "LittleMonkeyLab @Goldsmiths"
+mainfont: Atkinson Hyperlegible
+format: 
+  revealjs: 
+    title-slide-attributes:
+      data-background-color: "black"
+    logo: "images/LMLLOGO.png"
+    incremental: true
+    scrollable: true
+    controls: true
+    controls-layout: edges
+    footer: "The Science of People-Watching | 2025"
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 100px;
+      }
+      </style>
+---
+
+## What is People-Watching?
+
+::: r-fit-text
+> "I like to watch people. Sometimes I ride the subway all day and look at them and listen to them. I just want to figure out who they are and what they want and where they're going."
+:::
+
+::: attribution
+— Ray Bradbury, *Fahrenheit 451*
+:::
+
+::: notes
+-   Start by asking students if they've ever people-watched
+-   Explain that this common pastime is actually a sophisticated cognitive process
+:::
+
+## More Than Just a Pastime {background-image="https://images.unsplash.com/photo-1533779283484-8ad4940aa3a8?q=80&w=1000" background-opacity="0.4"}
+
+People-watching is **central to our social existence**
+
+-   We observe others to gather information
+-   We form impressions within seconds
+-   Our brains are wired to analyze social interactions
+-   These impressions affect how we interact with others
+
+::: notes
+-   Emphasize that people-watching isn't just entertainment
+-   It's a fundamental cognitive skill that helps us navigate our social world
+-   Ask students when they might people-watch (cafes, airports, school hallways)
+:::
+
+## The Science of "Third-Party Encounters" {.smaller}
+
+::::: columns
+::: {.column width="50%"}
+**Traditional Research**
+
+-   Focused on impressions of isolated individuals
+-   Usually just faces or single people
+-   Missed the complexity of social interactions
+:::
+
+::: {.column width="50%"}
+**New Research Direction**
+
+-   Studies how we observe interactions between others
+-   Views interactions as the unit of analysis
+-   Recognizes the richness of encounter-based impressions
+:::
+:::::
+
+::: notes
+-   Explain that "Third-Party Encounters" (TPEs) is the scientific term for watching people interact
+-   Mention that this is a relatively new and exciting area of research
+:::
+
+## Brain Game: Reading Social Clues
+
+What clues do we use when people-watching? Let's see how many you can identify!
+
+-   Physical appearances and facial expressions
+-   Body language and proximity
+-   Gestures and eye contact
+-   Speaking patterns and tone
+-   Actions and reactions
+-   **Can you think of others?**
+
+::: notes
+-   Make this interactive - ask students to volunteer additional cues they use
+-   Have them discuss with a partner how they "read" other people
+:::
+
+## What Can We Actually Tell from Watching? {background-color="#3E2F5B"}
+
+-   Joint vs. independent actions
+-   Power dynamics and social status
+-   Level of intimacy and rapport
+-   Emotional states and attitudes
+-   Type of relationship (strangers, friends, family)
+-   Cultural norms and violations
+
+::: notes
+-   Explain each item with examples relevant to high school students
+-   E.g., how can you tell who's popular, who's dating, who's arguing?
+:::
+
+## Our Brains on People-Watching {background-image="https://images.unsplash.com/photo-1559757175-7cb05f6d89e5?q=80&w=1000" background-opacity="0.3"}
+
+Three brain networks work together:
+
+1.  **Person Perception Network**: Processes faces and bodies
+2.  **Action Perception Network**: Understands actions and movements
+3.  **Mentalizing Network**: Interprets mental states and intentions
+
+::: notes
+-   Explain in simple terms how our brains have specialized systems for social perception
+-   Compare to having different apps that work together on a phone
+:::
+
+## The Marketing Connection
+
+::::: columns
+::: {.column width="60%"}
+Companies like Coca-Cola use our people-watching instincts in advertisements:
+
+-   Show intimate moments between people
+-   Trigger our social analysis systems
+-   Make us feel connected to the product
+-   Leverage our desire to be part of positive interactions
+:::
+
+::: {.column width="40%"}
+![Coca-Cola ad showing social connection](https://i.imgur.com/example.jpg)
+:::
+:::::
+
+::: notes
+-   Discuss how ads often show people interacting rather than just the product
+-   Ask students to recall ads that use social scenarios to sell products
+:::
+
+## Quick Activity: Spot the Relationship
+
+*As I show each image, write down:*
+
+1.  What type of relationship do you think these people have?
+2.  How do you know?
+3.  What clues are you using?
+
+::: notes
+-   Show 3-4 images of different interactions (friends, romantic partners, strangers, etc.)
+-   Have students jot down observations and discuss with a partner
+-   Then discuss as a group, noting common patterns in observations
+:::
+
+## Are We Actually Good at People-Watching? {background-color="#254441"}
+
+::::: columns
+::: {.column width="50%"}
+**When we're accurate:**
+
+-   Judging whether people know each other
+-   Detecting romantic interest
+-   Recognizing power differences
+-   Identifying basic emotions
+:::
+
+::: {.column width="50%"}
+**When we make mistakes:**
+
+-   Overrelying on stereotypes
+-   Misreading cultural differences
+-   Assuming internal states from external behavior
+-   Projecting our own expectations
+:::
+:::::
+
+::: notes
+-   Discuss why we might misinterpret what we see
+-   Connect to real-life experiences students might have had
+:::
+
+## The Social Intelligence Hypothesis
+
+::::: columns
+::: {.column width="60%"}
+**Did social complexity drive brain evolution?**
+
+-   Humans have uniquely complex social structures
+-   Keeping track of many relationships requires cognitive power
+-   Our large brains may have evolved partly to handle social computations
+-   People-watching skills appear very early in development
+:::
+
+::: {.column width="40%"}
+![Brain evolution illustration](https://i.imgur.com/example2.jpg)
+:::
+:::::
+
+::: notes
+-   Explain how even 6-month-old infants show surprise at "irrational" social interactions
+-   Connect to evolutionary advantages of understanding social dynamics
+:::
+
+## Real-World Applications {.smaller}
+
+:::::: columns
+::: {.column width="30%"}
+**Clinical Psychology**
+
+-   Assessing social-cognitive functioning
+-   Diagnosing conditions like autism
+-   Designing better therapies
+:::
+
+::: {.column width="30%"}
+**Education**
+
+-   Improving observational learning
+-   Understanding classroom dynamics
+-   Designing better social skills programs
+:::
+
+::: {.column width="30%"}
+**Technology**
+
+-   Training AI to understand human interactions
+-   Developing more natural robots
+-   Improving virtual reality experiences
+:::
+::::::
+
+::: notes
+-   Emphasize the many practical applications of this research
+-   Connect to potential career paths students might find interesting
+:::
+
+## People-Watching Skills Challenge
+
+**How can you become a better people-watcher?**
+
+-   Practice observing without jumping to conclusions
+-   Notice patterns across different situations
+-   Consider cultural and contextual factors
+-   Be aware of your own biases and expectations
+-   Look for details in behavior and responses
+
+::: notes
+-   Frame people-watching as a skill that can be developed
+-   Emphasize the ethical aspects (respect for privacy, avoiding judgmentalism)
+:::
+
+## The Future of People-Watching Research
+
+**Exciting new directions:**
+
+-   Cross-cultural studies of social perception
+-   How virtual interactions change our people-watching abilities
+-   Neural mechanisms of real-time social analysis
+-   How our social perceptions influence our behavior
+-   Using VR to study encounter-based impressions
+
+::: notes
+-   Highlight that this is a growing field with many unanswered questions
+-   Mention opportunities for students interested in psychology, neuroscience, or sociology
+:::
+
+## Why This Matters
+
+People-watching is more than entertainment:
+
+-   It helps us understand complex social dynamics
+-   It provides a window into how our brains process social information
+-   It reveals biases and cultural differences in perception
+-   It connects to fundamental questions about what makes us human
+-   It has countless applications in the real world
+
+::: notes
+-   Wrap up by emphasizing the significance of this research
+-   Connect back to students' everyday experiences
+:::
+
+## Try It Yourself!
+
+**Mini-experiment for the next week:**
+
+1.  Spend 10 minutes people-watching in a public place
+2.  Record your observations and impressions
+3.  Note what specific cues led to your conclusions
+4.  Reflect on any assumptions you might have made
+5.  Compare notes with friends - did they notice the same things?
+
+::: notes
+-   Provide a simple, ethical activity students can try
+-   Emphasize respectful observation in public places only
+-   Suggest they might notice new things after this presentation
+:::
+
+## Thank You!
+
+::::: columns
+::: {.column width="70%"}
+**Questions to consider:**
+
+-   How might people-watching skills differ across cultures?
+-   How might social media change how we read social cues?
+-   What ethical considerations should people-watchers keep in mind?
+-   How might technology like AR glasses change people-watching?
+:::
+
+::: {.column width="30%"}
+![QR code linking to research](https://i.imgur.com/example3.jpg)
+:::
+:::::
+
+::: notes
+-   End with discussion questions
+-   Provide resources for students who want to learn more
+:::
+
+## References {.smaller}
+
+-   Barasz, K., & Kim, T. (2022). Editorial: A field guide to people-watching. Current Opinion in Psychology, 45, 101301.
+-   Quadflieg, S., & Penton-Voak, I. (2017). The Emerging Science of People-Watching: Forming Impressions From Third-Party Encounters. Current Directions in Psychological Science, 26(4), 383-389.
+-   Place, S. S., Todd, P. M., Zhuang, J., Penke, L., & Asendorpf, J. B. (2012). Judging romantic interest of others from thin slices is a cross-cultural ability. Evolution and Human Behavior, 33, 547-550.
+-   Manera, V., Del Giudice, M., Bara, B. G., Verfailie, K., & Becchio, C. (2011). The second-agent effect: communicative gestures increase the likelihood of perceiving a second agent. PLoS One, 6, e22650.
+
+::: notes
+-   Acknowledge the researchers whose work formed the basis of the presentation
+:::
+
+## The Methodological Challenge {background-image="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80" background-opacity="0.3"}
+
+::: r-fit-text
+How do researchers systematically study something as complex and natural as people-watching?
+:::
+
+::: notes
+-   Explain that studying social perception requires specialized methods
+-   Highlight the challenge of examining an automatic process we usually do unconsciously
+-   Note that researchers had to develop innovative approaches to study this phenomenon
+:::
+
+## Research Paradigm Shift {background-color="#254441"}
+
+::::: columns
+::: {.column width="50%"}
+**Traditional Approach**
+
+![Single face studies](https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80){width="166"}
+
+-   Single faces or individuals
+-   Static images
+-   Isolated traits or emotions
+-   Decontextualized
+:::
+
+::: {.column width="50%"}
+**TPE Approach** ![Dyadic interaction](https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80){width="444"}
+
+-   Multiple people interacting
+-   Dynamic exchanges
+-   Relational qualities
+-   Contextualized interactions
+:::
+:::::
+
+::: notes
+-   Explain how studying dyads required a completely different experimental approach
+-   Note that this represents a significant methodological innovation in social psychology
+:::
+
+## The Stimuli Toolkit {background-color="#3E2F5B"}
+
+Researchers use a variety of stimuli to study people-watching:
+
+:::::: columns
+::: {.column width="33%"}
+**Static** ![Photograph example](https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80)
+
+-   Photographs
+-   Paintings
+-   Drawings
+:::
+
+::: {.column width="33%"}
+**Dynamic** ![Video interactions](https://images.unsplash.com/photo-1525620455013-d7f46e424d35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80)
+
+-   Video clips
+-   Animations
+-   Live interactions
+:::
+
+::: {.column width="33%"}
+**Abstracted** ![Point light displays](https://miro.medium.com/v2/resize:fit:1400/1*3Tg-0kV_JXK2Ggc4LQzayw.jpeg)
+
+-   Point light displays
+-   Stick figures
+-   Silhouettes
+:::
+::::::
+
+::: notes
+-   Explain each type of stimulus and why researchers might choose one over another
+-   Point light displays especially show our ability to read social information from minimal cues
+-   Note how abstracted stimuli help isolate motion and configuration information from identity
+:::
+
+## Point Light Displays: A Technical Deep Dive {background-color="#1A1A2E"}
+
+::::: columns
+::: {.column width="60%"}
+**How they work:** \* Actors wear reflective markers on joints \* Movements are recorded in darkness \* Only points of light are visible \* Removes all identity cues \* Isolates pure motion information
+
+**The surprising finding:** We can determine social relationships from just moving dots!
+:::
+
+::: {.column width="40%"}
+![Point light display example](https://miro.medium.com/v2/resize:fit:1400/1*3Tg-0kV_JXK2Ggc4LQzayw.jpeg)
+:::
+:::::
+
+::: notes
+-   Explain this is a powerful technique originally developed for studying biological motion
+-   The fact we can read social relationships from such minimal stimuli shows how sensitive our social perception systems are
+-   Used in the research by Manera et al. (2011)
+:::
+
+## Eye-Tracking Methods {background-image="https://images.unsplash.com/photo-1523289217630-0dd16184af8e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" background-opacity="0.2"}
+
+::::: columns
+::: {.column width="60%"}
+**What researchers track:** \* Fixation patterns between interacting people \* Gaze switches between interaction partners \* Time spent looking at different body parts \* Pupil dilation (indicating emotional response) \* Scan path analysis (the sequence of looking)
+:::
+
+::: {.column width="40%"}
+![Eye tracking heatmap example](https://miro.medium.com/v2/resize:fit:1180/1*sAtpCEzl-qnWKCC9H7M_hg.png)
+:::
+:::::
+
+::: notes
+-   Explain that eye-tracking reveals what information people are extracting during social observation
+-   Studies by Villani et al. showed observers continuously look back and forth between interaction partners
+-   This methodology helps identify what visual cues people use when forming impressions
+:::
+
+## Brain Imaging Techniques {background-color="#30343F"}
+
+::::: columns
+::: {.column width="50%"}
+**fMRI Studies Reveal:**
+
+![fMRI brain scan](https://cdn.mos.cms.futurecdn.net/VvzPJn9Qwyji9kaPP8U5dQ-1200-80.jpg)
+
+-   Three integrated neural networks
+-   Increased activity for joint vs. independent actions
+-   Specialized brain regions for social context processing
+:::
+
+::: {.column width="50%"}
+**The Three Networks:**
+
+![Brain networks schematic](https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41593-018-0283-1/MediaObjects/41593_2018_283_Fig1_HTML.png?as=webp)
+
+1.  Person Perception Network (PPN)
+2.  Action Perception Network (APN)
+3.  Mentalizing Network (MN)
+:::
+:::::
+
+::: notes
+-   Explain these networks form the neural foundation of people-watching
+-   PPN analyzes faces and bodies
+-   APN interprets actions and movements
+-   MN attributes mental states and intentions
+-   Describe how fMRI shows these networks activate more strongly during observations of interacting vs. non-interacting people
+:::
+
+## Experimental Paradigms {background-image="https://images.unsplash.com/photo-1553835973-dec43bfddbeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" background-opacity="0.2"}
+
+::::: columns
+::: {.column width="50%"}
+**Encounter Categorization Task**
+
+-   Participants classify interactions into types
+-   Measures accuracy and response time
+-   Example categories:
+    -   Cooperative vs. competitive
+    -   Formal vs. intimate
+    -   Dominant vs. equal status
+:::
+
+::: {.column width="50%"}
+**Encounter Prediction Task**
+
+-   Participants predict how an interaction will unfold
+-   View partial information (beginning of interaction)
+-   Predict next actions or relationship outcomes
+-   Tests understanding of social dynamics
+:::
+:::::
+
+::: notes
+-   These paradigms measure how accurately people can "read" social situations
+-   Explain that reaction time gives insight into automatic vs. deliberate processing
+-   Connect to real-world situation where we need to quickly assess social dynamics
+:::
+
+## The "Thin Slices" Methodology {background-color="#0F3057"}
+
+::::: columns
+::: {.column width="60%"}
+**How it works:** \* Observers view brief (10-30 second) clips of interactions \* Make judgments about relationships, traits, or outcomes \* Judgments are compared to actual outcomes or self-reports \* Measures the accuracy of rapid social perception
+
+**Key research question:** How much social information can we extract from minimal exposure?
+:::
+
+::: {.column width="40%"}
+![People interacting at party](https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80)
+:::
+:::::
+
+::: notes
+-   Explain that "thin slices" refers to brief samples of behavior
+-   This method has shown we need surprisingly little information to form accurate impressions
+-   Place et al. (2012) used this to study romantic interest detection across cultures
+:::
+
+## Visual Cue Analysis {background-color="#3E2F5B"}
+
+Researchers isolate and manipulate specific visual cues:
+
+::::: columns
+::: {.column width="50%"}
+**Physical proximity** ![People standing at different distances](https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80)
+
+**Facial expressions** ![People with different expressions](https://images.unsplash.com/photo-1521119989659-a83eee488004?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1723&q=80)
+:::
+
+::: {.column width="50%"}
+**Body orientation** ![People oriented toward each other](https://images.unsplash.com/photo-1524481905007-ea072534b820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80)
+
+**Motion synchrony** ![People in synchronized motion](https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80)
+:::
+:::::
+
+::: notes
+-   Explain how researchers systematically manipulate one variable while controlling others
+-   Distance studies (proxemics) show we judge relationships partly by how close people stand
+-   Synchrony studies reveal we detect even subtle coordination between interaction partners
+:::
+
+## Experimental Design: Biernieri's Classic Study {background-color="#2A2438"}
+
+::::: columns
+::: {.column width="60%"}
+**Methodology:** 1. Filmed dyads of strangers having conversations 2. Participants rated their own felt rapport 3. Observers watched silent video clips 4. Observers rated perceived rapport 5. Compared self-reports vs. observer judgments 6. Analyzed which visual cues predicted each
+
+**Key finding:** Observers relied on smiles, but participants' ratings were linked to physical proximity
+:::
+
+::: {.column width="40%"}
+![People in conversation](https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80)
+:::
+:::::
+
+::: notes
+-   This 1996 study was groundbreaking in revealing the mismatch between perceived and felt rapport
+-   Explains why we sometimes misread social situations - we rely on visible cues that may not be diagnostic
+-   Connect to everyday experience of misjudging whether people are enjoying a conversation
+:::
+
+## Cross-Cultural Research Methods {background-image="https://images.unsplash.com/photo-1526650588039-8235daee8455?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" background-opacity="0.3"}
+
+::::: columns
+::: {.column width="50%"}
+**Research Questions:** \* Are some social perceptions universal? \* How do cultural norms affect interpretation? \* Which cues are culturally specific? \* Can people accurately read interactions from other cultures?
+:::
+
+::: {.column width="50%"}
+**Methodology:** \* Show identical interactions to people from different cultures \* Compare perception accuracy across cultures \* Analyze culture-specific interpretation biases \* Test for universal vs. culture-specific cues
+:::
+:::::
+
+::: notes
+-   Place et al. (2012) found that detecting romantic interest is a cross-cultural ability
+-   Some social cues appear to be universal, while others are culturally specific
+-   This methodology helps separate innate from learned aspects of social perception
+:::
+
+## The Two-Strategy Hypothesis {background-color="#1A1A2E"}
+
+::::: columns
+::: {.column width="60%"}
+**How do we process social interactions?**
+
+**Feature-Based Processing** \* Extract specific visual components \* Analyze individual cues (e.g., number of smiles) \* Process components separately \* Build up interpretation from parts
+
+**Template-Based Processing** \* Compare to stored patterns of typical interactions \* Process interactions holistically \* Use prior expectations to guide perception \* Recognize patterns from minimal information
+:::
+
+::: {.column width="40%"}
+![Social interaction analysis diagram](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41593-018-0283-1/MediaObjects/41593_2018_283_Fig1_HTML.png?as=webp)
+:::
+:::::
+
+::: notes
+-   Explain that researchers debate which strategy is primary
+-   Evidence suggests we may use both strategies at different processing stages
+-   Template approach explains how we recognize interactions even from minimal cues
+-   Feature approach explains how we analyze specific aspects of interactions
+:::
+
+## Developmental Research Methods {background-image="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" background-opacity="0.2"}
+
+::::: columns
+::: {.column width="50%"}
+**With Infants & Toddlers:** \* Looking time paradigms \* Violation-of-expectation method \* Preferential looking tasks \* Action imitation studies \* Measures: gaze duration, surprise, preference
+:::
+
+::: {.column width="50%"}
+**Research Findings:** \* 6-month-olds notice "irrational" interactions \* 12-month-olds have expectations about social goals \* 18-month-olds imitate observed interactions \* Social perception develops before language
+:::
+:::::
+
+::: notes
+-   Explain each methodology (e.g., babies look longer at unexpected events)
+-   These methods reveal that social perception is present very early in development
+-   Findings suggest some aspects of people-watching may be innate or develop very early
+-   Gredebäck & Melinder's research shows infants' sophisticated social understanding
+:::
+
+## Clinical Applications & Methods {background-color="#254441"}
+
+::::: columns
+::: {.column width="50%"}
+**Comparative Studies:** \* Compare clinical vs. typical populations \* Diagnose social-cognitive differences \* Identify specific processing differences \* Design targeted interventions
+
+**Example:** Autism studies show differences in: \* Eye movement patterns \* Neural activation patterns \* Types of social cues utilized
+:::
+
+::: {.column width="50%"}
+![Clinical assessment setup](https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1756&q=80)
+:::
+:::::
+
+::: notes
+-   Explain how these methods help understand conditions with social perception differences
+-   Byrge et al. (2015) showed distinct neural patterns in autism during interaction observation
+-   These findings help develop better assessment tools and interventions
+-   Connect to potential career paths in clinical psychology or neuroscience
+:::
+
+## Virtual Reality Methods {background-color="#3E2F5B"}
+
+::::: columns
+::: {.column width="50%"}
+**Advantages:** \* Precise control over social scenarios \* Manipulation of specific social variables \* Immersive, ecological validity \* Replicable across participants \* Can track behavior in realistic contexts
+:::
+
+::: {.column width="50%"}
+![VR research setup](https://images.unsplash.com/photo-1622979135240-caa35388be43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80)
+
+**Growing area of TPE research!**
+:::
+:::::
+
+::: notes
+-   Explain how VR allows researchers to create controlled but realistic social scenarios
+-   VR can place participants within interactions rather than just observing them
+-   Emerging methodology that combines control with ecological validity
+-   Connect to potential future research directions
+:::
+
+## Computational Modeling {background-color="#1A1A2E"}
+
+::::: columns
+::: {.column width="60%"}
+**How It Works:** \* Create computational models of social perception \* Test which features are most diagnostic \* Simulate different processing strategies \* Compare model performance to human performance \* Identify minimal features needed for accurate perception
+
+**Questions Addressed:** \* Which visual features are most informative? \* How do we integrate different social cues? \* How does prior knowledge influence perception?
+:::
+
+::: {.column width="40%"}
+![Computational model diagram](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-021-01196-4/MediaObjects/41562_2021_1196_Fig1_HTML.png?as=webp)
+:::
+:::::
+
+::: notes
+-   Explain that computational models help test theories about how people process social information
+-   These models can reveal which strategies are most efficient and accurate
+-   Modeling approaches help bridge psychology and computer science
+-   Connect to AI and machine learning applications
+:::
+
+## Future Methodological Frontiers {background-image="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" background-opacity="0.2"}
+
+-   **Hyperscanning:** Simultaneous brain recording from multiple individuals
+-   **Natural Language Processing:** Analyzing verbal content of interactions
+-   **Machine Learning Applications:** Training computers to recognize social dynamics
+-   **Mobile Eye-Tracking:** Studying social perception in real-world environments
+-   **Digital Phenotyping:** Using smartphone data to assess social perception abilities
+
+::: notes
+-   Hyperscanning studies neural synchronization between interacting individuals
+-   Mobile methods allow studying social perception in natural environments
+-   These cutting-edge methods will further advance our understanding of people-watching
+-   Connect to potential research careers and interdisciplinary approaches
+:::
+
+## Technical Challenge: Design Your Study {background-color="#30343F"}
+
+::::: columns
+::: {.column width="60%"}
+**You are a social psychologist studying how teens detect popularity based on observed interactions.**
+
+**What would you include in your research design?** \* What stimuli would you use? \* What measures would you employ? \* What variables would you manipulate? \* How would you assess accuracy? \* What technologies would you incorporate?
+:::
+
+::: {.column width="40%"}
+![Teens interacting](https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80)
+:::
+:::::
+
+::: notes
+-   Make this interactive - have students discuss in small groups
+-   Connect to real-world high school social dynamics
+-   Encourage creative thinking about methodology
+-   Emphasize that good research requires careful design
+:::
+
+## Methods Integration: A Case Study {background-color="#254441"}
+
+::::: columns
+::: {.column width="50%"}
+**Research Question:** How do we detect cooperative vs. competitive relationships?
+
+**Multi-method Approach:** 1. Eye-tracking (what cues we look at) 2. fMRI (neural processing differences) 3. Behavioral measures (accuracy & reaction time) 4. Computational modeling (processing strategies)
+:::
+
+::: {.column width="50%"}
+![Integration of methods diagram](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41593-018-0283-1/MediaObjects/41593_2018_283_Fig2_HTML.png?as=webp)
+:::
+:::::
+
+::: notes
+-   Explain how combining multiple methods provides stronger evidence
+-   Each method addresses different aspects of the research question
+-   Integration allows researchers to connect neural, cognitive, and behavioral levels
+-   Strong research programs use complementary methods
+:::
+
+## Thank You!
+
+::::: columns
+::: {.column width="70%"}
+**Key Takeaways:** \* People-watching research uses sophisticated methodologies \* Multiple techniques provide complementary insights \* The field combines psychology, neuroscience, and computer science \* These methods reveal how we make sense of our social world \* New technologies continue to advance our understanding
+:::
+
+::: {.column width="30%"}
+![Social interaction research](https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2232&q=80)
+:::
+:::::
+
+::: notes
+-   Wrap up by emphasizing the sophisticated methodologies used in this research
+-   Connect to potential career pathways in psychology, neuroscience, or data science
+-   Invite questions about specific methodologies
+:::
+
+## References {.smaller}
+
+-   Barasz, K., & Kim, T. (2022). Editorial: A field guide to people-watching. Current Opinion in Psychology, 45, 101301.
+-   Quadflieg, S., & Penton-Voak, I. (2017). The Emerging Science of People-Watching: Forming Impressions From Third-Party Encounters. Current Directions in Psychological Science, 26(4), 383-389.
+-   Bernieri, F. J., Gillis, J. S., Davis, J. M., & Grahe, J. E. (1996). Dyad rapport and the accuracy of its judgment across situations: A Lens Model analysis. Journal of Personality and Social Psychology, 71, 110-129.
+-   Manera, V., Del Giudice, M., Bara, B. G., Verfailie, K., & Becchio, C. (2011). The second-agent effect: communicative gestures increase the likelihood of perceiving a second agent. PLoS One, 6, e22650.
+-   Villani, D., Morganti, F., Cipresso, P., Ruggi, S., Riva, G., & Gilli, G. (2015). Visual exploration patterns of human figures in action. Frontiers in Psychology, doi: 10.3389/fpsyg.2015.01636.
+
+::: notes
+-   Acknowledge the researchers whose methodological innovations advanced this field
+:::

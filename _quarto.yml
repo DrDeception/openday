@@ -38,8 +38,7 @@ format:
     center: false
     width: 1280
     height: 720
-    margin: 0.5
+    margin: 0.2
     link-external-newwindow: true
     embed-resources: true
 
-editor: visual
