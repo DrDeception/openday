@@ -1,395 +1,1053 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n# Load required libraries\nlibrary(ggplot2)\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(tidyr)\n\n# Sample data for the chart\ndata &lt;- data.frame(\n  AgeGroup = c(\"60-77\", \"45-60\", \"30-44\", \"18-29\", \"13-17\", \"8-12\", \"6-8\"),\n  MoreThanFiveLies = c(1, 3, 4, 10, 11, 9, 9),\n  OneToFiveLies = c(10, 13, 28, 35, 45, 43, 43),\n  NoLies = c(89, 84, 68, 55, 45, 48, 48)\n)\n\n# Reshape the data for plotting\ndata_long &lt;- data %&gt;%\n  pivot_longer(cols = c(\"MoreThanFiveLies\", \"OneToFiveLies\", \"NoLies\"),\n               names_to = \"LieFrequency\",\n               values_to = \"Percentage\")\n\n# Define the order of the factors for AgeGroup and LieFrequency\ndata_long$AgeGroup &lt;- factor(data_long$AgeGroup, levels = rev(data$AgeGroup))\ndata_long$LieFrequency &lt;- factor(data_long$LieFrequency, \n                                 levels = c(\"NoLies\", \"OneToFiveLies\", \"MoreThanFiveLies\"))\n\n# Improved color palette\ncolor_palette &lt;- c(\"#d9d9d9\", \"#969696\", \"#525252\")  # Light to dark grey\n\n# Create the stacked bar plot\nggplot(data_long, aes(x = AgeGroup, y = Percentage, fill = LieFrequency)) +\n  geom_bar(stat = \"identity\", position = \"stack\", width = 0.7) +\n  scale_fill_manual(values = color_palette) +\n  coord_flip() +\n  labs(title = \"Lying frequency, by age\", subtitle = \"Over a 24-hour period\", \n       x = \"Age Group\", y = \"Percentage of Lies\", fill = \"Lies Frequency\") +\n  theme_minimal() +\n  theme(legend.position = \"top\", \n        plot.title = element_text(size = 16, face = \"bold\"),\n        plot.subtitle = element_text(size = 12),\n        legend.title = element_blank()) +\n  geom_text(aes(label = paste0(Percentage, \"%\")), \n            position = position_stack(vjust = 0.5), \n            size = 3, color = \"white\")\n\n\n\n\n\n\n\n\n\n# Load required libraries\nlibrary(ggplot2)\nlibrary(dplyr)\nlibrary(tidyr)\n\n# Sample data for the chart\ndata &lt;- data.frame(\n  AgeGroup = c(\"60-77\", \"45-60\", \"30-44\", \"18-29\", \"13-17\", \"8-12\", \"6-8\"),\n  MoreThanFiveLies = c(1, 3, 4, 10, 11, 9, 9),\n  OneToFiveLies = c(10, 13, 28, 35, 45, 43, 43),\n  NoLies = c(89, 84, 68, 55, 45, 48, 48)\n)\n\n# Reshape the data for plotting\ndata_long &lt;- data %&gt;%\n  pivot_longer(cols = c(\"MoreThanFiveLies\", \"OneToFiveLies\", \"NoLies\"),\n               names_to = \"LieFrequency\",\n               values_to = \"Percentage\")\n\n# Define the order of the factors for AgeGroup and LieFrequency\ndata_long$AgeGroup &lt;- factor(data_long$AgeGroup, levels = rev(data$AgeGroup))\ndata_long$LieFrequency &lt;- factor(data_long$LieFrequency, \n                                 levels = c(\"NoLies\", \"OneToFiveLies\", \"MoreThanFiveLies\"))\n\n# Updated pastel color palette\ncolor_palette &lt;- c(\"#f2f2f2\", \"#f7c6c7\", \"#FFEB84\")  # Light grey, pastel pink, pastel yellow for 5+\n\n# Create the stacked bar plot\np &lt;- ggplot(data_long, aes(x = AgeGroup, y = Percentage, fill = LieFrequency)) +\n  geom_bar(stat = \"identity\", position = \"stack\", width = 0.7) +\n  scale_fill_manual(values = color_palette) +\n  coord_flip() +\n  labs(title = \"Lying frequency, by age\", subtitle = \"Over a 24-hour period\", \n       x = \"Age Group\", y = \"Percentage of Lies\", fill = \"Lies Frequency\") +\n  theme_minimal() +\n  theme(legend.position = \"top\", \n        plot.title = element_text(size = 16, face = \"bold\"),\n        plot.subtitle = element_text(size = 12),\n        legend.title = element_blank()) +\n  geom_text(aes(label = ifelse(LieFrequency == \"NoLies\", paste0(Percentage, \"%\"), \"\")), \n            position = position_stack(vjust = 0.5), \n            size = 3, color = \"black\") +  # Black text for \"No Lies\"\n  geom_text(aes(label = ifelse(LieFrequency != \"NoLies\", paste0(Percentage, \"%\"), \"\")), \n            position = position_stack(vjust = 0.5), \n            size = 3, color = \"black\")  # White text for other categories\n\n# Display the plot\nprint(p)"
+    "objectID": "myths.html#the-most-common-questions-psych-students-get-asked",
+    "href": "myths.html#the-most-common-questions-psych-students-get-asked",
+    "title": "Mythbusting",
+    "section": "The most common questions Psych Students get asked",
+    "text": "The most common questions Psych Students get asked"
   },
   {
-    "objectID": "t-tests.html#introduction",
-    "href": "t-tests.html#introduction",
-    "title": "Experiments - Revision",
-    "section": "Introduction",
-    "text": "Introduction\n\n\n\n\n\n\nImportant\n\n\n\nUnderstanding IVs, DVs and Design is crucial for research design\nGolf putting used as a running example for T-Tests, OneWay ANOVA, and 2x2 ANOVA\nReminder to revisit foundational concepts if struggling\n\n\n\n\nUnderstanding the basics of experimental design is crucial for conducting scientific research, especially your Mini-Dissertation this year. In this review, we’ll explore the concepts of Independent Variables (IVs), Dependent Variables (DVs), and how experiments are designed to determine causal links. We’ll use golf putting as our running example.\nClarifying Independent and Dependent Variables for Your Mini-Dissertation:\nI want to remind you how crucial it is to fully grasp the concept of Independent Variables (IVs) and Dependent Variables (DVs). These were covered in depth last year and are central to the research design of your mini-dissertation. If you’re experiencing challenges now, it may stem from not being completely confident or competent in distinguishing between these key elements.\nThe Independent Variable is what you, as the researcher, manipulate or categorize, and the Dependent Variable is what you measure as a result of these manipulations. Whether you’re working on an experimental or correlational study, mastering this distinction is critical.\nPlease take time to revisit this foundational concept, as a clear understanding will simplify the complexity of your research and improve your analysis moving forward."
+    "objectID": "myths.html#introduce-yourself-gordon",
+    "href": "myths.html#introduce-yourself-gordon",
+    "title": "Mythbusting",
+    "section": "Introduce yourself, Gordon",
+    "text": "Introduce yourself, Gordon\n\nUnfortunately, none of the interesting psychologists are here today.\nSo you are stuck with me.\nI am sorry to say that I spend lots of my time lecturing Research Methods and Statistics.\nWe take that seriously here at Goldsmiths."
   },
   {
-    "objectID": "t-tests.html#independent-variables-ivs",
-    "href": "t-tests.html#independent-variables-ivs",
-    "title": "Experiments - Revision",
-    "section": "Independent Variables (IVs)",
-    "text": "Independent Variables (IVs)\nDefinition\nAn Independent Variable is the factor that researchers manipulate or change in an experiment. It’s the presumed cause in a cause-effect relationship. I remember this by saying “the IV is the variable I manipulate!” - silly, but effective!\nCharacteristics\n\nControlled by the researcher\nHas two or more levels or conditions\nManipulated to observe its effect on the Dependent Variable\n\nGolf Putting Example\nIn a golf putting experiment, potential Independent Variables could include: - Hole size (e.g., small vs. big) - Putting distance (e.g., 5 feet vs. 10 feet) - Crowd noise (e.g., booing vs. cheering) - Incentive (e.g., win a egg, or lose an egg)"
+    "objectID": "myths.html#we-are-just-about-to-introduce-next-years-y2-research-topics",
+    "href": "myths.html#we-are-just-about-to-introduce-next-years-y2-research-topics",
+    "title": "Mythbusting",
+    "section": "We are just about to introduce next year’s Y2 research topics",
+    "text": "We are just about to introduce next year’s Y2 research topics\n\nIndependent choice of topics\nWork as a group\nRun a real exxperiment using Qual and Quant techniques\nAnd yes, Analyse the data!"
   },
   {
-    "objectID": "t-tests.html#dependent-variables-dvs",
-    "href": "t-tests.html#dependent-variables-dvs",
-    "title": "Experiments - Revision",
-    "section": "Dependent Variables (DVs)",
-    "text": "Dependent Variables (DVs)\nDefinition\nA Dependent Variable is the outcome that is measured in an experiment. It’s the presumed effect in a cause-effect relationship. I remember this as “the DV is the data I collect that depends on the result of the manipulation”\nCharacteristics\n\nObserved and measured by the researcher\nChanges in response to the Independent Variable (if a causal relationship exists)\nQuantifiable and measurable in the right way!\n\nGolf Putting Example\nIn our golf putting experiment, potential Dependent Variables could include:\n\nPercentage of successful putts\nDistance from the hole for missed putts\nConsistency of putting stroke (measured by the purity of the sound when hit)"
+    "objectID": "myths.html#this-year-was-a-bit-of-a-nightmare",
+    "href": "myths.html#this-year-was-a-bit-of-a-nightmare",
+    "title": "Mythbusting",
+    "section": "This year was a bit of a nightmare…",
+    "text": "This year was a bit of a nightmare…\nLet me tell you why!"
   },
   {
-    "objectID": "t-tests.html#experiments-to-determine-causal-links-golf-joke",
-    "href": "t-tests.html#experiments-to-determine-causal-links-golf-joke",
-    "title": "Experiments - Revision",
-    "section": "Experiments to Determine Causal Links (golf joke!)",
-    "text": "Experiments to Determine Causal Links (golf joke!)\nPurpose\nExperiments are designed to establish a causal relationship between the IV and DV by controlling for other factors that might influence the outcome.\nKey Components\n\nControl: Minimizing the influence of extraneous variables\nRandomization: Assigning participants or conditions randomly\nReplication: Repeating the experiment to ensure reliability\n\nSteps in Experimental Design\n\nFormulate a hypothesis\nIdentify and define the IV and DV\nDesign the experimental procedure\nCollect and analyze data\nDraw conclusions"
+    "objectID": "myths.html#can-you-read-my-mind",
+    "href": "myths.html#can-you-read-my-mind",
+    "title": "Mythbusting",
+    "section": "Can you read my mind?",
+    "text": "Can you read my mind?"
   },
   {
-    "objectID": "t-tests.html#experiment-overview",
-    "href": "t-tests.html#experiment-overview",
-    "title": "Experiments - Revision",
-    "section": "Experiment Overview",
-    "text": "Experiment Overview\n\nIndependent Variable (IV):\n\nPresence of crowd noise (2 levels: Booing vs. Cheering)\n\nDependent Variable (DV):\n\nPutting accuracy (percentage of successful putts)"
+    "objectID": "myths.html#mind-reading-for-real",
+    "href": "myths.html#mind-reading-for-real",
+    "title": "Mythbusting",
+    "section": "Mind-reading for real",
+    "text": "Mind-reading for real"
   },
   {
-    "objectID": "t-tests.html#between-groups-design-concept",
-    "href": "t-tests.html#between-groups-design-concept",
-    "title": "Experiments - Revision",
-    "section": "Between-Groups Design Concept",
-    "text": "Between-Groups Design Concept\nIn this between-groups design:\n\nWe have two separate groups of participants\nEach group experiences only one condition of the IV\nWe compare the mean scores of the two groups on the DV"
+    "objectID": "myths.html#die-in-the-cup-task",
+    "href": "myths.html#die-in-the-cup-task",
+    "title": "Mythbusting",
+    "section": "Die in the cup task",
+    "text": "Die in the cup task"
   },
   {
-    "objectID": "t-tests.html#golf-putting-experiment-example",
-    "href": "t-tests.html#golf-putting-experiment-example",
-    "title": "Experiments - Revision",
-    "section": "Golf Putting Experiment Example",
-    "text": "Golf Putting Experiment Example\nHypotheses\n\nNull Hypothesis (H0):\n\nThere is no significant difference in putting accuracy between the booing and cheering conditions.\n\nAlternative Hypothesis (H1):\n\nThere is a significant difference in putting accuracy between the booing and cheering conditions.\n\n\nMethod\nParticipants\n\n40 amateur golfers (20 per group)\nRandomly assigned to either the Booing condition or the Cheering condition\n\nMaterials\n\nStandard putters and golf balls\nPutting green with a straight 10-foot putt\nAudio system for the cheering condition\n\nProcedure\n\nParticipants are briefed on the task but not told about the specific hypothesis\nEach participant attempts 20 putts\nBooing group: putts while the horrible crowd boos and jeers\nCheering group: putts while the crowd goes wild with excitement\n\nData Structure\nOur data might look like this:\n\n\n\nParticipant\nCondition\nSuccess Rate (%)\n\n\n\n\n1\nBooing\n70\n\n\n2\nBooing\n65\n\n\n…\n…\n…\n\n\n20\nBooing\n75\n\n\n21\nCheering\n80\n\n\n22\nCheering\n85\n\n\n…\n…\n…\n\n\n40\nCheering\n78\n\n\n\nAnalysis\nWe would use an independent samples t-test to analyze this data, comparing the means of the two groups."
+    "objectID": "myths.html#the-science-of-mind-reading",
+    "href": "myths.html#the-science-of-mind-reading",
+    "title": "Mythbusting",
+    "section": "The Science of Mind Reading",
+    "text": "The Science of Mind Reading\n\nPsychological research reveals we can detect subtle nonverbal cues that appear like mind reading\nPsychologists study subconscious communication through microexpressions and body language\nProfessional “mind readers” utilize techniques like cold reading, warm reading, and hot reading\nBrain imaging studies show how we predict others’ intentions through mirror neurons and theory of mind"
   },
   {
-    "objectID": "t-tests.html#conducting-an-independent-samples-t-test",
-    "href": "t-tests.html#conducting-an-independent-samples-t-test",
-    "title": "Experiments - Revision",
-    "section": "Conducting an Independent Samples t-test",
-    "text": "Conducting an Independent Samples t-test\nAssumptions\n\nThe DV is continuous\nThe IV consists of two categorical, independent groups\nThere is independence of observations\nNo significant outliers in either group\nThe DV is approximately normally distributed for each group\nThere is homogeneity of variances\n\nCalculation\nWe won’t go into this here but it might look like this.\n\nInterpretation & Reporting\n\nIf p &lt; α (typically 0.05), reject the null hypothesis\nReport the t-statistic, degrees of freedom, p-value, and effect size (e.g., Cohen’s d)\n\n\nThere was a significant difference in putting success rates between the cheering (M = 79.74%, SD = 4.15) and booing (M = 70.71%, SD = 4.86) conditions; t(37) = -6.32, p &lt; 0.001, d = 2.00. The cheering condition resulted in a 9.04 percentage point increase in putting success rate compared to the booing condition."
+    "objectID": "myths.html#techniques-behind-mind-reading",
+    "href": "myths.html#techniques-behind-mind-reading",
+    "title": "Mythbusting",
+    "section": "Techniques Behind “Mind Reading”",
+    "text": "Techniques Behind “Mind Reading”\n\n\nScientific Explanations\n\nUnconscious behavioral cues\nImplicit pattern recognition\nSkilled observation of reactions\nStatistical guessing with feedback\n\n\nReal-World Applications\n\nClinical psychology assessments\nLaw enforcement interrogations\nMarketing and consumer research\nHuman-computer interaction design"
   },
   {
-    "objectID": "t-tests.html#advantages-and-limitations",
-    "href": "t-tests.html#advantages-and-limitations",
-    "title": "Experiments - Revision",
-    "section": "Advantages and Limitations",
-    "text": "Advantages and Limitations\nAdvantages\n\nAvoids order effects and practice effects\nEach participant only needs to be tested once\nSuitable for manipulations that cannot be easily reversed, like a nice or awful crowd\n\nLimitations\n\nRequires more participants for the same statistical power as a within-subjects design\nIndividual differences between groups could affect the results\n\nFor example, one group might coincidentally have more skilled golfers\n\nEach participant provides data for only one condition, potentially limiting the richness of the data\nMore susceptible to the influence of outliers due to smaller per-condition sample sizes\nCannot account for how individuals might respond differently to various conditions\nMay be less sensitive to detecting small effects due to between-subject variability\nRandomization may not always perfectly balance out all potential confounding variables\nIf the manipulation is obvious, there might be demand characteristics where participants guess the hypothesis and alter their behavior\nIn our specific golf example, environmental factors (like slight changes in wind or green conditions) might affect one group more than the other if all tests for one condition are done together"
+    "objectID": "myths.html#are-you-profiling-me",
+    "href": "myths.html#are-you-profiling-me",
+    "title": "Mythbusting",
+    "section": "Are you profiling me?",
+    "text": "Are you profiling me?"
   },
   {
-    "objectID": "t-tests.html#experiment-overview-1",
-    "href": "t-tests.html#experiment-overview-1",
-    "title": "Experiments - Revision",
-    "section": "Experiment Overview",
-    "text": "Experiment Overview\n\nIndependent Variable (IV):\n\nIncentive type (2 levels: Win an egg vs. Lose an egg)\n\nDependent Variable (DV):\n\nPutting accuracy (percentage of successful putts)"
+    "objectID": "myths.html#the-psychology-of-environmental-profiling",
+    "href": "myths.html#the-psychology-of-environmental-profiling",
+    "title": "Mythbusting",
+    "section": "The Psychology of Environmental Profiling",
+    "text": "The Psychology of Environmental Profiling\n\nResearch shows personal spaces contain “behavioral residue” that reveals personality traits\nPsychologists can analyze bedrooms, offices, and social media profiles for accurate personality insights\nGosling’s research demonstrates how possessions and environment reflect our “extended self”\nThe field of psychogeography explores how personal spaces both shape and reflect identity"
   },
   {
-    "objectID": "t-tests.html#within-subjects-design-concept",
-    "href": "t-tests.html#within-subjects-design-concept",
-    "title": "Experiments - Revision",
-    "section": "Within-Subjects Design Concept",
-    "text": "Within-Subjects Design Concept\nIn this within-subjects design:\n\nEach participant experiences both conditions of the IV\nThe order of conditions is counterbalanced across participants\nWe compare each participant’s performance across the two conditions"
+    "objectID": "myths.html#what-your-stuff-says-about-you",
+    "href": "myths.html#what-your-stuff-says-about-you",
+    "title": "Mythbusting",
+    "section": "What Your Stuff Says About You",
+    "text": "What Your Stuff Says About You\n\n\nWhat We Can Actually Tell\n\nConscientiousness from organization\nOpenness from variety of books/music\nExtraversion from memorabilia\nEmotional stability from photo content\n\n\nEthical Considerations\n\nConsent and privacy boundaries\nAvoiding stereotyping\nCultural context differences\nResponsible use of information"
   },
   {
-    "objectID": "t-tests.html#golf-putting-experiment-example-1",
-    "href": "t-tests.html#golf-putting-experiment-example-1",
-    "title": "Experiments - Revision",
-    "section": "Golf Putting Experiment Example",
-    "text": "Golf Putting Experiment Example\nHypotheses\n\nNull Hypothesis (H0):\n\nThere is no significant difference in putting accuracy between the “win an egg” and “lose an egg” conditions.\n\nAlternative Hypothesis (H1):\n\nThere is a significant difference in putting accuracy between the “win an egg” and “lose an egg” conditions.\n\n\nMethod\nParticipants\n\n20 amateur golfers\nEach participant completes both conditions in a counterbalanced order\n\nMaterials\n\nStandard putters and golf balls\nPutting green with a straight 10-foot putt\nEggs as incentives\n\nProcedure\n\nParticipants are briefed on the task but not told about the specific hypothesis\nEach participant attempts 20 putts in each condition\n“Win an egg” condition: Participant wins an egg for each successful putt\n“Lose an egg” condition: Participant starts with 20 eggs and loses one for each missed putt\nOrder of conditions is counterbalanced across participants\n\nData Structure\nOur data might look like this:\n\n\n\nParticipant\nWin Egg (%)\nLose Egg (%)\n\n\n\n\n1\n75\n70\n\n\n2\n80\n75\n\n\n…\n…\n…\n\n\n20\n85\n80\n\n\n\nAnalysis\nWe would use a paired samples t-test to analyze this data, comparing each participant’s performance across the two conditions."
+    "objectID": "myths.html#can-you-seduce-anyone",
+    "href": "myths.html#can-you-seduce-anyone",
+    "title": "Mythbusting",
+    "section": "Can you seduce anyone?",
+    "text": "Can you seduce anyone?"
   },
   {
-    "objectID": "t-tests.html#conducting-a-paired-samples-t-test",
-    "href": "t-tests.html#conducting-a-paired-samples-t-test",
-    "title": "Experiments - Revision",
-    "section": "Conducting a Paired Samples t-test",
-    "text": "Conducting a Paired Samples t-test\nAssumptions\n\nThe DV is continuous\nThe IV consists of two related groups (repeated measures)\nNo significant outliers in the differences between the two related groups\nThe distribution of the differences should be approximately normally distributed\n\nCalculation\nWe won’t go into this here but it might look like this.\n\nInterpretation & Reporting\n\nIf p &lt; α (typically 0.05), reject the null hypothesis\nReport the t-statistic, degrees of freedom, p-value, and effect size (e.g., Cohen’s d)\n\n\nThere was a significant difference in putting success rates between the ‘win an egg’ (M = 79.87%, SD = 5.09) and ‘lose an egg’ (M = 74.76%, SD = 4.70) conditions; t(19) = 3.55, p &lt; 0.001, d = 0.79. The ‘win an egg’ condition resulted in a 5.96 percentage point increase in putting success rate compared to the ‘lose an egg’ condition."
+    "objectID": "myths.html#the-science-of-rapport-building",
+    "href": "myths.html#the-science-of-rapport-building",
+    "title": "Mythbusting",
+    "section": "The Science of Rapport Building",
+    "text": "The Science of Rapport Building\n\nPsychological research identifies specific techniques that build authentic connection\nMirroring and behavioral synchrony create unconscious feelings of affinity\nSelf-disclosure and active listening promote oxytocin release and interpersonal bonding\nCialdini’s principles of influence explain persuasion effects in social contexts"
   },
   {
-    "objectID": "t-tests.html#advantages-and-limitations-1",
-    "href": "t-tests.html#advantages-and-limitations-1",
-    "title": "Experiments - Revision",
-    "section": "Advantages and Limitations",
-    "text": "Advantages and Limitations\nAdvantages\n\nControls for individual differences in golfing ability\nRequires fewer participants for the same statistical power\nEach participant provides data for both conditions, allowing for richer within-subject comparisons\nMore sensitive to detecting small effects due to reduced error variance\n\nLimitations\n\nPotential for order effects (partially addressed through counterbalancing)\nPractice effects may occur as participants become more familiar with the task\nFatigue effects may influence performance in the second condition\nCarryover effects from one condition to another (e.g., strategy developed in first condition applied to second)\nCannot be used for manipulations that have lasting effects (unlike the between-subjects design)\nParticipants may guess the hypothesis more easily, potentially leading to demand characteristics\nAnalysis can be more complex, especially if order effects need to be accounted for\nIn our specific golf example, the psychological impact of winning or losing eggs in the first condition might affect performance in the second condition"
+    "objectID": "myths.html#building-genuine-connection",
+    "href": "myths.html#building-genuine-connection",
+    "title": "Mythbusting",
+    "section": "Building Genuine Connection",
+    "text": "Building Genuine Connection\n\n\nEmpirically-Validated Techniques\n\nMaintained eye contact (70% listening)\nSubtle mirroring of posture and speech\nAsking follow-up questions\nUsing person’s name appropriately\n\n\nBeyond Manipulation\n\nAuthentic interest vs. manipulation\nEthics of interpersonal influence\nBuilding meaningful relationships\nApplying research responsibly"
   },
   {
-    "objectID": "t-tests.html#bridge-from-t-tests-to-one-way-anova",
-    "href": "t-tests.html#bridge-from-t-tests-to-one-way-anova",
-    "title": "Experiments - Revision",
-    "section": "Bridge: From t-tests to One-Way ANOVA",
-    "text": "Bridge: From t-tests to One-Way ANOVA\nWhen we move beyond comparing just two groups, we enter the realm of Analysis of Variance (ANOVA). The simplest form of ANOVA is the one-way ANOVA, which is used when we have one independent variable (IV) with three or more levels.\nOne-Way ANOVA: Three Group Comparison\nLet’s consider an extension of our TeemuBall experiment where we have three types of crowd reactions:\nIndependent Variable (IV): Crowd Reaction (3 levels: Booing, Silence, Cheering) Dependent Variable (DV): Accuracy (percentage of successful throws)\nDesign Concept\n\nThree separate groups of participants\nEach group experiences one type of crowd reaction\n\nMethod\nParticipants\n\n60 participants (20 per group)\nRandomly assigned to one of three conditions\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in their assigned condition\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nAccuracy (%)\n\n\n\n\n1\nBooing\n70\n\n\n2\nBooing\n75\n\n\n…\n…\n…\n\n\n21\nSilence\n80\n\n\n…\n…\n…\n\n\n41\nCheering\n85\n\n\n…\n…\n…\n\n\n\nAnalysis\n\nOne-way between-groups ANOVA\n\nKey Points\n\nExtension of t-test: One-way ANOVA is an extension of the independent samples t-test, allowing comparison of more than two groups.\nOverall F-test: ANOVA provides an overall F-test to determine if there are any significant differences among the groups.\nPost-hoc tests: If the overall F-test is significant, post-hoc tests (e.g., Tukey’s HSD) can determine which specific groups differ from each other.\nEfficiency: One-way ANOVA is more efficient than conducting multiple t-tests, reducing the risk of Type I errors.\n\nThis bridge from t-tests to one-way ANOVA sets the stage for understanding more complex designs like the 2x2 ANOVA, where we introduce a second independent variable."
+    "objectID": "myths.html#do-you-like-people-watching",
+    "href": "myths.html#do-you-like-people-watching",
+    "title": "Mythbusting",
+    "section": "Do you like People Watching?",
+    "text": "Do you like People Watching?"
   },
   {
-    "objectID": "t-tests.html#overview-of-2x2-anova",
-    "href": "t-tests.html#overview-of-2x2-anova",
-    "title": "Experiments - Revision",
-    "section": "Overview of 2x2 ANOVA",
-    "text": "Overview of 2x2 ANOVA\nA 2x2 ANOVA (Analysis of Variance) is a powerful statistical technique that allows us to examine the effects of two independent variables (IVs) simultaneously on a dependent variable (DV). It extends the concept of a t-test, which compares means between two groups, to a more complex design with four groups.\nComponents of a 2x2 ANOVA:\n\nMain Effect of IV1: The overall effect of the first independent variable, averaged across levels of the second IV.\nMain Effect of IV2: The overall effect of the second independent variable, averaged across levels of the first IV.\nInteraction Effect: The combined effect of both IVs, which may be different from what we’d expect based on the main effects alone."
+    "objectID": "myths.html#the-science-of-social-observation",
+    "href": "myths.html#the-science-of-social-observation",
+    "title": "Mythbusting",
+    "section": "The Science of Social Observation",
+    "text": "The Science of Social Observation\n\nPeople-watching is a sophisticated cognitive process studied in social perception research\nPsychologists analyze “third-party encounters” to understand how we interpret social interactions\nWe form accurate impressions about relationships, status, and intentions within seconds\nBrain studies reveal specialized neural networks dedicated to processing social dynamics"
   },
   {
-    "objectID": "t-tests.html#x2-anova-visual-representations",
-    "href": "t-tests.html#x2-anova-visual-representations",
-    "title": "Experiments - Revision",
-    "section": "2x2 ANOVA Visual Representations",
-    "text": "2x2 ANOVA Visual Representations\nBasic 2x2 Table Structure\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\nMain Effect of Crowd Reaction\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\n\nYou’d expect A&C to consistently differ from B&D to show Crowd has a general effect\n\nMain Effect of Incentive\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\n\nYou’d expect A&B to consistently differ from C&D to show Incentive has a general effect\n\nInteraction Effect\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB!\n\n\nLose\nC\nD\n\n\n\nIf Crowd and Incentive both have general effects, where they interact e.g. B (assuming both positive) something magic might happen there.\nIf you have trouble grasping this (common) think about Drug interactions. You shouldn’t take Drug 1 and Drug 2 together or your nose will grow. If you are not taking either drug, fine. If you are taking only one of the two drugs, fine. But if you are in the condition where you are taking both drugs… they interact and your nose grows!\nThese schematic representations help illustrate:\n\nThe basic structure of a 2x2 design\nHow main effects involve comparisons across one variable (ignoring the other)\nHow interaction effects involve the unique combinations of both variables\n\nAdvantages over Multiple t-tests:\n\nEfficiency: Conducts multiple comparisons in a single analysis, reducing the risk of Type I errors.\nInteraction Detection: Can identify how the effect of one IV depends on the levels of the other IV.\nIncreased Power: Generally has more statistical power to detect effects than multiple separate t-tests."
+    "objectID": "myths.html#how-we-make-sense-of-social-interactions",
+    "href": "myths.html#how-we-make-sense-of-social-interactions",
+    "title": "Mythbusting",
+    "section": "How We Make Sense of Social Interactions",
+    "text": "How We Make Sense of Social Interactions\n\n\nWhat We Can Detect\n\nRelationship types (friends vs. strangers)\nPower dynamics and social status\nRomantic interest and attraction\nCultural norms and violations\n\n\nResearch Applications\n\nClinical assessments (e.g., autism)\nCross-cultural understanding\nArtificial intelligence development\nUrban planning and public spaces\n\n\nhttps://huggingface.co/spaces/LittleMonkeyLab/All_a_bit_emotional"
   },
   {
-    "objectID": "t-tests.html#experiment-overview-2",
-    "href": "t-tests.html#experiment-overview-2",
-    "title": "Experiments - Revision",
-    "section": "Experiment Overview",
-    "text": "Experiment Overview\nTask:\n\nParticipants throw balls into Teemu’s Topmiler (a hat that looks like a basketball net)\n\nIndependent Variables (IVs):\n\n1. Crowd Reaction: Booing vs. Cheering\n2. Incentive: Win an egg vs. Lose an egg\n\nDependent Variable (DV):\n\nAccuracy (percentage of successful throws)"
+    "objectID": "myths.html#can-you-do-tricks-like-derren-brown",
+    "href": "myths.html#can-you-do-tricks-like-derren-brown",
+    "title": "Mythbusting",
+    "section": "Can you do tricks like Derren Brown?",
+    "text": "Can you do tricks like Derren Brown?"
   },
   {
-    "objectID": "t-tests.html#fully-between-groups-factorial-design-2b-x-2b-anova",
-    "href": "t-tests.html#fully-between-groups-factorial-design-2b-x-2b-anova",
-    "title": "Experiments - Revision",
-    "section": "1. Fully Between-Groups Factorial Design: 2(b) x 2(b) ANOVA",
-    "text": "1. Fully Between-Groups Factorial Design: 2(b) x 2(b) ANOVA\nDesign Concept\n\nFour separate (groups of) participants\nEach group experiences one combination of the two IVs\n\nMethod\nParticipants\n\n80 participants (20 per group)\nRandomly assigned to one of four conditions\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in their assigned condition\nConditions:\n\nBooing, Win an egg\nBooing, Lose an egg\nCheering, Win an egg\nCheering, Lose an egg\n\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nIncentive\nAccuracy (%)\n\n\n\n\n1\nBooing\nWin egg\n75\n\n\n2\nBooing\nWin egg\n80\n\n\n…\n…\n…\n…\n\n\n21\nBooing\nLose egg\n65\n\n\n…\n…\n…\n…\n\n\n41\nCheering\nWin egg\n85\n\n\n…\n…\n…\n…\n\n\n61\nCheering\nLose egg\n70\n\n\n…\n…\n…\n…\n\n\n\nAnalysis\n\nTwo-way between-groups ANOVA\n\nAdvantages and Limitations\nAdvantages\n\nNo order effects\nEach participant only tested once\nCan examine both main effects and interaction\n\nLimitations\n\nRequires larger sample size\nCannot account for individual differences across conditions"
+    "objectID": "myths.html#the-psychology-of-cold-reading",
+    "href": "myths.html#the-psychology-of-cold-reading",
+    "title": "Mythbusting",
+    "section": "The Psychology of Cold Reading",
+    "text": "The Psychology of Cold Reading\n\nCold reading uses psychological principles to create illusion of mind reading or clairvoyance\nTechniques include Barnum statements, observation, and probability-based guessing\nPsychologists study these methods to understand belief formation and cognitive biases\nThe ideomotor effect explains unconscious movements in techniques like pendulum swinging"
   },
   {
-    "objectID": "t-tests.html#mixed-design-2w-x-2b-anova",
-    "href": "t-tests.html#mixed-design-2w-x-2b-anova",
-    "title": "Experiments - Revision",
-    "section": "2. Mixed Design: 2(w) x 2(b) ANOVA",
-    "text": "2. Mixed Design: 2(w) x 2(b) ANOVA\nDesign Concept\n\nTwo (groups of) participants\nEach participant experiences both levels of Incentive, but only one level of Crowd Reaction\n\nMethod\nParticipants\n\n40 participants (20 per group)\nRandomly assigned to either Booing or Cheering condition\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in the “Win egg” condition and 20 throws in the “Lose egg” condition\nIncentive order is counterbalanced\nParticipants remain in their assigned Crowd Reaction condition for all throws\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nWin Egg (%)\nLose Egg (%)\n\n\n\n\n1\nBooing\n75\n70\n\n\n2\nBooing\n80\n75\n\n\n…\n…\n…\n…\n\n\n21\nCheering\n85\n80\n\n\n…\n…\n…\n…\n\n\n\nAnalysis\n\nMixed ANOVA with Incentive as within-subjects factor and Crowd Reaction as between-groups factor\n\nAdvantages and Limitations\nAdvantages\n\nCombines benefits of within and between-subjects designs\nRequires fewer participants than fully between-groups\nCan examine individual differences in response to Incentive\n\nLimitations\n\nPotential for order effects in the Incentive factor\nMore complex analysis\nCannot examine individual differences across Crowd Reaction conditions"
+    "objectID": "myths.html#the-science-behind-the-performance",
+    "href": "myths.html#the-science-behind-the-performance",
+    "title": "Mythbusting",
+    "section": "The Science Behind the Performance",
+    "text": "The Science Behind the Performance"
   },
   {
-    "objectID": "t-tests.html#mixed-design-2b-x-2w-anova",
-    "href": "t-tests.html#mixed-design-2b-x-2w-anova",
-    "title": "Experiments - Revision",
-    "section": "3. Mixed Design: 2(b) x 2(w) ANOVA",
-    "text": "3. Mixed Design: 2(b) x 2(w) ANOVA\nDesign Concept\n\nTwo groups of participants\nEach participant experiences both levels of Crowd Reaction, but only one level of Incentive\n\nMethod\nParticipants\n\n40 participants (20 per group)\nRandomly assigned to either Win egg or Lose egg condition\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in the Booing condition and 20 throws in the Cheering condition\nCrowd Reaction order is counterbalanced\nParticipants remain in their assigned Incentive condition for all throws\n\nData Structure\n\n\n\nParticipant\nIncentive\nBooing (%)\nCheering (%)\n\n\n\n\n1\nWin egg\n75\n85\n\n\n2\nWin egg\n80\n90\n\n\n…\n…\n…\n…\n\n\n21\nLose egg\n65\n75\n\n\n…\n…\n…\n…\n\n\n\nAnalysis\n\nMixed ANOVA with Crowd Reaction as within-subjects factor and Incentive as between-groups factor\n\nAdvantages and Limitations\nAdvantages\n\nCombines benefits of within and between-subjects designs\nRequires fewer participants than fully between-groups\nCan examine individual differences in response to Crowd Reaction\n\nLimitations\n\nPotential for order effects in the Crowd Reaction factor\nMore complex analysis\nCannot examine individual differences across Incentive conditions"
+    "objectID": "myths.html#the-science-behind-the-performance-2",
+    "href": "myths.html#the-science-behind-the-performance-2",
+    "title": "Mythbusting",
+    "section": "The Science Behind the Performance 2",
+    "text": "The Science Behind the Performance 2\n\n\nPsychological Mechanisms\n\nConfirmation bias in interpretation\nSubjective validation effects\nAvailability heuristics\nThe Forer (Barnum) effect\n\n\nCritical Thinking Tools\n\nDistinguishing skill from deception\nUnderstanding suggestibility\nRecognizing statistical tricks\nEthical entertainment vs. exploitation"
   },
   {
-    "objectID": "t-tests.html#repeated-measures-design-2w-x-2w-anova",
-    "href": "t-tests.html#repeated-measures-design-2w-x-2w-anova",
-    "title": "Experiments - Revision",
-    "section": "4. Repeated Measures Design: 2(w) x 2(w) ANOVA",
-    "text": "4. Repeated Measures Design: 2(w) x 2(w) ANOVA\nDesign Concept\n\nOne group of participants\nEach participant experiences all combinations of the two IVs\n\nMethod\nParticipants\n\n20 participants\n\nProcedure\n\nParticipants are briefed on the task\nEach participant completes 20 throws in each of the four conditions:\n\nBooing, Win egg\nBooing, Lose egg\nCheering, Win egg\nCheering, Lose egg\n\nOrder of conditions is counterbalanced\n\nData Structure\n\n\n\n\n\n\n\n\n\n\nParticipant\nBooing, Win (%)\nBooing, Lose (%)\nCheering, Win (%)\nCheering, Lose (%)\n\n\n\n\n1\n75\n70\n85\n80\n\n\n2\n80\n75\n90\n85\n\n\n…\n…\n…\n…\n…\n\n\n\nAnalysis\n\nTwo-way repeated measures ANOVA\n\nAdvantages and Limitations\nAdvantages\n\nRequires fewest participants\nCan examine individual differences across all conditions\nHighest statistical power\n\nLimitations\n\nMost susceptible to order effects and practice effects\nPotential for participant fatigue\nMost complex analysis\nCannot be used if effects of conditions are long-lasting"
+    "objectID": "myths.html#can-you-sherlock-me",
+    "href": "myths.html#can-you-sherlock-me",
+    "title": "Mythbusting",
+    "section": "Can you Sherlock me?",
+    "text": "Can you Sherlock me?"
   },
   {
-    "objectID": "t-tests.html#into-some-detail",
-    "href": "t-tests.html#into-some-detail",
-    "title": "Experiments - Revision",
-    "section": "Into some detail",
-    "text": "Into some detail\n\n\n\n\n\n\nNote\n\n\nCopied with thanks from Matt Crump’s Asking Questions with Data OER under CC-BY-NC-SA 4.0 Online Textbook: https://crumplab.github.io/statistics/\nCitation: Crump, M. J. C., Navarro, D. J., & Suzuki, J. (2019, June 5). Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students. https://doi.org/10.17605/OSF.IO/JZE52\n\n\n\nDesigns with multiple factors are very common. When you read a research article you will often see graphs that show the results from designs with multiple factors. It would be good for you if you were comfortable interpreting the meaning of those results. The skill here is to be able to look at a graph and see the pattern of main effects and interactions. This skill is important, because the patterns in the data can quickly become very complicated looking, especially when there are more than two independent variables, with more than two levels.\n2x2 designs\nLet’s take the case of 2x2 designs. There will always be the possibility of two main effects and one interaction. You will always be able to compare the means for each main effect and interaction. If the appropriate means are different then there is a main effect or interaction. Here’s the thing, there a bunch of ways all of this can turn out. Check out the ways, there are 8 of them:\n\nno IV1 main effect, no IV2 main effect, no interaction\nIV1 main effect, no IV2 main effect, no interaction\nIV1 main effect, no IV2 main effect, interaction\nIV1 main effect, IV2 main effect, no interaction\nIV1 main effect, IV2 main effect, interaction\nno IV1 main effect, IV2 main effect, no interaction\nno IV1 main effect, IV2 main effect, interaction\nno IV1 main effect, no IV2 main effect, interaction\n\nOK, so if you run a 2x2, any of these 8 general patterns could occur in your data. That’s a lot to keep track of isn’t. As you develop your skills in examining graphs that plot means, you should be able to look at the graph and visually guesstimate if there is, or is not, a main effect or interaction. You will need you inferential statistics to tell you for sure, but it is worth knowing how to know see the patterns.\nFigure 1 shows the possible patterns of main effects and interactions in bar graph form. Here is a legend for the labels in the panels.\n\n1 = there was a main effect for IV1.\n~1 = there was not a main effect for IV1\n2 = there was a main effect for IV2\n~2 = there was not a main effect of IV2\n1x2 = there was an interaction\n~1x2 = there was not an interaction\n\n\n\n\n\n\n\n\n\nFigure 1: 8 Example patterns for means for each of the possible kinds of general outcomes in a 2x2 design.\n\n\n\n\n\nFigure 2 shows the same eight patterns in line graph form:\n\n\n\n\n\n\n\n\nFigure 2: Line graphs showing 8 possible general outcomes for a 2x2 design.\n\n\n\n\n\nThe line graphs accentuates the presence of interaction effects. Whenever the lines cross, or would cross if they kept going, you have a possibility of an interaction. Whenever the lines are parallel, there can’t be an interaction. When both of the points on the A side are higher or lower than both of the points on the B side, then you have a main effect for IV1 (A vs B). Whenever the green line is above or below the red line, then you have a main effect for IV2 (1 vs. 2). We know this is complicated. You should see what all the possibilities look like when we start adding more levels or more IVs. It gets nuts. Because of this nuttiness, it is often good practice to make your research designs simple (as few IVs and levels as possible to test your question). That way it will be easier to interpret your data. Whenever you see that someone ran a 4x3x7x2 design, your head should spin. It’s just too complicated."
+    "objectID": "myths.html#the-science-of-personality-prediction",
+    "href": "myths.html#the-science-of-personality-prediction",
+    "title": "Mythbusting",
+    "section": "The Science of Personality Prediction",
+    "text": "The Science of Personality Prediction\n\n\nResearch shows personality traits can be predicted from behavioral patterns and preferences\nThe “Big Five” traits provide a scientific framework for understanding stable dimensions\nDigital footprints on social media can reveal personality with surprising accuracy\nBehavioral economics uses “nudges” based on personality insights to influence decisions"
   },
   {
-    "objectID": "t-tests.html#interpreting-main-effects-and-interactions",
-    "href": "t-tests.html#interpreting-main-effects-and-interactions",
-    "title": "Experiments - Revision",
-    "section": "Interpreting main effects and interactions",
-    "text": "Interpreting main effects and interactions\nThe interpretation of main effects and interactions can get tricky. Consider the concept of a main effect. This is the idea that a particular IV has a consistent effect. For example, drinking 5 cups of coffee makes you more awake compared to not drinking 5 cups of coffee. The main effect of drinking 5 cups of coffee vs not drinking coffee will generally be true across the levels of other IVs in our life. For example, let’s say you conducted an experiment testing whether the effect of drinking 5 cups of coffee vs not, changes depending on whether you are in your house or in a car. Perhaps the situation matters? No, probably not so much. You will probably still be more awake in your house, or your car, after having 5 cups of coffee, compared to if you hadn’t.\nThe coffee example is a reasonably good example of a consistent main effect. Another silly kind of example might be the main effect of shoes on your height. For example, if your IV was wearing shoes or not, and your DV was height, then we could expect to find a main effect of wearing shoes on your measurement of height. When you wear shoes, you will become taller compared to when you don’t wear shoes. Wearing shoes adds to your total height. In fact, it’s hard to imagine how the effect of wearing shoes on your total height would ever interact with other kinds of variables. You will be always be that extra bit taller wearing shoes. Indeed, if there was another manipulation that could cause an interaction that would truly be strange. For example, imagine if the effect of being inside a bodega or outside a bodega interacted with the effect of wearing shoes on your height. That could mean that shoes make you taller when you are outside a bodega, but when you step inside, your shoes make you shorter…but, obviously this is just totally ridiculous. That’s correct, it is often ridiculous to expect that one IV will have an influence on the effect of another, especially when there is no good reason.\nThe summary here is that it is convenient to think of main effects as a consistent influence of one manipulation. However, when an interaction is observed, this messes up the consistency of the main effect. That is the very definition of an interaction. It means that some main effect is not behaving consistently across different situations. Indeed, whenever we find an interaction, sometimes we can question whether or not there really is a general consistent effect of some manipulation, or instead whether that effect only happens in specific situations.\nFor this reason, you will often see that researchers report their findings this way:\n“We found a main effect of X, BUT, this main effect was qualified by an interaction between X and Y”.\nNotice the big BUT. Why is it there? The sentence points out that before they talk about the main effect, they need to first talk about the interaction, which is making the main effect behave inconsistently. In other words, the interpretation of the main effect depends on the interaction, the two things have to be thought of together to make sense of them.\nHere are two examples to help you make sense of these issues:\nA consistent main effect and an interaction\n\n\n\n\n\n\n\n\nFigure 3: Example means showing a generally consistent main effect along with an interaction\n\n\n\n\n\nFigure 3 shows a main effect and interaction. There is a main effect of IV2: the level 1 means (red points and line) are both lower than the level 2 means (aqua points and line). There is also an interaction. The size of the difference between the red and aqua points in the A condition (left) is bigger than the size of the difference in the B condition.\nHow would we interpret this? We could say there WAS a main effect of IV2, BUT it was qualified by an IV1 x IV2 interaction.\nWhat’s the qualification? The size of the IV2 effect changed as a function of the levels of IV1. It was big for level A, and small for level B of IV1.\nWhat does the qualification mean for the main effect? Well, first it means the main effect can be changed by the other IV. That’s important to know. Does it also mean that the main effect is not a real main effect because there was an interaction? Not really, there is a generally consistent effect of IV2. The green points are above the red points in all cases. Whatever IV2 is doing, it seems to work in at least a couple situations, even if the other IV also causes some change to the influence.\nAn inconsistent main effect and an interaction\n\n\n\n\n\n\n\n\nFigure 4: Example data showing how an interaction exists, and a main effect does not, even though the means for the main effect may show a difference\n\n\n\n\n\nFigure 4 shows another 2x2 design. You should see an interaction here straight away. The difference between the aqua and red points in condition A (left two dots) is huge, and there is 0 difference between them in condition B. Is there an interaction? Yes!\nAre there any main effects here? With data like this, sometimes an ANOVA will suggest that you do have significant main effects. For example, what is the mean difference between level 1 and 2 of IV2? That is the average of the green points ( (10+5)/2 = 15/2= 7.5 ) compared to the average of the red points (5). There will be a difference of 2.5 for the main effect (7.5 vs. 5).\nStarting to see the issue here? From the perspective of the main effect (which collapses over everything and ignores the interaction), there is an overall effect of 2.5. In other words, level 2 adds 2.5 in general compared to level 1. However, we can see from the graph that IV2 does not do anything in general. It does not add 2.5s everywhere. It adds 5 in condition A, and nothing in condition B. It only does one thing in one condition.\nWhat is happening here is that a “main effect” is produced by the process of averaging over a clear interaction.\nHow would we interpret this? We might have to say there was a main effect of IV2, BUT we would definitely say it was qualified by an IV1 x IV2 interaction.\nWhat’s the qualification? The size of the IV2 effect completely changes as a function of the levels of IV1. It was big for level A, and nonexistent for level B of IV1.\nWhat does the qualification mean for the main effect? In this case, we might doubt whether there is a main effect of IV2 at all. It could turn out that IV2 does not have a general influence over the DV all of the time, it may only do something in very specific circumstances, in combination with the presence of other factors."
+    "objectID": "myths.html#predicting-personality-from-behavior",
+    "href": "myths.html#predicting-personality-from-behavior",
+    "title": "Mythbusting",
+    "section": "Predicting Personality from Behavior",
+    "text": "Predicting Personality from Behavior\n\n\nWhat Science Can Actually Predict\n\nCareer preferences from personality traits\nConsumer choices from values\nSocial behavior from attachment style\nDigital behavior from cognitive style\n\n\nMINDSPACE Framework\n\nMessenger: who communicates matters\nIncentives: response to rewards/penalties\nNorms: influence of social expectations\nDefaults: tendency to accept preset options\nSalience: attention to novel/relevant items"
   },
   {
-    "objectID": "t-tests.html#mixed-designs",
-    "href": "t-tests.html#mixed-designs",
-    "title": "Experiments - Revision",
-    "section": "Mixed Designs",
-    "text": "Mixed Designs\nThroughout this book we keep reminding you that research designs can take different forms. The manipulations can be between-subjects (different subjects in each group), or within-subjects (everybody contributes data in all conditions). If you have more than one manipulation, you can have a mixed design when one of your IVs is between-subjects and one of the other ones is within-subjects.\nThe only “trick” to these designs is to use the appropriate error terms to construct the F-values for each effect. Effects that have a within-subjects repeated measure (IV) use different error terms than effects that only have a between-subject IV. In principle, you could run an ANOVA with any number of IVs, and any of them good be between or within-subjects variables.\nBecause this is an introductory textbook, we leave out a full discussion on mixed designs. What we are leaving out are the formulas to construct ANOVA tables that show how to use the correct error terms for each effect. There are many good more advanced textbooks that discuss these issues in much more depth. And, these things can all be Googled. This is a bit of a cop-out on our part, and we may return to fill in this section at some point in the future (or perhaps someone else will add a chapter about this)."
+    "objectID": "myths.html#just-because-we-are",
+    "href": "myths.html#just-because-we-are",
+    "title": "Mythbusting",
+    "section": "Just because we are",
+    "text": "Just because we are\n\nDebunking myths in human behavior\nUnderstanding the ethics of influence and perception\nThinking Critically about popular psychological claims\nHow to appreciate the complexity of the human mind\n\nDoesn’t mean we have to be boring, and not use cool toys!"
   },
   {
-    "objectID": "t-tests.htm",
-    "href": "t-tests.htm",
-    "title": "Experiments - Revision",
-    "section": "",
-    "text": "Important\n\n\n\n\nUnderstanding IVs, DVs and Design is crucial for research design\nGolf putting used as a running example for T-Tests, OneWay ANOVA, and 2x2 ANOVA\nReminder to revisit foundational concepts if struggling\n\n\n\nUnderstanding the basics of experimental design is crucial for conducting scientific research, especially your Mini-Dissertation this year. In this review, we’ll explore the concepts of Independent Variables (IVs), Dependent Variables (DVs), and how experiments are designed to determine causal links. We’ll use golf putting as our running example.\nClarifying Independent and Dependent Variables for Your Mini-Dissertation:\nI want to remind you how crucial it is to fully grasp the concept of Independent Variables (IVs) and Dependent Variables (DVs). These were covered in depth last year and are central to the research design of your mini-dissertation. If you’re experiencing challenges now, it may stem from not being completely confident or competent in distinguishing between these key elements.\nThe Independent Variable is what you, as the researcher, manipulate or categorize, and the Dependent Variable is what you measure as a result of these manipulations. Whether you’re working on an experimental or correlational study, mastering this distinction is critical.\nPlease take time to revisit this foundational concept, as a clear understanding will simplify the complexity of your research and improve your analysis moving forward.\n\n\n\n\n\nAn Independent Variable is the factor that researchers manipulate or change in an experiment. It’s the presumed cause in a cause-effect relationship. I remember this by saying “the IV is the variable I manipulate!” - silly, but effective!\n\n\n\n\nControlled by the researcher\nHas two or more levels or conditions\nManipulated to observe its effect on the Dependent Variable\n\n\n\n\nIn a golf putting experiment, potential Independent Variables could include: - Hole size (e.g., small vs. big) - Putting distance (e.g., 5 feet vs. 10 feet) - Crowd noise (e.g., booing vs. cheering) - Incentive (e.g., win a egg, or lose an egg)\n\n\n\n\n\n\nA Dependent Variable is the outcome that is measured in an experiment. It’s the presumed effect in a cause-effect relationship. I remember this as “the DV is the data I collect that depends on the result of the manipulation”\n\n\n\n\nObserved and measured by the researcher\nChanges in response to the Independent Variable (if a causal relationship exists)\nQuantifiable and measurable in the right way!\n\n\n\n\nIn our golf putting experiment, potential Dependent Variables could include:\n\nPercentage of successful putts\nDistance from the hole for missed putts\nConsistency of putting stroke (measured by the purity of the sound when hit)\n\n\n\n\n\n\n\nExperiments are designed to establish a causal relationship between the IV and DV by controlling for other factors that might influence the outcome.\n\n\n\n\nControl: Minimizing the influence of extraneous variables\nRandomization: Assigning participants or conditions randomly\nReplication: Repeating the experiment to ensure reliability\n\n\n\n\n\nFormulate a hypothesis\nIdentify and define the IV and DV\nDesign the experimental procedure\nCollect and analyze data\nDraw conclusions"
+    "objectID": "myths.html#next-year-maybe",
+    "href": "myths.html#next-year-maybe",
+    "title": "Mythbusting",
+    "section": "Next Year? Maybe?",
+    "text": "Next Year? Maybe?"
   },
   {
-    "objectID": "t-tests.htm#introduction",
-    "href": "t-tests.htm#introduction",
-    "title": "Experiments - Revision",
-    "section": "",
-    "text": "Important\n\n\n\n\nUnderstanding IVs, DVs and Design is crucial for research design\nGolf putting used as a running example for T-Tests, OneWay ANOVA, and 2x2 ANOVA\nReminder to revisit foundational concepts if struggling\n\n\n\nUnderstanding the basics of experimental design is crucial for conducting scientific research, especially your Mini-Dissertation this year. In this review, we’ll explore the concepts of Independent Variables (IVs), Dependent Variables (DVs), and how experiments are designed to determine causal links. We’ll use golf putting as our running example.\nClarifying Independent and Dependent Variables for Your Mini-Dissertation:\nI want to remind you how crucial it is to fully grasp the concept of Independent Variables (IVs) and Dependent Variables (DVs). These were covered in depth last year and are central to the research design of your mini-dissertation. If you’re experiencing challenges now, it may stem from not being completely confident or competent in distinguishing between these key elements.\nThe Independent Variable is what you, as the researcher, manipulate or categorize, and the Dependent Variable is what you measure as a result of these manipulations. Whether you’re working on an experimental or correlational study, mastering this distinction is critical.\nPlease take time to revisit this foundational concept, as a clear understanding will simplify the complexity of your research and improve your analysis moving forward."
+    "objectID": "myths.html#thank-you",
+    "href": "myths.html#thank-you",
+    "title": "Mythbusting",
+    "section": "Thank You",
+    "text": "Thank You\n\n\n\nContact Information: g.wright@gold.ac.uk"
   },
   {
-    "objectID": "t-tests.htm#independent-variables-ivs",
-    "href": "t-tests.htm#independent-variables-ivs",
-    "title": "Experiments - Revision",
-    "section": "",
-    "text": "An Independent Variable is the factor that researchers manipulate or change in an experiment. It’s the presumed cause in a cause-effect relationship. I remember this by saying “the IV is the variable I manipulate!” - silly, but effective!\n\n\n\n\nControlled by the researcher\nHas two or more levels or conditions\nManipulated to observe its effect on the Dependent Variable\n\n\n\n\nIn a golf putting experiment, potential Independent Variables could include: - Hole size (e.g., small vs. big) - Putting distance (e.g., 5 feet vs. 10 feet) - Crowd noise (e.g., booing vs. cheering) - Incentive (e.g., win a egg, or lose an egg)"
+    "objectID": "about.html#welcome",
+    "href": "about.html#welcome",
+    "title": "MarshMallows",
+    "section": "Welcome!",
+    "text": "Welcome!\n\nPsychology at Goldsmiths\nWhere science meets creativity"
   },
   {
-    "objectID": "t-tests.htm#dependent-variables-dvs",
-    "href": "t-tests.htm#dependent-variables-dvs",
-    "title": "Experiments - Revision",
-    "section": "",
-    "text": "A Dependent Variable is the outcome that is measured in an experiment. It’s the presumed effect in a cause-effect relationship. I remember this as “the DV is the data I collect that depends on the result of the manipulation”\n\n\n\n\nObserved and measured by the researcher\nChanges in response to the Independent Variable (if a causal relationship exists)\nQuantifiable and measurable in the right way!\n\n\n\n\nIn our golf putting experiment, potential Dependent Variables could include:\n\nPercentage of successful putts\nDistance from the hole for missed putts\nConsistency of putting stroke (measured by the purity of the sound when hit)"
+    "objectID": "about.html#overview-of-y1-psychology-at-goldsmiths",
+    "href": "about.html#overview-of-y1-psychology-at-goldsmiths",
+    "title": "MarshMallows",
+    "section": "Overview of Y1 Psychology at Goldsmiths",
+    "text": "Overview of Y1 Psychology at Goldsmiths\n\n\nTerm 1 Modules - Introduction to Psychology - Research Methods & Statistics I - Biological & Comparative Approaches - Cognitive Psychology\n\nTerm 2 Modules - Social Psychology - Developmental Psychology - Individual Differences - Applied Psychology\n\n\nEmphasize our unique strengths: - Critical approach to psychology - Integration of scientific rigor with creative thinking - Strong focus on research skills from day one"
   },
   {
-    "objectID": "t-tests.htm#experiments-to-determine-causal-links-golf-joke",
-    "href": "t-tests.htm#experiments-to-determine-causal-links-golf-joke",
-    "title": "Experiments - Revision",
-    "section": "",
-    "text": "Experiments are designed to establish a causal relationship between the IV and DV by controlling for other factors that might influence the outcome.\n\n\n\n\nControl: Minimizing the influence of extraneous variables\nRandomization: Assigning participants or conditions randomly\nReplication: Repeating the experiment to ensure reliability\n\n\n\n\n\nFormulate a hypothesis\nIdentify and define the IV and DV\nDesign the experimental procedure\nCollect and analyze data\nDraw conclusions"
+    "objectID": "about.html#are-you-ready-for-university",
+    "href": "about.html#are-you-ready-for-university",
+    "title": "MarshMallows",
+    "section": "Are You Ready for University?",
+    "text": "Are You Ready for University?\n\nTime ManagementIndependent LearningAcademic Skills\n\n\n\nHow do you currently organize your studies?\nCan you manage multiple deadlines without supervision?\nDo you have systems for tracking your work?\n\n\n\n\nHow do you find information beyond what’s provided?\nCan you evaluate sources critically?\nHow comfortable are you with ambiguity?\n\n\n\n\nHow confident are you with academic writing?\nCan you construct a coherent argument?\nAre you comfortable with statistical concepts?"
   },
   {
-    "objectID": "t-tests.htm#experiment-overview",
-    "href": "t-tests.htm#experiment-overview",
-    "title": "Experiments - Revision",
-    "section": "Experiment Overview",
-    "text": "Experiment Overview\n\nIndependent Variable (IV):\n\nPresence of crowd noise (2 levels: Booing vs. Cheering)\n\nDependent Variable (DV):\n\nPutting accuracy (percentage of successful putts)"
+    "objectID": "about.html#how-university-differs-from-school",
+    "href": "about.html#how-university-differs-from-school",
+    "title": "MarshMallows",
+    "section": "How University Differs from School",
+    "text": "How University Differs from School\n\n\n\nSchool\nUniversity\n\n\n\n\nTeacher-directed learning\nSelf-directed learning\n\n\nRegular homework checks\nIndependent deadlines\n\n\nStructured timetable\nFlexible schedule with gaps\n\n\nInformation provided\nResearch expected\n\n\nFocus on correct answers\nFocus on critical analysis\n\n\nLimited reading list\nExtensive reading beyond lectures"
   },
   {
-    "objectID": "t-tests.htm#between-groups-design-concept",
-    "href": "t-tests.htm#between-groups-design-concept",
-    "title": "Experiments - Revision",
-    "section": "Between-Groups Design Concept",
-    "text": "Between-Groups Design Concept\nIn this between-groups design:\n\nWe have two separate groups of participants\nEach group experiences only one condition of the IV\nWe compare the mean scores of the two groups on the DV"
+    "objectID": "about.html#your-psychology-journey",
+    "href": "about.html#your-psychology-journey",
+    "title": "MarshMallows",
+    "section": "Your Psychology Journey",
+    "text": "Your Psychology Journey\n\nWhat brings you to psychology?"
   },
   {
-    "objectID": "t-tests.htm#golf-putting-experiment-example",
-    "href": "t-tests.htm#golf-putting-experiment-example",
-    "title": "Experiments - Revision",
-    "section": "Golf Putting Experiment Example",
-    "text": "Golf Putting Experiment Example\n\nHypotheses\n\nNull Hypothesis (H0):\n\nThere is no significant difference in putting accuracy between the booing and cheering conditions.\n\nAlternative Hypothesis (H1):\n\nThere is a significant difference in putting accuracy between the booing and cheering conditions.\n\n\n\n\nMethod\n\nParticipants\n\n40 amateur golfers (20 per group)\nRandomly assigned to either the Booing condition or the Cheering condition\n\n\n\nMaterials\n\nStandard putters and golf balls\nPutting green with a straight 10-foot putt\nAudio system for the cheering condition\n\n\n\nProcedure\n\nParticipants are briefed on the task but not told about the specific hypothesis\nEach participant attempts 20 putts\nBooing group: putts while the horrible crowd boos and jeers\nCheering group: putts while the crowd goes wild with excitement\n\n\n\n\nData Structure\nOur data might look like this:\n\n\n\nParticipant\nCondition\nSuccess Rate (%)\n\n\n\n\n1\nBooing\n70\n\n\n2\nBooing\n65\n\n\n…\n…\n…\n\n\n20\nBooing\n75\n\n\n21\nCheering\n80\n\n\n22\nCheering\n85\n\n\n…\n…\n…\n\n\n40\nCheering\n78\n\n\n\n\n\nAnalysis\nWe would use an independent samples t-test to analyze this data, comparing the means of the two groups."
+    "objectID": "about.html#your-end-goals",
+    "href": "about.html#your-end-goals",
+    "title": "MarshMallows",
+    "section": "Your End Goals",
+    "text": "Your End Goals\n\nWhat do you want from your psychology degree?\n\n\n\nCareer preparation?\nUnderstanding human behavior?\nResearch skills?\nPersonal development?\nSomething else?"
   },
   {
-    "objectID": "t-tests.htm#conducting-an-independent-samples-t-test",
-    "href": "t-tests.htm#conducting-an-independent-samples-t-test",
-    "title": "Experiments - Revision",
-    "section": "Conducting an Independent Samples t-test",
-    "text": "Conducting an Independent Samples t-test\n\nAssumptions\n\nThe DV is continuous\nThe IV consists of two categorical, independent groups\nThere is independence of observations\nNo significant outliers in either group\nThe DV is approximately normally distributed for each group\nThere is homogeneity of variances\n\n\n\nCalculation\nWe won’t go into this here but it might look like this.\n\n\n\n\n\n\n\n\n\n\n\nInterpretation & Reporting\n\nIf p &lt; α (typically 0.05), reject the null hypothesis\nReport the t-statistic, degrees of freedom, p-value, and effect size (e.g., Cohen’s d)\n\n\nThere was a significant difference in putting success rates between the cheering (M = 79.74%, SD = 4.15) and booing (M = 70.71%, SD = 4.86) conditions; t(37) = -6.32, p &lt; 0.001, d = 2.00. The cheering condition resulted in a 9.04 percentage point increase in putting success rate compared to the booing condition."
+    "objectID": "about.html#todays-experiment-the-marshmallow-challenge",
+    "href": "about.html#todays-experiment-the-marshmallow-challenge",
+    "title": "MarshMallows",
+    "section": "Today’s Experiment: The Marshmallow Challenge",
+    "text": "Today’s Experiment: The Marshmallow Challenge\n\n\n\n\n\n\nThe Task\n\n\nBuild the tallest free-standing structure using: - 20 sticks of spaghetti - 1 yard of tape - 1 yard of string - 1 marshmallow (must be on top!) - Time limit: 18 minutes"
   },
   {
-    "objectID": "t-tests.htm#advantages-and-limitations",
-    "href": "t-tests.htm#advantages-and-limitations",
-    "title": "Experiments - Revision",
-    "section": "Advantages and Limitations",
-    "text": "Advantages and Limitations\n\nAdvantages\n\nAvoids order effects and practice effects\nEach participant only needs to be tested once\nSuitable for manipulations that cannot be easily reversed, like a nice or awful crowd\n\n\n\nLimitations\n\nRequires more participants for the same statistical power as a within-subjects design\nIndividual differences between groups could affect the results\n\nFor example, one group might coincidentally have more skilled golfers\n\nEach participant provides data for only one condition, potentially limiting the richness of the data\nMore susceptible to the influence of outliers due to smaller per-condition sample sizes\nCannot account for how individuals might respond differently to various conditions\nMay be less sensitive to detecting small effects due to between-subject variability\nRandomization may not always perfectly balance out all potential confounding variables\nIf the manipulation is obvious, there might be demand characteristics where participants guess the hypothesis and alter their behavior\nIn our specific golf example, environmental factors (like slight changes in wind or green conditions) might affect one group more than the other if all tests for one condition are done together"
+    "objectID": "about.html#pre-challenge-psychology-connections",
+    "href": "about.html#pre-challenge-psychology-connections",
+    "title": "MarshMallows",
+    "section": "Pre-Challenge Psychology Connections",
+    "text": "Pre-Challenge Psychology Connections\n\n\nGroup dynamics: How do strangers form working relationships?\nSocial facilitation vs. social loafing\nIn-group formation\nStatus and power dynamics\nCognitive biases:\nFunctional fixedness (seeing objects only for their intended use)\nPlanning fallacy (underestimating time needed)\nOverconfidence effect\nDecision-making under pressure:\nImpact of stress on cognitive performance\nSatisficing vs. optimizing strategies"
   },
   {
-    "objectID": "t-tests.htm#experiment-overview-1",
-    "href": "t-tests.htm#experiment-overview-1",
-    "title": "Experiments - Revision",
-    "section": "Experiment Overview",
-    "text": "Experiment Overview\n\nIndependent Variable (IV):\n\nIncentive type (2 levels: Win an egg vs. Lose an egg)\n\nDependent Variable (DV):\n\nPutting accuracy (percentage of successful putts)"
+    "objectID": "about.html#predictions",
+    "href": "about.html#predictions",
+    "title": "MarshMallows",
+    "section": "Predictions",
+    "text": "Predictions\n\n\n\n\n\n\nThink-Pair-Share\n\n\n\nWhich type of group performs best in this challenge?\nBusiness executives\nRecent MBA graduates\nEngineers and architects\nKindergarten children\nWhy do you think this is the case?"
   },
   {
-    "objectID": "t-tests.htm#within-subjects-design-concept",
-    "href": "t-tests.htm#within-subjects-design-concept",
-    "title": "Experiments - Revision",
-    "section": "Within-Subjects Design Concept",
-    "text": "Within-Subjects Design Concept\nIn this within-subjects design:\n\nEach participant experiences both conditions of the IV\nThe order of conditions is counterbalanced across participants\nWe compare each participant’s performance across the two conditions"
+    "objectID": "about.html#research-methods-preview",
+    "href": "about.html#research-methods-preview",
+    "title": "MarshMallows",
+    "section": "Research Methods Preview",
+    "text": "Research Methods Preview\nThis challenge demonstrates core elements of psychological research:\n\n\nVariables:\nIndependent (group composition)\nDependent (tower height, completion)\nControl (same materials, instructions)\nObservation methods:\nStructured observation\nBehavioral coding\nProcess analysis\nData analysis:\nQuantitative (height measurements)\nQualitative (group dynamics)"
   },
   {
-    "objectID": "t-tests.htm#golf-putting-experiment-example-1",
-    "href": "t-tests.htm#golf-putting-experiment-example-1",
-    "title": "Experiments - Revision",
-    "section": "Golf Putting Experiment Example",
-    "text": "Golf Putting Experiment Example\n\nHypotheses\n\nNull Hypothesis (H0):\n\nThere is no significant difference in putting accuracy between the “win an egg” and “lose an egg” conditions.\n\nAlternative Hypothesis (H1):\n\nThere is a significant difference in putting accuracy between the “win an egg” and “lose an egg” conditions.\n\n\n\n\nMethod\n\nParticipants\n\n20 amateur golfers\nEach participant completes both conditions in a counterbalanced order\n\n\n\nMaterials\n\nStandard putters and golf balls\nPutting green with a straight 10-foot putt\nEggs as incentives\n\n\n\nProcedure\n\nParticipants are briefed on the task but not told about the specific hypothesis\nEach participant attempts 20 putts in each condition\n“Win an egg” condition: Participant wins an egg for each successful putt\n“Lose an egg” condition: Participant starts with 20 eggs and loses one for each missed putt\nOrder of conditions is counterbalanced across participants\n\n\n\n\nData Structure\nOur data might look like this:\n\n\n\nParticipant\nWin Egg (%)\nLose Egg (%)\n\n\n\n\n1\n75\n70\n\n\n2\n80\n75\n\n\n…\n…\n…\n\n\n20\n85\n80\n\n\n\n\n\nAnalysis\nWe would use a paired samples t-test to analyze this data, comparing each participant’s performance across the two conditions."
+    "objectID": "about.html#observer-roles",
+    "href": "about.html#observer-roles",
+    "title": "MarshMallows",
+    "section": "Observer Roles",
+    "text": "Observer Roles\nSome of you will be observers rather than participants:\n\n\nCommunication patterns:\nWho speaks? How often? Who listens?\nVerbal vs. non-verbal communication\nDecision-making processes:\nHow are ideas generated and evaluated?\nIs there evidence of groupthink?\nLeadership emergence:\nFormal vs. informal leadership\nLeadership styles (directive, participative)\nConflict resolution:\nHow are disagreements handled?\nConstructive vs. destructive conflict"
   },
   {
-    "objectID": "t-tests.htm#conducting-a-paired-samples-t-test",
-    "href": "t-tests.htm#conducting-a-paired-samples-t-test",
-    "title": "Experiments - Revision",
-    "section": "Conducting a Paired Samples t-test",
-    "text": "Conducting a Paired Samples t-test\n\nAssumptions\n\nThe DV is continuous\nThe IV consists of two related groups (repeated measures)\nNo significant outliers in the differences between the two related groups\nThe distribution of the differences should be approximately normally distributed\n\n\n\nCalculation\nWe won’t go into this here but it might look like this.\n\n\n\n\n\n\n\n\n\n\n\nInterpretation & Reporting\n\nIf p &lt; α (typically 0.05), reject the null hypothesis\nReport the t-statistic, degrees of freedom, p-value, and effect size (e.g., Cohen’s d)\n\n\nThere was a significant difference in putting success rates between the ‘win an egg’ (M = 79.87%, SD = 5.09) and ‘lose an egg’ (M = 74.76%, SD = 4.70) conditions; t(19) = 3.55, p &lt; 0.001, d = 0.79. The ‘win an egg’ condition resulted in a 5.96 percentage point increase in putting success rate compared to the ‘lose an egg’ condition."
+    "objectID": "about.html#now-lets-begin",
+    "href": "about.html#now-lets-begin",
+    "title": "MarshMallows",
+    "section": "Now, Let’s Begin!",
+    "text": "Now, Let’s Begin!\n\n18:00 minutes on the clock…"
   },
   {
-    "objectID": "t-tests.htm#advantages-and-limitations-1",
-    "href": "t-tests.htm#advantages-and-limitations-1",
-    "title": "Experiments - Revision",
-    "section": "Advantages and Limitations",
-    "text": "Advantages and Limitations\n\nAdvantages\n\nControls for individual differences in golfing ability\nRequires fewer participants for the same statistical power\nEach participant provides data for both conditions, allowing for richer within-subject comparisons\nMore sensitive to detecting small effects due to reduced error variance\n\n\n\nLimitations\n\nPotential for order effects (partially addressed through counterbalancing)\nPractice effects may occur as participants become more familiar with the task\nFatigue effects may influence performance in the second condition\nCarryover effects from one condition to another (e.g., strategy developed in first condition applied to second)\nCannot be used for manipulations that have lasting effects (unlike the between-subjects design)\nParticipants may guess the hypothesis more easily, potentially leading to demand characteristics\nAnalysis can be more complex, especially if order effects need to be accounted for\nIn our specific golf example, the psychological impact of winning or losing eggs in the first condition might affect performance in the second condition"
+    "objectID": "about.html#post-challenge-analysis",
+    "href": "about.html#post-challenge-analysis",
+    "title": "MarshMallows",
+    "section": "Post-Challenge Analysis",
+    "text": "Post-Challenge Analysis\nTuckman’s Stages of Group Development\n\n\nForming: Orientation, testing boundaries\nStorming: Conflict, resistance to task demands\nNorming: Development of group cohesion\nPerforming: Functional role relatedness\nAdjourning: Completion and disengagement"
   },
   {
-    "objectID": "t-tests.htm#bridge-from-t-tests-to-one-way-anova",
-    "href": "t-tests.htm#bridge-from-t-tests-to-one-way-anova",
-    "title": "Experiments - Revision",
-    "section": "Bridge: From t-tests to One-Way ANOVA",
-    "text": "Bridge: From t-tests to One-Way ANOVA\nWhen we move beyond comparing just two groups, we enter the realm of Analysis of Variance (ANOVA). The simplest form of ANOVA is the one-way ANOVA, which is used when we have one independent variable (IV) with three or more levels.\n\nOne-Way ANOVA: Three Group Comparison\nLet’s consider an extension of our TeemuBall experiment where we have three types of crowd reactions:\nIndependent Variable (IV): Crowd Reaction (3 levels: Booing, Silence, Cheering) Dependent Variable (DV): Accuracy (percentage of successful throws)\n\nDesign Concept\n\nThree separate groups of participants\nEach group experiences one type of crowd reaction\n\n\n\nMethod\n\nParticipants\n\n60 participants (20 per group)\nRandomly assigned to one of three conditions\n\n\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in their assigned condition\n\n\n\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nAccuracy (%)\n\n\n\n\n1\nBooing\n70\n\n\n2\nBooing\n75\n\n\n…\n…\n…\n\n\n21\nSilence\n80\n\n\n…\n…\n…\n\n\n41\nCheering\n85\n\n\n…\n…\n…\n\n\n\n\n\nAnalysis\n\nOne-way between-groups ANOVA\n\n\n\nKey Points\n\nExtension of t-test: One-way ANOVA is an extension of the independent samples t-test, allowing comparison of more than two groups.\nOverall F-test: ANOVA provides an overall F-test to determine if there are any significant differences among the groups.\nPost-hoc tests: If the overall F-test is significant, post-hoc tests (e.g., Tukey’s HSD) can determine which specific groups differ from each other.\nEfficiency: One-way ANOVA is more efficient than conducting multiple t-tests, reducing the risk of Type I errors.\n\nThis bridge from t-tests to one-way ANOVA sets the stage for understanding more complex designs like the 2x2 ANOVA, where we introduce a second independent variable."
+    "objectID": "about.html#cognitive-biases-in-action",
+    "href": "about.html#cognitive-biases-in-action",
+    "title": "MarshMallows",
+    "section": "Cognitive Biases in Action",
+    "text": "Cognitive Biases in Action\n\n\n\n\n\n\nWhat we observed\n\n\n\n\n\n\n\n\nPlanning fallacy: Groups overestimated what they could accomplish\nFunctional fixedness: Limited vision of how materials could be used\nOverconfidence bias: Initial certainty vs. final outcomes\nSunk cost fallacy: Continuing with failing approaches"
   },
   {
-    "objectID": "t-tests.htm#overview-of-2x2-anova",
-    "href": "t-tests.htm#overview-of-2x2-anova",
-    "title": "Experiments - Revision",
-    "section": "Overview of 2x2 ANOVA",
-    "text": "Overview of 2x2 ANOVA\nA 2x2 ANOVA (Analysis of Variance) is a powerful statistical technique that allows us to examine the effects of two independent variables (IVs) simultaneously on a dependent variable (DV). It extends the concept of a t-test, which compares means between two groups, to a more complex design with four groups.\n\nComponents of a 2x2 ANOVA:\n\nMain Effect of IV1: The overall effect of the first independent variable, averaged across levels of the second IV.\nMain Effect of IV2: The overall effect of the second independent variable, averaged across levels of the first IV.\nInteraction Effect: The combined effect of both IVs, which may be different from what we’d expect based on the main effects alone."
+    "objectID": "about.html#stress-and-creativity",
+    "href": "about.html#stress-and-creativity",
+    "title": "MarshMallows",
+    "section": "Stress and Creativity",
+    "text": "Stress and Creativity\n\n\n\nYerkes-Dodson Law: Optimal arousal\nTime pressure effects on divergent thinking\nImpact of evaluation apprehension\nStress responses: Fight, flight, or freeze in team contexts"
   },
   {
-    "objectID": "t-tests.htm#x2-anova-visual-representations",
-    "href": "t-tests.htm#x2-anova-visual-representations",
-    "title": "Experiments - Revision",
-    "section": "2x2 ANOVA Visual Representations",
-    "text": "2x2 ANOVA Visual Representations\n\nBasic 2x2 Table Structure\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\n\n\nMain Effect of Crowd Reaction\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\n\nYou’d expect A&C to consistently differ from B&D to show Crowd has a general effect\n\n\n\nMain Effect of Incentive\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB\n\n\nLose\nC\nD\n\n\n\n\nYou’d expect A&B to consistently differ from C&D to show Incentive has a general effect\n\n\n\nInteraction Effect\n\n\n\nIncentive\nBooing\nCheering\n\n\n\n\nWin\nA\nB!\n\n\nLose\nC\nD\n\n\n\nIf Crowd and Incentive both have general effects, where they interact e.g. B (assuming both positive) something magic might happen there.\nIf you have trouble grasping this (common) think about Drug interactions. You shouldn’t take Drug 1 and Drug 2 together or your nose will grow. If you are not taking either drug, fine. If you are taking only one of the two drugs, fine. But if you are in the condition where you are taking both drugs… they interact and your nose grows!\nThese schematic representations help illustrate:\n\nThe basic structure of a 2x2 design\nHow main effects involve comparisons across one variable (ignoring the other)\nHow interaction effects involve the unique combinations of both variables\n\n\n\nAdvantages over Multiple t-tests:\n\nEfficiency: Conducts multiple comparisons in a single analysis, reducing the risk of Type I errors.\nInteraction Detection: Can identify how the effect of one IV depends on the levels of the other IV.\nIncreased Power: Generally has more statistical power to detect effects than multiple separate t-tests."
+    "objectID": "about.html#psychology-careers-connection",
+    "href": "about.html#psychology-careers-connection",
+    "title": "MarshMallows",
+    "section": "Psychology Careers Connection",
+    "text": "Psychology Careers Connection\n\nOrganizational PsychologyClinical PsychologyDevelopmental Psychology\n\n\n\nTeam effectiveness assessment\nLeadership development\nWorkplace interventions\nChange management\n\n\n\n\nGroup therapy dynamics\nBehavioral observation\nInterpersonal functioning\nStress responses\n\n\n\n\nAge differences in approach\nLearning through play\nConcrete vs. abstract thinking\nSocial development"
   },
   {
-    "objectID": "t-tests.htm#experiment-overview-2",
-    "href": "t-tests.htm#experiment-overview-2",
-    "title": "Experiments - Revision",
-    "section": "Experiment Overview",
-    "text": "Experiment Overview\nTask:\n\nParticipants throw balls into Teemu’s Topmiler (a hat that looks like a basketball net)\n\nIndependent Variables (IVs):\n\n1. Crowd Reaction: Booing vs. Cheering\n2. Incentive: Win an egg vs. Lose an egg\n\nDependent Variable (DV):\n\nAccuracy (percentage of successful throws)"
+    "objectID": "about.html#the-research-behind-the-challenge",
+    "href": "about.html#the-research-behind-the-challenge",
+    "title": "MarshMallows",
+    "section": "The Research Behind the Challenge",
+    "text": "The Research Behind the Challenge\n\n\nCollaborative problem-solving:\nCoordination costs vs. diversity benefits\nPsychological safety (Edmondson, 1999)\nCreative thinking principles:\nDivergent vs. convergent thinking phases\nPrototype testing and iteration\nMindset research:\nFixed vs. growth mindset (Dweck)\nImpact on persistence and approach to failure"
   },
   {
-    "objectID": "t-tests.htm#fully-between-groups-factorial-design-2b-x-2b-anova",
-    "href": "t-tests.htm#fully-between-groups-factorial-design-2b-x-2b-anova",
-    "title": "Experiments - Revision",
-    "section": "1. Fully Between-Groups Factorial Design: 2(b) x 2(b) ANOVA",
-    "text": "1. Fully Between-Groups Factorial Design: 2(b) x 2(b) ANOVA\n\nDesign Concept\n\nFour separate (groups of) participants\nEach group experiences one combination of the two IVs\n\n\n\nMethod\n\nParticipants\n\n80 participants (20 per group)\nRandomly assigned to one of four conditions\n\n\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in their assigned condition\nConditions:\n\nBooing, Win an egg\nBooing, Lose an egg\nCheering, Win an egg\nCheering, Lose an egg\n\n\n\n\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nIncentive\nAccuracy (%)\n\n\n\n\n1\nBooing\nWin egg\n75\n\n\n2\nBooing\nWin egg\n80\n\n\n…\n…\n…\n…\n\n\n21\nBooing\nLose egg\n65\n\n\n…\n…\n…\n…\n\n\n41\nCheering\nWin egg\n85\n\n\n…\n…\n…\n…\n\n\n61\nCheering\nLose egg\n70\n\n\n…\n…\n…\n…\n\n\n\n\n\nAnalysis\n\nTwo-way between-groups ANOVA\n\n\n\nAdvantages and Limitations\n\nAdvantages\n\nNo order effects\nEach participant only tested once\nCan examine both main effects and interaction\n\n\n\nLimitations\n\nRequires larger sample size\nCannot account for individual differences across conditions"
+    "objectID": "about.html#the-kindergarten-advantage",
+    "href": "about.html#the-kindergarten-advantage",
+    "title": "MarshMallows",
+    "section": "The Kindergarten Advantage",
+    "text": "The Kindergarten Advantage\n\n\n\n\n\n\nWhy children often outperform business students:\n\n\n\n\n\n\n\n\nRapid prototyping - testing early and often\nNo status management or impression concerns\nLearning through play - less fear of failure\nLess fixated on “one right way” to solve problems\nNatural collaboration without hierarchy"
   },
   {
-    "objectID": "t-tests.htm#mixed-design-2w-x-2b-anova",
-    "href": "t-tests.htm#mixed-design-2w-x-2b-anova",
-    "title": "Experiments - Revision",
-    "section": "2. Mixed Design: 2(w) x 2(b) ANOVA",
-    "text": "2. Mixed Design: 2(w) x 2(b) ANOVA\n\nDesign Concept\n\nTwo (groups of) participants\nEach participant experiences both levels of Incentive, but only one level of Crowd Reaction\n\n\n\nMethod\n\nParticipants\n\n40 participants (20 per group)\nRandomly assigned to either Booing or Cheering condition\n\n\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in the “Win egg” condition and 20 throws in the “Lose egg” condition\nIncentive order is counterbalanced\nParticipants remain in their assigned Crowd Reaction condition for all throws\n\n\n\n\nData Structure\n\n\n\nParticipant\nCrowd Reaction\nWin Egg (%)\nLose Egg (%)\n\n\n\n\n1\nBooing\n75\n70\n\n\n2\nBooing\n80\n75\n\n\n…\n…\n…\n…\n\n\n21\nCheering\n85\n80\n\n\n…\n…\n…\n…\n\n\n\n\n\nAnalysis\n\nMixed ANOVA with Incentive as within-subjects factor and Crowd Reaction as between-groups factor\n\n\n\nAdvantages and Limitations\n\nAdvantages\n\nCombines benefits of within and between-subjects designs\nRequires fewer participants than fully between-groups\nCan examine individual differences in response to Incentive\n\n\n\nLimitations\n\nPotential for order effects in the Incentive factor\nMore complex analysis\nCannot examine individual differences across Crowd Reaction conditions"
+    "objectID": "about.html#follow-up-activity-design-your-experiment",
+    "href": "about.html#follow-up-activity-design-your-experiment",
+    "title": "MarshMallows",
+    "section": "Follow-up Activity: Design Your Experiment",
+    "text": "Follow-up Activity: Design Your Experiment\n\n\n\n\n\n\nIn groups, design a variation of this challenge to test:\n\n\n\n\n\n\n\n\nHow would you modify the challenge to test a specific psychological variable?\nWhat would you measure and how?\nWhat hypotheses would you propose?\nWhat interventions might improve performance?"
   },
   {
-    "objectID": "t-tests.htm#mixed-design-2b-x-2w-anova",
-    "href": "t-tests.htm#mixed-design-2b-x-2w-anova",
-    "title": "Experiments - Revision",
-    "section": "3. Mixed Design: 2(b) x 2(w) ANOVA",
-    "text": "3. Mixed Design: 2(b) x 2(w) ANOVA\n\nDesign Concept\n\nTwo groups of participants\nEach participant experiences both levels of Crowd Reaction, but only one level of Incentive\n\n\n\nMethod\n\nParticipants\n\n40 participants (20 per group)\nRandomly assigned to either Win egg or Lose egg condition\n\n\n\nProcedure\n\nParticipants are briefed on the task\nEach participant makes 20 throws in the Booing condition and 20 throws in the Cheering condition\nCrowd Reaction order is counterbalanced\nParticipants remain in their assigned Incentive condition for all throws\n\n\n\n\nData Structure\n\n\n\nParticipant\nIncentive\nBooing (%)\nCheering (%)\n\n\n\n\n1\nWin egg\n75\n85\n\n\n2\nWin egg\n80\n90\n\n\n…\n…\n…\n…\n\n\n21\nLose egg\n65\n75\n\n\n…\n…\n…\n…\n\n\n\n\n\nAnalysis\n\nMixed ANOVA with Crowd Reaction as within-subjects factor and Incentive as between-groups factor\n\n\n\nAdvantages and Limitations\n\nAdvantages\n\nCombines benefits of within and between-subjects designs\nRequires fewer participants than fully between-groups\nCan examine individual differences in response to Crowd Reaction\n\n\n\nLimitations\n\nPotential for order effects in the Crowd Reaction factor\nMore complex analysis\nCannot examine individual differences across Incentive conditions"
+    "objectID": "about.html#whats-next",
+    "href": "about.html#whats-next",
+    "title": "MarshMallows",
+    "section": "What’s Next?",
+    "text": "What’s Next?\n\n\nComplete our welcome day feedback form\nJoin the Psychology Society\nExplore the campus\nConnect with your peer mentors\nFollow @GoldsmithsPsych on social media\n\n\n\nAny questions?"
   },
   {
-    "objectID": "t-tests.htm#repeated-measures-design-2w-x-2w-anova",
-    "href": "t-tests.htm#repeated-measures-design-2w-x-2w-anova",
-    "title": "Experiments - Revision",
-    "section": "4. Repeated Measures Design: 2(w) x 2(w) ANOVA",
-    "text": "4. Repeated Measures Design: 2(w) x 2(w) ANOVA\n\nDesign Concept\n\nOne group of participants\nEach participant experiences all combinations of the two IVs\n\n\n\nMethod\n\nParticipants\n\n20 participants\n\n\n\nProcedure\n\nParticipants are briefed on the task\nEach participant completes 20 throws in each of the four conditions:\n\nBooing, Win egg\nBooing, Lose egg\nCheering, Win egg\nCheering, Lose egg\n\nOrder of conditions is counterbalanced\n\n\n\n\nData Structure\n\n\n\n\n\n\n\n\n\n\nParticipant\nBooing, Win (%)\nBooing, Lose (%)\nCheering, Win (%)\nCheering, Lose (%)\n\n\n\n\n1\n75\n70\n85\n80\n\n\n2\n80\n75\n90\n85\n\n\n…\n…\n…\n…\n…\n\n\n\n\n\nAnalysis\n\nTwo-way repeated measures ANOVA\n\n\n\nAdvantages and Limitations\n\nAdvantages\n\nRequires fewest participants\nCan examine individual differences across all conditions\nHighest statistical power\n\n\n\nLimitations\n\nMost susceptible to order effects and practice effects\nPotential for participant fatigue\nMost complex analysis\nCannot be used if effects of conditions are long-lasting"
+    "objectID": "about.html#thank-you",
+    "href": "about.html#thank-you",
+    "title": "MarshMallows",
+    "section": "Thank You!",
+    "text": "Thank You!\n\nWe look forward to welcoming you in September!"
   },
   {
-    "objectID": "t-tests.htm#into-some-detail",
-    "href": "t-tests.htm#into-some-detail",
-    "title": "Experiments - Revision",
-    "section": "Into some detail",
-    "text": "Into some detail\n\n\n\n\n\n\nNote\n\n\n\n\n\nCopied with thanks from Matt Crump’s Asking Questions with Data OER under CC-BY-NC-SA 4.0 Online Textbook: https://crumplab.github.io/statistics/\nCitation: Crump, M. J. C., Navarro, D. J., & Suzuki, J. (2019, June 5). Answering Questions with Data (Textbook): Introductory Statistics for Psychology Students. https://doi.org/10.17605/OSF.IO/JZE52\n\n\n\nDesigns with multiple factors are very common. When you read a research article you will often see graphs that show the results from designs with multiple factors. It would be good for you if you were comfortable interpreting the meaning of those results. The skill here is to be able to look at a graph and see the pattern of main effects and interactions. This skill is important, because the patterns in the data can quickly become very complicated looking, especially when there are more than two independent variables, with more than two levels.\n\n2x2 designs\nLet’s take the case of 2x2 designs. There will always be the possibility of two main effects and one interaction. You will always be able to compare the means for each main effect and interaction. If the appropriate means are different then there is a main effect or interaction. Here’s the thing, there a bunch of ways all of this can turn out. Check out the ways, there are 8 of them:\n\nno IV1 main effect, no IV2 main effect, no interaction\nIV1 main effect, no IV2 main effect, no interaction\nIV1 main effect, no IV2 main effect, interaction\nIV1 main effect, IV2 main effect, no interaction\nIV1 main effect, IV2 main effect, interaction\nno IV1 main effect, IV2 main effect, no interaction\nno IV1 main effect, IV2 main effect, interaction\nno IV1 main effect, no IV2 main effect, interaction\n\nOK, so if you run a 2x2, any of these 8 general patterns could occur in your data. That’s a lot to keep track of isn’t. As you develop your skills in examining graphs that plot means, you should be able to look at the graph and visually guesstimate if there is, or is not, a main effect or interaction. You will need you inferential statistics to tell you for sure, but it is worth knowing how to know see the patterns.\nFigure 1 shows the possible patterns of main effects and interactions in bar graph form. Here is a legend for the labels in the panels.\n\n1 = there was a main effect for IV1.\n~1 = there was not a main effect for IV1\n2 = there was a main effect for IV2\n~2 = there was not a main effect of IV2\n1x2 = there was an interaction\n~1x2 = there was not an interaction\n\n\n\n\n\n\n\n\n\nFigure 1: 8 Example patterns for means for each of the possible kinds of general outcomes in a 2x2 design.\n\n\n\n\n\nFigure 2 shows the same eight patterns in line graph form:\n\n\n\n\n\n\n\n\nFigure 2: Line graphs showing 8 possible general outcomes for a 2x2 design.\n\n\n\n\n\nThe line graphs accentuates the presence of interaction effects. Whenever the lines cross, or would cross if they kept going, you have a possibility of an interaction. Whenever the lines are parallel, there can’t be an interaction. When both of the points on the A side are higher or lower than both of the points on the B side, then you have a main effect for IV1 (A vs B). Whenever the green line is above or below the red line, then you have a main effect for IV2 (1 vs. 2). We know this is complicated. You should see what all the possibilities look like when we start adding more levels or more IVs. It gets nuts. Because of this nuttiness, it is often good practice to make your research designs simple (as few IVs and levels as possible to test your question). That way it will be easier to interpret your data. Whenever you see that someone ran a 4x3x7x2 design, your head should spin. It’s just too complicated."
+    "objectID": "Course.html#our-new-curriculum-in-2024-25",
+    "href": "Course.html#our-new-curriculum-in-2024-25",
+    "title": "Psychology at Goldsmiths",
+    "section": "Our new curriculum in 2024-25",
+    "text": "Our new curriculum in 2024-25\nTeaching themes that reflect you:\n\nMental Health and Wellbeing\nCognition and Culture\nLife and Society"
   },
   {
-    "objectID": "t-tests.htm#interpreting-main-effects-and-interactions",
-    "href": "t-tests.htm#interpreting-main-effects-and-interactions",
-    "title": "Experiments - Revision",
-    "section": "Interpreting main effects and interactions",
-    "text": "Interpreting main effects and interactions\nThe interpretation of main effects and interactions can get tricky. Consider the concept of a main effect. This is the idea that a particular IV has a consistent effect. For example, drinking 5 cups of coffee makes you more awake compared to not drinking 5 cups of coffee. The main effect of drinking 5 cups of coffee vs not drinking coffee will generally be true across the levels of other IVs in our life. For example, let’s say you conducted an experiment testing whether the effect of drinking 5 cups of coffee vs not, changes depending on whether you are in your house or in a car. Perhaps the situation matters? No, probably not so much. You will probably still be more awake in your house, or your car, after having 5 cups of coffee, compared to if you hadn’t.\nThe coffee example is a reasonably good example of a consistent main effect. Another silly kind of example might be the main effect of shoes on your height. For example, if your IV was wearing shoes or not, and your DV was height, then we could expect to find a main effect of wearing shoes on your measurement of height. When you wear shoes, you will become taller compared to when you don’t wear shoes. Wearing shoes adds to your total height. In fact, it’s hard to imagine how the effect of wearing shoes on your total height would ever interact with other kinds of variables. You will be always be that extra bit taller wearing shoes. Indeed, if there was another manipulation that could cause an interaction that would truly be strange. For example, imagine if the effect of being inside a bodega or outside a bodega interacted with the effect of wearing shoes on your height. That could mean that shoes make you taller when you are outside a bodega, but when you step inside, your shoes make you shorter…but, obviously this is just totally ridiculous. That’s correct, it is often ridiculous to expect that one IV will have an influence on the effect of another, especially when there is no good reason.\nThe summary here is that it is convenient to think of main effects as a consistent influence of one manipulation. However, when an interaction is observed, this messes up the consistency of the main effect. That is the very definition of an interaction. It means that some main effect is not behaving consistently across different situations. Indeed, whenever we find an interaction, sometimes we can question whether or not there really is a general consistent effect of some manipulation, or instead whether that effect only happens in specific situations.\nFor this reason, you will often see that researchers report their findings this way:\n“We found a main effect of X, BUT, this main effect was qualified by an interaction between X and Y”.\nNotice the big BUT. Why is it there? The sentence points out that before they talk about the main effect, they need to first talk about the interaction, which is making the main effect behave inconsistently. In other words, the interpretation of the main effect depends on the interaction, the two things have to be thought of together to make sense of them.\nHere are two examples to help you make sense of these issues:\n\nA consistent main effect and an interaction\n\n\n\n\n\n\n\n\nFigure 3: Example means showing a generally consistent main effect along with an interaction\n\n\n\n\n\nFigure 3 shows a main effect and interaction. There is a main effect of IV2: the level 1 means (red points and line) are both lower than the level 2 means (aqua points and line). There is also an interaction. The size of the difference between the red and aqua points in the A condition (left) is bigger than the size of the difference in the B condition.\nHow would we interpret this? We could say there WAS a main effect of IV2, BUT it was qualified by an IV1 x IV2 interaction.\nWhat’s the qualification? The size of the IV2 effect changed as a function of the levels of IV1. It was big for level A, and small for level B of IV1.\nWhat does the qualification mean for the main effect? Well, first it means the main effect can be changed by the other IV. That’s important to know. Does it also mean that the main effect is not a real main effect because there was an interaction? Not really, there is a generally consistent effect of IV2. The green points are above the red points in all cases. Whatever IV2 is doing, it seems to work in at least a couple situations, even if the other IV also causes some change to the influence.\n\n\nAn inconsistent main effect and an interaction\n\n\n\n\n\n\n\n\nFigure 4: Example data showing how an interaction exists, and a main effect does not, even though the means for the main effect may show a difference\n\n\n\n\n\nFigure 4 shows another 2x2 design. You should see an interaction here straight away. The difference between the aqua and red points in condition A (left two dots) is huge, and there is 0 difference between them in condition B. Is there an interaction? Yes!\nAre there any main effects here? With data like this, sometimes an ANOVA will suggest that you do have significant main effects. For example, what is the mean difference between level 1 and 2 of IV2? That is the average of the green points ( (10+5)/2 = 15/2= 7.5 ) compared to the average of the red points (5). There will be a difference of 2.5 for the main effect (7.5 vs. 5).\nStarting to see the issue here? From the perspective of the main effect (which collapses over everything and ignores the interaction), there is an overall effect of 2.5. In other words, level 2 adds 2.5 in general compared to level 1. However, we can see from the graph that IV2 does not do anything in general. It does not add 2.5s everywhere. It adds 5 in condition A, and nothing in condition B. It only does one thing in one condition.\nWhat is happening here is that a “main effect” is produced by the process of averaging over a clear interaction.\nHow would we interpret this? We might have to say there was a main effect of IV2, BUT we would definitely say it was qualified by an IV1 x IV2 interaction.\nWhat’s the qualification? The size of the IV2 effect completely changes as a function of the levels of IV1. It was big for level A, and nonexistent for level B of IV1.\nWhat does the qualification mean for the main effect? In this case, we might doubt whether there is a main effect of IV2 at all. It could turn out that IV2 does not have a general influence over the DV all of the time, it may only do something in very specific circumstances, in combination with the presence of other factors."
+    "objectID": "Course.html#our-new-curriculum-1",
+    "href": "Course.html#our-new-curriculum-1",
+    "title": "Psychology at Goldsmiths",
+    "section": "Our new curriculum",
+    "text": "Our new curriculum\nTeaching themes that reflect you, plus:\n\nResearch methods and statistics\nProfessional and personal development\nFocus on applied and personal/real-world relevance of psychology"
   },
   {
-    "objectID": "t-tests.htm#mixed-designs",
-    "href": "t-tests.htm#mixed-designs",
-    "title": "Experiments - Revision",
-    "section": "Mixed Designs",
-    "text": "Mixed Designs\nThroughout this book we keep reminding you that research designs can take different forms. The manipulations can be between-subjects (different subjects in each group), or within-subjects (everybody contributes data in all conditions). If you have more than one manipulation, you can have a mixed design when one of your IVs is between-subjects and one of the other ones is within-subjects.\nThe only “trick” to these designs is to use the appropriate error terms to construct the F-values for each effect. Effects that have a within-subjects repeated measure (IV) use different error terms than effects that only have a between-subject IV. In principle, you could run an ANOVA with any number of IVs, and any of them good be between or within-subjects variables.\nBecause this is an introductory textbook, we leave out a full discussion on mixed designs. What we are leaving out are the formulas to construct ANOVA tables that show how to use the correct error terms for each effect. There are many good more advanced textbooks that discuss these issues in much more depth. And, these things can all be Googled. This is a bit of a cop-out on our part, and we may return to fill in this section at some point in the future (or perhaps someone else will add a chapter about this)."
+    "objectID": "Course.html#research-and-practice-informed-teaching",
+    "href": "Course.html#research-and-practice-informed-teaching",
+    "title": "Psychology at Goldsmiths",
+    "section": "Research and practice informed teaching",
+    "text": "Research and practice informed teaching\n\n\n\n\n\nDr Hilary Norman\n\n\n\n\n\nDr Lucy Oldfield\n\n\n\nMental Health and Wellbeing\n\nWhat does it mean to be happy?\nHow does sleep affect our wellbeing?\nHow do our thoughts influence our emotions?"
   },
   {
-    "objectID": "sliders.htm",
-    "href": "sliders.htm",
-    "title": "Sliders",
-    "section": "",
-    "text": "Content\nContent\nContent\n\nWill not appear in Slides\nThis is for the ladies out there. You know!"
+    "objectID": "Course.html#research-and-practice-informed-teaching-1",
+    "href": "Course.html#research-and-practice-informed-teaching-1",
+    "title": "Psychology at Goldsmiths",
+    "section": "Research and practice informed teaching",
+    "text": "Research and practice informed teaching\n\n\n\n\n\nDr Hilary Norman\n\n\n\n\n\nDr Lucy Oldfield\n\n\n\nMental Health and Wellbeing\n\nMake an individual wellbeing plan\nExperience how our beliefs influence our behaviours and emotions by taking part in a behavioural experiment"
   },
   {
-    "objectID": "sliders.htm#title",
-    "href": "sliders.htm#title",
-    "title": "Sliders",
-    "section": "",
-    "text": "Content\nContent\nContent\n\nWill not appear in Slides\nThis is for the ladies out there. You know!"
+    "objectID": "Course.html#research-and-practice-informed-teaching-2",
+    "href": "Course.html#research-and-practice-informed-teaching-2",
+    "title": "Psychology at Goldsmiths",
+    "section": "Research and practice informed teaching",
+    "text": "Research and practice informed teaching\n\n\n\n\n\nProf Joydeep Bhattacharya\n\n\n\n\n\nDr Rebecca Chamberlain\n\n\n\nCognition and Culture\n\nDoes living in an urban environment affect our attention?\nDo artists see the world in a different way?\nHow does AI affect our sense of agency?"
   },
   {
-    "objectID": "sliders.html#title",
-    "href": "sliders.html#title",
-    "title": "Sliders",
-    "section": "Title",
-    "text": "Title\n\nContent\nContent\nContent"
+    "objectID": "Course.html#research-and-practice-informed-teaching-3",
+    "href": "Course.html#research-and-practice-informed-teaching-3",
+    "title": "Psychology at Goldsmiths",
+    "section": "Research and practice informed teaching",
+    "text": "Research and practice informed teaching\n\n\n\n\n\nProf Joydeep Bhattacharya\n\n\n\n\n\nDr Rebecca Chamberlain\n\n\n\nCognition and Culture\n\nCreate a video explaining how to measure brain and behaviour to the public\nWrite a reflective piece on what it would mean if free will was an illusion"
+  },
+  {
+    "objectID": "Course.html#research-and-practice-informed-teaching-4",
+    "href": "Course.html#research-and-practice-informed-teaching-4",
+    "title": "Psychology at Goldsmiths",
+    "section": "Research and practice informed teaching",
+    "text": "Research and practice informed teaching\n\n\n\n\nLife and Society\n\nCan music boost language acquisition?\nWhat are the ethical implications of genetic testing?\nWhat are psychological incentives and obstacles to social justice?"
+  },
+  {
+    "objectID": "Course.html#research-and-practice-informed-teaching-5",
+    "href": "Course.html#research-and-practice-informed-teaching-5",
+    "title": "Psychology at Goldsmiths",
+    "section": "Research and practice informed teaching",
+    "text": "Research and practice informed teaching\n\n\n\n\n\nProf Alice Jones\n\n\n\n\n\nDr Sinead Rocha\n\n\n\nLife and Society\n\nWrite a policy brief on the importance of the First 1001 days of life\nDevelop a research proposal investigating inter-group conflict management"
+  },
+  {
+    "objectID": "Course.html#professional-personal-development",
+    "href": "Course.html#professional-personal-development",
+    "title": "Psychology at Goldsmiths",
+    "section": "Professional & Personal Development",
+    "text": "Professional & Personal Development\n\nLearning how to learn\nPersonal Tutoring\nGroup Work preparing for assessments linked in with themes"
+  },
+  {
+    "objectID": "Course.html#research-methods",
+    "href": "Course.html#research-methods",
+    "title": "Psychology at Goldsmiths",
+    "section": "Research Methods",
+    "text": "Research Methods\n\nLearning how to code in R\nParticipating in and running qualitative and quantitative research\nJournaling your progress week-by-week"
+  },
+  {
+    "objectID": "Course.html#what-does-teaching-look-like",
+    "href": "Course.html#what-does-teaching-look-like",
+    "title": "Psychology at Goldsmiths",
+    "section": "What does teaching look like?",
+    "text": "What does teaching look like?\nExample: Year 1 Term2, Life & Society: Growing Up\n\n\n\n\n\n\n\n\n\n\nMonday\nTuesday\nWednesday\nThursday\nFriday\n\n\n\n\nIndependent study\nLecture: What is development?\nGoldsmiths Connected Curriculum: Identity, environment and agency\nResearch Methods Lecture\nIndependent study\n\n\n\nDevelopmental Cascades (seminar)\nSeminar\nPPD: Exploring careers that support children and families\n\n\n\n\nLecture: Infancy\nSocieties!\nResearch Methods Lab: Data Skills – Experimental Design\n\n\n\n\nSeminar: First 1001 Days\nIndependent Study"
+  },
+  {
+    "objectID": "Course.html#timetable",
+    "href": "Course.html#timetable",
+    "title": "Psychology at Goldsmiths",
+    "section": "Timetable",
+    "text": "Timetable\n\nExample weekly timetable"
+  },
+  {
+    "objectID": "Course.html#curating-your-degree",
+    "href": "Course.html#curating-your-degree",
+    "title": "Psychology at Goldsmiths",
+    "section": "Curating your degree",
+    "text": "Curating your degree\n\n\nYear 1: Assessments tailored to your interests and experience\nYear 2: Group project work\nYear 3: Free choice of optional modules including:\n\n\n\nAddictive Behaviours / Neuropsychology / Psychology of the Arts / Behavioural Genetics / Psychology and Law / Coding / Clinical Psychology / Neurodevelopmental Disorders / Psychology and Education / Cognitive Neuroscience"
+  },
+  {
+    "objectID": "Course.html#year-3-projects",
+    "href": "Course.html#year-3-projects",
+    "title": "Psychology at Goldsmiths",
+    "section": "Year 3 projects",
+    "text": "Year 3 projects\n\nExperiences of students with ASD in mainstream school\nThe relationship between procrastination and wellbeing\nThe role of music in advertising\nPerceptions of doping in competitive sport\nHow line-ups affect eye-witness testimony\nPerceptions of stalking: when do behaviours cross the line?"
+  },
+  {
+    "objectID": "Course.html#curating-your-degree-1",
+    "href": "Course.html#curating-your-degree-1",
+    "title": "Psychology at Goldsmiths",
+    "section": "Curating your degree",
+    "text": "Curating your degree\n\nTaking a stream subject: Clinical Psychology, Forensic Psychology, Cognitive Neuroscience\nJoin a research lab (e.g, GoldAge, Forensic Unit, EquaLab, EEG, brain stimulation)\nDepartmental research talks\n4-year degree with placement in 3rd year: Staff support you to secure placements in clinical / social care / educational / forensic"
+  },
+  {
+    "objectID": "Course.html#connected-curriculum-and-college-wide-modules",
+    "href": "Course.html#connected-curriculum-and-college-wide-modules",
+    "title": "Psychology at Goldsmiths",
+    "section": "Connected Curriculum and college-wide modules",
+    "text": "Connected Curriculum and college-wide modules\nYear 1: Identity, Environment and Agency\n\nTaught by lecturers from a range of departments\nCovers societally relevant topics such as AI, feminism, decolonising education\nYou choose the assessment format: essay, video, music, poster, audio presentation"
+  },
+  {
+    "objectID": "Course.html#connected-curriculum-and-college-wide-modules-1",
+    "href": "Course.html#connected-curriculum-and-college-wide-modules-1",
+    "title": "Psychology at Goldsmiths",
+    "section": "Connected Curriculum and college-wide modules",
+    "text": "Connected Curriculum and college-wide modules\nYear 2: two elective modules\n\nChoose modules from other Departments across college: sociology, anthropology, music, computing, therapeutic studies, management school etc\nYou can also choose one or both of your electives from Psychology"
+  },
+  {
+    "objectID": "Course.html#psychology-at-goldsmiths-1",
+    "href": "Course.html#psychology-at-goldsmiths-1",
+    "title": "Psychology at Goldsmiths",
+    "section": "Psychology at Goldsmiths",
+    "text": "Psychology at Goldsmiths\n\nResearch-active department:\n\nStaff are experts in their field\nStudents get involved in running research\n\nSmall cohort sizes: get to know fellow students and staff small-group and 1-to-1 teaching range of assessments individual feedback"
+  },
+  {
+    "objectID": "Course.html#research-informed-teaching-1",
+    "href": "Course.html#research-informed-teaching-1",
+    "title": "Psychology at Goldsmiths",
+    "section": "Research-informed teaching",
+    "text": "Research-informed teaching\nGet involved in our research groups:\n\nCognition and Neuroscience\nDevelopmental and Educational Science\nForensic and Clinical Science\nSocial Processes and Personality\nScience of the Creative and Performing Arts"
+  },
+  {
+    "objectID": "Course.html#research-facilities",
+    "href": "Course.html#research-facilities",
+    "title": "Psychology at Goldsmiths",
+    "section": "Research facilities",
+    "text": "Research facilities\n\nNeuroscience lab EEG / TMS / fNIRs\nEye Tracking Lab\nPhysiology\nInfant Lab\nMultimedia Lab\nForensic lab interview observation cubicles"
+  },
+  {
+    "objectID": "Course.html#research-in-society",
+    "href": "Course.html#research-in-society",
+    "title": "Psychology at Goldsmiths",
+    "section": "Research in society",
+    "text": "Research in society"
+  },
+  {
+    "objectID": "Course.html#study-environment-1",
+    "href": "Course.html#study-environment-1",
+    "title": "Psychology at Goldsmiths",
+    "section": "Study environment",
+    "text": "Study environment\nExcellence in teaching and research\n\nTHE World University Rankings 2023 Top 150 of Psychology departments worldwide\nResearch Excellence Framework (REF) 2021 82% of our research rated world-leading / internationally excellent\nInstitute for Fiscal Studies (IFS) 2021 1st in country for social mobility\nGoldsmiths student union teaching awards"
+  },
+  {
+    "objectID": "Course.html#study-environment-2",
+    "href": "Course.html#study-environment-2",
+    "title": "Psychology at Goldsmiths",
+    "section": "Study environment",
+    "text": "Study environment\nVaried teaching\n\nLectures\nTutorials and seminars\nPersonal tutor sessions\nLab classes\nOne-to-one sessions\n\n\nVaried assessment focused around skills for employability\nPersonal tutor throughout your studies"
+  },
+  {
+    "objectID": "Course.html#study-environment-3",
+    "href": "Course.html#study-environment-3",
+    "title": "Psychology at Goldsmiths",
+    "section": "Study environment",
+    "text": "Study environment\nPsychology society: film clubs, social events, study groups"
+  },
+  {
+    "objectID": "Applicant.html#welcome",
+    "href": "Applicant.html#welcome",
+    "title": "Psychology Taster Lecture",
+    "section": "Welcome!",
+    "text": "Welcome!\n\nPsychology at Goldsmiths\nWhere science meets creativity"
+  },
+  {
+    "objectID": "Applicant.html#our-ethos",
+    "href": "Applicant.html#our-ethos",
+    "title": "Psychology Taster Lecture",
+    "section": "Our ethos",
+    "text": "Our ethos"
+  },
+  {
+    "objectID": "Applicant.html#about-the-programme",
+    "href": "Applicant.html#about-the-programme",
+    "title": "Psychology Taster Lecture",
+    "section": "About the Programme",
+    "text": "About the Programme\n\n\nAccredited by the British Psychological Society (BPS). Achieving at least 50% on all modules makes you eligible for graduate membership of the BPS.\nUnderpinned by a bio-psycho-social model to explain how human behaviour is influenced by a complex mix of biological, social, environmental & psychological factors.\nDevelops understanding of applications of psychology and transferable skills for graduate-level employment by helping you to:\n\nCritically assess evidence to develop and deliver creative, coherent, effective and ethical plans for changing practice and policy in an uncertain world.\nBalance personal experience and perspective with scientific evidence to inform critical enquiry and public policy.\n\nTaught in modules that connect with one another; some teaching in blocks:\n\nLectures, seminars, tutorials, independent learning and active learning strategies"
+  },
+  {
+    "objectID": "Applicant.html#pedagogy",
+    "href": "Applicant.html#pedagogy",
+    "title": "Psychology Taster Lecture",
+    "section": "Pedagogy",
+    "text": "Pedagogy"
+  },
+  {
+    "objectID": "Applicant.html#year-one-term-one",
+    "href": "Applicant.html#year-one-term-one",
+    "title": "Psychology Taster Lecture",
+    "section": "Year one Term one",
+    "text": "Year one Term one"
+  },
+  {
+    "objectID": "Applicant.html#year-one-term-two",
+    "href": "Applicant.html#year-one-term-two",
+    "title": "Psychology Taster Lecture",
+    "section": "Year one Term two",
+    "text": "Year one Term two"
+  },
+  {
+    "objectID": "Applicant.html#year-one-term-three",
+    "href": "Applicant.html#year-one-term-three",
+    "title": "Psychology Taster Lecture",
+    "section": "Year one Term three",
+    "text": "Year one Term three"
+  },
+  {
+    "objectID": "Applicant.html#personal-and-professional-development",
+    "href": "Applicant.html#personal-and-professional-development",
+    "title": "Psychology Taster Lecture",
+    "section": "Personal and Professional Development",
+    "text": "Personal and Professional Development\n\n\n\n\nEvery student has a Personal Tutor who will facilitate these tutorials\nAims to enable empowered, independent & interdependent learners\nPilot PPD programme in 2023/4 co-created with two third year students\nStudent Advisory Group reviewed whole curriculum, including PPD\nIn 2024/5\n\nPPD connected to modular content and careers service\nAssessed through portfolio of activities including guided reflections\nAnother Student Advisory Group will be developed"
+  },
+  {
+    "objectID": "Applicant.html#research-methods-statistics",
+    "href": "Applicant.html#research-methods-statistics",
+    "title": "Psychology Taster Lecture",
+    "section": "Research Methods & Statistics",
+    "text": "Research Methods & Statistics\nThis module offers the nuts and bolts of conducting and interpreting different kinds of research.\nThese fundamental research skills are highly valued by graduate employers. Whether you want to be a psychologist, a research scientist, an entrepreneur or an Olympic athlete, developing the skills to conduct quality research and analyse data will serve you well.\nYou will be assessed via: * Lab-book of exercises – practice works! * 2 lab reports * In person multiple-choice exam"
+  },
+  {
+    "objectID": "Applicant.html#mental-health-and-wellbeing",
+    "href": "Applicant.html#mental-health-and-wellbeing",
+    "title": "Psychology Taster Lecture",
+    "section": "Mental Health and Wellbeing",
+    "text": "Mental Health and Wellbeing\nThis module offers an introduction to psychological wellbeing and the emotional experience of being human.\nAssessments are designed to help you connect psychological theory, scientific evidence and your personal development now and in the future.\nYou will be assessed via: * Evidence-based action plan for student wellbeing * Written description of a behavioural experiment; applying psychological theory in an experiential learning exercise to change a personal belief or behaviour."
+  },
+  {
+    "objectID": "Applicant.html#cognition-culture",
+    "href": "Applicant.html#cognition-culture",
+    "title": "Psychology Taster Lecture",
+    "section": "Cognition & Culture",
+    "text": "Cognition & Culture\nThis module offers an overview of what cognition is and the ways it can be applied in different real-world contexts.\nAssessments are designed to enable you to work in groups and individually to present an argument for a non-technical audience. Teamwork and clear communication are essential skills in graduate-level employment.\nYou will be assessed via: * Group poster designed for a public audience summarising a method in the psychology of cognition and culture * Individual oral presentation of individual difference on aspect of perception, attention or action."
+  },
+  {
+    "objectID": "Applicant.html#life-and-society",
+    "href": "Applicant.html#life-and-society",
+    "title": "Psychology Taster Lecture",
+    "section": "Life And Society",
+    "text": "Life And Society\nThis module offers an introduction to the self and interactions with others using social and developmental psychological theories.\nAssessments are designed to ensure that you have grasped key concepts and that you can apply your learning in the form of a policy briefing paper. These policy briefs are frequently written in government agencies, businesses and non-government organisations to enable readers to understand how to take evidence-based actions on a particular issue.\nYou will be assessed via: * In-person exam * Policy brief on the first 1001 days of life"
+  },
+  {
+    "objectID": "Applicant.html#identity-agency-environment",
+    "href": "Applicant.html#identity-agency-environment",
+    "title": "Psychology Taster Lecture",
+    "section": "Identity, Agency & Environment",
+    "text": "Identity, Agency & Environment\nThis Semester 1 module will enable you to develop critical thinking skills through various topics:\nHello students of Identity Agency Environment 1 (IAE1) - this module is subtitled Critical Thinking. Welcome to the module and to your new year at Goldsmiths.\nEvery week this module will introduce you to a new, compelling, topical subject in a lecture, followed by interdisciplinary seminar groups, where you will explore your critical thinking capacities and engage with peers in discussions about topics you are presented with.\nYour assessment at the close of the semester will be to respond critically to one of these topics in a way that feels purposeful and useful for you. You might decide to express your ideas about the topic of your choice by writing an essay, song, poem or composition, or by making a podcast, film, or designing a poster."
+  },
+  {
+    "objectID": "Applicant.html#applications-of-psychological-research",
+    "href": "Applicant.html#applications-of-psychological-research",
+    "title": "Psychology Taster Lecture",
+    "section": "Applications of Psychological Research",
+    "text": "Applications of Psychological Research\nThis Semester 2 module will enable you to critically evaluate psychological research findings and understand the motivation and practical issues involved in the planning and conduct of that research, from the perspective of investigators and research participants.\nYou will be assessed via: * Participation in research studies * A Blog or pre-recorded video for a non-expert audience—"
+  },
+  {
+    "objectID": "Applicant.html#are-you-ready-for-university",
+    "href": "Applicant.html#are-you-ready-for-university",
+    "title": "Psychology Taster Lecture",
+    "section": "Are You Ready for University?",
+    "text": "Are You Ready for University?\n\nTime ManagementIndependent LearningAcademic Skills\n\n\n\nHow do you currently organize your studies?\nCan you manage multiple deadlines without supervision?\nDo you have systems for tracking your work?\n\n\n\n\nHow do you find information beyond what’s provided?\nCan you evaluate sources critically?\nHow comfortable are you with ambiguity?\n\n\n\n\nHow confident are you with academic writing?\nCan you construct a coherent argument?\nAre you comfortable with statistical concepts?"
+  },
+  {
+    "objectID": "Applicant.html#how-university-differs-from-school",
+    "href": "Applicant.html#how-university-differs-from-school",
+    "title": "Psychology Taster Lecture",
+    "section": "How University Differs from School",
+    "text": "How University Differs from School\n\n\n\nSchool\nUniversity\n\n\n\n\nTeacher-directed learning\nSelf-directed learning\n\n\nRegular homework checks\nIndependent deadlines\n\n\nStructured timetable\nFlexible schedule with gaps\n\n\nInformation provided\nResearch expected\n\n\nFocus on correct answers\nFocus on critical analysis\n\n\nLimited reading list\nExtensive reading beyond lectures"
+  },
+  {
+    "objectID": "Applicant.html#your-psychology-journey",
+    "href": "Applicant.html#your-psychology-journey",
+    "title": "Psychology Taster Lecture",
+    "section": "Your Psychology Journey",
+    "text": "Your Psychology Journey"
+  },
+  {
+    "objectID": "Applicant.html#what-brings-you-to-psychology",
+    "href": "Applicant.html#what-brings-you-to-psychology",
+    "title": "Psychology Taster Lecture",
+    "section": "What brings you to psychology?",
+    "text": "What brings you to psychology?"
+  },
+  {
+    "objectID": "Applicant.html#your-end-goals",
+    "href": "Applicant.html#your-end-goals",
+    "title": "Psychology Taster Lecture",
+    "section": "Your End Goals",
+    "text": "Your End Goals\n\nWhat do you want from your psychology degree?\n\n\n\nCareer preparation?\nUnderstanding human behavior?\nResearch skills?\nPersonal development?\nSomething else?"
+  },
+  {
+    "objectID": "Applicant.html#todays-experiment-the-marshmallow-challenge",
+    "href": "Applicant.html#todays-experiment-the-marshmallow-challenge",
+    "title": "Psychology Taster Lecture",
+    "section": "Today’s Experiment: The Marshmallow Challenge",
+    "text": "Today’s Experiment: The Marshmallow Challenge\n\n\n\n\n\n\nThe Task\n\n\nBuild the tallest free-standing structure using:\n- 20 sticks of spaghetti\n- 1 yard of tape\n- 1 yard of string\n- 1 marshmallow (must be on top!)\n- Time limit: 18 minutes"
+  },
+  {
+    "objectID": "Applicant.html#pre-challenge-psychology-connections",
+    "href": "Applicant.html#pre-challenge-psychology-connections",
+    "title": "Psychology Taster Lecture",
+    "section": "Pre-Challenge Psychology Connections",
+    "text": "Pre-Challenge Psychology Connections\n\n\nGroup dynamics: How do strangers form working relationships?\nSocial facilitation vs. social loafing\nIn-group formation\nStatus and power dynamics\nCognitive biases:\nFunctional fixedness (seeing objects only for their intended use)\nPlanning fallacy (underestimating time needed)\nOverconfidence effect\nDecision-making under pressure:\nImpact of stress on cognitive performance\nSatisficing vs. optimizing strategies"
+  },
+  {
+    "objectID": "Applicant.html#predictions",
+    "href": "Applicant.html#predictions",
+    "title": "Psychology Taster Lecture",
+    "section": "Predictions",
+    "text": "Predictions\n\n\n\n\n\n\nThink-Pair-Share\n\n\n\nWhich type of group performs best in this challenge?\nBusiness executives\nRecent MBA graduates\nEngineers and architects\nKindergarten children\nWhy do you think this is the case?"
+  },
+  {
+    "objectID": "Applicant.html#research-methods-preview",
+    "href": "Applicant.html#research-methods-preview",
+    "title": "Psychology Taster Lecture",
+    "section": "Research Methods Preview",
+    "text": "Research Methods Preview\nThis challenge demonstrates core elements of psychological research:\n\n\nVariables:\nIndependent (group composition)\nDependent (tower height, completion)\nControl (same materials, instructions)\nObservation methods:\nStructured observation\nBehavioral coding\nProcess analysis\nData analysis:\nQuantitative (height measurements)\nQualitative (group dynamics)"
+  },
+  {
+    "objectID": "Applicant.html#observer-roles",
+    "href": "Applicant.html#observer-roles",
+    "title": "Psychology Taster Lecture",
+    "section": "Observer Roles",
+    "text": "Observer Roles\nSome of you will be observers rather than participants:\n\n\nCommunication patterns:\nWho speaks? How often? Who listens?\nVerbal vs. non-verbal communication\nDecision-making processes:\nHow are ideas generated and evaluated?\nIs there evidence of groupthink?\nLeadership emergence:\nFormal vs. informal leadership\nLeadership styles (directive, participative)\nConflict resolution:\nHow are disagreements handled?\nConstructive vs. destructive conflict"
+  },
+  {
+    "objectID": "Applicant.html#now-lets-begin",
+    "href": "Applicant.html#now-lets-begin",
+    "title": "Psychology Taster Lecture",
+    "section": "Now, Let’s Begin!",
+    "text": "Now, Let’s Begin!\n\n18:00 minutes on the clock…"
+  },
+  {
+    "objectID": "Applicant.html#post-challenge-analysis",
+    "href": "Applicant.html#post-challenge-analysis",
+    "title": "Psychology Taster Lecture",
+    "section": "Post-Challenge Analysis",
+    "text": "Post-Challenge Analysis\nTuckman’s Stages of Group Development\n\n\nForming: Orientation, testing boundaries\nStorming: Conflict, resistance to task demands\nNorming: Development of group cohesion\nPerforming: Functional role relatedness\nAdjourning: Completion and disengagement (Tuckman, 1965)"
+  },
+  {
+    "objectID": "Applicant.html#cognitive-biases-in-action",
+    "href": "Applicant.html#cognitive-biases-in-action",
+    "title": "Psychology Taster Lecture",
+    "section": "Cognitive Biases in Action",
+    "text": "Cognitive Biases in Action\n\n\n\n\n\n\nWhat we observed\n\n\n\n\n\n\n\n\nPlanning fallacy: Groups overestimated what they could accomplish\nFunctional fixedness: Limited vision of how materials could be used\nOverconfidence bias: Initial certainty vs. final outcomes\nSunk cost fallacy: Continuing with failing approaches"
+  },
+  {
+    "objectID": "Applicant.html#stress-and-creativity",
+    "href": "Applicant.html#stress-and-creativity",
+    "title": "Psychology Taster Lecture",
+    "section": "Stress and Creativity",
+    "text": "Stress and Creativity\n\n\n\nYerkes-Dodson Law: Optimal arousal (Yerkes & Dodson, 1908)\nTime pressure effects on divergent thinking\nImpact of evaluation apprehension (Amabile et al., 2002)\nStress responses: Fight, flight, or freeze in team contexts\n\n\n\n\n\nGraph showing the Yerkes-Dodson curve of optimal arousal and performance"
+  },
+  {
+    "objectID": "Applicant.html#psychology-careers-connection",
+    "href": "Applicant.html#psychology-careers-connection",
+    "title": "Psychology Taster Lecture",
+    "section": "Psychology Careers Connection",
+    "text": "Psychology Careers Connection\n\nOrganizational PsychologyClinical PsychologyDevelopmental PsychologyForensic Psychology\n\n\n\nTeam effectiveness assessment\nLeadership development\nWorkplace interventions\nChange management\n\n\n\n\nGroup therapy dynamics\nBehavioral observation\nInterpersonal functioning\nStress responses\n\n\n\n\nAge differences in approach\nLearning through play\nConcrete vs. abstract thinking\nSocial development\n\n\n\n\nBehavioral analysis and profiling\nWitness reliability assessment\nDecision-making under pressure\nGroup dynamics in legal contexts"
+  },
+  {
+    "objectID": "Applicant.html#the-research-behind-the-challenge",
+    "href": "Applicant.html#the-research-behind-the-challenge",
+    "title": "Psychology Taster Lecture",
+    "section": "The Research Behind the Challenge",
+    "text": "The Research Behind the Challenge\n\n\nCollaborative problem-solving:\nCoordination costs vs. diversity benefits\nPsychological safety (Edmondson, 1999)\nCreative thinking principles:\nDivergent vs. convergent thinking phases\nPrototype testing and iteration (Brown, 2009)\nMindset research:\nFixed vs. growth mindset (Dweck, 2006)\nImpact on persistence and approach to failure"
+  },
+  {
+    "objectID": "Applicant.html#the-kindergarten-advantage",
+    "href": "Applicant.html#the-kindergarten-advantage",
+    "title": "Psychology Taster Lecture",
+    "section": "The Kindergarten Advantage",
+    "text": "The Kindergarten Advantage\n\n\n\n\n\n\nWhy children often outperform business students:\n\n\n\n\n\n\n\n\nRapid prototyping - testing early and often\nNo status management or impression concerns\nLearning through play - less fear of failure\nLess fixated on “one right way” to solve problems\nNatural collaboration without hierarchy"
+  },
+  {
+    "objectID": "Applicant.html#follow-up-activity-design-your-experiment",
+    "href": "Applicant.html#follow-up-activity-design-your-experiment",
+    "title": "Psychology Taster Lecture",
+    "section": "Follow-up Activity: Design Your Experiment",
+    "text": "Follow-up Activity: Design Your Experiment\n\n\n\n\n\n\nIn groups, design a variation of this challenge to test:\n\n\n\n\n\n\n\n\nHow would you modify the challenge to test a specific psychological variable?\nWhat would you measure and how?\nWhat hypotheses would you propose?\nWhat interventions might improve performance?"
+  },
+  {
+    "objectID": "Applicant.html#whats-next",
+    "href": "Applicant.html#whats-next",
+    "title": "Psychology Taster Lecture",
+    "section": "What’s Next?",
+    "text": "What’s Next?\n\n\nComplete our welcome day feedback form\nJoin the Psychology Society\nExplore the campus\nConnect with your peer mentors\nFollow @GoldsmithsPsych on social media\n\n\n\nAny questions?"
+  },
+  {
+    "objectID": "Applicant.html#references",
+    "href": "Applicant.html#references",
+    "title": "Psychology Taster Lecture",
+    "section": "References",
+    "text": "References\n\nAmabile, T. M., Mueller, J. S., Simpson, W. B., Hadley, C. N., Kramer, S. J., & Fleming, L. (2002). Time pressure and creativity in organizations: A longitudinal field study. Harvard Business School Working Paper, 02-073.\nBrown, T. (2009). Change by design: How design thinking transforms organizations and inspires innovation. HarperCollins.\nDweck, C. S. (2006). Mindset: The new psychology of success. Random House.\nEdmondson, A. (1999). Psychological safety and learning behavior in work teams. Administrative Science Quarterly, 44(2), 350-383. https://doi.org/10.2307/2666999\nTuckman, B. W. (1965). Developmental sequence in small groups. Psychological Bulletin, 63(6), 384-399. https://doi.org/10.1037/h0022100\nWujec, T. (2010, February). Build a tower, build a team [Video]. TED Conferences. https://www.ted.com/talks/tom_wujec_build_a_tower_build_a_team\nYerkes, R. M., & Dodson, J. D. (1908). The relation of strength of stimulus to rapidity of habit-formation. Journal of Comparative Neurology and Psychology, 18(5), 459-482. https://doi.org/10.1002/cne.920180503"
+  },
+  {
+    "objectID": "Applicant.html#thank-you",
+    "href": "Applicant.html#thank-you",
+    "title": "Psychology Taster Lecture",
+    "section": "Thank You!",
+    "text": "Thank You!\n\nWe look forward to welcoming you in September!\n\n\n\n\nGoldsmiths University campus view\n\n\n\n\n\nGoldsmiths University campus view"
+  },
+  {
+    "objectID": "Applicant.html#do-you-want-to-play",
+    "href": "Applicant.html#do-you-want-to-play",
+    "title": "Psychology Taster Lecture",
+    "section": "Do you want to play?",
+    "text": "Do you want to play?\n\nThe topic for this year is…\nPsychological Profiling (in all it’s guises)\nAll students are welcome to join in (current and maybe future!)\n@ForensicGold on X.com\nhttps://www.gold.ac.uk/forensic-psychology-unit/"
+  },
+  {
+    "objectID": "Applicant.html#thank-you-1",
+    "href": "Applicant.html#thank-you-1",
+    "title": "Psychology Taster Lecture",
+    "section": "Thank you",
+    "text": "Thank you\nAny Questions?"
+  },
+  {
+    "objectID": "People.html#what-is-people-watching",
+    "href": "People.html#what-is-people-watching",
+    "title": "The Science of People-Watching",
+    "section": "What is People-Watching?",
+    "text": "What is People-Watching?\n\n\n“I like to watch people. Sometimes I ride the subway all day and look at them and listen to them. I just want to figure out who they are and what they want and where they’re going.”\n\n\n\n— Ray Bradbury, Fahrenheit 451\n\n\n\nStart by asking students if they’ve ever people-watched\nExplain that this common pastime is actually a sophisticated cognitive process"
+  },
+  {
+    "objectID": "People.html#more-than-just-a-pastime",
+    "href": "People.html#more-than-just-a-pastime",
+    "title": "The Science of People-Watching",
+    "section": "More Than Just a Pastime",
+    "text": "More Than Just a Pastime\nPeople-watching is central to our social existence\n\nWe observe others to gather information\nWe form impressions within seconds\nOur brains are wired to analyze social interactions\nThese impressions affect how we interact with others\n\n\n\nEmphasize that people-watching isn’t just entertainment\nIt’s a fundamental cognitive skill that helps us navigate our social world\nAsk students when they might people-watch (cafes, airports, school hallways)"
+  },
+  {
+    "objectID": "People.html#the-science-of-third-party-encounters",
+    "href": "People.html#the-science-of-third-party-encounters",
+    "title": "The Science of People-Watching",
+    "section": "The Science of “Third-Party Encounters”",
+    "text": "The Science of “Third-Party Encounters”\n\n\nTraditional Research\n\nFocused on impressions of isolated individuals\nUsually just faces or single people\nMissed the complexity of social interactions\n\n\nNew Research Direction\n\nStudies how we observe interactions between others\nViews interactions as the unit of analysis\nRecognizes the richness of encounter-based impressions\n\n\n\n\nExplain that “Third-Party Encounters” (TPEs) is the scientific term for watching people interact\nMention that this is a relatively new and exciting area of research"
+  },
+  {
+    "objectID": "People.html#brain-game-reading-social-clues",
+    "href": "People.html#brain-game-reading-social-clues",
+    "title": "The Science of People-Watching",
+    "section": "Brain Game: Reading Social Clues",
+    "text": "Brain Game: Reading Social Clues\nWhat clues do we use when people-watching? Let’s see how many you can identify!\n\nPhysical appearances and facial expressions\nBody language and proximity\nGestures and eye contact\nSpeaking patterns and tone\nActions and reactions\nCan you think of others?\n\n\n\nMake this interactive - ask students to volunteer additional cues they use\nHave them discuss with a partner how they “read” other people"
+  },
+  {
+    "objectID": "People.html#what-can-we-actually-tell-from-watching",
+    "href": "People.html#what-can-we-actually-tell-from-watching",
+    "title": "The Science of People-Watching",
+    "section": "What Can We Actually Tell from Watching?",
+    "text": "What Can We Actually Tell from Watching?\n\nJoint vs. independent actions\nPower dynamics and social status\nLevel of intimacy and rapport\nEmotional states and attitudes\nType of relationship (strangers, friends, family)\nCultural norms and violations\n\n\n\nExplain each item with examples relevant to high school students\nE.g., how can you tell who’s popular, who’s dating, who’s arguing?"
+  },
+  {
+    "objectID": "People.html#our-brains-on-people-watching",
+    "href": "People.html#our-brains-on-people-watching",
+    "title": "The Science of People-Watching",
+    "section": "Our Brains on People-Watching",
+    "text": "Our Brains on People-Watching\nThree brain networks work together:\n\nPerson Perception Network: Processes faces and bodies\nAction Perception Network: Understands actions and movements\nMentalizing Network: Interprets mental states and intentions\n\n\n\nExplain in simple terms how our brains have specialized systems for social perception\nCompare to having different apps that work together on a phone"
+  },
+  {
+    "objectID": "People.html#the-marketing-connection",
+    "href": "People.html#the-marketing-connection",
+    "title": "The Science of People-Watching",
+    "section": "The Marketing Connection",
+    "text": "The Marketing Connection\n\n\nCompanies like Coca-Cola use our people-watching instincts in advertisements:\n\nShow intimate moments between people\nTrigger our social analysis systems\nMake us feel connected to the product\nLeverage our desire to be part of positive interactions\n\n\n\n\n\nCoca-Cola ad showing social connection\n\n\n\n\n\nDiscuss how ads often show people interacting rather than just the product\nAsk students to recall ads that use social scenarios to sell products"
+  },
+  {
+    "objectID": "People.html#quick-activity-spot-the-relationship",
+    "href": "People.html#quick-activity-spot-the-relationship",
+    "title": "The Science of People-Watching",
+    "section": "Quick Activity: Spot the Relationship",
+    "text": "Quick Activity: Spot the Relationship\nAs I show each image, write down:\n\nWhat type of relationship do you think these people have?\nHow do you know?\nWhat clues are you using?\n\n\n\nShow 3-4 images of different interactions (friends, romantic partners, strangers, etc.)\nHave students jot down observations and discuss with a partner\nThen discuss as a group, noting common patterns in observations"
+  },
+  {
+    "objectID": "People.html#are-we-actually-good-at-people-watching",
+    "href": "People.html#are-we-actually-good-at-people-watching",
+    "title": "The Science of People-Watching",
+    "section": "Are We Actually Good at People-Watching?",
+    "text": "Are We Actually Good at People-Watching?\n\n\nWhen we’re accurate:\n\nJudging whether people know each other\nDetecting romantic interest\nRecognizing power differences\nIdentifying basic emotions\n\n\nWhen we make mistakes:\n\nOverrelying on stereotypes\nMisreading cultural differences\nAssuming internal states from external behavior\nProjecting our own expectations\n\n\n\n\nDiscuss why we might misinterpret what we see\nConnect to real-life experiences students might have had"
+  },
+  {
+    "objectID": "People.html#the-social-intelligence-hypothesis",
+    "href": "People.html#the-social-intelligence-hypothesis",
+    "title": "The Science of People-Watching",
+    "section": "The Social Intelligence Hypothesis",
+    "text": "The Social Intelligence Hypothesis\n\n\nDid social complexity drive brain evolution?\n\nHumans have uniquely complex social structures\nKeeping track of many relationships requires cognitive power\nOur large brains may have evolved partly to handle social computations\nPeople-watching skills appear very early in development\n\n\n\n\n\nBrain evolution illustration\n\n\n\n\n\nExplain how even 6-month-old infants show surprise at “irrational” social interactions\nConnect to evolutionary advantages of understanding social dynamics"
+  },
+  {
+    "objectID": "People.html#real-world-applications",
+    "href": "People.html#real-world-applications",
+    "title": "The Science of People-Watching",
+    "section": "Real-World Applications",
+    "text": "Real-World Applications\n\n\nClinical Psychology\n\nAssessing social-cognitive functioning\nDiagnosing conditions like autism\nDesigning better therapies\n\n\nEducation\n\nImproving observational learning\nUnderstanding classroom dynamics\nDesigning better social skills programs\n\n\nTechnology\n\nTraining AI to understand human interactions\nDeveloping more natural robots\nImproving virtual reality experiences\n\n\n\n\nEmphasize the many practical applications of this research\nConnect to potential career paths students might find interesting"
+  },
+  {
+    "objectID": "People.html#people-watching-skills-challenge",
+    "href": "People.html#people-watching-skills-challenge",
+    "title": "The Science of People-Watching",
+    "section": "People-Watching Skills Challenge",
+    "text": "People-Watching Skills Challenge\nHow can you become a better people-watcher?\n\nPractice observing without jumping to conclusions\nNotice patterns across different situations\nConsider cultural and contextual factors\nBe aware of your own biases and expectations\nLook for details in behavior and responses\n\n\n\nFrame people-watching as a skill that can be developed\nEmphasize the ethical aspects (respect for privacy, avoiding judgmentalism)"
+  },
+  {
+    "objectID": "People.html#the-future-of-people-watching-research",
+    "href": "People.html#the-future-of-people-watching-research",
+    "title": "The Science of People-Watching",
+    "section": "The Future of People-Watching Research",
+    "text": "The Future of People-Watching Research\nExciting new directions:\n\nCross-cultural studies of social perception\nHow virtual interactions change our people-watching abilities\nNeural mechanisms of real-time social analysis\nHow our social perceptions influence our behavior\nUsing VR to study encounter-based impressions\n\n\n\nHighlight that this is a growing field with many unanswered questions\nMention opportunities for students interested in psychology, neuroscience, or sociology"
+  },
+  {
+    "objectID": "People.html#why-this-matters",
+    "href": "People.html#why-this-matters",
+    "title": "The Science of People-Watching",
+    "section": "Why This Matters",
+    "text": "Why This Matters\nPeople-watching is more than entertainment:\n\nIt helps us understand complex social dynamics\nIt provides a window into how our brains process social information\nIt reveals biases and cultural differences in perception\nIt connects to fundamental questions about what makes us human\nIt has countless applications in the real world\n\n\n\nWrap up by emphasizing the significance of this research\nConnect back to students’ everyday experiences"
+  },
+  {
+    "objectID": "People.html#try-it-yourself",
+    "href": "People.html#try-it-yourself",
+    "title": "The Science of People-Watching",
+    "section": "Try It Yourself!",
+    "text": "Try It Yourself!\nMini-experiment for the next week:\n\nSpend 10 minutes people-watching in a public place\nRecord your observations and impressions\nNote what specific cues led to your conclusions\nReflect on any assumptions you might have made\nCompare notes with friends - did they notice the same things?\n\n\n\nProvide a simple, ethical activity students can try\nEmphasize respectful observation in public places only\nSuggest they might notice new things after this presentation"
+  },
+  {
+    "objectID": "People.html#thank-you",
+    "href": "People.html#thank-you",
+    "title": "The Science of People-Watching",
+    "section": "Thank You!",
+    "text": "Thank You!\n\n\nQuestions to consider:\n\nHow might people-watching skills differ across cultures?\nHow might social media change how we read social cues?\nWhat ethical considerations should people-watchers keep in mind?\nHow might technology like AR glasses change people-watching?\n\n\n\n\n\nQR code linking to research\n\n\n\n\n\nEnd with discussion questions\nProvide resources for students who want to learn more"
+  },
+  {
+    "objectID": "People.html#references",
+    "href": "People.html#references",
+    "title": "The Science of People-Watching",
+    "section": "References",
+    "text": "References\n\nBarasz, K., & Kim, T. (2022). Editorial: A field guide to people-watching. Current Opinion in Psychology, 45, 101301.\nQuadflieg, S., & Penton-Voak, I. (2017). The Emerging Science of People-Watching: Forming Impressions From Third-Party Encounters. Current Directions in Psychological Science, 26(4), 383-389.\nPlace, S. S., Todd, P. M., Zhuang, J., Penke, L., & Asendorpf, J. B. (2012). Judging romantic interest of others from thin slices is a cross-cultural ability. Evolution and Human Behavior, 33, 547-550.\nManera, V., Del Giudice, M., Bara, B. G., Verfailie, K., & Becchio, C. (2011). The second-agent effect: communicative gestures increase the likelihood of perceiving a second agent. PLoS One, 6, e22650.\n\n\n\nAcknowledge the researchers whose work formed the basis of the presentation"
+  },
+  {
+    "objectID": "People.html#the-methodological-challenge",
+    "href": "People.html#the-methodological-challenge",
+    "title": "The Science of People-Watching",
+    "section": "The Methodological Challenge",
+    "text": "The Methodological Challenge\n\nHow do researchers systematically study something as complex and natural as people-watching?\n\n\n\nExplain that studying social perception requires specialized methods\nHighlight the challenge of examining an automatic process we usually do unconsciously\nNote that researchers had to develop innovative approaches to study this phenomenon"
+  },
+  {
+    "objectID": "People.html#research-paradigm-shift",
+    "href": "People.html#research-paradigm-shift",
+    "title": "The Science of People-Watching",
+    "section": "Research Paradigm Shift",
+    "text": "Research Paradigm Shift\n\n\nTraditional Approach\n\n\n\nSingle face studies\n\n\n\nSingle faces or individuals\nStatic images\nIsolated traits or emotions\nDecontextualized\n\n\nTPE Approach \n\nMultiple people interacting\nDynamic exchanges\nRelational qualities\nContextualized interactions\n\n\n\n\nExplain how studying dyads required a completely different experimental approach\nNote that this represents a significant methodological innovation in social psychology"
+  },
+  {
+    "objectID": "People.html#the-stimuli-toolkit",
+    "href": "People.html#the-stimuli-toolkit",
+    "title": "The Science of People-Watching",
+    "section": "The Stimuli Toolkit",
+    "text": "The Stimuli Toolkit\nResearchers use a variety of stimuli to study people-watching:\n\n\nStatic \n\nPhotographs\nPaintings\nDrawings\n\n\nDynamic \n\nVideo clips\nAnimations\nLive interactions\n\n\nAbstracted \n\nPoint light displays\nStick figures\nSilhouettes\n\n\n\n\nExplain each type of stimulus and why researchers might choose one over another\nPoint light displays especially show our ability to read social information from minimal cues\nNote how abstracted stimuli help isolate motion and configuration information from identity"
+  },
+  {
+    "objectID": "People.html#point-light-displays-a-technical-deep-dive",
+    "href": "People.html#point-light-displays-a-technical-deep-dive",
+    "title": "The Science of People-Watching",
+    "section": "Point Light Displays: A Technical Deep Dive",
+    "text": "Point Light Displays: A Technical Deep Dive\n\n\nHow they work: * Actors wear reflective markers on joints * Movements are recorded in darkness * Only points of light are visible * Removes all identity cues * Isolates pure motion information\nThe surprising finding: We can determine social relationships from just moving dots!\n\n\n\n\nPoint light display example\n\n\n\n\n\nExplain this is a powerful technique originally developed for studying biological motion\nThe fact we can read social relationships from such minimal stimuli shows how sensitive our social perception systems are\nUsed in the research by Manera et al. (2011)"
+  },
+  {
+    "objectID": "People.html#eye-tracking-methods",
+    "href": "People.html#eye-tracking-methods",
+    "title": "The Science of People-Watching",
+    "section": "Eye-Tracking Methods",
+    "text": "Eye-Tracking Methods\n\n\nWhat researchers track: * Fixation patterns between interacting people * Gaze switches between interaction partners * Time spent looking at different body parts * Pupil dilation (indicating emotional response) * Scan path analysis (the sequence of looking)\n\n\n\n\nEye tracking heatmap example\n\n\n\n\n\nExplain that eye-tracking reveals what information people are extracting during social observation\nStudies by Villani et al. showed observers continuously look back and forth between interaction partners\nThis methodology helps identify what visual cues people use when forming impressions"
+  },
+  {
+    "objectID": "People.html#brain-imaging-techniques",
+    "href": "People.html#brain-imaging-techniques",
+    "title": "The Science of People-Watching",
+    "section": "Brain Imaging Techniques",
+    "text": "Brain Imaging Techniques\n\n\nfMRI Studies Reveal:\n\n\n\nfMRI brain scan\n\n\n\nThree integrated neural networks\nIncreased activity for joint vs. independent actions\nSpecialized brain regions for social context processing\n\n\nThe Three Networks:\n\n\n\nBrain networks schematic\n\n\n\nPerson Perception Network (PPN)\nAction Perception Network (APN)\nMentalizing Network (MN)\n\n\n\n\nExplain these networks form the neural foundation of people-watching\nPPN analyzes faces and bodies\nAPN interprets actions and movements\nMN attributes mental states and intentions\nDescribe how fMRI shows these networks activate more strongly during observations of interacting vs. non-interacting people"
+  },
+  {
+    "objectID": "People.html#experimental-paradigms",
+    "href": "People.html#experimental-paradigms",
+    "title": "The Science of People-Watching",
+    "section": "Experimental Paradigms",
+    "text": "Experimental Paradigms\n\n\nEncounter Categorization Task\n\nParticipants classify interactions into types\nMeasures accuracy and response time\nExample categories:\n\nCooperative vs. competitive\nFormal vs. intimate\nDominant vs. equal status\n\n\n\nEncounter Prediction Task\n\nParticipants predict how an interaction will unfold\nView partial information (beginning of interaction)\nPredict next actions or relationship outcomes\nTests understanding of social dynamics\n\n\n\n\nThese paradigms measure how accurately people can “read” social situations\nExplain that reaction time gives insight into automatic vs. deliberate processing\nConnect to real-world situation where we need to quickly assess social dynamics"
+  },
+  {
+    "objectID": "People.html#the-thin-slices-methodology",
+    "href": "People.html#the-thin-slices-methodology",
+    "title": "The Science of People-Watching",
+    "section": "The “Thin Slices” Methodology",
+    "text": "The “Thin Slices” Methodology\n\n\nHow it works: * Observers view brief (10-30 second) clips of interactions * Make judgments about relationships, traits, or outcomes * Judgments are compared to actual outcomes or self-reports * Measures the accuracy of rapid social perception\nKey research question: How much social information can we extract from minimal exposure?\n\n\n\n\nPeople interacting at party\n\n\n\n\n\nExplain that “thin slices” refers to brief samples of behavior\nThis method has shown we need surprisingly little information to form accurate impressions\nPlace et al. (2012) used this to study romantic interest detection across cultures"
+  },
+  {
+    "objectID": "People.html#visual-cue-analysis",
+    "href": "People.html#visual-cue-analysis",
+    "title": "The Science of People-Watching",
+    "section": "Visual Cue Analysis",
+    "text": "Visual Cue Analysis\nResearchers isolate and manipulate specific visual cues:\n\n\nPhysical proximity \nFacial expressions \n\nBody orientation \nMotion synchrony \n\n\n\nExplain how researchers systematically manipulate one variable while controlling others\nDistance studies (proxemics) show we judge relationships partly by how close people stand\nSynchrony studies reveal we detect even subtle coordination between interaction partners"
+  },
+  {
+    "objectID": "People.html#experimental-design-biernieris-classic-study",
+    "href": "People.html#experimental-design-biernieris-classic-study",
+    "title": "The Science of People-Watching",
+    "section": "Experimental Design: Biernieri’s Classic Study",
+    "text": "Experimental Design: Biernieri’s Classic Study\n\n\nMethodology: 1. Filmed dyads of strangers having conversations 2. Participants rated their own felt rapport 3. Observers watched silent video clips 4. Observers rated perceived rapport 5. Compared self-reports vs. observer judgments 6. Analyzed which visual cues predicted each\nKey finding: Observers relied on smiles, but participants’ ratings were linked to physical proximity\n\n\n\n\nPeople in conversation\n\n\n\n\n\nThis 1996 study was groundbreaking in revealing the mismatch between perceived and felt rapport\nExplains why we sometimes misread social situations - we rely on visible cues that may not be diagnostic\nConnect to everyday experience of misjudging whether people are enjoying a conversation"
+  },
+  {
+    "objectID": "People.html#cross-cultural-research-methods",
+    "href": "People.html#cross-cultural-research-methods",
+    "title": "The Science of People-Watching",
+    "section": "Cross-Cultural Research Methods",
+    "text": "Cross-Cultural Research Methods\n\n\nResearch Questions: * Are some social perceptions universal? * How do cultural norms affect interpretation? * Which cues are culturally specific? * Can people accurately read interactions from other cultures?\n\nMethodology: * Show identical interactions to people from different cultures * Compare perception accuracy across cultures * Analyze culture-specific interpretation biases * Test for universal vs. culture-specific cues\n\n\n\nPlace et al. (2012) found that detecting romantic interest is a cross-cultural ability\nSome social cues appear to be universal, while others are culturally specific\nThis methodology helps separate innate from learned aspects of social perception"
+  },
+  {
+    "objectID": "People.html#the-two-strategy-hypothesis",
+    "href": "People.html#the-two-strategy-hypothesis",
+    "title": "The Science of People-Watching",
+    "section": "The Two-Strategy Hypothesis",
+    "text": "The Two-Strategy Hypothesis\n\n\nHow do we process social interactions?\nFeature-Based Processing * Extract specific visual components * Analyze individual cues (e.g., number of smiles) * Process components separately * Build up interpretation from parts\nTemplate-Based Processing * Compare to stored patterns of typical interactions * Process interactions holistically * Use prior expectations to guide perception * Recognize patterns from minimal information\n\n\n\n\nSocial interaction analysis diagram\n\n\n\n\n\nExplain that researchers debate which strategy is primary\nEvidence suggests we may use both strategies at different processing stages\nTemplate approach explains how we recognize interactions even from minimal cues\nFeature approach explains how we analyze specific aspects of interactions"
+  },
+  {
+    "objectID": "People.html#developmental-research-methods",
+    "href": "People.html#developmental-research-methods",
+    "title": "The Science of People-Watching",
+    "section": "Developmental Research Methods",
+    "text": "Developmental Research Methods\n\n\nWith Infants & Toddlers: * Looking time paradigms * Violation-of-expectation method * Preferential looking tasks * Action imitation studies * Measures: gaze duration, surprise, preference\n\nResearch Findings: * 6-month-olds notice “irrational” interactions * 12-month-olds have expectations about social goals * 18-month-olds imitate observed interactions * Social perception develops before language\n\n\n\nExplain each methodology (e.g., babies look longer at unexpected events)\nThese methods reveal that social perception is present very early in development\nFindings suggest some aspects of people-watching may be innate or develop very early\nGredebäck & Melinder’s research shows infants’ sophisticated social understanding"
+  },
+  {
+    "objectID": "People.html#clinical-applications-methods",
+    "href": "People.html#clinical-applications-methods",
+    "title": "The Science of People-Watching",
+    "section": "Clinical Applications & Methods",
+    "text": "Clinical Applications & Methods\n\n\nComparative Studies: * Compare clinical vs. typical populations * Diagnose social-cognitive differences * Identify specific processing differences * Design targeted interventions\nExample: Autism studies show differences in: * Eye movement patterns * Neural activation patterns * Types of social cues utilized\n\n\n\n\nClinical assessment setup\n\n\n\n\n\nExplain how these methods help understand conditions with social perception differences\nByrge et al. (2015) showed distinct neural patterns in autism during interaction observation\nThese findings help develop better assessment tools and interventions\nConnect to potential career paths in clinical psychology or neuroscience"
+  },
+  {
+    "objectID": "People.html#virtual-reality-methods",
+    "href": "People.html#virtual-reality-methods",
+    "title": "The Science of People-Watching",
+    "section": "Virtual Reality Methods",
+    "text": "Virtual Reality Methods\n\n\nAdvantages: * Precise control over social scenarios * Manipulation of specific social variables * Immersive, ecological validity * Replicable across participants * Can track behavior in realistic contexts\n\n\n\n\nVR research setup\n\n\nGrowing area of TPE research!\n\n\n\nExplain how VR allows researchers to create controlled but realistic social scenarios\nVR can place participants within interactions rather than just observing them\nEmerging methodology that combines control with ecological validity\nConnect to potential future research directions"
+  },
+  {
+    "objectID": "People.html#computational-modeling",
+    "href": "People.html#computational-modeling",
+    "title": "The Science of People-Watching",
+    "section": "Computational Modeling",
+    "text": "Computational Modeling\n\n\nHow It Works: * Create computational models of social perception * Test which features are most diagnostic * Simulate different processing strategies * Compare model performance to human performance * Identify minimal features needed for accurate perception\nQuestions Addressed: * Which visual features are most informative? * How do we integrate different social cues? * How does prior knowledge influence perception?\n\n\n\n\nComputational model diagram\n\n\n\n\n\nExplain that computational models help test theories about how people process social information\nThese models can reveal which strategies are most efficient and accurate\nModeling approaches help bridge psychology and computer science\nConnect to AI and machine learning applications"
+  },
+  {
+    "objectID": "People.html#future-methodological-frontiers",
+    "href": "People.html#future-methodological-frontiers",
+    "title": "The Science of People-Watching",
+    "section": "Future Methodological Frontiers",
+    "text": "Future Methodological Frontiers\n\nHyperscanning: Simultaneous brain recording from multiple individuals\nNatural Language Processing: Analyzing verbal content of interactions\nMachine Learning Applications: Training computers to recognize social dynamics\nMobile Eye-Tracking: Studying social perception in real-world environments\nDigital Phenotyping: Using smartphone data to assess social perception abilities\n\n\n\nHyperscanning studies neural synchronization between interacting individuals\nMobile methods allow studying social perception in natural environments\nThese cutting-edge methods will further advance our understanding of people-watching\nConnect to potential research careers and interdisciplinary approaches"
+  },
+  {
+    "objectID": "People.html#technical-challenge-design-your-study",
+    "href": "People.html#technical-challenge-design-your-study",
+    "title": "The Science of People-Watching",
+    "section": "Technical Challenge: Design Your Study",
+    "text": "Technical Challenge: Design Your Study\n\n\nYou are a social psychologist studying how teens detect popularity based on observed interactions.\nWhat would you include in your research design? * What stimuli would you use? * What measures would you employ? * What variables would you manipulate? * How would you assess accuracy? * What technologies would you incorporate?\n\n\n\n\nTeens interacting\n\n\n\n\n\nMake this interactive - have students discuss in small groups\nConnect to real-world high school social dynamics\nEncourage creative thinking about methodology\nEmphasize that good research requires careful design"
+  },
+  {
+    "objectID": "People.html#methods-integration-a-case-study",
+    "href": "People.html#methods-integration-a-case-study",
+    "title": "The Science of People-Watching",
+    "section": "Methods Integration: A Case Study",
+    "text": "Methods Integration: A Case Study\n\n\nResearch Question: How do we detect cooperative vs. competitive relationships?\nMulti-method Approach: 1. Eye-tracking (what cues we look at) 2. fMRI (neural processing differences) 3. Behavioral measures (accuracy & reaction time) 4. Computational modeling (processing strategies)\n\n\n\n\nIntegration of methods diagram\n\n\n\n\n\nExplain how combining multiple methods provides stronger evidence\nEach method addresses different aspects of the research question\nIntegration allows researchers to connect neural, cognitive, and behavioral levels\nStrong research programs use complementary methods"
+  },
+  {
+    "objectID": "People.html#thank-you-1",
+    "href": "People.html#thank-you-1",
+    "title": "The Science of People-Watching",
+    "section": "Thank You!",
+    "text": "Thank You!\n\n\nKey Takeaways: * People-watching research uses sophisticated methodologies * Multiple techniques provide complementary insights * The field combines psychology, neuroscience, and computer science * These methods reveal how we make sense of our social world * New technologies continue to advance our understanding\n\n\n\n\nSocial interaction research\n\n\n\n\n\nWrap up by emphasizing the sophisticated methodologies used in this research\nConnect to potential career pathways in psychology, neuroscience, or data science\nInvite questions about specific methodologies"
+  },
+  {
+    "objectID": "People.html#references-1",
+    "href": "People.html#references-1",
+    "title": "The Science of People-Watching",
+    "section": "References",
+    "text": "References\n\nBarasz, K., & Kim, T. (2022). Editorial: A field guide to people-watching. Current Opinion in Psychology, 45, 101301.\nQuadflieg, S., & Penton-Voak, I. (2017). The Emerging Science of People-Watching: Forming Impressions From Third-Party Encounters. Current Directions in Psychological Science, 26(4), 383-389.\nBernieri, F. J., Gillis, J. S., Davis, J. M., & Grahe, J. E. (1996). Dyad rapport and the accuracy of its judgment across situations: A Lens Model analysis. Journal of Personality and Social Psychology, 71, 110-129.\nManera, V., Del Giudice, M., Bara, B. G., Verfailie, K., & Becchio, C. (2011). The second-agent effect: communicative gestures increase the likelihood of perceiving a second agent. PLoS One, 6, e22650.\nVillani, D., Morganti, F., Cipresso, P., Ruggi, S., Riva, G., & Gilli, G. (2015). Visual exploration patterns of human figures in action. Frontiers in Psychology, doi: 10.3389/fpsyg.2015.01636.\n\n\n\nAcknowledge the researchers whose methodological innovations advanced this field"
   },
   {
     "objectID": "index.html#dr.-gordon-wright",
     "href": "index.html#dr.-gordon-wright",
     "title": "Psychology Taster Lecture",
     "section": "Dr. Gordon Wright",
-    "text": "Dr. Gordon Wright\n\nLecturer in Deception, Mind-reading and People-Watching\nLittleMonkeyLab"
+    "text": "Dr. Gordon Wright\n\nLecturer in Deception, Mind-reading and People-Watching\n\n\nChief Mischief Officer - LittleMonkeyLab"
+  },
+  {
+    "objectID": "index.html#im-very-sorry",
+    "href": "index.html#im-very-sorry",
+    "title": "Psychology Taster Lecture",
+    "section": "I’m very sorry…",
+    "text": "I’m very sorry…"
   },
   {
     "objectID": "index.html#little-monkey",
@@ -420,20 +1078,6 @@
     "text": "Who lies and how often?"
   },
   {
-    "objectID": "index.html#frequency-and-nature-of-lying",
-    "href": "index.html#frequency-and-nature-of-lying",
-    "title": "Psychology Taster Lecture",
-    "section": "Frequency and Nature of Lying",
-    "text": "Frequency and Nature of Lying\n\nMost people lie infrequently\n\nAverage: ~2 lies per day\nBUT: 40-50% tell zero lies in 24 hours\n~5% of people tell ~50% of all lies\n\nLying typically avoided despite potential benefits\n\nPure lie aversion demonstrated in studies\nPeople often choose honesty even when lying is beneficial"
-  },
-  {
-    "objectID": "index.html#the-15-coin-flip-study",
-    "href": "index.html#the-15-coin-flip-study",
-    "title": "Psychology Taster Lecture",
-    "section": "The €15 Coin Flip Study",
-    "text": "The €15 Coin Flip Study\nThis is a landmark study which purports to illustrate the ‘generalised aversion to lying’\n\n\n\nStudy Setup:\n658 German participants\nPhone survey from home\n\nReport coin flip result:\n\nTails = €15 reward\nHeads = No reward\nComplete anonymity\n\n\n\n\n\nResults:\n\n44.4% reported tails (€15)\n55.6% reported heads (€0)\nDespite:\n\nFinancial incentive to lie\nNo detection possible\nMinimal reputation cost"
-  },
-  {
     "objectID": "index.html#but-is-it-so-bad",
     "href": "index.html#but-is-it-so-bad",
     "title": "Psychology Taster Lecture",
@@ -446,13 +1090,6 @@
     "title": "Psychology Taster Lecture",
     "section": "Dunbar’s Number",
     "text": "Dunbar’s Number"
-  },
-  {
-    "objectID": "index.html#psychological-perspectives",
-    "href": "index.html#psychological-perspectives",
-    "title": "Psychology Taster Lecture",
-    "section": "Psychological Perspectives",
-    "text": "Psychological Perspectives\n\nMultiple subdisciplinary approaches:\n\nSocial psychology: relationship dynamics\nCognitive psychology: decision-making processes\nDevelopmental psychology: deception abilities in children\n\nCompeting theoretical frameworks:\n\nTruth-Default Theory (Levine, 2014)\nAdaptive Lie Detector (Street, 2015)"
   },
   {
     "objectID": "index.html#introducing-mind-space",
@@ -480,28 +1117,14 @@
     "href": "index.html#whats-the-point",
     "title": "Psychology Taster Lecture",
     "section": "What’s the point?",
-    "text": "What’s the point?\n\nIt’s not just really cool\nIt could offer us new ways to understand variability in Social Cognitive ability\nAnd understand some of the ‘magic’ abilities we share with cheeky monkeys"
-  },
-  {
-    "objectID": "index.html#societal-impact-of-deception",
-    "href": "index.html#societal-impact-of-deception",
-    "title": "Psychology Taster Lecture",
-    "section": "Societal Impact of Deception",
-    "text": "Societal Impact of Deception\n\nAffects multiple domains:\n\nLaw enforcement and courts\nCybersecurity (“social engineering”)\nBusiness negotiations\nPolitical sphere\nEmployment interviews\n\nStudied across disciplines: communication, anthropology, philosophy, marketing, management\nBroad economic and societal implications (DePaulo et al., 2003)"
+    "text": "What’s the point?\n\nIt’s not just really cool (it is!)\nIt could offer us new ways to understand variability in Social Cognitive ability\nAnd understand some of the ‘magic’ abilities we share with cheeky monkeys"
   },
   {
     "objectID": "index.html#systematic-observation-in-natural-settings",
     "href": "index.html#systematic-observation-in-natural-settings",
     "title": "Psychology Taster Lecture",
     "section": "Systematic Observation in Natural Settings",
-    "text": "Systematic Observation in Natural Settings\n\nEveryday Psychology\nObserving behavior without interference\nIdentifying patterns and anomalies\nReal-life Psychological Profiling\nInferring meaning and motive in everyday behaviour"
-  },
-  {
-    "objectID": "index.html#its-got-monkeys-too",
-    "href": "index.html#its-got-monkeys-too",
-    "title": "Psychology Taster Lecture",
-    "section": "It’s got Monkeys too!",
-    "text": "It’s got Monkeys too!"
+    "text": "Systematic Observation in Natural Settings\n\nStreet Psychology\nObserving behavior without interference\nIdentifying patterns and anomalies\nReal-life Psychological Profiling\nInferring meaning and motive in everyday behaviour"
   },
   {
     "objectID": "index.html#i-did-some-people-watching-on-the-telly",
@@ -509,20 +1132,6 @@
     "title": "Psychology Taster Lecture",
     "section": "I did some people-watching on the telly",
     "text": "I did some people-watching on the telly\nBBC Horizon - A Week Without Lying\nGoldsmiths Link"
-  },
-  {
-    "objectID": "index.html#cognitive-load-in-deception",
-    "href": "index.html#cognitive-load-in-deception",
-    "title": "Psychology Taster Lecture",
-    "section": "Cognitive Load in Deception",
-    "text": "Cognitive Load in Deception\n\nTraditional view: Lying is more cognitively demanding\n\nRequires suppressing truth\nNeed to create consistent story\n\nHowever, lying can sometimes be easier when:\n\nStakes/rewards are high\nLies are well-rehearsed\nStory is simple"
-  },
-  {
-    "objectID": "index.html#being-an-effective-liar",
-    "href": "index.html#being-an-effective-liar",
-    "title": "Psychology Taster Lecture",
-    "section": "Being an Effective Liar",
-    "text": "Being an Effective Liar\n\nKey strategies:\n\nReducing cognitive load through preparation\nEmbedding lies within truthful information\nSelf-deception to reduce cognitive demands\n\nInfluencing factors:\n\nPersonality traits (e.g., Machiavellianism)\nMoral cognition\nCultural context"
   },
   {
     "objectID": "index.html#forensic-psychology-unit",
@@ -536,14 +1145,14 @@
     "href": "index.html#do-you-want-to-play",
     "title": "Psychology Taster Lecture",
     "section": "Do you want to play?",
-    "text": "Do you want to play?\n\nThis year we are putting together a 10-year review!\nAll students are welcome to join in (current and maybe future!)\n@ForensicGold on X.com\nhttps://www.gold.ac.uk/forensic-psychology-unit/"
+    "text": "Do you want to play?\n\nThe topic for this year is…\nPsychological Profiling (in all it’s guises)\nAll students are welcome to join in (current and maybe future!)\n@ForensicGold on X.com\nhttps://www.gold.ac.uk/forensic-psychology-unit/"
   },
   {
     "objectID": "index.html#thank-you",
     "href": "index.html#thank-you",
     "title": "Psychology Taster Lecture",
     "section": "Thank you",
-    "text": "Thank you\nooops..\nBut I think I forgot something…"
+    "text": "Thank you\nAny Questions?\nBut I think I forgot something…"
   },
   {
     "objectID": "index.html#yes.-the-subject-i-mostly-teach",
@@ -551,12 +1160,5 @@
     "title": "Psychology Taster Lecture",
     "section": "Yes. The subject I mostly teach…",
     "text": "Yes. The subject I mostly teach…"
-  },
-  {
-    "objectID": "index.html#references",
-    "href": "index.html#references",
-    "title": "Psychology Taster Lecture",
-    "section": "References",
-    "text": "References\n\n\nDePaulo, B. M., Lindsay, J. J., Malone, B. E., Muhlenbruck, L., Charlton, K., & Cooper, H. (2003). Cues to deception. Psychological Bulletin Psychol Bull, 129(1), 74–118. https://doi.org/10.1037/0033-2909.129.1.74\n\n\nLevine, T. R. (2014). Truth-default theory (TDT): A theory of human deception and deception detection. Journal of Language and Social Psychology, 33(4), 378–392. https://doi.org/10.1177/0261927X14535916\n\n\nStreet, C. N. H. (2015). ALIED: Humans as adaptive lie detectors. Journal of Applied Research in Memory and Cognition, 4(4), 335–343. https://doi.org/10.1016/j.jarmac.2015.06.002"
   }
 ]
