@@ -226,11 +226,19 @@ Let me tell you why!
 :::
 :::::
 
+<https://huggingface.co/spaces/LittleMonkeyLab/All_a_bit_emotional>
+
 <!-- Section 5: Terra Cotta (#A16B56) -->
 
 ## Can you do tricks like Derren Brown? {.section-header background-color="#A16B56"}
 
+::: center
+{{< video https://youtu.be/yHNq4SQxyv0?si=asOQ7vv416JC7nnu width="500" height="350" >}}
+:::
+
 ![](images/8ed691f5-7be1-4434-96f7-ffa5fae56b7c.JPG)
+
+![](images/CleanShot 2025-04-09 at 13.40.01.png)
 
 ## The Psychology of Cold Reading {background-color="#F5EFEC"}
 
@@ -247,7 +255,7 @@ Let me tell you why!
 {{< video https://www.youtube.com/watch?v=2G1ESs-NJQo width="500" height="350" >}}
 :::
 
-## The Science Behind the Performance 2{background-color="#F5EFEC"}
+## The Science Behind the Performance 2 {background-color="#F5EFEC"}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -319,6 +327,12 @@ Let me tell you why!
 -   How to appreciate the complexity of the human mind
 
 Doesn't mean we have to be boring, and not use cool toys!
+
+## Next Year? Maybe?
+
+![](images/paste-12.png)
+
+![](images/paste-11.png)
 
 ## Thank You {.center}
 
