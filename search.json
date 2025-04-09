@@ -25,7 +25,7 @@
     "href": "myths.html#this-year-was-a-bit-of-a-nightmare",
     "title": "Mythbusting",
     "section": "This year was a bit of a nightmare…",
-    "text": "This year was a bit of a nightmare…\nLet me tell you why!"
+    "text": "This year was a bit of a nightmare…\nLet me tell you why!\nI was Expert for one lab this year…"
   },
   {
     "objectID": "myths.html#can-you-read-my-mind",
@@ -53,14 +53,21 @@
     "href": "myths.html#the-science-of-mind-reading",
     "title": "Mythbusting",
     "section": "The Science of Mind Reading",
-    "text": "The Science of Mind Reading\n\nPsychological research reveals we can detect subtle nonverbal cues that appear like mind reading\nPsychologists study subconscious communication through microexpressions and body language\nProfessional “mind readers” utilize techniques like cold reading, warm reading, and hot reading\nBrain imaging studies show how we predict others’ intentions through mirror neurons and theory of mind"
+    "text": "The Science of Mind Reading\n\nPsychological research reveals we can detect subtle nonverbal cues that appear like mind reading\nPsychologists study subconscious communication through microexpressions and body language\nProfessional “mind readers” utilize techniques like cold reading\nBrain imaging studies show how we predict others’ intentions through mirror neurons and ‘theory of mind’"
   },
   {
     "objectID": "myths.html#techniques-behind-mind-reading",
     "href": "myths.html#techniques-behind-mind-reading",
     "title": "Mythbusting",
     "section": "Techniques Behind “Mind Reading”",
-    "text": "Techniques Behind “Mind Reading”\n\n\nScientific Explanations\n\nUnconscious behavioral cues\nImplicit pattern recognition\nSkilled observation of reactions\nStatistical guessing with feedback\n\n\nReal-World Applications\n\nClinical psychology assessments\nLaw enforcement interrogations\nMarketing and consumer research\nHuman-computer interaction design"
+    "text": "Techniques Behind “Mind Reading”\n\n\nScientific Explanations\n\nUnconscious behavioural cues\nImplicit pattern recognition\nSkilled observation of reactions\nStatistical guessing with feedback\n\n\nReal-World Applications\n\nClinical psychology assessments\nLaw enforcement interrogations\nMarketing and consumer research\nHuman-computer interaction design"
+  },
+  {
+    "objectID": "myths.html#check-this-out",
+    "href": "myths.html#check-this-out",
+    "title": "Mythbusting",
+    "section": "Check this out!",
+    "text": "Check this out!\nhttps://huggingface.co/spaces/LittleMonkeyLab/All_a_bit_emotional"
   },
   {
     "objectID": "myths.html#are-you-profiling-me",
@@ -81,7 +88,7 @@
     "href": "myths.html#what-your-stuff-says-about-you",
     "title": "Mythbusting",
     "section": "What Your Stuff Says About You",
-    "text": "What Your Stuff Says About You\n\n\nWhat We Can Actually Tell\n\nConscientiousness from organization\nOpenness from variety of books/music\nExtraversion from memorabilia\nEmotional stability from photo content\n\n\nEthical Considerations\n\nConsent and privacy boundaries\nAvoiding stereotyping\nCultural context differences\nResponsible use of information"
+    "text": "What Your Stuff Says About You\n\n\n\nWhat We Can Actually Tell\n\nConscientiousness from organization\nOpenness from variety of books/music\nExtraversion from memorabilia\nEmotional stability from photo content\n\n\nEthical Considerations\n\nConsent and privacy boundaries\nAvoiding stereotyping\nCultural context differences\nResponsible use of information"
   },
   {
     "objectID": "myths.html#can-you-seduce-anyone",
@@ -123,7 +130,7 @@
     "href": "myths.html#how-we-make-sense-of-social-interactions",
     "title": "Mythbusting",
     "section": "How We Make Sense of Social Interactions",
-    "text": "How We Make Sense of Social Interactions\n\n\nWhat We Can Detect\n\nRelationship types (friends vs. strangers)\nPower dynamics and social status\nRomantic interest and attraction\nCultural norms and violations\n\n\nResearch Applications\n\nClinical assessments (e.g., autism)\nCross-cultural understanding\nArtificial intelligence development\nUrban planning and public spaces\n\n\nhttps://huggingface.co/spaces/LittleMonkeyLab/All_a_bit_emotional"
+    "text": "How We Make Sense of Social Interactions\n\n\nWhat We Can Detect\n\nRelationship types (friends vs. strangers)\nPower dynamics and social status\nRomantic interest and attraction\nCultural norms and violations\n\n\nResearch Applications\n\nClinical assessments (e.g., autism)\nCross-cultural understanding\nArtificial intelligence development\nUrban planning and public spaces"
   },
   {
     "objectID": "myths.html#can-you-do-tricks-like-derren-brown",
