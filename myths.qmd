@@ -58,13 +58,11 @@ format:
 
 Let me tell you why!
 
+I was Expert for one lab this year...
+
 <!-- Section 1: Navy Blue (#2E5077) -->
 
 ## Can you read my mind? {.section-header background-color="#2E5077"}
-
-::: center
-{{< video https://www.youtube.com/watch?v=bWyhsqh_e9s width="500" height="350" >}}
-:::
 
 ## Mind-reading for real {.section-header background-color="#2E5077"}
 
@@ -80,8 +78,8 @@ Let me tell you why!
 
 -   Psychological research reveals we can detect subtle nonverbal cues that appear like mind reading
 -   Psychologists study subconscious communication through microexpressions and body language
--   Professional "mind readers" utilize techniques like cold reading, warm reading, and hot reading
--   Brain imaging studies show how we predict others' intentions through mirror neurons and theory of mind
+-   Professional "mind readers" utilize techniques like cold reading
+-   Brain imaging studies show how we predict others' intentions through mirror neurons and 'theory of mind'
 
 ------------------------------------------------------------------------
 
@@ -91,7 +89,7 @@ Let me tell you why!
 ::: {.column width="50%"}
 **Scientific Explanations**
 
--   Unconscious behavioral cues
+-   Unconscious behavioural cues
 -   Implicit pattern recognition
 -   Skilled observation of reactions
 -   Statistical guessing with feedback
@@ -106,6 +104,10 @@ Let me tell you why!
 -   Human-computer interaction design
 :::
 :::::
+
+## Check this out! 
+
+<https://huggingface.co/spaces/LittleMonkeyLab/All_a_bit_emotional>
 
 <!-- Section 2: Burgundy (#903C3D) -->
 
@@ -226,7 +228,6 @@ Let me tell you why!
 :::
 :::::
 
-<https://huggingface.co/spaces/LittleMonkeyLab/All_a_bit_emotional>
 
 <!-- Section 5: Terra Cotta (#A16B56) -->
 
