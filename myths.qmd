@@ -1,0 +1,329 @@
+---
+title: "Mythbusting"
+subtitle: "Only real psychology here please"
+author: "Dr. Gordon Wright"
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    transition: slide
+    background-transition: fade
+    incremental: true
+    slide-number: true
+    code-fold: true
+    logo: images/LMLLOGO.png
+    footer: "Get Real! | 2025"
+---
+
+## The most common questions Psych Students get asked {.center}
+
+::::: columns
+::: {.column width="50%"}
+![](images/svgviewer-png-output%20(6)-2.png)
+
+![](images/svgviewer-output%20(3).svg)
+
+![](images/svgviewer-png-output%20(3).png)
+:::
+
+::: {.column width="50%"}
+![](images/svgviewer-output%20(1).svg)
+
+![](images/svgviewer-png-output%20(1).png)
+
+![](images/svgviewer-png-output%20(4).png)
+:::
+:::::
+
+## Introduce yourself, Gordon {background-color="#333333"}
+
+-   Unfortunately, none of the interesting psychologists are here today.
+
+-   So you are stuck with me.
+
+-   I am sorry to say that I spend lots of my time lecturing **Research Methods and Statistics.**
+
+-   We take that seriously here at Goldsmiths.
+
+## We are just about to introduce next year's Y2 research topics {background-color="#333333"}
+
+-   Independent choice of topics
+
+-   Work as a group
+
+-   Run a real exxperiment using Qual and Quant techniques
+
+-   And yes, Analyse the data!
+
+## This year was a bit of a nightmare...
+
+Let me tell you why!
+
+<!-- Section 1: Navy Blue (#2E5077) -->
+
+## Can you read my mind? {.section-header background-color="#2E5077"}
+
+::: center
+{{< video https://www.youtube.com/watch?v=bWyhsqh_e9s width="500" height="350" >}}
+:::
+
+## Mind-reading for real {.section-header background-color="#2E5077"}
+
+::: center
+{{< video https://www.youtube.com/embed/6kvQHGZU86A?start=301 width="500" height="350" >}}
+:::
+
+## Die in the cup task
+
+![](images/paste-7.png)
+
+## The Science of Mind Reading {background-color="#E6ECF3"}
+
+-   Psychological research reveals we can detect subtle nonverbal cues that appear like mind reading
+-   Psychologists study subconscious communication through microexpressions and body language
+-   Professional "mind readers" utilize techniques like cold reading, warm reading, and hot reading
+-   Brain imaging studies show how we predict others' intentions through mirror neurons and theory of mind
+
+------------------------------------------------------------------------
+
+## Techniques Behind "Mind Reading" {background-color="#E6ECF3"}
+
+::::: columns
+::: {.column width="50%"}
+**Scientific Explanations**
+
+-   Unconscious behavioral cues
+-   Implicit pattern recognition
+-   Skilled observation of reactions
+-   Statistical guessing with feedback
+:::
+
+::: {.column width="50%"}
+**Real-World Applications**
+
+-   Clinical psychology assessments
+-   Law enforcement interrogations
+-   Marketing and consumer research
+-   Human-computer interaction design
+:::
+:::::
+
+<!-- Section 2: Burgundy (#903C3D) -->
+
+## Are you profiling me? {.section-header background-color="#903C3D"}
+
+![](images/Snoop.png)
+
+## The Psychology of Environmental Profiling {background-color="#F5E9E9"}
+
+-   Research shows personal spaces contain "behavioral residue" that reveals personality traits
+-   Psychologists can analyze bedrooms, offices, and social media profiles for accurate personality insights
+-   Gosling's research demonstrates how possessions and environment reflect our "extended self"
+-   The field of psychogeography explores how personal spaces both shape and reflect identity
+
+------------------------------------------------------------------------
+
+## What Your Stuff Says About You {background-color="#F5E9E9"}
+
+::::: columns
+::: {.column width="50%"}
+**What We Can Actually Tell**
+
+-   Conscientiousness from organization
+-   Openness from variety of books/music
+-   Extraversion from memorabilia
+-   Emotional stability from photo content
+:::
+
+::: {.column width="50%"}
+**Ethical Considerations**
+
+-   Consent and privacy boundaries
+-   Avoiding stereotyping
+-   Cultural context differences
+-   Responsible use of information
+:::
+:::::
+
+<!-- Section 3: Forest Green (#467355) -->
+
+## Can you seduce anyone? {.section-header background-color="#467355"}
+
+![](images/Rapport.png)
+
+![](images/paste-8.png)
+
+## The Science of Rapport Building {background-color="#EAF1ED"}
+
+-   Psychological research identifies specific techniques that build authentic connection
+-   Mirroring and behavioral synchrony create unconscious feelings of affinity
+-   Self-disclosure and active listening promote oxytocin release and interpersonal bonding
+-   Cialdini's principles of influence explain persuasion effects in social contexts
+
+------------------------------------------------------------------------
+
+## Building Genuine Connection {background-color="#EAF1ED"}
+
+::::: columns
+::: {.column width="50%"}
+**Empirically-Validated Techniques**
+
+-   Maintained eye contact (70% listening)
+-   Subtle mirroring of posture and speech
+-   Asking follow-up questions
+-   Using person's name appropriately
+:::
+
+::: {.column width="50%"}
+**Beyond Manipulation**
+
+-   Authentic interest vs. manipulation
+-   Ethics of interpersonal influence
+-   Building meaningful relationships
+-   Applying research responsibly
+:::
+:::::
+
+<!-- Section 4: Purple (#675F99) -->
+
+## Do you like People Watching? {.section-header background-color="#675F99"}
+
+![](images/PeopleWatching.png)
+
+![](images/emotions.png)
+
+![](images/room4.png)
+
+![](images/paste-9.png)
+
+## The Science of Social Observation {background-color="#EEEDF5"}
+
+-   People-watching is a sophisticated cognitive process studied in social perception research
+-   Psychologists analyze "third-party encounters" to understand how we interpret social interactions
+-   We form accurate impressions about relationships, status, and intentions within seconds
+-   Brain studies reveal specialized neural networks dedicated to processing social dynamics
+
+------------------------------------------------------------------------
+
+## How We Make Sense of Social Interactions {background-color="#EEEDF5"}
+
+::::: columns
+::: {.column width="50%"}
+**What We Can Detect**
+
+-   Relationship types (friends vs. strangers)
+-   Power dynamics and social status
+-   Romantic interest and attraction
+-   Cultural norms and violations
+:::
+
+::: {.column width="50%"}
+**Research Applications**
+
+-   Clinical assessments (e.g., autism)
+-   Cross-cultural understanding
+-   Artificial intelligence development
+-   Urban planning and public spaces
+:::
+:::::
+
+<!-- Section 5: Terra Cotta (#A16B56) -->
+
+## Can you do tricks like Derren Brown? {.section-header background-color="#A16B56"}
+
+![](images/8ed691f5-7be1-4434-96f7-ffa5fae56b7c.JPG)
+
+## The Psychology of Cold Reading {background-color="#F5EFEC"}
+
+-   Cold reading uses psychological principles to create illusion of mind reading or clairvoyance
+-   Techniques include Barnum statements, observation, and probability-based guessing
+-   Psychologists study these methods to understand belief formation and cognitive biases
+-   The ideomotor effect explains unconscious movements in techniques like pendulum swinging
+
+------------------------------------------------------------------------
+
+## The Science Behind the Performance {background-color="#F5EFEC"}
+
+::: center
+{{< video https://www.youtube.com/watch?v=2G1ESs-NJQo width="500" height="350" >}}
+:::
+
+## The Science Behind the Performance 2{background-color="#F5EFEC"}
+
+::::: columns
+::: {.column width="50%"}
+**Psychological Mechanisms**
+
+-   Confirmation bias in interpretation
+-   Subjective validation effects
+-   Availability heuristics
+-   The Forer (Barnum) effect
+:::
+
+::: {.column width="50%"}
+**Critical Thinking Tools**
+
+-   Distinguishing skill from deception
+-   Understanding suggestibility
+-   Recognizing statistical tricks
+-   Ethical entertainment vs. exploitation
+:::
+:::::
+
+<!-- Section 6: Teal (#206676) -->
+
+## Can you Sherlock me? {.section-header background-color="#206676"}
+
+::: center
+{{< video https://www.youtube.com/watch?v=Ho6t683GazQ width="500" height="350" >}}
+:::
+
+## The Science of Personality Prediction {background-color="#E6EEEF"}
+
+![](images/Faces.png)
+
+-   Research shows personality traits can be predicted from behavioral patterns and preferences
+-   The "Big Five" traits provide a scientific framework for understanding stable dimensions
+-   Digital footprints on social media can reveal personality with surprising accuracy
+-   Behavioral economics uses "nudges" based on personality insights to influence decisions
+
+------------------------------------------------------------------------
+
+## Predicting Personality from Behavior {background-color="#E6EEEF"}
+
+::::: columns
+::: {.column width="50%"}
+**What Science Can Actually Predict**
+
+-   Career preferences from personality traits
+-   Consumer choices from values
+-   Social behavior from attachment style
+-   Digital behavior from cognitive style
+:::
+
+::: {.column width="50%"}
+**MINDSPACE Framework**
+
+-   Messenger: who communicates matters
+-   Incentives: response to rewards/penalties
+-   Norms: influence of social expectations
+-   Defaults: tendency to accept preset options
+-   Salience: attention to novel/relevant items
+:::
+:::::
+
+## Just because we are
+
+-   Debunking myths in human behavior
+-   Understanding the ethics of influence and perception
+-   Thinking Critically about popular psychological claims
+-   How to appreciate the complexity of the human mind
+
+Doesn't mean we have to be boring, and not use cool toys!
+
+## Thank You {.center}
+
+::: centre
+![](images/goldsmiths-logo.png){width="80%"}
+:::
+
+**Contact Information:** g.wright\@gold.ac.uk
