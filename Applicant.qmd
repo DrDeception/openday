@@ -1,12 +1,12 @@
 ---
-title: "Psychology Taster Lecture"
+title: "Psychology Taster"
 author: "Dr. Gordon Wright"
 affiliation: "LittleMonkeyLab @Goldsmiths"
 mainfont: Atkinson Hyperlegible
 format: 
   revealjs: 
     title-slide-attributes:
-      data-background-color: "blue"
+      data-background-color: "darkblue"
     logo: "images/LMLLOGO.png"
     incremental: true
     scrollable: true
