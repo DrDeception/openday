@@ -1,0 +1,108 @@
+---
+title: "MarshMallows"
+author: "Dr. Gordon Wright"
+affiliation: "LittleMonkeyLab @Goldsmiths"
+mainfont: Atkinson Hyperlegible
+format: 
+  revealjs: 
+    title-slide-attributes:
+      data-background-color: "black"
+    logo: "images/LMLLOGO.png"
+    incremental: true
+    scrollable: true
+    controls: true
+    controls-layout: edges
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 100px;
+      }
+      </style>
+---
+## Welcome!
+
+::: r-fit-text
+**Psychology at Goldsmiths**\
+*Where science meets creativity*
+:::
+
+------------------------------------------------------------------------
+
+## Overview of Y1 Psychology at Goldsmiths
+
+::::: columns
+::: {.column width="50%"}
+**Term 1 Modules** - Introduction to Psychology - Research Methods & Statistics I - Biological & Comparative Approaches - Cognitive Psychology
+:::
+
+::: {.column width="50%"}
+**Term 2 Modules** - Social Psychology - Developmental Psychology - Individual Differences - Applied Psychology
+:::
+:::::
+
+::: notes
+Emphasize our unique strengths: - Critical approach to psychology - Integration of scientific rigor with creative thinking - Strong focus on research skills from day one
+:::
+
+------------------------------------------------------------------------
+
+## Are You Ready for University?
+
+::: panel-tabset
+### Time Management
+
+-   How do you currently organize your studies?
+-   Can you manage multiple deadlines without supervision?
+-   Do you have systems for tracking your work?
+
+### Independent Learning
+
+-   How do you find information beyond what's provided?
+-   Can you evaluate sources critically?
+-   How comfortable are you with ambiguity?
+
+### Academic Skills
+
+-   How confident are you with academic writing?
+-   Can you construct a coherent argument?
+-   Are you comfortable with statistical concepts?
+:::
+
+------------------------------------------------------------------------
+
+## How University Differs from School
+
+| School                    | University                        |
+|---------------------------|-----------------------------------|
+| Teacher-directed learning | Self-directed learning            |
+| Regular homework checks   | Independent deadlines             |
+| Structured timetable      | Flexible schedule with gaps       |
+| Information provided      | Research expected                 |
+| Focus on correct answers  | Focus on critical analysis        |
+| Limited reading list      | Extensive reading beyond lectures |
+
+------------------------------------------------------------------------
+
+## Your Psychology Journey
+
+![](https://placekitten.com/800/400)
+
+What brings you to psychology?
+
+------------------------------------------------------------------------
+
+## Your End Goals
+
+::: r-fit-text
+**What do you want from your psychology degree?**
+:::
+
+::: incremental
+-   Career preparation?
+-   Understanding human behavior?
+-   Research skills?
+-   Personal development?
+-   Something else?
+:::

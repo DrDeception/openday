@@ -1,0 +1,221 @@
+---
+title: "Prepare2"
+author: "Dr. Gordon Wright"
+affiliation: "LittleMonkeyLab @Goldsmiths"
+mainfont: Atkinson Hyperlegible
+format: 
+  revealjs: 
+    title-slide-attributes:
+      data-background-color: "darkblue"
+    logo: "images/LMLLOGO.png"
+    incremental: true
+    scrollable: true
+    controls: true
+    controls-layout: edges
+filters: 
+  - timer
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 100px;
+      }
+      </style>
+---
+
+## Welcome!
+
+::: r-fit-text
+**Psychology at Goldsmiths**\
+*Where science meets creativity*
+:::
+
+------------------------------------------------------------------------
+
+## Our ethos
+
+## About the Programme
+
+::: nonincremental
+-   **Accredited by the British Psychological Society (BPS).** Achieving at least 50% on all modules makes you eligible for graduate membership of the BPS.
+-   Underpinned by a **bio-psycho-social model** to explain how human behaviour is influenced by a complex mix of biological, social, environmental & psychological factors.
+-   **Develops understanding of applications of psychology and transferable skills for graduate-level employment by helping you to:**
+    -   Critically assess evidence to develop and deliver creative, coherent, effective and ethical plans for changing practice and policy in an uncertain world.
+    -   Balance personal experience and perspective with scientific evidence to inform critical enquiry and public policy.
+-   **Taught in modules that connect with one another; some teaching in blocks:**
+    -   Lectures, seminars, tutorials, independent learning and active learning strategies
+:::
+
+------------------------------------------------------------------------
+
+## Pedagogy
+
+![](images/CleanShot%202025-03-14%20at%2017.33.49-01.png)
+
+## Year one Term one
+
+![](images/CleanShot%202025-03-14%20at%2017.59.58.png)
+
+## Year one Term two
+
+![](images/CleanShot%202025-03-14%20at%2018.00.57.png)
+
+## Year one Term three
+
+![](images/CleanShot%202025-03-14%20at%2018.01.30.png)
+
+## Personal and Professional Development
+
+::: nonincremental
+-   <div>
+
+    -   Every student has a Personal Tutor who will facilitate these tutorials
+
+    -   Aims to enable empowered, independent & interdependent learners
+
+    -   Pilot PPD programme in 2023/4 co-created with two third year students
+
+    -   Student Advisory Group reviewed whole curriculum, including PPD
+
+    -   In 2024/5
+
+        -   PPD connected to modular content and careers service
+        -   Assessed through portfolio of activities including guided reflections
+        -   Another Student Advisory Group will be developed
+
+    </div>
+:::
+
+------------------------------------------------------------------------
+
+## Research Methods & Statistics
+
+This module offers the nuts and bolts of conducting and interpreting different kinds of research.
+
+These fundamental research skills are highly valued by graduate employers. Whether you want to be a psychologist, a research scientist, an entrepreneur or an Olympic athlete, developing the skills to conduct quality research and analyse data will serve you well.
+
+**You will be assessed via:** \* Lab-book of exercises – practice works! \* 2 lab reports \* In person multiple-choice exam
+
+------------------------------------------------------------------------
+
+## Mental Health and Wellbeing
+
+This module offers an introduction to psychological wellbeing and the emotional experience of being human.
+
+Assessments are designed to help you connect psychological theory, scientific evidence and your personal development now and in the future.
+
+**You will be assessed via:** \* Evidence-based action plan for student wellbeing \* Written description of a behavioural experiment; applying psychological theory in an experiential learning exercise to change a personal belief or behaviour.
+
+------------------------------------------------------------------------
+
+## Cognition & Culture
+
+This module offers an overview of what cognition is and the ways it can be applied in different real-world contexts.
+
+Assessments are designed to enable you to work in groups and individually to present an argument for a non-technical audience. Teamwork and clear communication are essential skills in graduate-level employment.
+
+**You will be assessed via:** \* Group poster designed for a public audience summarising a method in the psychology of cognition and culture \* Individual oral presentation of individual difference on aspect of perception, attention or action.
+
+------------------------------------------------------------------------
+
+## Life And Society
+
+This module offers an introduction to the self and interactions with others using social and developmental psychological theories.
+
+Assessments are designed to ensure that you have grasped key concepts and that you can apply your learning in the form of a policy briefing paper. These policy briefs are frequently written in government agencies, businesses and non-government organisations to enable readers to understand how to take evidence-based actions on a particular issue.
+
+**You will be assessed via:** \* In-person exam \* Policy brief on the first 1001 days of life
+
+------------------------------------------------------------------------
+
+## Identity, Agency & Environment
+
+This Semester 1 module will enable you to develop critical thinking skills through various topics:
+
+Hello students of **Identity Agency Environment 1 (IAE1)** - this module is subtitled ***Critical Thinking***. Welcome to the module and to your new year at Goldsmiths.
+
+Every week this module will introduce you to a new, compelling, topical subject in a lecture, followed by interdisciplinary seminar groups, where you will explore your critical thinking capacities and engage with peers in discussions about topics you are presented with.
+
+Your assessment at the close of the semester will be to respond critically to one of these topics in a way that feels purposeful and useful for you. You might decide to express your ideas about the topic of your choice by writing an essay, song, poem or composition, or by making a podcast, film, or designing a poster.
+
+------------------------------------------------------------------------
+
+### IAE1 Weekly Topics
+
+Lectures are each Wednesday morning in the Ian Gulland Lecture Theatre in the Whitehead Building at either: 9am (Group 1) or 10am (Group 2)
+
+-   Week 1: How To Use Your Critical Thinking Skills To Unpack The World
+-   Week 2: The Utopian Ideal Of Computing and its Controversial Reality
+-   Week 3: Kenneth Goldsmiths Uncreative Writing
+-   Week 4: What We Learn From 4'33'
+-   Week 5: The Crossbones Graveyard
+-   Week 7: "Sex, Lies & Videotape: Bill & Monica"
+-   Week 8: Cultural Hegemony and The Hunger Games
+-   Week 9: Artificial Intelligence As A Text: ChatGPT
+-   Week 10: The Fyre Festival
+
+------------------------------------------------------------------------
+
+## Applications of Psychological Research
+
+This Semester 2 module will enable you to critically evaluate psychological research findings and understand the motivation and practical issues involved in the planning and conduct of that research, from the perspective of investigators and research participants.
+
+**You will be assessed via:** \* Participation in research studies \* A Blog or pre-recorded video for a non-expert audience---
+
+## Are You Ready for University?
+
+::: panel-tabset
+### Time Management
+
+-   How do you currently organize your studies?
+-   Can you manage multiple deadlines without supervision?
+-   Do you have systems for tracking your work?
+
+### Independent Learning
+
+-   How do you find information beyond what's provided?
+-   Can you evaluate sources critically?
+-   How comfortable are you with ambiguity?
+
+### Academic Skills
+
+-   How confident are you with academic writing?
+-   Can you construct a coherent argument?
+-   Are you comfortable with statistical concepts?
+:::
+
+------------------------------------------------------------------------
+
+## How University Differs from School
+
+| School                    | University                        |
+|---------------------------|-----------------------------------|
+| Teacher-directed learning | Self-directed learning            |
+| Regular homework checks   | Independent deadlines             |
+| Structured timetable      | Flexible schedule with gaps       |
+| Information provided      | Research expected                 |
+| Focus on correct answers  | Focus on critical analysis        |
+| Limited reading list      | Extensive reading beyond lectures |
+
+------------------------------------------------------------------------
+
+## Your Psychology Journey
+
+## What brings you to psychology?
+
+------------------------------------------------------------------------
+
+## Your End Goals
+
+::: r-fit-text
+**What do you want from your psychology degree?**
+:::
+
+::: incremental
+-   Career preparation?
+-   Understanding human behavior?
+-   Research skills?
+-   Personal development?
+-   Something else?
+:::

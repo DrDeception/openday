@@ -1,0 +1,755 @@
+---
+title: "Our Psychology Programme"
+subtitle: "Building Tomorrow's Psychological Scientists"
+author: "Dr. Gordon Wright"
+affiliation: "LittleMonkeyLab @Goldsmiths"
+mainfont: Atkinson Hyperlegible
+format: 
+  revealjs: 
+    title-slide-attributes:
+      data-background-color: "black"
+    logo: "images/goldsmiths-logo.png"
+    incremental: true
+    scrollable: true
+    controls: true
+    controls-layout: edges
+    footer: "Psychology Programme | Goldsmiths | 2025"
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 100px;
+      }
+      .vision-exercise {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 2rem;
+        border-radius: 15px;
+        margin: 1rem 0;
+      }
+      .key-points {
+        background: #2d3748;
+        padding: 1.5rem;
+        border-left: 5px solid #4299e1;
+        margin: 1rem 0;
+      }
+      </style>
+---
+
+# Welcome to Psychology at Goldsmiths {background-color="#1a202c"}
+
+::: r-fit-text
+**Where Science Meets Society**
+:::
+
+::: fragment
+*Preparing you for careers that matter*
+:::
+
+------------------------------------------------------------------------
+
+## Before We Begin... {background-color="#2d3748"}
+
+### Vision Exercise #1: You in 3 Years
+
+::: incremental
+-   It's graduation day, 2028
+-   You're walking across the stage with your Psychology degree
+-   What **skills** do you have that you didn't have today?
+-   What **questions** can you answer now that puzzled you before?
+-   How do you **think differently** about human behavior?
+-   What **impact** are you ready to make in the world?
+:::
+
+*Hold onto these thoughts...*
+
+------------------------------------------------------------------------
+
+## Vision Exercise #2: The Hiring Manager {background-color="#2d3748"}
+
+### Now... You're Ancient (Like Me!)
+
+**It's 2050. You're running an organization.**
+
+::: incremental
+-   **Candidate A:** Brilliant grades, memorized textbooks, follows instructions perfectly
+-   **Candidate B:** Strong grades AND thinks critically, solves novel problems, works with diverse teams, asks right questions, challenges assumptions respectfully
+:::
+
+::: fragment
+**Who do you hire?**
+
+*What would make YOU the Candidate B of 2028?*
+:::
+
+# This is What We help YOU Build! {background-color="#4a5568"}
+
+## Our Psychology Programme: The Big Picture {background-color="#1a202c"}
+
+**BPS Accredited** - Your First Step to Professional Psychology
+
+**Research-Led** - Faculty are Active Researchers, Not Just Teachers
+
+**Applied Focus** - Real Problems, Real Solutions, Real Impact
+
+**Small Cohorts** - You're Not Just a Number
+
+**London Advantage** - The World's Psychology Hub
+
+------------------------------------------------------------------------
+
+## The Three Pillars {background-color="#2d3748"}
+
+:::::: columns
+::: {.column width="33%"}
+### Mental Health & Wellbeing
+
+![](images/wellbeing-icon.png)
+
+-   Clinical Psychology
+-   Positive Psychology\
+-   Neurodiversity
+-   Personal Development
+-   Evidence-Based Interventions
+:::
+
+::: {.column width="33%"}
+### Cognition & Culture
+
+![](images/cognition-icon.png)
+
+-   How We Think
+-   Cultural Psychology
+-   Perception & Attention
+-   Art & Creativity
+-   Cross-Cultural Research
+:::
+
+::: {.column width="33%"}
+### Life & Society
+
+![](images/society-icon.png)
+
+-   Social Psychology
+-   Developmental Science
+-   Relationships
+-   Political Psychology
+-   Social Justice
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## A-Level vs University: The Great Divide {background-color="#4a5568"}
+
+::::: columns
+::: {.column width="50%"}
+### A-Level Psychology
+
+-   **Memorize** theories and studies
+-   **Accept** what textbooks say
+-   **Learn** the "right" answers
+-   **Individual** work focus
+-   **Describe** phenomena
+-   **Simple** cause-effect thinking
+-   **UK-centric** examples
+-   **Teacher-directed** learning
+:::
+
+::: {.column width="50%"}
+### University Psychology
+
+-   **Critically evaluate** evidence
+-   **Question** everything (respectfully!)
+-   **Construct** your own understanding
+-   **Collaborate** on complex problems
+-   **Explain WHY** things happen
+-   **Systems** thinking approach
+-   **Global** perspectives
+-   **Self-directed** exploration
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Example: Depression {background-color="#2d3748"}
+
+::::: columns
+::: {.column width="50%"}
+### A-Level Approach
+
+Depression is caused by low serotonin.
+
+Studies show CBT is effective.
+
+Beck's cognitive triad explains negative thinking.
+
+*End of story, P.E. Next!.*
+:::
+
+::: {.column width="50%"}
+### University Approach
+
+What complex factors interact to create depression risk?
+
+How do cultural contexts shape expression?
+
+Which interventions work for whom and why?
+
+What are the limitations of current research?
+
+*Opening the door!*
+:::
+:::::
+
+# Year 1: Building Your Foundation {background-color="#1a202c"}
+
+------------------------------------------------------------------------
+
+## Our Themes
+
+::::: columns
+::: {.column width="50%"}
+### Research Methods & Statistics
+
+-   **Learning R programming**
+-   **Designing experiments**
+-   **Critical evaluation skills**
+-   **Data visualization**
+-   **Reproducible research**
+
+*Assessment: Lab-book + Reports + Exam*
+:::
+
+::: {.column width="50%"}
+### Mental Health & Wellbeing
+
+-   **Personal wellbeing planning**
+-   **Behavioral experiments**
+-   **Evidence-based interventions**
+-   **Theory meets practice**
+
+*Assessment: Wellbeing plan + Behavioral experiment report*
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Themes continued
+
+::::: columns
+::: {.column width="50%"}
+### Cognition & Culture
+
+-   **Group poster projects**
+-   **Public communication**
+-   **Individual differences**
+-   **Cross-cultural perspectives**
+
+*Assessment: Group poster + Individual presentation*
+:::
+
+::: {.column width="50%"}
+### Life & Society
+
+-   **Policy brief writing**
+-   **First 1001 days research**
+-   **Social development**
+-   **Applied implications**
+
+*Assessment: Exam + Policy brief*
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## College-wide Module
+
+::::: columns
+::: {.column width="50%"}
+### Connected Curriculum: Identity, Agency & Environment
+
+-   **Critical thinking skills**
+-   **Interdisciplinary perspectives**
+-   **Creative assessment options**
+-   **Contemporary issues**
+
+*Choose your format: Essay, podcast, video, poster...*
+:::
+
+::: {.column width="50%"}
+### Applications of Psychological Research
+
+-   **Participate in real research**
+-   **Communicate to public**
+-   **Ethics and responsibility**
+-   **Research impact**
+
+*Assessment: Research participation + Public communication*
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Personal & Professional Development {background-color="#2d3748"}
+
+### **Every Week, Every Year**
+
+::: incremental
+-   **Personal Tutor** - Your academic mentor
+-   **Career exploration** - Where psychology can take you\
+-   **Skill development** - Leadership, teamwork, communication
+-   **Reflection practice** - Understanding your learning journey
+-   **Industry connections** - Guest speakers, placements, networking
+-   **Research opportunities** - Join faculty research teams
+:::
+
+::: fragment
+*Not an add-on - it's integral to your degree*
+:::
+
+------------------------------------------------------------------------
+
+# Term 3: Integration, Application, Celebration {background-color="#4a5568"}
+
+Term 3 information here.
+
+## Year 2: Deepening Your Expertise {background-color="#4a5568"}
+
+### **Same Structure, Greater Depth**
+
+:::::: columns
+::: {.column width="33%"}
+### Mental Health & Wellbeing v2
+- **Advanced therapeutic approaches**
+- **Complex case studies**
+- **Intervention design**
+- **Cultural considerations in mental health**
+:::
+
+::: {.column width="33%"}
+### Cognition & Culture v2
+- **Advanced cognitive theories**
+- **Cross-cultural research methods**
+- **Individual differences in depth**
+- **Applied cognitive psychology**
+:::
+
+::: {.column width="33%"}
+### Life & Society v2
+- **Complex social phenomena**
+- **Advanced developmental theories**
+- **Social psychology applications**
+- **Policy implications**
+:::
+::::::
+
+### **Your Chosen Research Topic**
+- **Design and conduct your own group research project**
+- **Choose a topic that interests YOU within the themes**
+- **Real data collection and analysis**
+- **Present findings at student conference**
+
+### **Same Structure, University-Level Depth**
+
+## Year 3: Expertise & Independence
+
+### **Dissertation: Your Masterpiece**
+
+-   **400+ hours of independent research**
+-   **Supervision from expert faculty**
+-   **Contribute new knowledge to the field**
+-   **Preparation for postgraduate study**
+
+### **Optional Modules** (Choose from 15+ options)
+
+-   Addictive Behaviours
+-   Neuropsychology\
+-   Psychology of the Arts
+-   Behavioural Genetics
+-   Psychology and Law
+-   Advanced Coding
+-   Clinical Psychology
+-   Neurodevelopmental Disorders
+
+------------------------------------------------------------------------
+
+## The Goldsmiths Difference {background-color="#2d3748"}
+
+::: incremental
+### **Research-Active Faculty**
+
+Every lecturer is conducting cutting-edge research
+
+### **State-of-the-Art Facilities**
+
+-   EEG/TMS Laboratory
+-   Eye-Tracking Lab
+-   Infant Development Lab
+-   Forensic Psychology Suite
+-   Virtual Reality Lab
+
+### **London Laboratory**
+
+The city as your research site - diversity, culture, opportunity
+
+### **Social Justice Focus**
+
+Psychology for positive social change
+
+### **Creative Community**
+
+Where science meets art, music, and social action
+:::
+
+------------------------------------------------------------------------
+
+# Our Research Groups {background-color="#1a202c"}
+
+------------------------------------------------------------------------
+
+## Join Our Research Community
+
+::::: columns
+::: {.column width="50%"}
+### **Cognition & Neuroscience**
+
+-   Brain imaging studies
+-   Cognitive enhancement
+-   Attention and perception
+-   Consciousness research
+
+### **Developmental & Educational Science**
+
+-   Child development
+-   Learning sciences
+-   Educational neuroscience
+-   Family systems
+:::
+
+::: {.column width="50%"}
+### **Forensic & Clinical Science**
+
+-   Criminal behavior analysis
+-   Therapeutic interventions
+-   Risk assessment
+-   Mental health research
+
+### **Social Processes & Personality**
+
+-   Intergroup relations
+-   Political psychology
+-   Cultural psychology
+-   Individual differences
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Student Research Showcase
+
+### **Recent Student Projects:**
+
+-   "Experiences of students with ASD in mainstream school"
+-   "The relationship between procrastination and wellbeing"\
+-   "The role of music in advertising effectiveness"
+-   "Perceptions of doping in competitive sport"
+-   "How line-ups affect eye-witness testimony"
+-   "Perceptions of stalking: when do behaviours cross the line?"
+
+::: fragment
+**Your research could be next!**
+:::
+
+------------------------------------------------------------------------
+
+# Why Choose Goldsmiths? {background-color="#4a5568"}
+
+------------------------------------------------------------------------
+
+## The Numbers Tell a Story
+
+::: incremental
+### **THE World University Rankings 2024**
+
+Top 150 Psychology departments worldwide
+
+### **Research Excellence Framework (REF) 2021**
+
+82% of our research rated world-leading or internationally excellent
+
+### **Institute for Fiscal Studies (IFS) 2021**
+
+#1 in UK for social mobility
+
+### **Graduate Outcomes**
+
+95% of our graduates in employment or further study within 15 months
+:::
+
+------------------------------------------------------------------------
+
+## Why Choose Goldsmiths? {background-color="#2d3748"}
+
+### **You'll Be Known**
+
+Small cohorts mean individual attention, not lecture hall anonymity
+
+### **You'll Be Challenged**
+
+We push you to think deeper, question more, create solutions
+
+### **You'll Be Supported**
+
+Comprehensive pastoral care and academic mentoring
+
+### **You'll Be Connected**
+
+Alumni network spanning clinical practice, research, business, and public service
+
+### **You'll Be Ready**
+
+Skills that employers actually want: critical thinking, research literacy, communication, collaboration
+
+------------------------------------------------------------------------
+
+# Career Pathways {background-color="#2d3748"}
+
+------------------------------------------------------------------------
+
+## Where Our Graduates Go
+
+::::: columns
+::: {.column width="50%"}
+### **Clinical Psychology**
+
+-   NHS Clinical Psychologist
+-   Private Practice
+-   Research Clinician
+-   Neuropsychologist
+
+### **Research & Academia**
+
+-   PhD Research
+-   University Lecturer
+-   Think Tank Researcher
+-   Policy Advisor
+
+### **Forensic Psychology**
+
+-   Prison Psychology Services
+-   Police Advisory Roles
+-   Court Assessment
+-   Victim Support Services
+:::
+
+::: {.column width="50%"}
+### **Business & Consulting**
+
+-   Human Resources
+-   Market Research
+-   User Experience Design
+-   Organizational Development
+
+### **Education & Training**
+
+-   Educational Psychology
+-   Training and Development
+-   School Counseling
+-   Special Educational Needs
+
+### **Public Service**
+
+-   Civil Service
+-   Local Government
+-   Charity Sector
+-   Healthcare Management
+:::
+:::::
+
+------------------------------------------------------------------------
+
+## Are you Goldsmiths? {background-color="#1a202c"}
+
+### **What We Look For**
+
+-   **Genuine interest** in psychological science
+-   **Critical thinking** abilities
+-   **Communication skills**
+-   **Commitment** to evidence-based practice
+-   **Enthusiasm** for research and application
+
+------------------------------------------------------------------------
+
+## Making Your Application Stand Out
+
+::: incremental
+### **Personal Statement Tips**
+
+-   Show **genuine engagement** with psychology beyond A-level
+-   Demonstrate **critical thinking** - don't just describe studies
+-   Include **relevant experience** - volunteering, work, personal projects
+-   Express **clear motivation** for studying psychology
+-   Show **awareness** of psychology as a science
+
+### **Preparation for Goldsmiths**
+
+-   Bring yourself and your loftiest ambitions
+:::
+
+------------------------------------------------------------------------
+
+# Let's Get Practical {background-color="#4a5568"}
+
+------------------------------------------------------------------------
+
+## Student Support & Wellbeing
+
+::: incremental
+### **Academic Support**
+
+-   Personal tutors throughout your degree
+-   Study skills workshops
+-   Writing support center
+-   Peer mentoring scheme
+-   Research methods drop-in sessions
+
+### **Wellbeing Support**
+
+-   Counseling and mental health services
+-   Disability and inclusion support
+-   Financial advice and hardship funds
+-   Student health center
+-   24/7 support helpline
+
+### **Career Support**
+
+-   Careers guidance and planning
+-   Internship and placement support
+-   Graduate school application assistance
+-   CV and interview preparation
+-   Alumni mentoring network
+:::
+
+------------------------------------------------------------------------
+
+## Life at Goldsmiths
+
+::::: columns
+::: {.column width="50%"}
+### **Campus Life**
+
+-   **New Cross location** - Zone 2, 10 minutes to central London
+-   **Cutting edge facilities** for psychology research
+-   **24/7 library access** during term time
+-   **Student union** with 60+ societies
+-   **Psychology Society** - your academic and social home
+
+### **The London Advantage**
+
+-   **World-class Psychology Hub**
+-   **Internship opportunities** across all sectors
+-   **Cultural diversity** enriching your studies
+-   **Networking events** with industry professionals
+-   **Graduate employment** opportunities
+:::
+
+::: {.column width="50%"}
+### **Student Experience**
+
+-   **Small class sizes** - get to know your classmates and lecturers
+-   **Research participation** - contribute to cutting-edge studies
+-   **Student Conference & Journal** - showcase your work
+-   **Fieldwork opportunities** - real-world data collection
+
+### **Financial Support**
+
+-   **Bursaries and scholarships** available
+-   **Part-time work** opportunities on campus
+-   **Financial advice** service
+-   **Hardship funds** for unexpected difficulties
+:::
+:::::
+
+------------------------------------------------------------------------
+
+# Back to Our Vision {background-color="#2d3748"}
+
+------------------------------------------------------------------------
+
+## Remember Your Future Self? {background-color="#2d3748"}
+
+### **The Skills You'll Develop:**
+
+::: incremental
+-   **Critical Analysis** - Question everything, evaluate evidence rigorously
+-   **Research Literacy** - Design studies, analyze data, interpret findings
+-   **Communication** - Write clearly, present confidently, teach others
+-   **Collaboration** - Work effectively in diverse teams
+-   **Ethical Reasoning** - Navigate complex moral landscapes
+-   **Cultural Competence** - Understand psychology across cultures
+-   **Problem-Solving** - Apply psychological knowledge to real challenges
+-   **Self-Reflection** - Understand your own biases and limitations
+:::
+
+### **You'll Be the Candidate B Every Employer Wants**
+
+------------------------------------------------------------------------
+
+## Your Psychology Journey Starts Here
+
+::: r-fit-text
+**Three years from now...**
+:::
+
+::: incremental
+-   You'll **think** like a scientist
+-   You'll **question** like a scholar\
+-   You'll **communicate** like a professional
+-   You'll **solve problems** like an innovator
+-   You'll **understand people** like never before
+-   You'll be **ready** to make a difference
+:::
+
+::: fragment
+### **The question is: Are you ready to begin?**
+:::
+
+------------------------------------------------------------------------
+
+# Questions & Discussion {background-color="#1a202c"}
+
+::: r-fit-text
+**What questions do you have about your psychology future?**
+:::
+
+------------------------------------------------------------------------
+
+## Thank You {background-color="black"}
+
+::: r-fit-text
+**Psychology at Goldsmiths**
+
+*Where your future begins*
+:::
+
+### Contact Information
+
+-   **Email:** g.wright\@goldsmiths.ac.uk
+-   **Website:** goldsmiths.ac.uk/psychology
+
+::: fragment
+**Ready to apply? Let's make it happen.**
+:::
+
+------------------------------------------------------------------------
+
+## Further Information
+
+### **Next Steps:**
+
+If you want to be added to our mailing list, please fill out the short form at the QR code here.
+
+::: fragment
+**Your psychology journey is just beginning...**
+:::

@@ -1,197 +1,37 @@
----
-title: "Psychology Taster Lecture"
-author: "Dr. Gordon Wright"
-affiliation: "LittleMonkeyLab @Goldsmiths"
-mainfont: Atkinson Hyperlegible
-format: 
-  revealjs: 
-    title-slide-attributes:
-      data-background-color: "black"
-    logo: "images/LMLLOGO.png"
-    incremental: true
-    scrollable: true
-    controls: true
-    controls-layout: edges
-include-in-header:
-  - text: |
-      <style>
-      .reveal .slide-logo {
-        max-height: unset;
-        height: 100px;
-      }
-      </style>
----
+## Menu du jour {background-color="#f0f0f0" .center}
 
-## Dr. Gordon Wright {background-color="black"}
+::: {.columns}
+::: {.column width="70%"}
+### Presentations Overview
 
-. . .
+- [Our Psychology Course](Course.qmd)
+- [Mythbusting University](myths.qmd)
+- [Strategic Deception in Psychology](deception.qmd)
+- [The Science of People-Watching](People.qmd)
+- [Prepare for university](prepare.qmd)
+- [Prepare for your Research Project](prepare2.qmd)
 
-Lecturer in Deception, Mind-reading and People-Watching
-
-. . .
-
-Chief Mischief Officer - LittleMonkeyLab
-
-. . .
-
-![](images/Themes.png){fig-align="center" width="400"}
-
-## I'm very sorry...
-
-::::: columns
-::: {.column width="50%"}
-![](images/C&C.png){.absolute top="10%" left="10%" width="250px"}
-
-![](images/H&W.png){.absolute top="40%" left="10%" width="250px"}
-
-![](images/L&S.png){.absolute top="70%" left="10%" width="250px"}
 :::
 
-::: {.column width="50%"}
-![](images/G&C.png){.absolute .fragment .fade-in top="10%" left="50%" width="250px"}
+::: {.column width="30%"}
+### Navigation Tips
+- Use the arrow keys to move between slides
 
-![](images/G&H.png){.absolute .fragment .fade-in top="40%" left="50%" width="250px"}
+::::
 
-![](images/G&S.png){.absolute .fragment .fade-in top="70%" left="50%" width="250px"}
-:::
-:::::
-
-# Cognition & Culture Theme {background-color="#2583c6"}
-
-# Deception {background-color="#2583c6"}
-
-## Little Monkey {background-color="#2583c6"}
-
-```{=html}
-<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;height:auto;">
-  <iframe src="https://www.youtube.com/embed/6kvQHGZU86A?start=301" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-</div>
-```
-
-## Deception - Key Questions {background-color="#2583c6"}
-
--   Why do we lie?
--   Who lies? How much?
--   How do we do it?
-
-## Why we lie {background-color="#2583c6"}
-
-![](images/paste-3.png){fig-align="center" width="800"}
-
-## Who lies and how often? {background-color="#2583c6"}
-
-```{r}
-
-```
-
-## But is it so bad? {background-color="#2583c6"}
-
--   Well I argue not
--   We saw out little monkey tricking his co-monkeys out of a tasty bird's egg
--   That's right up there with animals that use tools
-
-## Dunbar's Number {background-color="#2583c6"}
-
-![](images/Dunbar.png){fig-align="center"}
-
-# Health & Wellbeing Theme {background-color="#62a537"}
-
-# Mindreading {background-color="#62a537"}
-
-## Introducing Mind-space {background-color="#62a537"}
-
-::: incremental
--   Every person's mind exists in a multidimensional space
--   It's like the multiverse, but for brains!
--   Minds are mapped based on traits, abilities, and quirks
--   YOU are constantly navigating this mind-boggling terrain
-:::
-
-## The Power of Mind-space {background-color="#62a537"}
-
-::: incremental
--   Not just abstract theory - the key to unlocking human behavior!
--   Every time you:
-    -   Size someone up
-    -   Predict their actions
-    -   Wonder "What were they thinking?!"
--   You're tapping into the awesome power of Mind-space!
-:::
-
-## For any AI geeks out there... 💛 {background-color="#62a537"}
-
--   It's essentially the same idea as embeddings in vectorspace in LLMs
-
--   But we do it WAY better, and potentially faster! ![](images/paste-4.png){fig-align="center"}
-
-## What's the point? {background-color="#62a537"}
-
--   It's not just really cool (it is!)
--   It could offer us new ways to understand variability in Social Cognitive ability
--   And understand some of the 'magic' abilities we share with cheeky monkeys
-
-# Life & Society Theme {background-color="#ef3a5d"}
-
-# People-watching {background-color="#ef3a5d"}
-
-## Systematic Observation in Natural Settings {background-color="#ef3a5d"}
-
--   Street Psychology
--   Observing behavior without interference
--   Identifying patterns and anomalies
--   Real-life Psychological Profiling
--   Inferring meaning and motive in everyday behaviour
-
-## I did some people-watching on the telly {background-color="#ef3a5d"}
-
-[BBC Horizon - A Week Without Lying](https://learningonscreen.ac.uk/ondemand/index.php/prog/11ED256E?bcast=127465838&playlist=220146)
-
-[Goldsmiths Link](https://login.learningonscreen.ac.uk/wayfless.php?entityID=https%3A%2F%2Fidp.goldsmiths.ac.uk%2Fidp%2Fshibboleth&target=https%3A%2F%2Flearningonscreen.ac.uk%2Fondemand%2Findex.php%2Fprog%2F11ED256E%3Fbcast%3D127465838)
-
-![](images/paste-5.png){width="800"}
-
-# ExtraCurricular {background-color="#d0f42e"}
-
-## Forensic Psychology Unit {background-color="#d0f42e"}
-
-```{=html}
-<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%;height:auto;">
-  <iframe src="https://www.youtube.com/embed/2G1ESs-NJQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-</div>
-```
-
-![](images/29882.png){fig-align="center" width="600"}
-
-![](images/66984.png){fig-align="center" width="600"}
-
-![](images/90703.png){fig-align="center" width="600"}
-
-![](images/10573.png){fig-align="center" width="600"}
-
-![](images/60045.png){fig-align="center" width="600"}
-
-![](images/85543.png){fig-align="center" width="400"}
-
-![](images/paste-6.png){fig-align="center" width="800"}
-
-## Do you want to play? {.incremental background-color="yellow"}
-
--   The topic for this year is...
--   Psychological Profiling (in all it's guises)
--   All students are welcome to join in (current and maybe future!)
--   \@ForensicGold on X.com
--   <https://www.gold.ac.uk/forensic-psychology-unit/>
-
-## Thank you {background-color="black"}
-
-### Any Questions? {background-color="black"}
-
-But I think I forgot something...
-
-## Yes. The subject I mostly teach...
-
-------------------------------------------------------------------------
-
-### I bet no other Uni gave you a Research Methods Lecture at their open day!
-
-![](images/Themes+.png){fig-align="center" width="800"}
+<style>
+  .reveal .columns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .reveal .column {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .reveal .center {
+    text-align: center;
+  }
+</style>

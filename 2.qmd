@@ -1,0 +1,862 @@
+---
+title: "Strategic Deception & People-Watching"
+subtitle: "A Taster of University-Level Psychology"
+author: "Dr. Gordon Wright"
+affiliation: "LittleMonkeyLab @Goldsmiths"
+mainfont: Atkinson Hyperlegible
+format: 
+  revealjs: 
+    title-slide-attributes:
+      data-background-color: "black"
+    logo: "images/LMLLOGO.png"
+    incremental: true
+    scrollable: true
+    controls: true
+    controls-layout: edges
+    footer: "Strategic Deception & People-Watching | Goldsmiths Taster | 2025"
+include-in-header:
+  - text: |
+      <style>
+      .reveal .slide-logo {
+        max-height: unset;
+        height: 100px;
+      }
+      .demo-box {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        padding: 2rem;
+        border-radius: 15px;
+        margin: 1rem 0;
+        text-align: center;
+      }
+      .competition-alert {
+        background: #e53e3e;
+        color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        font-weight: bold;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0% { opacity: 1; }
+        50% { opacity: 0.7; }
+        100% { opacity: 1; }
+      }
+      .audience-section {
+        background: #2d3748;
+        padding: 1rem;
+        border-radius: 8px;
+        margin: 0.5rem;
+      }
+      </style>
+---
+
+# Welcome to Real Psychology {background-color="#1a202c"}
+
+::: {.r-fit-text}
+**Strategic Deception & People-Watching**
+:::
+
+::: {.fragment}
+*Prepare to have your assumptions challenged*
+:::
+
+---
+
+## Before We Start... {background-color="#2d3748"}
+
+### **A Warning:**
+
+::: {.incremental}
+- Today you'll learn skills that could be **misused**
+- We're teaching you **for protection**, not manipulation
+- With knowledge comes **responsibility**
+- Psychology is **powerful** - use it ethically
+:::
+
+### **Our Goal:**
+Transform you from psychology **consumers** to psychological **scientists**
+
+---
+
+# DEMONSTRATION 1: Die Under the Cup {background-color="#4a5568"}
+
+---
+
+## The Setup {background-color="#2d3748"}
+
+### **I need a volunteer!**
+
+**The Challenge:**
+
+- I'll place a die under an opaque cup
+- You'll "guess" the number showing
+- But I'm going to **help** you guess correctly
+- **WITHOUT** saying a word about the die
+- **WITHOUT** looking at the die myself
+
+**Ready to see some "mind-reading"?**
+
+---
+
+## Let's Do This! {background-color="#1a202c"}
+
+**[LIVE DEMONSTRATION]**
+
+*Volunteer comes up, die is placed, "mind-reading" occurs*
+
+---
+
+## What Just Happened? {background-color="#2d3748"}
+
+### **Audience - What Did You Observe?**
+
+::: {.incremental}
+- What did I do with my body?
+- Where did I look?
+- How did I position myself?
+- What questions did I ask?
+- How did the volunteer respond?
+:::
+
+### **Let's Analyze This Like Scientists...**
+
+---
+
+## The Science Behind the "Magic" {background-color="#4a5568"}
+
+### **Multiple Techniques at Work:**
+
+::: {.incremental}
+- **Cold Reading**: Statistical guessing + feedback
+- **Body Language Reading**: Micro-expressions and reactions
+- **Ideomotor Effect**: Unconscious physical responses
+- **Arousal & Leakage**: subtle physiological responses
+- **Psychological Pressure**: Motivational impairment
+- **Statistical Probability**: Working with likely outcomes
+:::
+
+::: {.fragment}
+**This isn't magic - it's applied psychology!**
+:::
+
+---
+
+## The Ideomotor Effect {background-color="#2d3748"}
+
+::: {.demo-box}
+### **Quick Demo: The Pendulum**
+
+*[Demonstration with pendulum or ring on string]*
+
+**Your unconscious mind moves your hand based on expectations**
+- Think "yes" → pendulum swings one way
+- Think "no" → pendulum swings another way
+- **You're not consciously controlling it**
+
+**Same principle applies to die guessing - micro-movements give away answers**
+:::
+
+---
+
+# The Psychology of Deception {background-color="#1a202c"}
+
+---
+
+## A-Level vs University Thinking {background-color="#2d3748"}
+
+:::::: columns
+::: {.column width="50%"}
+### **A-Level View:**
+- Lying = morally wrong
+- Honesty = always best
+- Simple moral judgments
+- Black and white thinking
+- "Good people don't lie"
+:::
+
+::: {.column width="50%"}
+### **University View:**
+- Deception = complex cognitive skill
+- Multiple functions and contexts
+- Sophisticated analysis needed
+- Evidence-based understanding
+- "Strategic communication serves many purposes"
+:::
+::::::
+
+---
+
+## The Shocking Truth About Lying {background-color="#4a5568"}
+
+### **Research Findings:**
+
+::: {.incremental}
+- Average person tells **1-2 lies per day**
+- Most lies are **prosocial** (protecting others' feelings)
+- Learning to lie **enhances cognitive abilities**
+- Deception requires **advanced executive function**
+- Good liars have **superior theory of mind**
+- Some lies actually **increase trust** between people
+:::
+
+::: {.fragment}
+**Your brain on deception is your brain on advanced cognitive training!**
+:::
+
+---
+
+## Cognitive Benefits of Deception Training {background-color="#2d3748"}
+
+### **Ding et al. (2018) - Breakthrough Study:**
+
+::: {.incremental}
+- **42 children** randomly assigned to deception training
+- **4 days** of strategic lying practice
+- **Results**: Significant improvements in:
+  - Executive function
+  - Working memory
+  - Theory of mind
+  - Cognitive flexibility
+:::
+
+::: {.fragment}
+**First causal proof that learning to deceive makes you smarter!**
+:::
+
+---
+
+## What Your Brain Does When You Lie {background-color="#4a5568"}
+
+### **The Cognitive Orchestra:**
+
+::: {.incremental}
+1. **Suppress** the truthful response (inhibition)
+2. **Generate** a plausible alternative (creativity)
+3. **Track** both true and false information (working memory)
+4. **Monitor** the target's reactions (theory of mind)
+5. **Manage** your own expressions (emotional regulation)
+6. **Adapt** your story based on feedback (cognitive flexibility)
+:::
+
+::: {.fragment}
+**This is advanced cognitive multitasking at its finest!**
+:::
+
+---
+
+# DEMONSTRATION 2: People-Watching Science {background-color="#1a202c"}
+
+---
+
+## The People-Watching Challenge {background-color="#2d3748"}
+
+::: {.demo-box}
+### **I need several volunteers for this one!**
+
+**The Setup:**
+- Two volunteers will have a brief conversation
+- The rest will observe and make judgments
+- We'll test what you can actually detect from watching others
+- **No audio** - visual information only
+
+**Ready to put your people-watching skills to the test?**
+:::
+
+---
+
+## The Scenarios {background-color="#4a5568"}
+
+### **Volunteers will act out different relationships:**
+
+::: {.incremental}
+- **Scenario A**: Two friends meeting after summer holidays
+- **Scenario B**: Two strangers meeting for the first time  
+- **Scenario C**: Two people who secretly dislike each other
+- **Scenario D**: Two people with a romantic interest
+:::
+
+::: {.fragment}
+**Observers: Can you tell which is which?**
+:::
+
+---
+
+## [LIVE PEOPLE-WATCHING DEMONSTRATION] {background-color="#1a202c"}
+
+::: {.r-fit-text}
+**Volunteers perform scenarios**
+
+**Audience observes and records judgments**
+:::
+
+---
+
+## Let's Analyze Your Observations {background-color="#2d3748"}
+
+### **What Cues Did You Use?**
+
+:::::: columns
+::: {.column width="50%"}
+**Physical Cues:**
+- Proximity/distance
+- Body orientation
+- Facial expressions
+- Hand gestures
+- Posture changes
+:::
+
+::: {.column width="50%"}
+**Behavioral Cues:**
+- Eye contact patterns
+- Mirroring behaviors
+- Response timing
+- Conversation flow
+- Tension indicators
+:::
+::::::
+
+---
+
+## The Science of Third-Party Encounters {background-color="#4a5568"}
+
+### **What Research Shows We Can Actually Detect:**
+
+::: {.incremental}
+- **Relationship type** (friends vs. strangers) - 75% accuracy
+- **Power dynamics** - who's in charge
+- **Romantic interest** - cross-culturally universal
+- **Deception in interactions** - when people are lying to each other
+- **Group cohesion** - how well teams work together
+- **Emotional states** - stress, excitement, discomfort
+:::
+
+::: {.fragment}
+**Your brain has specialized networks for reading social interactions!**
+:::
+
+---
+
+## Three Brain Networks at Work {background-color="#2d3748"}
+
+:::::: columns
+::: {.column width="33%"}
+### **Person Perception Network**
+- Processes faces and bodies
+- Identifies individuals
+- Reads basic emotions
+:::
+
+::: {.column width="33%"}
+### **Action Perception Network**  
+- Interprets movements
+- Understands intentions
+- Predicts next actions
+:::
+
+::: {.column width="33%"}
+### **Mentalizing Network**
+- Attributes mental states
+- Infers thoughts and beliefs
+- Predicts social behavior
+:::
+::::::
+
+---
+
+# THE LIE DETECTION COMPETITION {background-color="#e53e3e"}
+
+---
+
+## Competition Rules {background-color="#2d3748"}
+
+::: {.competition-alert}
+### **🏆 LIE DETECTION CHAMPIONSHIP 🏆**
+
+**PRIZE: Goldsmiths Psychology Mug + Bragging Rights**
+:::
+
+### **How It Works:**
+::: {.incremental}
+1. **Volunteers** will tell true and false stories
+2. **Audience** votes on truth vs. lie
+3. **Highest accuracy** wins!
+4. But first... let's learn the science
+:::
+
+---
+
+## Why Humans Are Terrible Lie Detectors {background-color="#4a5568"}
+
+### **The Depressing Statistics:**
+
+::: {.incremental}
+- **Average accuracy**: 54% (barely better than chance!)
+- **Police officers**: 55%
+- **Judges**: 57%
+- **CIA agents**: 64%
+- **Secret Service**: 64%
+:::
+
+::: {.fragment}
+**Even "experts" are pretty bad at this!**
+:::
+
+---
+
+## Common Lie Detection Myths {background-color="#2d3748"}
+
+### **Things That DON'T Indicate Lying:**
+
+::: {.incremental}
+- ❌ **Avoiding eye contact** (cultural variation)
+- ❌ **Fidgeting or nervousness** (could be anxiety)
+- ❌ **Touching nose/face** (just normal behavior)
+- ❌ **Pausing before speaking** (could be thinking)
+- ❌ **Changes in voice pitch** (emotional, not deceptive)
+:::
+
+::: {.fragment}
+**TV shows have taught us wrong!**
+:::
+
+---
+
+## What ACTUALLY Works: Cognitive Load Approach {background-color="#4a5568"}
+
+### **Vrij's Research-Based Method:**
+
+::: {.incremental}
+- **Increase cognitive demand** on the storyteller
+- **Truth-tellers** can handle extra cognitive load
+- **Liars** struggle because they're already working hard
+- **Ask unexpected questions** that break prepared scripts
+- **Look for inconsistencies** in detailed narratives
+:::
+
+::: {.fragment}
+**This gets 70%+ accuracy in lab studies!**
+:::
+
+---
+
+## Competition Strategy Session {background-color="#2d3748"}
+
+### **Evidence-Based Lie Detection Tips:**
+
+::: {.incremental}
+1. **Listen for detail richness** - true stories have more sensory details
+2. **Ask follow-up questions** - liars struggle with unexpected queries  
+3. **Notice confidence levels** - overconfidence can indicate deception
+4. **Watch for cognitive strain** - lying is mentally exhausting
+5. **Look for micro-expressions** - brief flashes of real emotion
+6. **Consider baseline behavior** - how does this person normally act?
+:::
+
+---
+
+## Meet Your Contestants! {background-color="#1a202c"}
+
+::: {.audience-section}
+### **Contestant 1**: [Volunteer Name]
+*Will tell one true story, one false story*
+:::
+
+::: {.audience-section}
+### **Contestant 2**: [Volunteer Name]  
+*Will tell one true story, one false story*
+:::
+
+::: {.audience-section}
+### **Contestant 3**: [Volunteer Name]
+*Will tell one true story, one false story*
+:::
+
+---
+
+## Round 1: True or False? {background-color="#4a5568"}
+
+### **Contestant 1's Stories:**
+
+**Story A**: *[Volunteer tells first story]*
+
+**Story B**: *[Volunteer tells second story]*
+
+::: {.fragment}
+### **Audience: Vote now!**
+- **Show of hands for Story A being true**
+- **Show of hands for Story B being true**
+:::
+
+---
+
+## Round 2: True or False? {background-color="#4a5568"}
+
+### **Contestant 2's Stories:**
+
+**Story A**: *[Volunteer tells first story]*
+
+**Story B**: *[Volunteer tells second story]*
+
+::: {.fragment}
+### **Audience: Vote now!**
+- **Show of hands for Story A being true**
+- **Show of hands for Story B being true**
+:::
+
+---
+
+## Round 3: True or False? {background-color="#4a5568"}
+
+### **Contestant 3's Stories:**
+
+**Story A**: *[Volunteer tells first story]*
+
+**Story B**: *[Volunteer tells second story]*
+
+::: {.fragment}
+### **Audience: Vote now!**
+- **Show of hands for Story A being true**
+- **Show of hands for Story B being true**
+:::
+
+---
+
+## The Reveals! {background-color="#2d3748"}
+
+### **Contestant 1**: 
+- **Story A**: [TRUE/FALSE]
+- **Story B**: [TRUE/FALSE]
+
+### **Contestant 2**:
+- **Story A**: [TRUE/FALSE]  
+- **Story B**: [TRUE/FALSE]
+
+### **Contestant 3**:
+- **Story A**: [TRUE/FALSE]
+- **Story B**: [TRUE/FALSE]
+
+---
+
+## Competition Results! {background-color="#e53e3e"}
+
+::: {.competition-alert}
+### **🏆 AND THE WINNER IS... 🏆**
+
+*[Count hands and declare winner]*
+
+**Accuracy: X out of 6 correct**
+
+**That's X% - better than chance!**
+:::
+
+::: {.fragment}
+**Congratulations! You've just experienced university-level psychology in action!**
+:::
+
+---
+
+# What This Means for Your Future {background-color="#1a202c"}
+
+---
+
+## Beyond Party Tricks {background-color="#2d3748"}
+
+### **Why This Matters:**
+
+::: {.incremental}
+- **Critical thinking skills** - question what you see
+- **Research literacy** - understand how evidence is gathered
+- **Communication skills** - read between the lines
+- **Professional applications** - therapy, education, business
+- **Personal protection** - avoid manipulation and fraud
+- **Social understanding** - navigate complex relationships
+:::
+
+---
+
+## Career Applications {background-color="#4a5568"}
+
+:::::: columns
+::: {.column width="50%"}
+### **Clinical Psychology**
+- Therapeutic rapport building
+- Detecting client deception
+- Reading non-verbal cues
+- Building trust
+
+### **Forensic Psychology**
+- Interviewing techniques
+- Court assessments
+- Risk evaluation
+- Victim support
+:::
+
+::: {.column width="50%"}
+### **Business Psychology**
+- Negotiation skills
+- Team dynamics
+- Leadership assessment
+- Customer relations
+
+### **Research Psychology**
+- Experimental design
+- Data interpretation
+- Peer review
+- Publication ethics
+:::
+::::::
+
+---
+
+## The Research Behind Today's Demos {background-color="#2d3748"}
+
+### **Key Studies You Should Know:**
+
+::: {.incremental}
+- **Ding et al. (2018)**: Deception training enhances cognition
+- **Vrij et al. (2019)**: Cognitive load lie detection
+- **Quadflieg & Penton-Voak (2017)**: Third-party encounter perception
+- **Levine & Schweitzer (2015)**: Prosocial lies increase trust
+- **Bond & DePaulo (2006)**: Meta-analysis of lie detection accuracy
+:::
+
+::: {.fragment}
+**This is what university psychology looks like - evidence-based, rigorous, applicable**
+:::
+
+---
+
+## Methodological Sophistication {background-color="#4a5568"}
+
+### **How We Study These Phenomena:**
+
+::: {.incremental}
+- **Neuroimaging (fMRI)** - brain activity during deception
+- **Eye-tracking** - where people look during social observation  
+- **Physiological measures** - stress responses to lying
+- **Cross-cultural studies** - universal vs. cultural patterns
+- **Longitudinal research** - development of skills over time
+- **Meta-analyses** - combining results across studies
+:::
+
+---
+
+# Ethical Considerations {background-color="#2d3748"}
+
+---
+
+## With Great Power... {background-color="#4a5568"}
+
+### **Ethical Guidelines for Psychological Skills:**
+
+::: {.incremental}
+- **Consent and transparency** - don't manipulate without permission
+- **Beneficence** - use skills to help, not harm
+- **Cultural sensitivity** - respect different norms and values
+- **Professional boundaries** - maintain appropriate relationships
+- **Continued learning** - stay updated on best practices
+- **Supervision and support** - seek guidance when needed
+:::
+
+---
+
+## The Dark Side {background-color="#2d3748"}
+
+### **How These Skills Can Be Misused:**
+
+::: {.incremental}
+- **Manipulation and exploitation** - taking advantage of others
+- **Fraud and deception** - financial or emotional scams
+- **Invasion of privacy** - reading people without consent
+- **Stereotyping and bias** - making unfair judgments
+- **Professional misconduct** - violating ethical codes
+:::
+
+::: {.fragment}
+**This is why we need ethical training alongside skill development**
+:::
+
+---
+
+# What's Next? {background-color="#1a202c"}
+
+---
+
+## If This Interests You... {background-color="#2d3748"}
+
+### **At Goldsmiths You Could:**
+
+::: {.incremental}
+- **Join our Forensic Psychology Unit** - solve real cases
+- **Participate in deception research** - contribute to knowledge
+- **Learn advanced statistics** - R programming for data analysis
+- **Study cross-cultural psychology** - global perspectives
+- **Conduct your own research** - dissertation projects
+- **Present at conferences** - share your findings
+:::
+
+---
+
+## Year 1 Modules That Build On Today {background-color="#4a5568"}
+
+:::::: columns
+::: {.column width="50%"}
+### **Research Methods & Statistics**
+- Experimental design
+- Data analysis techniques
+- Critical evaluation skills
+- Reproducible research
+
+### **Cognition & Culture**
+- Perception and attention
+- Social cognition
+- Cross-cultural psychology
+- Individual differences
+:::
+
+::: {.column width="50%"}
+### **Life & Society**
+- Social psychology
+- Developmental science
+- Interpersonal relationships
+- Group dynamics
+
+### **Personal & Professional Development**
+- Ethical reasoning
+- Critical thinking skills
+- Communication training
+- Career exploration
+:::
+::::::
+
+---
+
+## Advanced Opportunities {background-color="#2d3748"}
+
+### **Years 2 & 3:**
+
+::: {.incremental}
+- **Forensic Psychology stream** - crime and justice
+- **Clinical Psychology pathway** - therapeutic applications
+- **Research methods specialization** - advanced techniques
+- **Cognitive neuroscience** - brain imaging studies
+- **Cross-cultural research** - international collaborations
+- **Applied psychology placements** - real-world experience
+:::
+
+---
+
+# Reflection & Discussion {background-color="#4a5568"}
+
+---
+
+## Think About Today {background-color="#2d3748"}
+
+### **Reflection Questions:**
+
+::: {.incremental}
+1. **How has your view of lying/deception changed?**
+2. **What surprised you most about people-watching research?**
+3. **How might these skills be useful in your future career?**
+4. **What ethical concerns do you have about these abilities?**
+5. **What questions do you still have about this research?**
+:::
+
+---
+
+## The Bigger Picture {background-color="#4a5568"}
+
+### **Today Demonstrated:**
+
+::: {.incremental}
+- **Psychology is a science** - rigorous methods, careful analysis
+- **Common sense isn't always right** - myths vs. evidence
+- **Skills can be learned and improved** - practice makes better
+- **Ethics matter** - power requires responsibility
+- **Research has real applications** - from lab to life
+- **Critical thinking is essential** - question everything
+:::
+
+---
+
+# Questions & Discussion {background-color="#1a202c"}
+
+::: {.r-fit-text}
+**What questions do you have?**
+:::
+
+::: {.fragment}
+*About the demonstrations, the research, the ethics, the career applications...*
+:::
+
+---
+
+## Take-Home Messages {background-color="#2d3748"}
+
+### **Key Points to Remember:**
+
+::: {.incremental}
+1. **Psychology is sophisticated** - much more complex than A-level
+2. **Research evidence matters** - don't trust intuition alone
+3. **Skills can be developed** - you're not stuck with current abilities
+4. **Ethics are crucial** - use knowledge responsibly
+5. **Applications are everywhere** - therapy, business, education, daily life
+6. **Questions are more important than answers** - keep wondering!
+:::
+
+---
+
+## Thank You! {background-color="black"}
+
+::: {.r-fit-text}
+**Welcome to University Psychology**
+
+*Where assumptions go to die, and understanding is born*
+:::
+
+### **Contact & Follow-Up:**
+- **Email:** g.wright@gold.ac.uk
+- **Twitter:** @ForensicGold
+- **Web:** gold.ac.uk/forensic-psychology-unit
+- **Forensic Psychology Unit:** Join us!
+
+::: {.fragment}
+**Ready to challenge everything you think you know?**
+:::
+
+---
+
+## Further Reading {background-color="#2d3748"}
+
+### **If You Want to Explore More:**
+
+::: {.incremental}
+- **Vrij, A. (2019)** - "Detecting Lies and Deceit: Pitfalls and Opportunities"
+- **Quadflieg, S. & Penton-Voak, I. (2017)** - "The Emerging Science of People-Watching"
+- **Levine, T. (2020)** - "Duped: Truth-Default Theory and the Social Science of Lying"
+- **Ekman, P. (2009)** - "Telling Lies: Clues to Deceit in the Marketplace, Politics, and Marriage"
+- **Heath, C. & Heath, D. (2010)** - "Switch: How to Change Things When Change Is Hard"
+:::
+
+### **Research Journals:**
+- Journal of Experimental Social Psychology
+- Applied Cognitive Psychology  
+- Legal and Criminological Psychology
+
+---
+
+## One Final Challenge {background-color="#4a5568"}
+
+### **For This Week:**
+
+::: {.incremental}
+- **Practice ethical people-watching** in public spaces
+- **Notice your own deception** - when and why do you lie?
+- **Question psychology claims** you see in media
+- **Observe group dynamics** in your classes or friend groups
+- **Research one study** mentioned today - read the actual paper!
+:::
+
+::: {.fragment}
+**Start thinking like a psychology student NOW!**
+:::

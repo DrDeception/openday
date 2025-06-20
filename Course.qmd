@@ -1,5 +1,5 @@
 ---
-title: "Psychology at Goldsmiths"
+title: "Our Psychology Course"
 author: "Dr. Gordon Wright"
 affiliation: "LittleMonkeyLab @Goldsmiths"
 mainfont: Atkinson Hyperlegible
@@ -24,7 +24,7 @@ include-in-header:
 
 ![](images/campus.jpg){.column width="30%"} ![](images/lecture-hall.jpg){.column width="30%"} ![](images/students-studying.jpg){.column width="30%"}
 
-## Our new curriculum in 2024-25
+## Our new curriculum in 2025
 
 Teaching themes that reflect you:
 
