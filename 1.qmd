@@ -50,7 +50,11 @@ include-in-header:
 
 ## Before We Begin... {background-color="#2d3748"}
 
-### Vision Exercise #1: You in 3 Years
+## Please join our mailing list
+
+![](images/MailingList.png){fig-align="center" width="500"}
+
+## Vision Exercise #1: You in 3 Years
 
 ::: incremental
 -   It's graduation day, 2028
@@ -100,14 +104,16 @@ include-in-header:
 
 ## The Three Pillars {background-color="#2d3748"}
 
+![](images/paste-1.png){fig-align="center"}
+
+## Three Themes - continued
+
 :::::: columns
 ::: {.column width="33%"}
 ### Mental Health & Wellbeing
 
-![](images/wellbeing-icon.png)
-
 -   Clinical Psychology
--   Positive Psychology\
+-   Positive Psychology
 -   Neurodiversity
 -   Personal Development
 -   Evidence-Based Interventions
@@ -115,8 +121,6 @@ include-in-header:
 
 ::: {.column width="33%"}
 ### Cognition & Culture
-
-![](images/cognition-icon.png)
 
 -   How We Think
 -   Cultural Psychology
@@ -127,8 +131,6 @@ include-in-header:
 
 ::: {.column width="33%"}
 ### Life & Society
-
-![](images/society-icon.png)
 
 -   Social Psychology
 -   Developmental Science
@@ -312,7 +314,13 @@ What are the limitations of current research?
 
 # Term 3: Integration, Application, Celebration {background-color="#4a5568"}
 
-Term 3 information here.
+The last term of every year is designed to be an opportunity to use what you have learned, connect with students in other years, and frankly, just celebrate all the hard work - looking forward to the next year!
+
+![](images/paste-13.png)
+
+---
+
+![](images/paste-14.png)
 
 ## Year 2: Deepening Your Expertise {background-color="#4a5568"}
 
@@ -321,34 +329,38 @@ Term 3 information here.
 :::::: columns
 ::: {.column width="33%"}
 ### Mental Health & Wellbeing v2
-- **Advanced therapeutic approaches**
-- **Complex case studies**
-- **Intervention design**
-- **Cultural considerations in mental health**
+
+-   **Advanced therapeutic approaches**
+-   **Complex case studies**
+-   **Intervention design**
+-   **Cultural considerations in mental health**
 :::
 
 ::: {.column width="33%"}
 ### Cognition & Culture v2
-- **Advanced cognitive theories**
-- **Cross-cultural research methods**
-- **Individual differences in depth**
-- **Applied cognitive psychology**
+
+-   **Advanced cognitive theories**
+-   **Cross-cultural research methods**
+-   **Individual differences in depth**
+-   **Applied cognitive psychology**
 :::
 
 ::: {.column width="33%"}
 ### Life & Society v2
-- **Complex social phenomena**
-- **Advanced developmental theories**
-- **Social psychology applications**
-- **Policy implications**
+
+-   **Complex social phenomena**
+-   **Advanced developmental theories**
+-   **Social psychology applications**
+-   **Policy implications**
 :::
 ::::::
 
 ### **Your Chosen Research Topic**
-- **Design and conduct your own group research project**
-- **Choose a topic that interests YOU within the themes**
-- **Real data collection and analysis**
-- **Present findings at student conference**
+
+-   **Design and conduct your own group research project**
+-   **Choose a topic that interests YOU within the themes**
+-   **Real data collection and analysis**
+-   **Present findings at student conference**
 
 ### **Same Structure, University-Level Depth**
 
@@ -364,7 +376,7 @@ Term 3 information here.
 ### **Optional Modules** (Choose from 15+ options)
 
 -   Addictive Behaviours
--   Neuropsychology\
+-   Neuropsychology
 -   Psychology of the Arts
 -   Behavioural Genetics
 -   Psychology and Law
@@ -451,11 +463,12 @@ Where science meets art, music, and social action
 ### **Recent Student Projects:**
 
 -   "Experiences of students with ASD in mainstream school"
--   "The relationship between procrastination and wellbeing"\
+-   "The relationship between procrastination and wellbeing"
 -   "The role of music in advertising effectiveness"
 -   "Perceptions of doping in competitive sport"
 -   "How line-ups affect eye-witness testimony"
 -   "Perceptions of stalking: when do behaviours cross the line?"
+-   
 
 ::: fragment
 **Your research could be next!**
@@ -603,6 +616,28 @@ Skills that employers actually want: critical thinking, research literacy, commu
 
 ------------------------------------------------------------------------
 
+## Study environment
+
+Varied teaching
+
+-   Lectures
+-   Tutorials and seminars
+-   Personal tutor sessions
+-   Lab classes
+-   One-to-one sessions
+
+::: {.fragment .fade-in}
+Varied assessment focused around skills for employability
+
+Personal tutor throughout your studies
+:::
+
+## Study environment
+
+Psychology society: film clubs, social events, study groups
+
+![](images/psych-social.jpg){.column width="30%"} ![](images/film-night1.jpg){.column width="30%"} ![](images/film-night2.jpg){.column width="30%"}
+
 ## Student Support & Wellbeing
 
 ::: incremental
@@ -704,7 +739,7 @@ Skills that employers actually want: critical thinking, research literacy, commu
 
 ::: incremental
 -   You'll **think** like a scientist
--   You'll **question** like a scholar\
+-   You'll **question** like a scholar
 -   You'll **communicate** like a professional
 -   You'll **solve problems** like an innovator
 -   You'll **understand people** like never before
@@ -725,31 +760,46 @@ Skills that employers actually want: critical thinking, research literacy, commu
 
 ------------------------------------------------------------------------
 
-## Thank You {background-color="black"}
+## Contact Information & Mailing list
 
-::: r-fit-text
-**Psychology at Goldsmiths**
-
-*Where your future begins*
-:::
-
-### Contact Information
-
--   **Email:** g.wright\@goldsmiths.ac.uk
--   **Website:** goldsmiths.ac.uk/psychology
+-   **Email:** g.wright\@gold.ac.uk
+-   **Website:** gold.ac.uk/psychology
+-   ![](images/MailingList.png)
 
 ::: fragment
-**Ready to apply? Let's make it happen.**
+**Ready to join us? Let's make it happen.**
 :::
 
 ------------------------------------------------------------------------
 
-## Further Information
+## Thank You!
 
-### **Next Steps:**
-
-If you want to be added to our mailing list, please fill out the short form at the QR code here.
-
-::: fragment
-**Your psychology journey is just beginning...**
+::: r-fit-text
+We look forward to welcoming you in September!
 :::
+
+![](images/paste-19.png)
+
+![](images/66984.png){fig-align="center" width="600"}
+
+![](images/90703.png){fig-align="center" width="600"}
+
+![](images/10573.png){fig-align="center" width="600"}
+
+![](images/60045.png){fig-align="center" width="600"}
+
+![](images/85543.png){fig-align="center" width="400"}
+
+![](images/paste-6.png){fig-align="center" width="800"}
+
+## Do you want to play? {.incremental background-color="yellow"}
+
+-   The topic for this year is...
+-   Psychological Profiling (in all it's guises)
+-   All students are welcome to join in (current and maybe future!)
+-   \@ForensicGold on X.com
+-   <https://www.gold.ac.uk/forensic-psychology-unit/>
+
+## Thank you {background-color="black"}
+
+### Any Questions? {background-color="black"}
