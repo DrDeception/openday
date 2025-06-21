@@ -43,7 +43,7 @@ include-in-header:
 :::
 
 ::: fragment
-*Preparing you for careers that matter*
+*Preparing you to make a difference*
 :::
 
 ------------------------------------------------------------------------
