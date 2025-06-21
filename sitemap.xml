@@ -1,35 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://DrDeception.github.io/openday/taster.html</loc>
-    <lastmod>2025-04-08T20:55:50.670Z</lastmod>
-  </url>
-  <url>
-    <loc>https://DrDeception.github.io/openday/marshmallow.html</loc>
-    <lastmod>2025-04-11T17:59:06.257Z</lastmod>
-  </url>
-  <url>
-    <loc>https://DrDeception.github.io/openday/about.html</loc>
-    <lastmod>2025-04-09T10:38:57.632Z</lastmod>
-  </url>
-  <url>
-    <loc>https://DrDeception.github.io/openday/Course.html</loc>
-    <lastmod>2025-04-08T21:15:49.999Z</lastmod>
-  </url>
-  <url>
-    <loc>https://DrDeception.github.io/openday/Applicant.html</loc>
-    <lastmod>2025-04-11T14:57:36.557Z</lastmod>
-  </url>
-  <url>
-    <loc>https://DrDeception.github.io/openday/People.html</loc>
-    <lastmod>2025-04-08T21:43:51.289Z</lastmod>
-  </url>
-  <url>
     <loc>https://DrDeception.github.io/openday/index.html</loc>
-    <lastmod>2025-04-11T17:59:08.181Z</lastmod>
+    <lastmod>2025-06-21T08:33:03.693Z</lastmod>
   </url>
   <url>
-    <loc>https://DrDeception.github.io/openday/myths.html</loc>
-    <lastmod>2025-04-11T14:55:55.274Z</lastmod>
+    <loc>https://DrDeception.github.io/openday/DeceptionTaster.html</loc>
+    <lastmod>2025-06-21T08:30:24.336Z</lastmod>
+  </url>
+  <url>
+    <loc>https://DrDeception.github.io/openday/OurCourse.html</loc>
+    <lastmod>2025-06-21T08:30:27.865Z</lastmod>
   </url>
 </urlset>
